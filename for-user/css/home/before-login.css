@@ -214,6 +214,7 @@ a:hover{
 
 
 
+
 input {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -224,10 +225,13 @@ input {
   border-radius: 5px;
 }
 .searchForm {
-  width:50%;
+  width:500px;
   height:50px;
-  margin: 15% 25% 8%; 
+  margin:5% auto;
+  margin-bottom:2.5%;
   position: relative;
+  /* display:flex;
+  justify-content: center; */
 }
 .searchForm-input {
   width: 85%;
@@ -339,17 +343,17 @@ div ul li a:hover{
 }
 
 .setumei{
-  width:50%;
+  width:850px;
   margin:50px auto;
-  font-size:25px;
+  font-size:28px;
   font-weight: bold;
-  padding-top:80px;
+  padding-top:50px;
   color:rgb(22, 22, 90);
   /* -webkit-text-stroke: 1px rgb(255, 254, 254); */
 }
 .list1{
   color:rgb(22, 22, 90);
-  font-size:15px;
+  font-size:18px;
   padding-right:15px;
 }
 .list2{
@@ -357,19 +361,19 @@ div ul li a:hover{
   padding-left:15px;
   padding-right:15px;
   color:rgb(22, 22, 90);
-  font-size:16px;
+  font-size:18px;
 }
 .list3{
   border-left:1px solid rgb(22, 22, 90);
   padding-left:15px;
   color:rgb(22, 22, 90);
-  font-size:16px;
+  font-size:18px;
 }
-.one{
+/* .one{
   width:40%;
   height:780px;
   margin:0 auto;
-}
+} */
 .ul2{
   padding-top:30px;
   margin: 0 auto;
@@ -382,7 +386,7 @@ div ul li a:hover{
 
 
 .sikaku{
-  width:15%;
+  width:160px;
 }
 
 .sikaku:hover{
