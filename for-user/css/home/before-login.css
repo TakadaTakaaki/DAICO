@@ -22,9 +22,18 @@ a:hover{
   color:rgb(197, 196, 196);
 }
 .logo{
-  width:83%;
-  height:50px;
-  margin-right:450px;
+  width:100%;
+  height:auto;
+  padding-top:30px;
+  padding-bottom:30px;
+  display:flex;
+  justify-content: flex-end;
+}
+.logo0{
+  margin-right:1%;
+}
+.logo00{
+  margin-right:15%;
 }
 .daico{
   width:194px;
@@ -39,7 +48,7 @@ a:hover{
   color:white;
   background-color: rgb(255, 187, 0);
   font-size: 15px;
-  margin-top:40px;
+  /* margin-top:40px; */
   margin-right:10px;
   float: right;
   text-align:center;
@@ -55,7 +64,7 @@ a:hover{
   color:white;
   background-color: rgb(48, 182, 245);
   font-size: 15px;
-  margin-top:40px;
+  /* margin-top:40px; */
   float: right;
   text-align:center;
   border-radius:10%;
@@ -68,22 +77,28 @@ a:hover{
 .template{
   width:100%;
   background-color:rgb(17, 17, 51);
+  display: flex;
+  justify-content: center;
 }
-.template ul{
-  margin:0 auto;
+.template #menu{
   list-style: none;
-  height: 130px;
+  height: auto;
+  padding-bottom:30px;
   padding-top: 0px;
   /* border-top: solid 1px #000; */
   /* border-bottom: solid 1px #000; */
   padding-left:0;
-  width:40%;
-}
-.template ul li{
-  display: inline;
-  padding-left:3%;
+  width:100%;
+  display:flex;
+  justify-content: center;
+  align-items:center;
 }
 .just{
+  width:200px;
+  margin:0 1%;
+  text-align:center;
+}
+/* .just{
   padding-left:2% !important;
 }
 .just0{
@@ -91,13 +106,16 @@ a:hover{
 }
 .just2{
   padding-left:2% !important;
+} */
+.just3{
+  padding-bottom:20px;
 }
 .home{
   font-size: 20px;
   color: rgb(255, 255, 255);
   padding: 10px;
   padding-right:0;
-  padding-left:10px;
+  padding-left:0;
   font-weight:bold;
   border-bottom:3px solid white;
 }
@@ -196,6 +214,7 @@ a:hover{
 
 
 
+
 input {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -206,10 +225,13 @@ input {
   border-radius: 5px;
 }
 .searchForm {
-  width:50%;
+  width:500px;
   height:50px;
-  margin: 15% 25% 8%; 
+  margin:5% auto;
+  margin-bottom:2.5%;
   position: relative;
+  /* display:flex;
+  justify-content: center; */
 }
 .searchForm-input {
   width: 85%;
@@ -321,17 +343,17 @@ div ul li a:hover{
 }
 
 .setumei{
-  width:50%;
+  width:850px;
   margin:50px auto;
-  font-size:25px;
+  font-size:28px;
   font-weight: bold;
-  padding-top:80px;
+  padding-top:50px;
   color:rgb(22, 22, 90);
   /* -webkit-text-stroke: 1px rgb(255, 254, 254); */
 }
 .list1{
   color:rgb(22, 22, 90);
-  font-size:15px;
+  font-size:18px;
   padding-right:15px;
 }
 .list2{
@@ -339,19 +361,19 @@ div ul li a:hover{
   padding-left:15px;
   padding-right:15px;
   color:rgb(22, 22, 90);
-  font-size:16px;
+  font-size:18px;
 }
 .list3{
   border-left:1px solid rgb(22, 22, 90);
   padding-left:15px;
   color:rgb(22, 22, 90);
-  font-size:16px;
+  font-size:18px;
 }
-.one{
+/* .one{
   width:40%;
   height:780px;
   margin:0 auto;
-}
+} */
 .ul2{
   padding-top:30px;
   margin: 0 auto;
@@ -364,7 +386,7 @@ div ul li a:hover{
 
 
 .sikaku{
-  width:15%;
+  width:160px;
 }
 
 .sikaku:hover{
