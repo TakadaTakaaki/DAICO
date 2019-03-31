@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../../css/setting/contact.css">
+        <link rel="shortcut icon" href="../../picture/favicon.ico">
+        <title>【DAICO】代行業を一括で検索・比較出来るサイト</title>
+        <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="../register/after-registration.html" class="login2"><i class="fas fa-user-circle"></i>   新規会員登録(無料)</a>
+                <a class="login" id="login-show"><i class="fas fa-sign-in-alt"></i> ログイン</a>
+            </div>
+        </header>
+            <div class="login-modal-wrapper" id="login-modal">
+              <div class="modal">
+                <div class="close-modal">
+                    <i class="fa fa-2x fa-times"></i>
+                </div>
+                <div id="login-form">
+                  <h2>Emailログイン</h2>
+                  <form action="#">
+                    <input class="form-control" type="text" placeholder="メールアドレス">
+                    <input class="form-control" type="password" placeholder="パスワード">
+                    <a href="after-login.html"><div id="submit-btn">ログイン</div></a>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <nav class="template">
+                <ul id="menu">
+                    <li class="just0"><a href="../favorite/favorite.html" class="favorite"><i class="far fa-heart"></i>  お気に入り</a></li>
+                    <li class="just2"><a href="../notification/store.html" class="notice"><i class="far fa-envelope"></i>  通知</a></li>
+                    <li><a href="../home/before-login.html" class="home"><img src="../../picture/daico.png" class="daico"></a></li>
+                    <li class="just"><a href="../order-history/order.html" class="order-history"><i class="fas fa-history"></i>  注文履歴</a></li>
+                    <li><a href="../setting/setting.html" class="my-page"><i class="fas fa-cogs"></i>  設定</a></li>
+                </ul>
+            </nav>
+        <div class="flex1">
+            <div class="last">
+                <div class="name">
+                    <p class="name1">お問い合わせ</p>
+                </div>
+                <div class="info">
+                    <div class="cp_ipradio">
+                        <div class="menwomen">
+                            <div class="sikiri">お問い合わせの種類</div>
+                            <div class="box">
+                                <input type="radio" id="radio1" name="cpipr01" />
+                                <label for="radio1">ご注文について</label>
+                                <input type="radio" id="radio2" name="cpipr01" />
+                                <label for="radio2">会員情報について</label>
+                                <input type="radio" id="radio3" name="cpipr01" />
+                                <label for="radio3">ご利用方法について</label>
+                                <input type="radio" id="radio4" name="cpipr01" />
+                                <label for="radio4">その他</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nameform">
+                        <div class="sikiri">お問い合わせの内容</div>
+                        <div class="flexbox01">
+                            <textarea name="example" cols="50" rows="10"></textarea>
+                        </div>
+                    </div>
+                    <div class="nameform">
+                        <div class="sikiri">お名前</div>
+                        <div class="cp_iptxt">
+                            <input type="text" placeholder="お名前">
+                            <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="tellphone">
+                        <label for="i_tel"><div class="sikiri">電話番号</div></label>
+                        <div class="flexbox01">
+                            <input id="i_tel" type="tel" name="tel" value="" inputmode="tel" placeholder="080-1234-5678">
+                        </div>
+                    </div>   
+                    <div class="mailform">
+                        <div class="sikiri">メールアドレス</div>
+                        <div class="flexbox01">
+                            <input id="i_tel" type="text" name="email" value="" style="ime-mode:disabled" placeholder="localname@domain.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="メールアドレス" required />
+                        </div>
+                    </div>
+                    <div class="buton">
+                        <a href="../home/before-login.html" class="click"><button type="button" class="buton4">送信してHOMEへ</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="favorite.js"></script>
+        <script src="../../javascript/login.js"></script>
+    </body>
+</html>
