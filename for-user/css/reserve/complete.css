@@ -1,6 +1,6 @@
 body{
   margin:0px;
-  background-color:rgb(238, 234, 234);
+  background-color:rgb(255, 255, 255);
   /* background-image: url("mori.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -22,15 +22,24 @@ a:hover{
   color:rgb(197, 196, 196);
 }
 .logo{
-  width:83%;
-  height:50px;
-  margin-right:450px;
+  width:100%;
+  height:auto;
+  padding-top:30px;
+  padding-bottom:30px;
+  display:flex;
+  justify-content: flex-end;
+}
+.logo0{
+  margin-right:1%;
+  margin-left:60%;
+}
+.logo00{
+  margin-right:5%;
 }
 .daico{
   width:194px;
   height:56px;
   padding-top:10px;
-  margin-right:0;
 }
 .top-logo{
   font-size: 30px;
@@ -40,7 +49,7 @@ a:hover{
   color:white;
   background-color: rgb(255, 187, 0);
   font-size: 15px;
-  margin-top:40px;
+  /* margin-top:40px; */
   margin-right:10px;
   float: right;
   text-align:center;
@@ -56,7 +65,7 @@ a:hover{
   color:white;
   background-color: rgb(48, 182, 245);
   font-size: 15px;
-  margin-top:40px;
+  /* margin-top:40px; */
   float: right;
   text-align:center;
   border-radius:10%;
@@ -69,22 +78,28 @@ a:hover{
 .template{
   width:100%;
   background-color:rgb(17, 17, 51);
+  display: flex;
+  justify-content: center;
 }
-.template ul{
-  margin:0 auto;
+.template #menu{
   list-style: none;
-  height: 130px;
+  height: auto;
+  padding-bottom:30px;
   padding-top: 0px;
   /* border-top: solid 1px #000; */
   /* border-bottom: solid 1px #000; */
   padding-left:0;
-  width:40%;
-}
-.template ul li{
-  display: inline;
-  padding-left:3%;
+  width:100%;
+  display:flex;
+  justify-content: center;
+  align-items:center;
 }
 .just{
+  width:200px;
+  margin:0 1%;
+  text-align:center;
+}
+/* .just{
   padding-left:2% !important;
 }
 .just0{
@@ -92,17 +107,18 @@ a:hover{
 }
 .just2{
   padding-left:2% !important;
-}
-.left0{
-  padding-left:0 !important;
+} */
+.just3{
+  padding-bottom:20px;
 }
 .home{
   font-size: 20px;
   color: rgb(255, 255, 255);
   padding: 10px;
   padding-right:0;
-  padding-left:0px;
+  padding-left:0;
   font-weight:bold;
+  border-bottom:3px solid white;
 }
 .favorite{
   font-size: 20px;
@@ -189,6 +205,7 @@ a:hover{
   margin: 10px auto;
   cursor: pointer;
 }
+
 
 
 
@@ -615,4 +632,186 @@ label{
 .lastmessage{
   margin-bottom:30px;
   font-weight:bold;
+}
+
+
+
+
+
+@media screen and (min-width:1024px){
+  /* 1024px以上の幅の都合に適応される */
+  .homebox{
+    display:none;
+  }
+  .get{
+    display:flex;
+  }
+  .logo0{
+    margin-left:0;
+  }
+  .login2{
+    font-size:12px;
+    width:130px;
+    height:20px;
+  }
+  .login{
+    font-size:12px;
+    width:100px;
+    height:20px;
+  }
+  .logo{
+    padding-bottom:0;
+  }
+  .just4{
+    display:none;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px){
+  /* 768px~1024pxまでの幅の場合に適応される */
+  .homebox{
+    display:none;
+  }
+  .get{
+    display:flex;
+  }
+  .logo0{
+    margin-left:0;
+  }
+  .login2{
+    font-size:12px;
+    width:130px;
+    height:20px;
+  }
+  .login{
+    font-size:12px;
+    width:100px;
+    height:20px;
+  }
+  .logo{
+    padding-bottom:0;
+  }
+  .just4{
+    display:none;
+  }
+  .just{
+    margin:0 0;
+    font-size:15px;
+  }
+  .daico{
+    width:140px;
+  }
+  .setumei{
+    width:500px;
+  }
+  .textbox{
+    display:inline-block;
+  }
+  .sikaku{
+    width:140px;
+  }
+  .searchForm{
+    margin:10% auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* 767pxまでの幅の場合に適応される */
+  .logo{
+    display:flex;
+    justify-content: flex-end;
+  }
+  .homebox{
+    width:150px;
+    height:50px;
+    margin-right:auto;
+    margin-left:3%;
+  }
+  .homebox1{
+    width:100%;
+    height:100%;
+  }
+  .get{
+    display:flex;
+    flex-direction: column;
+  }
+  .login2{
+    font-size:10px;
+    width:111px;
+  }
+  .logo0{
+    margin-bottom:5px;
+    margin-right:5%;
+    margin-left:0;
+  }
+  .login{
+    font-size:10px;
+    width:111px;
+    margin-right:0;
+  }
+  .template{
+    position:fixed;
+    left:0;
+    bottom:0;
+    height:50px;
+    z-index: 100;
+    background-color:rgb(255, 227, 144);
+    border-top:1px solid gray;
+  }
+  #menu i{
+    display:block;
+    font-size:20px;
+    color:gray;
+  }
+  .sp{
+    display:block;
+    font-size:10px;
+    color:gray;
+  }
+  .daico{
+    width:100px;
+  }
+  .just{
+    height:60px;
+  }
+  .just3{
+    display:none;
+  }
+  #menu{
+    padding-bottom:10px;
+  }
+  .setumei{
+    width:350px;
+    font-size:20px;
+    padding-top:0;
+  }
+  .textbox{
+    display:block;
+  }
+  .searchForm{
+    width:300px;
+  }
+  .list1{
+    font-size:12px;
+    width:100px;
+    padding-right:10px;
+  }
+  .list2{
+    font-size:12px;
+    width:100px;
+    padding-left:10px;
+    padding-right:10px;
+  }
+  .list3{
+    font-size:12px;
+    width:100px;
+    padding-left:10px;
+  }
+  .sikaku1{
+    display:none;
+  }
+  .ul2{
+    padding-top:0;
+    margin-bottom:50px;
+  }
 }

@@ -3,16 +3,26 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="../../css/home/after-login.css">
-        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="shortcut icon" href="../../picture/favicon.ico">
         <title>【DAICO】代行業を一括で検索・比較出来るサイト</title>
         <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
     </head>
     <body>
             <header>
                     <div class="logo">
-                        <a href="" class="login2"><i class="fas fa-user-circle"></i> 高田崇照様  </a>
-                        <a class="login" id="login-show">　ようこそ</a>
+                        <div class="homebox">
+                            <a href="../home/before-login.html"><img src="../../picture/daico.png" class="homebox1"></a>
+                        </div>
+                        <div class="get">
+                            <div class="logo0">
+                                <a href="../register/after-registration.html" class="login2"><i class="fas fa-user-circle"></i>   ようこそ</a>
+                            </div>
+                            <div class="logo00">
+                                <a class="login" id="login-show"><i class="fas fa-sign-in-alt"></i> 高田　崇照様</a>
+                            </div>
+                        </div>
                     </div>
                 </header>
                     <div class="login-modal-wrapper" id="login-modal">
@@ -25,30 +35,31 @@
                           <form action="#">
                             <input class="form-control" type="text" placeholder="メールアドレス">
                             <input class="form-control" type="password" placeholder="パスワード">
-                            <a href="../home/after-login.html"><div id="submit-btn">ログイン</div></a>
+                            <a href="after-login.html"><div id="submit-btn">ログイン</div></a>
                           </form>
                         </div>
                       </div>
                     </div>
                     <nav class="template">
-                        <ul>
-                            <li class="just0"><a href="../favorite/favorite.html" class="favorite"><i class="far fa-heart"></i>  お気に入り</a></li>
-                            <li class="just2"><a href="../notification/store.html" class="notice"><i class="far fa-envelope"></i>  通知</a></li>
-                            <li><a href="../home/before-login.html" class="home"><img src="../../picture/daico.png" class="daico"></a></li>
-                            <li class="just"><a href="../order-history/order.html" class="order-history"><i class="fas fa-history"></i>  注文履歴</a></li>
-                            <li><a href="../setting/setting.html" class="my-page"><i class="fas fa-cogs"></i>  設定</a></li>
-                        </ul>
+                        <div id="menu">
+                            <div class="just"><a href="../favorite/favorite.html" class="favorite"><i class="far fa-heart"></i>  <span class="sp">お気に入り</span></a></div>
+                            <div class="just"><a href="../notification/store.html" class="notice"><i class="far fa-envelope"></i>  <span class="sp">通知</span></a></div>
+                            <div class="just3"><a href="../home/before-login.html" class="home"><span class="sp"><img src="../../picture/daico.png" class="daico"></span></a></div>
+                            <div class="just just4"><a href="../home/before-login.html" class="favorite"><i class="fas fa-home"></i><span class="sp">ホーム</span></a></div>
+                            <div class="just"><a href="../order-history/order.html" class="order-history"><i class="fas fa-history"></i>  <span class="sp">注文履歴</span></a></div>
+                            <div class="just"><a href="../setting/setting.html" class="my-page"><i class="fas fa-cogs"></i>  <span class="sp">設定</span></a></div>
+                        </div>
                     </nav>
         <div class="one">
             <div class="logo2">
                 <p class="setumei">
-                    国内600社以上の代行会社を<br>
-                    検索・比較・予約できるサイト！
+                    <span class="textbox">国内600社以上の代行会社を</span>
+                    <span class="textbox">検索・比較・予約できるサイト！</span>
                 </p>
-                <ul>
-                    <li class="list1"><i class="fas fa-search"></i>ジャンル検索で代行会社を比較</li>
-                    <li class="list2"><i class="far fa-eye"></i>価格順で一目で比較</li>
-                    <li class="list3"><i class="far fa-handshake"></i>サイト内で予約が完了</li>
+                <ul class="textsize">
+                    <li class="list1"><i class="fas fa-search"></i><span class="textbox">ジャンル検索で</span><span class="textbox">代行会社を比較</span></li>
+                    <li class="list2"><i class="far fa-eye"></i><span class="textbox">価格順で</span><span class="textbox">一目で比較</span></li>
+                    <li class="list3"><i class="far fa-handshake"></i><span class="textbox">サイト内で</span><span class="textbox"><span class="textbox">予約が完了</span></li>
                 </ul>
             </div>
             <div class="searchForm">
@@ -57,20 +68,21 @@
             </div>
             <div>
                 <ul>
-                　　<li><a class=”current” href="../search-result/search.html"><img src="../../picture/kazi.png" class="maru"><p class="ico">家事代行</p></a></li>
-                　　<li><a href="../search-result/search.html"><img src="../../picture/ikuzi.jpg" class="maru"><p class="ico">育児代行</p></a></li>
-                　　<li><a href="../search-result/search.html"><img src="../../picture/souzi.jpg" class="maru"><p class="ico">掃除代行</p></a></li>
-                　　<li><a href="../search-result/search.html"><img src="../../picture/riazyu.png" class="maru"><p class="ico">友達代行</p></a></li>
-                　　<li><a href="../search-result/search.html"><img src="../../picture/oko.jpg" class="maru"><p class="ico">叱り代行</p></a></li>
+                　　<li class="sikaku"><a class=”current” href="../search-result/search.html"><img src="../../picture/kazi.png" class="maru"><p class="ico">家事代行</p></a></li>
+                　　<li class="sikaku"><a href="../search-result/search.html"><img src="../../picture/ikuzi.jpg" class="maru"><p class="ico">育児代行</p></a></li>
+                　　<li class="sikaku"><a href="../search-result/search.html"><img src="../../picture/souzi.jpg" class="maru"><p class="ico">掃除代行</p></a></li>
+                　　<li class="sikaku"><a href="../search-result/search.html"><img src="../../picture/riazyu.png" class="maru"><p class="ico">友達代行</p></a></li>
+                　　<li class="sikaku sikaku1"><a href="../search-result/search.html"><img src="../../picture/oko.jpg" class="maru"><p class="ico">叱り代行</p></a></li>
                 </ul>
                 <ul class="ul2">
-                　　<li><a class=”current” href="../search-result/search.html"><img src="../../picture/disney.jpg" class="maru"><p class="ico">夢国代行</p></a></li>
-                　　<li><a href="../search-result/search.html"><img src="../../picture/car.jpg" class="maru"><p class="ico">運転代行</p></a></li>
-                　　<li><a href="../search-result/search.html"><img src="../../picture/youtube.png" class="maru"><p class="ico">撮影代行</p></a></li>
-                　　<li><a href="../search-result/search.html"><img src="../../picture/super.jpg" class="maru"><p class="ico">相方代行</p></a></li>
-                　　<li><a href="../search-result/search.html"><img src="../../picture/inu.jpg" class="maru"><p class="ico">散歩代行</p></a></li>
+                　　<li class="sikaku"><a class=”current” href="../search-result/search.html"><img src="../../picture/disney.jpg" class="maru"><p class="ico">夢国代行</p></a></li>
+                　　<li class="sikaku"><a href="../search-result/search.html"><img src="../../picture/car.jpg" class="maru"><p class="ico">運転代行</p></a></li>
+                　　<li class="sikaku"><a href="../search-result/search.html"><img src="../../picture/youtube.png" class="maru"><p class="ico">撮影代行</p></a></li>
+                　　<li class="sikaku"><a href="../search-result/search.html"><img src="../../picture/super.jpg" class="maru"><p class="ico">相方代行</p></a></li>
+                　　<li class="sikaku sikaku1"><a href="../search-result/search.html"><img src="../../picture/inu.jpg" class="maru"><p class="ico">散歩代行</p></a></li>
                 </ul>
             </div>
         </div>
+        <script src="../../javascript/login.js"></script>
     </body>
 </html>
