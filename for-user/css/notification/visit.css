@@ -118,7 +118,6 @@ a:hover{
   padding-right:0;
   padding-left:0;
   font-weight:bold;
-  border-bottom:3px solid white;
 }
 .favorite{
   font-size: 20px;
@@ -137,6 +136,7 @@ a:hover{
   color: rgb(255, 255, 255);
   padding: 10px;
   font-weight:bold;
+  border-bottom:3px solid white;
 }
 .my-page{
   font-size: 20px;

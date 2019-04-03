@@ -157,14 +157,12 @@ a:hover{
 }
 
 .modal {
-  position: absolute;
-  top: 20%;
-  left: 34%;
+  margin:18% auto;
   background-color: #e6ecf0;
   padding: 20px 0 40px;
   border-radius: 10px;
   width: 450px;
-  height: auto;
+  height: 300px;
   text-align: center;
 }
 
@@ -172,8 +170,9 @@ a:hover{
   position: absolute;
   top: 12px;
   right: 12px;
-  color: rgba(128, 128, 128, 0.46);
+  color: rgba(255, 255, 255);
   cursor: pointer;
+  font-size:20px;
 }
 
 #signup-form, #login-form {
@@ -198,10 +197,11 @@ a:hover{
 #submit-btn {
   display: inline-block;
   padding: 14px 140px;
-  background-color: #5dca88;
+  background-color: #f3e34f;
   border: none;
   border-radius: 3px;
-  color: white;
+  color: gray;
+  font-weight: bold;
   margin: 10px auto;
   cursor: pointer;
 }
@@ -480,6 +480,9 @@ div ul li a:hover{
   .searchForm{
     margin:10% auto;
   }
+  .modal{
+    margin:30% auto;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -580,6 +583,23 @@ div ul li a:hover{
   .ul2{
     padding-top:0;
     margin-bottom:50px;
+  }
+  .modal{
+    margin:50% auto;
+    width:300px;
+    height:200px;
+  }
+  #login-form input{
+    width:200px;
+    margin-bottom:10px;
+  }
+  #submit-btn{
+    width:200px;
+    padding:10px 14px;
+    margin-top:0;
+  }
+  #login-form h2{
+    margin-bottom:20px;
   }
 }
 
