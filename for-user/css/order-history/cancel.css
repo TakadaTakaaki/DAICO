@@ -9,7 +9,7 @@ body{
 }
 header{
   width:100%;
-  background-color:rgb(17, 17, 51);
+  background-color:rgb(201, 191, 172);
 }
 
 
@@ -30,11 +30,14 @@ a:hover{
   justify-content: flex-end;
 }
 .logo0{
-  margin-right:1%;
+  margin-right:3%;
   margin-left:60%;
 }
 .logo00{
-  margin-right:5%;
+  margin-right:10%;
+}
+.get{
+  margin-right:24%;
 }
 .daico{
   width:194px;
@@ -47,7 +50,7 @@ a:hover{
 }
 .login{
   color:white;
-  background-color: rgb(255, 187, 0);
+  /* background-color: rgb(255, 187, 0); */
   font-size: 15px;
   /* margin-top:40px; */
   margin-right:10px;
@@ -56,28 +59,30 @@ a:hover{
   cursor:pointer;
   border-radius:10%;
   padding:2.5px 5px;
+  border:1px solid rgb(245, 244, 244);
 }
 .login:hover{
   background-color:rgb(253, 219, 123);
-  color:gray;
+  color:rgb(87, 86, 86);
 }
 .login2{
   color:white;
-  background-color: rgb(48, 182, 245);
+  /* background-color: rgb(48, 182, 245); */
   font-size: 15px;
   /* margin-top:40px; */
   float: right;
   text-align:center;
   border-radius:10%;
   padding:2.5px 5px;
+  border:1px solid rgb(245, 244, 244);
 }
 .login2:hover{
   background-color:rgb(146, 217, 250);
-  color:gray;
+  color:rgb(87, 86, 86);
 }
 .template{
   width:100%;
-  background-color:rgb(17, 17, 51);
+  background-color:rgb(201, 191, 172);
   display: flex;
   justify-content: center;
 }
@@ -119,11 +124,19 @@ a:hover{
   padding-left:0;
   font-weight:bold;
 }
+.home:hover{
+  color:white;
+  border-bottom:3px solid white;
+}
 .favorite{
   font-size: 20px;
   color: rgb(255, 255, 255);
   padding: 10px;
   font-weight:bold;
+}
+.favorite:hover{
+  color:white;
+  border-bottom:3px solid white;
 }
 .order-history{
   font-size: 20px;
@@ -132,17 +145,29 @@ a:hover{
   font-weight:bold;
   border-bottom:3px solid white;
 }
+.order-history:hover{
+  color:white;
+  border-bottom:3px solid white;
+}
 .notice{
   font-size: 20px;
   color: rgb(255, 255, 255);
   padding: 10px;
   font-weight:bold;
 }
+.notice:hover{
+  color:white;
+  border-bottom:3px solid white;
+}
 .my-page{
   font-size: 20px;
   color: rgb(255, 255, 255);
   padding: 10px;
   font-weight:bold;
+}
+.my-page:hover{
+  color:white;
+  border-bottom:3px solid white;
 }
 .login-modal-wrapper {
   position: fixed;
@@ -293,7 +318,7 @@ a:hover{
     color:blue;
     }
     .flex1{
-      width:40%;
+      width:50%;
       margin:30px auto;
       border:1px solid rgb(17, 17, 51);
       }
@@ -302,9 +327,9 @@ a:hover{
     }
     .name{
       height:60px;
-      background-color:rgb(50, 122, 182);
-      color:white;
-      border-bottom:1px solid rgb(17, 17, 51);
+      background-color:rgb(245, 244, 244);
+      color:rgb(99, 77, 47);
+      border-bottom:1px solid gray;
       display:flex;
       }
     .name0{
@@ -323,13 +348,14 @@ a:hover{
     }
     .name2{
     margin:0;
-    padding-left:10%;
+    margin-left:auto;
+    margin-right:30px;
     padding-top:20px;
     font-size:13px;
     text-align:left;
     }
     .ooo{
-      color: rgb(255, 187, 0);
+      color: rgb(250, 18, 95,0.7);
     }
     .heart{
     color:red;
@@ -404,40 +430,49 @@ a:hover{
     padding-left:70px;
     }
     .three{
-      width:40%;
-      margin:10px auto;
-      border-bottom:3px solid rgb(17, 17, 51,0.8);
       display:flex;
-      background-color:rgba(17, 17, 51,0.8);
+      width:50%;
+      margin:20px auto;
+      border-bottom:2px solid gray;
+    }
+    .three1{
+        width:50%;
+        margin:30px auto 10px auto;
+        border-bottom:3px solid gray;
+        display:flex;
+        background-color:rgb(255, 244, 227);
+        }
+        .order1{
+          margin-top:5px;
+          margin-bottom:5px;
+          color:rgb(99, 77, 47);
+          padding-left:30px;
+          font-weight:bold;
+          font-size:15px;
       }
-    .order1{
-        margin-top:5px;
-        margin-bottom:5px;
-        color:white;
-        padding-left:30px;
+      .order2{
+          margin-top:5px;
+          margin-bottom:5px;
+          padding-left:30px;
+          font-size: 15px;
+          color:rgb(117, 104, 106);
+      }
+      .order3{
+          margin-top:5px;
+          margin-bottom:5px;
+          padding-left:30px;
+          font-size:15px;
+      }
+      .now{
+        color:rgb(99, 77, 47);
         font-weight:bold;
-        font-size:13px;
     }
-    .order2{
-        margin-top:5px;
-        margin-bottom:5px;
-        color:blue;
-        padding-left:30px;
-        font-size: 13px;
-    }
-    .order3{
-        margin-top:5px;
-        margin-bottom:5px;
-        color:blue;
-        padding-left:20px;
-        font-size:13px;
-    }
-    .noneorder{
-        color:rgb(30, 191, 255);
-    }
-    .cancer{
-        color:rgb(30,191,255);
-    }
+      .noneorder{
+        color:rgb(2, 2, 109);
+      }
+      .cancer{
+        color:rgb(2, 2, 109);
+      }
     .casi{
         color:blue;
         font-size:14px;
@@ -471,17 +506,20 @@ a:hover{
         padding-left:13px;
         padding-right:13px;
         border-radius:10%;
-        background-color:rgb(247, 213, 62);
+        background-color:rgb(250, 18, 95,0.7);
         outline:none;
         font-size:14px;
         cursor: pointer;
         border:1px solid gray;
+        color:white;
+        font-weight:bold;
     }
     .order8:hover{
-        background-color:rgb(255, 245, 198);
+        background-color:rgb(250, 18, 95,0.4);
     }
     .buton{
-        margin-left:5%;
+        margin-left:auto;
+        margin-right:30px;
         margin-top:20px;
     }
     .buton1{
@@ -513,10 +551,6 @@ a:hover{
         color:white;
         font-size:20px;
       }
-      .now{
-        color:white;
-        font-weight:bold;
-    }
 
 
 

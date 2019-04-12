@@ -9,7 +9,7 @@ body{
 }
 header{
   width:100%;
-  background-color:rgb(17, 17, 51);
+  background-color:rgb(201, 191, 172);
 }
 
 
@@ -30,11 +30,14 @@ a:hover{
   justify-content: flex-end;
 }
 .logo0{
-  margin-right:1%;
+  margin-right:3%;
   margin-left:60%;
 }
 .logo00{
-  margin-right:5%;
+  margin-right:10%;
+}
+.get{
+  margin-right:24%;
 }
 .daico{
   width:194px;
@@ -47,7 +50,7 @@ a:hover{
 }
 .login{
   color:white;
-  background-color: rgb(255, 187, 0);
+  /* background-color: rgb(255, 187, 0); */
   font-size: 15px;
   /* margin-top:40px; */
   margin-right:10px;
@@ -56,28 +59,30 @@ a:hover{
   cursor:pointer;
   border-radius:10%;
   padding:2.5px 5px;
+  border:1px solid rgb(245, 244, 244);
 }
 .login:hover{
   background-color:rgb(253, 219, 123);
-  color:gray;
+  color:rgb(87, 86, 86);
 }
 .login2{
   color:white;
-  background-color: rgb(48, 182, 245);
+  /* background-color: rgb(48, 182, 245); */
   font-size: 15px;
   /* margin-top:40px; */
   float: right;
   text-align:center;
   border-radius:10%;
   padding:2.5px 5px;
+  border:1px solid rgb(245, 244, 244);
 }
 .login2:hover{
   background-color:rgb(146, 217, 250);
-  color:gray;
+  color:rgb(87, 86, 86);
 }
 .template{
   width:100%;
-  background-color:rgb(17, 17, 51);
+  background-color:rgb(201, 191, 172);
   display: flex;
   justify-content: center;
 }
@@ -119,17 +124,29 @@ a:hover{
   padding-left:0;
   font-weight:bold;
 }
+.home:hover{
+  color:white;
+  border-bottom:3px solid white;
+}
 .favorite{
   font-size: 20px;
   color: rgb(255, 255, 255);
   padding: 10px;
   font-weight:bold;
 }
+.favorite:hover{
+  color:white;
+  border-bottom:3px solid white;
+}
 .order-history{
   font-size: 20px;
   color: rgb(255, 255, 255);
   padding: 10px;
   font-weight:bold;
+}
+.order-history:hover{
+  color:white;
+  border-bottom:3px solid white;
 }
 .notice{
   font-size: 20px;
@@ -138,11 +155,19 @@ a:hover{
   font-weight:bold;
   border-bottom:3px solid white;
 }
+.notice:hover{
+  color:white;
+  border-bottom:3px solid white;
+}
 .my-page{
   font-size: 20px;
   color: rgb(255, 255, 255);
   padding: 10px;
   font-weight:bold;
+}
+.my-page:hover{
+  color:white;
+  border-bottom:3px solid white;
 }
 .login-modal-wrapper {
   position: fixed;
@@ -293,22 +318,22 @@ a:hover{
     color:blue;
     }
     .flex1{
-    width:40%;
+    width:50%;
     margin:10px auto;
-    border:1px solid rgba(17, 17, 51);
+    border:1px solid gray;
     }
     .last{
     width:100%;
     }
     .name{
     height:60px;
-    background-color:rgb(50, 122, 182);
-    color:white;
+    background-color:rgb(245, 244, 244);
+    color:rgb(99, 77, 47);
     font-weight:bold;
     display:flex;
     }
     .name:hover{
-      background-color:rgb(125, 159, 187);
+      background-color:rgba(190, 182, 187,0.5);
     }
     .name0{
     margin:7px 25px 4px 25px;
@@ -417,12 +442,11 @@ a:hover{
     padding-left:70px;
     }
     .three{
-      width:40%;
-      margin:10px auto;
-      border-bottom:3px solid rgb(17, 17, 51,0.8);
       display:flex;
-      background-color:rgba(17, 17, 51,0.8);
-      }
+      width:50%;
+      margin:20px auto;
+      border-bottom:2px solid gray;
+    }
     .three1{
         width:50%;
         margin:30px auto 10px auto;
@@ -441,23 +465,22 @@ a:hover{
     .order2{
         margin-top:5px;
         margin-bottom:5px;
-        color:blue;
         padding-left:30px;
-        font-size: 13px;
+        font-size: 15px;
     }
     .order3{
         margin-top:5px;
         margin-bottom:5px;
-        color:white;
+        color:rgb(117, 104, 106);
+        padding-left:30px;
         font-weight:bold;
-        padding-left:20px;
-        font-size:13px;
+        font-size:15px;
     }
     .noneorder{
-        color:rgb(30, 191, 255);
+      color:rgb(2, 2, 109);
     }
     .cancer{
-        color:rgb(30,191,255);
+         color:rgb(2, 2, 109);
     }
     .casi{
         color:blue;
@@ -534,24 +557,21 @@ a:hover{
 
 
     #navi_footer{
-      width:50%;
-      margin:30px auto;
       text-align:center;
-  }
+      margin-left:auto;
+    }
     .page1{
       padding:2px;
-      border:1px solid rgb(17, 17, 51);
       background-color:rgb(255, 255, 255);
       font-size:12px;
-      color:blue;
-  }
-  .page3{
+      color:gray;
+    }
+    .page3{
       padding:2px;
-      border:1px solid rgb(17, 17, 51);
       background-color:rgb(255, 255, 255);
       font-size:12px;
-      color:blue;
-  }
+      color:rgb(2, 2, 109);
+    }
 
 
 

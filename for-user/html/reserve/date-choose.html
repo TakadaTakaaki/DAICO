@@ -4,9 +4,11 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="../../css/reserve/date-choose.css">
         <link rel="shortcut icon" href="../../picture/favicon.ico">
-        <title>【DAICO】代行業を一括で検索・比較出来るサイト</title>
+        <title>【代行エンジン】代行業を一括で検索・比較出来るサイト</title>
         <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../css/slick/slick1.css"/>
+        <link rel="stylesheet" type="text/css" href="../../css/slick/slick-theme1.css"/>
         <meta name="viewport" content="width=device-width,initial-scale=1">
     </head>
     <body>
@@ -44,22 +46,46 @@
                         <div id="menu">
                             <div class="just"><a href="../favorite/favorite.html" class="favorite"><i class="far fa-heart"></i>  <span class="sp">お気に入り</span></a></div>
                             <div class="just"><a href="../notification/store.html" class="notice"><i class="far fa-envelope"></i>  <span class="sp">通知</span></a></div>
-                            <div class="just3"><a href="../home/before-login.html" class="home"><span class="sp"><img src="../../picture/daico.png" class="daico"></span></a></div>
+                            <div class="just3"><a href="../home/before-login.html" class="home"><span class="sp"><img src="../../picture/pinklogo.png" class="daico"></span></a></div>
                             <div class="just just4"><a href="../home/before-login.html" class="favorite"><i class="fas fa-home"></i><span class="sp">ホーム</span></a></div>
                             <div class="just"><a href="../order-history/order.html" class="order-history"><i class="fas fa-history"></i>  <span class="sp">注文履歴</span></a></div>
                             <div class="just"><a href="../setting/setting.html" class="my-page"><i class="fas fa-cogs"></i>  <span class="sp">設定</span></a></div>
                         </div>
                     </nav>
-        <section id="casy">
-                <div class="name">
-                        <img src="../../picture/toy.jpg" class="toy">
-                        <div class="nameming">
-                            <p class="name1"><a href="../company/company-information.html">casy</a></p>
-                        </div>
-                        <button type="button"class="heart">❤</button>
+                <div class="allbox">
+                    <div class="fade">
+                        <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/1.jpg" alt=""></div>
+                        <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/2.jpg" alt=""></div>
+                        <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/3.jpg" alt=""></div>
+                        <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/4.jpg" alt=""></div>
+                        <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/5.jpg" alt=""></div>
+                        <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/6.jpg" alt=""></div>
+                        <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/7.jpg" alt=""></div>
+                        <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/8.jpg" alt=""></div>
                     </div>
+                    <div class="topbox">
+                        <div class="leftbox">
+                            <div class="erea">
+                                <p class="sibuya">渋谷　>　道玄坂・明治通り</p>
+                            </div>
+                            <div class="storename">
+                                <p class="casy"><a href="../company/company-information.html" class="casy1">Casy 【カジー】</a></p>
+                            </div>
+                            <div class="storetype">
+                                <p class="strongpoint">即時予約OK!</p>
+                                <p class="strongpoint1">ポイント加盟店</p>
+                                <p class="strongpoint2">メンズにもオススメ</p>
+                            </div>
+                        </div>
+                        <div class="rightbox">
+                            <div class="bottonbox">
+                                <p class="favoriteadd"><button type="button"class="heart"><i class="far fa-heart"></i>  お気に入り</button></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             <ol class="step">
-                <li>メニュー選択</li>
+                <li>プラン選択</li>
                 <li class="is-current">日時・代行者指定</li>
                 <li>お客様情報確認</li>
                 <li>予約内容確認</li>
@@ -96,19 +122,29 @@
                             </div>
                         </div>
                     </div>
-                    <div class="three2">
-                            <p class="order1"><a href="../reserve/date.html" class="noneorder">空き状況</a></p>
-                            <p class="order2"><a href="../reserve/date-choose.html" class="now">代行者別空き状況</a></p>
+                    <div class="three">
+                            <p class="order2"><a href="../reserve/date.html" class="noneorder">空き状況</a></p>
+                            <p class="order1">代行者別空き状況</p>
                         </div>
                        <div class="calender">
-                           <img src="../../picture/yamap.jpeg">
                            カレンダー(API)
                        </div>
                        <a href="../reserve/payment-method.html" class="click"><button type="button" class="buton4">お客様情報の確認</button>
             </div>
-        </section>
-        <script src="../../javascript/favorite.js"></script>
-        <script src="../../javascript/order.js"></script>    
-        <script src="../../javascript/login.js"></script>
+            <script src="../../javascript/order.js"></script>    
+            <script src="../../javascript/favorite.js"></script>
+            <script type="text/javascript" src="../../javascript/slick.min.js"></script>
+            <script src="../../javascript/login.js"></script>
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $('.fade').slick({
+                        autoplay: true, //自動再生
+                        dots: true, //ドットのナビゲーションを表示
+                        infinite: true, //スライドのループ有効化
+                        speed: 1000, //切り替えのスピード（小さくすると速くなる）
+                        fade: true, //フェードの有効化
+                    });
+                });
+            </script>
     </body>
 </html>

@@ -9,7 +9,7 @@ body{
 }
 header{
   width:100%;
-  background-color:rgb(17, 17, 51);
+  background-color:rgb(201, 191, 172);
 }
 
 
@@ -30,11 +30,14 @@ a:hover{
   justify-content: flex-end;
 }
 .logo0{
-  margin-right:1%;
+  margin-right:3%;
   margin-left:60%;
 }
 .logo00{
-  margin-right:5%;
+  margin-right:10%;
+}
+.get{
+  margin-right:24%;
 }
 .daico{
   width:194px;
@@ -47,7 +50,7 @@ a:hover{
 }
 .login{
   color:white;
-  background-color: rgb(255, 187, 0);
+  /* background-color: rgb(255, 187, 0); */
   font-size: 15px;
   /* margin-top:40px; */
   margin-right:10px;
@@ -56,28 +59,30 @@ a:hover{
   cursor:pointer;
   border-radius:10%;
   padding:2.5px 5px;
+  border:1px solid rgb(245, 244, 244);
 }
 .login:hover{
   background-color:rgb(253, 219, 123);
-  color:gray;
+  color:rgb(87, 86, 86);
 }
 .login2{
   color:white;
-  background-color: rgb(48, 182, 245);
+  /* background-color: rgb(48, 182, 245); */
   font-size: 15px;
   /* margin-top:40px; */
   float: right;
   text-align:center;
   border-radius:10%;
   padding:2.5px 5px;
+  border:1px solid rgb(245, 244, 244);
 }
 .login2:hover{
   background-color:rgb(146, 217, 250);
-  color:gray;
+  color:rgb(87, 86, 86);
 }
 .template{
   width:100%;
-  background-color:rgb(17, 17, 51);
+  background-color:rgb(201, 191, 172);
   display: flex;
   justify-content: center;
 }
@@ -119,11 +124,19 @@ a:hover{
   padding-left:0;
   font-weight:bold;
 }
+.home:hover{
+  color:white;
+  border-bottom:3px solid white;
+}
 .favorite{
   font-size: 20px;
   color: rgb(255, 255, 255);
   padding: 10px;
   font-weight:bold;
+}
+.favorite:hover{
+  color:white;
+  border-bottom:3px solid white;
 }
 .order-history{
   font-size: 20px;
@@ -131,17 +144,29 @@ a:hover{
   padding: 10px;
   font-weight:bold;
 }
+.order-history:hover{
+  color:white;
+  border-bottom:3px solid white;
+}
 .notice{
   font-size: 20px;
   color: rgb(255, 255, 255);
   padding: 10px;
   font-weight:bold;
 }
+.notice:hover{
+  color:white;
+  border-bottom:3px solid white;
+}
 .my-page{
   font-size: 20px;
   color: rgb(255, 255, 255);
   padding: 10px;
   font-weight:bold;
+}
+.my-page:hover{
+  color:white;
+  border-bottom:3px solid white;
 }
 .login-modal-wrapper {
   position: fixed;
@@ -393,7 +418,7 @@ img{
     font-weight:bold;
     text-align: center;
     color:#fff;
-    background-color:rgb(255, 187, 0);
+    background-color:rgb(250, 121, 164);
     text-shadow: 1px 1px 1px #000;
     border-radius: 10px;
     outline:none;
@@ -401,7 +426,7 @@ img{
     cursor:pointer;
 }
 .styled:hover {
-    background-color:rgb(252, 225, 152);
+    background-color:rgb(248, 164, 192);
 }
 
 
@@ -431,7 +456,7 @@ img{
     .named{
       width:100%;
       height:auto;
-      background-color:rgb(50, 122, 182);
+      background-color:rgb(245, 244, 244);
       border:1px solid gray;
   }
   .para{
@@ -449,7 +474,7 @@ img{
   font-size:18px;
   font-weight:bold;
   text-align:left;
-  color:white;
+  color:rgb(117, 104, 106);
   }
   .action{
     width:90px;

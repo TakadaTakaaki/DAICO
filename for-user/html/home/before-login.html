@@ -4,9 +4,11 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="../../css/home/before-login.css">
         <link rel="shortcut icon" href="../../picture/favicon.ico">
-        <title>【DAICO】代行業を一括で検索・比較出来るサイト</title>
+        <title>【代行エンジン】代行業を一括で検索・比較出来るサイト</title>
         <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../css/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="../../css/slick/slick-theme.css"/>
         <meta name="viewport" content="width=device-width,initial-scale=1">
     </head>
     <body>
@@ -17,7 +19,7 @@
                         </div>
                         <div class="get">
                             <div class="logo0">
-                                <a href="../register/after-registration.html" class="login2"><i class="fas fa-user-circle"></i>   新規会員登録(無料)</a>
+                                <a class="login2" id="login-show"><i class="fas fa-user-circle"></i>   新規会員登録(無料)</a>
                             </div>
                             <div class="logo00">
                                 <a class="login" id="login-show"><i class="fas fa-sign-in-alt"></i> ログイン</a>
@@ -25,6 +27,21 @@
                         </div>
                     </div>
                 </header>
+                    <div class="login-modal-wrapper" id="login-modal">
+                        <div class="modal">
+                            <div class="close-modal">
+                                <i class="fa fa-2x fa-times"></i>
+                            </div>
+                        <div id="login-form">
+                            <h2>新規会員登録</h2>
+                                <form action="#">
+                                    <input class="form-control" type="text" placeholder="メールアドレス">
+                                    <input class="form-control" type="password" placeholder="パスワード">
+                                    <a href="../../html/register/after-registration.html"><div id="submit-btn">登録</div></a>
+                                </form>
+                        </div>
+                    </div>
+                    </div>
                     <div class="login-modal-wrapper" id="login-modal">
                       <div class="modal">
                         <div class="close-modal">
@@ -44,7 +61,7 @@
                         <div id="menu">
                             <div class="just"><a href="../favorite/favorite.html" class="favorite"><i class="far fa-heart"></i>  <span class="sp">お気に入り</span></a></div>
                             <div class="just"><a href="../notification/store.html" class="notice"><i class="far fa-envelope"></i>  <span class="sp">通知</span></a></div>
-                            <div class="just3"><a href="../home/before-login.html" class="home"><span class="sp"><img src="../../picture/daico.png" class="daico"></span></a></div>
+                            <div class="just3"><a href="../home/before-login.html" class="home"><span class="sp"><img src="../../picture/pinklogo.png" class="daico"></span></a></div>
                             <div class="just just4"><a href="../home/before-login.html" class="favorite"><i class="fas fa-home"></i><span class="sp">ホーム</span></a></div>
                             <div class="just"><a href="../order-history/order.html" class="order-history"><i class="fas fa-history"></i>  <span class="sp">注文履歴</span></a></div>
                             <div class="just"><a href="../setting/setting.html" class="my-page"><i class="fas fa-cogs"></i>  <span class="sp">設定</span></a></div>
@@ -53,7 +70,7 @@
         <div class="one">
             <div class="logo2">
                 <p class="setumei">
-                    <span class="textbox">国内600社以上の代行会社を</span>
+                    <span class="textbox">国内1000社以上の代行会社を</span>
                     <span class="textbox">検索・比較・予約できるサイト！</span>
                 </p>
                 <ul class="textsize">
@@ -61,6 +78,17 @@
                     <li class="list2"><i class="far fa-eye"></i><span class="textbox">価格順で</span><span class="textbox">一目で比較</span></li>
                     <li class="list3"><i class="far fa-handshake"></i><span class="textbox">サイト内で</span><span class="textbox"><span class="textbox">予約が完了</span></li>
                 </ul>
+                <p class="blogall"><a href="#" class="color">ブログ一覧へ</a></p>
+                <div class="multiple">
+                    <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/1.jpg" alt=""><p class="blogright">１時間５００円からの激安店舗!!</p></div>
+                    <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/2.jpg" alt=""><p class="blogright">１時間５００円からの激安店舗!!</p></div>
+                    <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/3.jpg" alt=""><p class="blogright">１時間５００円からの激安店舗!!</p></div>
+                    <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/4.jpg" alt=""><p class="blogright">１時間５００円からの激安店舗!!</p></div>
+                    <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/5.jpg" alt=""><p class="blogright">１時間５００円からの激安店舗!!</p></div>
+                    <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/6.jpg" alt=""><p class="blogright">１時間５００円からの激安店舗!!</p></div>
+                    <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/7.jpg" alt=""><p class="blogright">１時間５００円からの激安店舗!!</p></div>
+                    <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/8.jpg" alt=""><p class="blogright">１時間５００円からの激安店舗!!</p></div>
+                </div>
             </div>
             <div class="searchForm">
                 <input class="searchForm-input" type="text" placeholder="ジャンルを検索してください">
@@ -83,6 +111,31 @@
                 </ul>
             </div>
         </div>
+        <script type="text/javascript" src="../../javascript/slick.min.js"></script>
         <script src="../../javascript/login.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.multiple').slick({
+                    autoplay: true, //自動再生
+                    infinite: true, //スライドのループ有効化
+                    dots: true, //ドットのナビゲーションを表示
+                    slidesToShow: 3, //表示するスライドの数
+                    slidesToScroll: 3, //スクロールで切り替わるスライドの数
+                    responsive: [{
+                    breakpoint: 768, //ブレークポイントが768px
+                    settings: {
+                        slidesToShow: 3, //表示するスライドの数
+                        slidesToScroll: 3, //スクロールで切り替わるスライドの数
+                    }
+                    }, {
+                    breakpoint: 480, //ブレークポイントが480px
+                    settings: {
+                        slidesToShow: 2, //表示するスライドの数
+                        slidesToScroll: 2, //スクロールで切り替わるスライドの数
+                    }
+                    }]
+                });
+            });
+        </script>
     </body>
 </html>
