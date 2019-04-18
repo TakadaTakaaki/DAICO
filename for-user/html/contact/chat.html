@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+        <header>
+                <div class="logo">
+                    <div class="homebox">
+                        <a href="../home/before-login.html"><img src="../../picture/daico.png" class="homebox1"></a>
+                    </div>
+                    <div class="get">
+                            <div class="logo0">
+                                <a class="login2" id="login-show"><i class="fas fa-user-circle"></i>   新規会員登録(無料)</a>
+                            </div>
+                            <div class="logo00">
+                                <a class="login" id="login-show2"><i class="fas fa-sign-in-alt"></i> ログイン</a>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div class="login-modal-wrapper" id="login-modal">
+                    <div class="modal">
+                        <div class="close-modal">
+                            <i class="fa fa-2x fa-times"></i>
+                        </div>
+                        <div id="login-form">
+                            <h2>新規会員登録</h2>
+                            <form action="#">
+                                <input class="form-control" type="text" placeholder="名前">
+                                <input class="form-control" type="text" placeholder="メールアドレス">
+                                <input class="form-control" type="password" placeholder="パスワード">
+                                <a href="../../html/register/after-registration.html"><div id="submit-btn">登録</div></a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="login-modal-wrapper" id="login-modal2">
+                    <div class="modal">
+                        <div class="close-modal2">
+                            <i class="fa fa-2x fa-times"></i>
+                        </div>
+                        <div id="login-form">
+                            <h2>Emailログイン</h2>
+                            <form action="#">
+                                <input class="form-control" type="text" placeholder="メールアドレス">
+                                <input class="form-control" type="password" placeholder="パスワード">
+                                <a href="after-login.html"><div id="submit-btn">ログイン</div></a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <nav class="template">
+                    <div id="menu">
+                        <div class="just"><a href="../favorite/favorite.html" class="favorite"><i class="far fa-heart"></i>  <span class="sp">お気に入り</span></a></div>
+                        <div class="just"><a href="../notification/store.html" class="notice"><i class="far fa-envelope"></i>  <span class="sp">通知</span></a></div>
+                        <div class="just3"><a href="../home/before-login.html" class="home"><span class="sp"><img src="../../picture/pinklogo.png" class="daico"></span></a></div>
+                        <div class="just just4"><a href="../home/before-login.html" class="favorite"><i class="fas fa-home"></i><span class="sp">ホーム</span></a></div>
+                        <div class="just"><a href="../order-history/order.html" class="order-history"><i class="fas fa-history"></i>  <span class="sp">注文履歴</span></a></div>
+                        <div class="just"><a href="../setting/setting.html" class="my-page"><i class="fas fa-cogs"></i>  <span class="sp">設定</span></a></div>
+                    </div>
+                </nav>
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../../css/contact/chat.css">
+        <link rel="shortcut icon" href="../../picture/favicon.ico">
+        <title>【代行エンジン】代行業を一括で検索・比較出来るサイト</title>
+        <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../css/slick/slick1.css"/>
+        <link rel="stylesheet" type="text/css" href="../../css/slick/slick-theme1.css"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+    </head>
+    <body>
+        <div class="flex1">
+            <div class="three"></div>
+            <div class="status">
+                <select class="statuss">
+                    <option value="家事代行についてのご質問">家事代行についてのご質問</option>
+                    <option value="育児代行についてのご質問">育児代行についてのご質問</option>
+                    <option value="掃除・料理代行についてのご質問">掃除・料理代行についてのご質問</option>
+                    <option value="その他">その他</option>
+                    <option value="ご意見・ご要望">ご意見・ご要望</option>
+                </select>
+            </div>
+            <div class="searchForm">
+                <input class="searchForm-input" type="text" placeholder="お問い合わせ内容">
+                <a href="../contact/chat.html"><button class="searchForm-submit" type="submit">送信</button></a>
+            </div>
+            <div class="three2"></div>
+        </div>
+        <script src="../../javascript/favorite.js"></script>
+        <script type="text/javascript" src="../../javascript/slick.min.js"></script>
+        <script src="../../javascript/login.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.fade').slick({
+                    autoplay: true, //自動再生
+                    dots: true, //ドットのナビゲーションを表示
+                    infinite: true, //スライドのループ有効化
+                    speed: 1000, //切り替えのスピード（小さくすると速くなる）
+                    fade: true, //フェードの有効化
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -18,29 +18,45 @@
                             <a href="../home/before-login.html"><img src="../../picture/daico.png" class="homebox1"></a>
                         </div>
                         <div class="get">
-                            <div class="logo0">
-                                <a href="../register/after-registration.html" class="login2"><i class="fas fa-user-circle"></i>   新規会員登録(無料)</a>
+                                <div class="logo0">
+                                    <a class="login2" id="login-show"><i class="fas fa-user-circle"></i>   新規会員登録(無料)</a>
+                                </div>
+                                <div class="logo00">
+                                    <a class="login" id="login-show2"><i class="fas fa-sign-in-alt"></i> ログイン</a>
+                                </div>
                             </div>
-                            <div class="logo00">
-                                <a class="login" id="login-show"><i class="fas fa-sign-in-alt"></i> ログイン</a>
+                        </div>
+                    </header>
+                    <div class="login-modal-wrapper" id="login-modal">
+                        <div class="modal">
+                            <div class="close-modal">
+                                <i class="fa fa-2x fa-times"></i>
+                            </div>
+                            <div id="login-form">
+                                <h2>新規会員登録</h2>
+                                <form action="#">
+                                    <input class="form-control" type="text" placeholder="名前">
+                                    <input class="form-control" type="text" placeholder="メールアドレス">
+                                    <input class="form-control" type="password" placeholder="パスワード">
+                                    <a href="../../html/register/after-registration.html"><div id="submit-btn">登録</div></a>
+                                </form>
                             </div>
                         </div>
                     </div>
-                </header>
-                    <div class="login-modal-wrapper" id="login-modal">
-                      <div class="modal">
-                        <div class="close-modal">
-                            <i class="fa fa-2x fa-times"></i>
+                    <div class="login-modal-wrapper" id="login-modal2">
+                        <div class="modal">
+                            <div class="close-modal2">
+                                <i class="fa fa-2x fa-times"></i>
+                            </div>
+                            <div id="login-form">
+                                <h2>Emailログイン</h2>
+                                <form action="#">
+                                    <input class="form-control" type="text" placeholder="メールアドレス">
+                                    <input class="form-control" type="password" placeholder="パスワード">
+                                    <a href="after-login.html"><div id="submit-btn">ログイン</div></a>
+                                </form>
+                            </div>
                         </div>
-                        <div id="login-form">
-                          <h2>Emailログイン</h2>
-                          <form action="#">
-                            <input class="form-control" type="text" placeholder="メールアドレス">
-                            <input class="form-control" type="password" placeholder="パスワード">
-                            <a href="after-login.html"><div id="submit-btn">ログイン</div></a>
-                          </form>
-                        </div>
-                      </div>
                     </div>
                     <nav class="template">
                         <div id="menu">
@@ -79,9 +95,8 @@
                         </div>
                         <div class="rightbox">
                             <div class="bottonbox">
+                                <p class="favoriteadd"><a href="../contact/chat.html"><button type="button"class="heart8">チャット</button></a></p>
                                 <p class="favoriteadd"><button type="button"class="heart"><i class="far fa-heart"></i>  お気に入り</button></p>
-                            </div>
-                            <div class="bottonbox">
                                 <p class="favoriteadd"><a href="../reserve/plan-all.html"><button type="button"class="heart8">予約・日時指定へ</button></a></p>
                             </div>
                         </div>
@@ -311,6 +326,52 @@
                             <td>　24時間年中無休</td>
                         </tr>
                     </table>
+                        <div class="threethree">
+                            <p class="order7">サービス概要</p>
+                            <div class="service">
+                            <br><em class="naturalinfo">基本情報</em><br>
+                            <br>・毎週1回、お客様の不在時にお伺いして掃除をするサービスです。<br>
+                            ・毎週決まった曜日（平日）にお伺いします。（お伺いする曜日はエリアによって異なります。）<br>
+                            ・部屋の間取りが1R/1K/1DK/1LDK（40㎡未満）が対象となります。（それ以上の場合は個別お見積りいたします）<br>
+                            ・サービスエリアは東京23区となります。<br>
+                            <br><em class="naturalinfo">鍵・貴重品の管理</em><br>
+                            <br>・不在時のサービスの場合、サービス開始時にお客様から合鍵をお預かりします。（鍵は当社にて厳重管理いたします。）<br>
+                            ・万が一のトラブルを回避するために、お部屋にある貴重品は鍵のかかるところに保管してください。<br>
+                            <br><em class="naturalinfo">掃除用具</em><br>
+                            <br>・掃除機（クイックルワイパー）、トイレブラシ、お風呂スポンジ、および洗剤、ゴミ袋などの消耗品は、お客様にご準備頂きます。（買い物代行324円をご利用していただくことも可能です。）<br>
+                            </div>
+                        </div>
+                        <div class="threethree">
+                            <p class="order7">お支払いに関して</p>
+                            <div class="service">
+                            <br>・翌月27日（金融機関が休みの場合は翌営業日）に前月1カ月分の代金を指定口座から引き落とします。<br>
+                            ・サービスのお申し込み時に、口座振替依頼書をご記入いただきます。
+                            </div>
+                        </div>
+                        <div class="threethree">
+                            <p class="order7">キャンセル・解約に関して</p>
+                            <div class="service">
+                            <br><em class="naturalinfo">キャンセル</em><br>
+                            <br>・サービス実施日の1週間前の18時まではキャンセルは無料です。それ以降のキャンセルの場合はキャンセル料として全額頂きます。<br>
+                            <br><em class="naturalinfo">解約</em><br>
+                            <br>・サービス実施日の1週間前の18時までにご解約の申し出があった場合は、翌週からサービスがストップいたします。<br>
+                            </div>
+                        </div>
+                        <div class="threethree">
+                            <p class="order7">セキュリティ対策</p>
+                            <div class="service">
+                            <br><em class="naturalinfo">1. お預かりする鍵にはココセコムを付けて厳重管理をいたします。</em><br>
+                            <br>・お客様から鍵をお預かりする際は、シリアル番号まで記載した「鍵預り証」を発行いたします。（鍵はお客様でご用意願います。当社で複製は行っておりません）<br>
+                            ・お預かりした鍵は、ココセコムに取り付けて、担当スタッフが厳重に管理いたします。万が一盗難・紛失等が起こった場合、ココセコムの位置検索サービスにて即座に場所を把握し、当社スタッフまたはセコムの緊急対処員がかけつけることで被害を最小限におさえます。またその場合、損害賠償請求に関する法律に基づき、必要に応じてお客様のご自宅の鍵をお取替え致します。<br>
+                            ・スタッフには、鍵に第三者がお客様を特定できる情報を記載することや、それらの情報が記載された書類等といっしょに鍵を持ち歩くことを契約により禁止しています<br>
+                            <br><em class="naturalinfo">2. サービス中のスタッフによる物損・紛失事故は、当社が責任を持ちます。</em><br>
+                            <br>・サービス中にサービススタッフの故意または著しい過失によって、お客様宅にある物に損害を与えた場合、事実関係と賠償責任保険に基づいて保険会社から受け取った保険金額を限度として、当社が当該損害を賠償いたします。<br>
+                            ・現金・貴重品・貴金属類、個人情報や機密事項が記載された書類・データ類、金銭で代替することのできない物品等は、サービススタッフの手の届かない保管場所に保管していただくようお願い申し上げます。<br>
+                            <br><em class="naturalinfo">3. 個人情報の取り扱いは、契約と規則により徹底管理いたします。</em><br>
+                            <br>・サービススタッフとは、採用時において顧客情報に関する機密保持契約を結んでおり、お客様情報を外部に漏らすことはございません。また、サービス規約に則った掃除箇所もしくは別途お客様からご指示いただいた掃除箇所以外は絶対に触れることのないように徹底しております。<br>
+                            ・当社は個人情報保護法について、規則の制定及び管理体制の確立に努めております。当社全従業者が遵守すべき行動基準として本個人情報保護方針を定め、その遵守の徹底を図ることといたします。<br>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>
