@@ -6,7 +6,6 @@ body{
     background-attachment: fixed;
     /* background-position: center 130px; */
     /* background-repeat: no-repeat;  */
-    position:relative;
   }
   header{
     width:100%;
@@ -76,6 +75,7 @@ body{
     border-radius:10%;
     padding:2.5px 5px;
     border:1px solid rgb(245, 244, 244);
+    cursor: pointer;
   }
   .login2:hover{
     background-color:rgb(146, 217, 250);
@@ -124,7 +124,6 @@ body{
     padding-right:0;
     padding-left:0;
     font-weight:bold;
-    border-bottom:3px solid white;
   }
   .home:hover{
     color:white;
@@ -320,7 +319,6 @@ body{
       font-size:12px;
       color:blue;
     }
-  
     .last{
       width:100%;
     }
@@ -369,7 +367,7 @@ body{
     }
     .info{
       width:100%;
-      height:auto;
+      height:1050px;
       background-color:white;
       display:flex;
       flex-direction:column;
@@ -384,14 +382,6 @@ body{
     .syousai{
       display:flex;
       flex-direction:column;
-      margin-left:30px;
-      margin-right:30px;
-    }
-    .ikuzi{
-      padding: 10px;
-      width:420px;
-      height:260px;
-      /* flex:0 0 auto; */
     }
     .plan{
       width:100%;
@@ -406,25 +396,15 @@ body{
       font-weight:bold;
       text-align: center;
       color:#fff;
-      background-color: rgb(255, 187, 0);
+      background-color: #FFAAFF;
       text-shadow: 1px 1px 1px #000;
       border-radius: 10px;
       outline:none;
       cursor: pointer;
       margin-top:5px;
-      border:2px solid rgb(17, 17, 51);
     }
     .styled:hover {
-      background-color: rgb(252, 178, 203);
-    }
-    .last1{
-      width:50%;
-      margin:0 auto 10px;
-      border:3px solid gray;
-    }
-    em{
-      color:rgb(206, 5, 5);
-      font-size:20px;
+      background-color: plum;
     }
     .em{
       padding-left:20px;
@@ -432,7 +412,8 @@ body{
     .part{
       display:flex;
       flex-direction:column;
-      margin-left:50px;
+      margin-left:20%;
+      margin-top:3%;
     }
     .money{
       text-align:left;
@@ -458,22 +439,9 @@ body{
       color:blue;
       padding-left:70px;
     }
-    .daimei{
-      width:40%;
-      margin:10px auto;
-      margin-bottom:0;
-    }
-    .faa{
-      width:15%;
-      text-align:center;
-      background-color: rgba(17, 17, 51,0.8);
-      color:white;
-      font-size:20px;
-      margin-bottom:10px;
-    }
   
   
-  .daicomenu{
+    .daicomenu{
       width:100%;
   }
   .daicomenu ul{
@@ -556,56 +524,454 @@ body{
   
   
   
-  table{
-      width: 95%;
-      margin:0px auto;
-      margin-bottom:20px;
-      border-collapse: collapse;
-    }
-    tbody{
-        font-size:12px;
-    }
-    
-    table tr{
-      border: solid 1px gray;
-    }
-    
-    table th{
-      position: relative;
-      text-align: left;
-      width: 12%;
-      background-color: rgb(245, 244, 244);
-      color: rgb(117, 104, 106);
-      text-align: center;
-      padding: 10px 0;
-    }
-    
-    /* table th:after{
-      display: block;
-      content: "";
-      width: 0px;
-      height: 0px;
-      position: absolute;
-      top:calc(50% - 10px);
-      right:-10px;
-      border-left: 10px solid rgb(50, 122, 182);
-      border-top: 10px solid transparent;
-      border-bottom: 10px solid transparent;
-    } */
-    
-    table td{
-      text-align: left;
+  
+  
+  
+  
+  
+  .flex10{
+  width:95%;
+  margin:10px auto;
+  border:1px solid rgb(17, 17, 51);
+  }
+  .three1{
+      display:flex;
+      width:100%;
+      margin:10px;
+      margin-left:20px;
+  }
+  .three2{
+      width:95%;
+      margin:10px 20px 10px;
+      background-color:white;
+  }
+  .order2{
+      margin-top:15px;
+      margin-bottom:5px;
+      color:rgb(187, 83, 83);
+      font-weight:bold;
+      padding-left:30px;
+      font-weight:bold;
+      font-size:13px;
+      background-color:rgba(230, 229, 227, 0.8);
+      padding-top:5px;
+      padding-bottom:5px;
+  }
+  .now{
+      color:black;
+      font-weight:bold;
+  }
+  .now2{
+      color:rgb(187, 83, 83);
+      font-weight:bold;
+  }
+  .namee{
+      height:60px;
+      background-color:rgb(238, 238, 238);
+      color:black;
+      border-bottom:3px solid gray;
+      display:flex;
+  }
+  .namee0{
+      margin:0;
+      padding-left:25px;
+      padding-top:10px;
+      font-size:13px;
+      text-align:left;
+  }
+  .namee1{
+      margin:0;
+      padding-left:45px;
+      padding-top:10px;
+      font-size:13px;
+      text-align:left;
+  }
+  .namee2{
+      margin:0;
+      padding-left:275px;
+      padding-top:20px;
+      font-size:13px;
+      text-align:left;
+  }
+  .ooo{
+      color:blue;
+  }
+  .info2{
+      width:100%;
+      height:175px;
+      background-color:white;
+      display:flex;
+  }
+  .ikuzi{
+      padding: 10px 20px;
+      width:150px;
+      height:100px;
+  }
+  em{
+      font-weight: bold;
+  }
+  .casi{
+      color:blue;
+      font-size:14px;
+  }
+  .planning{
+      color:blue;
+      margin:20px 20px;
+  }
+  .serihu{
+      margin-left:20px;
+      font-size:13px;
+  }
+  .buton{
+      display:flex;
+      flex-direction: column;
+  }
+  .serihu1{
+      font-size:15px;
+      margin-bottom:0;
+      margin-top:3px;
+      color:rgb(97, 73, 30);
+      font-weight:bold;
       padding-left:20px;
-      width: 70%;
-      background-color: rgb(255, 255, 255);
-      padding: 10px 0;
+  }
+  .serihu3{
+      font-size:15px;
+      margin-bottom:0;
+      margin-top:3px;
+      color:rgb(218, 93, 155);
+      font-weight:bold;
+      padding-left:20px;
+  }
+  .serihu2{
+      color:rgb(228, 137, 0);
+      font-size:13px;
+      margin-left:20px;
+      margin-top:0;
+  }
+  .order8{
+      margin-left:20px;
+      padding-top:3px;
+      padding-bottom:3px;
+      padding-left:13px;
+      padding-right:13px;
+      border-radius:10%;
+      background-color:rgb(247, 213, 62);
+      outline:none;
+      font-size:14px;
+      cursor: pointer;
+      border:1px solid gray;
+  }
+  .order8:hover{
+      background-color:rgb(255, 245, 198);
+  }
+  .buton{
+      width:20%;
+      margin-left:auto;
+      background-color:rgb(238, 230, 196);
+  }
+  .click{
+      color:white;
+  }
+  .daimei{
+      width:40%;
+      margin:10px auto;
+      margin-bottom:0;
     }
-  
-  
-  
-    .hello{
-      line-height: 2em
+    .faa{
+      width:15%;
+      text-align:center;
+      background-color: rgba(17, 17, 51,0.8);
+      color:white;
+      font-size:20px;
+      margin-bottom:10px;
     }
+  .sinki{
+      text-align:center;
+      background-color:rgb(252, 122, 144);
+      border-right:3px solid gray;
+      color:white;
+      -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  }
+  .gene{
+      display:flex;
+      flex-direction:column;
+  }
+  .red{
+      width:11%;
+      margin: 7px 25px 4px 25px;
+      padding-right: 10px;
+      padding-left: 10px;
+      font-size: 11px;
+      text-align: center;
+      background-color: rgb(192, 97, 164);
+      border: 1px solid rgb(192, 97, 164);
+      border-radius: 40%;
+      color: white;
+  }
+  .zyouken{
+      display:flex;
+  }
+  .sinki2{
+      text-align:center;
+      background-color:rgb(255, 200, 200);
+      border-right:3px solid gray;
+      color:white;
+      -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  }
+  .suuti{
+      color:rgb(250, 92, 145);
+  }
+  .matome{
+      display:flex;
+      border:1px solid gray;
+  }
+  .menu1{
+      padding-left:30px;
+      padding-bottom:10px;
+      font-size:12px;
+  }
+  .menu2{
+      padding-left:40%;
+  }
+  .menu3{
+      width:15%;
+      margin-left:auto;
+      background-color:rgb(238, 230, 196);
+  }
+  .select{
+      font-size:15px;
+      font-weight:bold;
+      margin-bottom:10px;
+      margin-top:10px;
+  }
+  .simekiri{
+      font-size:12px;
+  }
+  .meizi{
+      color:rgb(233, 96, 96)
+  }
+  .buton2{
+      width:90%;
+      margin:20px 15px auto 8px;
+  }
+  .buton3{
+      width:100%;
+      margin:auto auto; 
+      border-radius: 5%;
+      background-color:rgb(221, 75, 173);
+      border:1px solid gray;
+  }
+  
+  .allstaff{
+      display:flex;
+      flex-wrap:wrap;
+  }
+  .staff1{
+      width:100%;
+      height:200px;
+  }
+  .staff{
+      width:19%;
+      margin-top:30px;
+      margin-bottom:10px;
+      margin-left:40px;
+      margin-right:0;
+  }
+  .hito{
+      font-size:20px;
+  }
+  .yakusyoku{
+      font-size:15px;
+  }
+  .prof{
+      font-size:13px;
+  }
+  .color{
+      color:rgb(15, 15, 134)
+  }
+  
+  
+  
+  
+  
+  
+  .kutikomi{
+      border:1px solid black;
+      background-color:white;
+      width:95%;
+      height:380px;
+      margin:10px 16px;
+  }
+  .ta-tyan{
+      background-color:rgb(245, 244, 244);
+  }
+  .tatyan{
+      display:flex;
+  }
+  .ta-tyan1{
+      color:rgb(250, 92, 145);
+      padding-left:10px;
+      margin-top:5px;
+      margin-bottom:0;
+  }
+  .ta-tyan2{
+      color:rgb(117, 104, 106);
+      padding-left:10px;
+      font-size:12px;
+      margin-top:8px;
+      margin-bottom:0;
+  }
+  .thank1{
+      font-size:14px;
+      padding-left:20px;
+  }
+  .cupon1{
+      background-color:rgb(247, 206, 23);
+      color:white;
+      font-weight:bold;
+      font-size:14px;
+      width:25%;
+      text-align:center;
+      margin-left:20px;
+  }
+  .cupon2{
+      margin-left:20px;
+  }
+  .comment{
+      width:90%;
+      height:200px;
+      border:1px solid gray;
+      margin:10px auto;
+  }
+  
+  
+  .fivestar{
+      margin-top:5px;
+      border-top:2px solid rgb(17, 17, 90);
+      color:rgb(117, 104, 106);
+      text-align:left !important;
+  }
+  .border{
+      border-right:none !important;
+  }
+  .bordercolor{
+      border-right:1px solid rgb(17, 17, 90) !important;
+      padding:0px 45px !important;
+  }
+  .staryellow{
+      color:rgb(247, 206, 23);
+  }
+  
+  .float{
+      width:160px;
+      margin-left:auto;
+      margin-right:20px;
+      text-align:right;
+  }
+  
+  /* モーダルウィンドウのスタイル */
+  .modal03 {
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    display:none;
+    left:0;
+  }
+   
+  /* オーバーレイのスタイル */
+  .overLay1 {
+    position:absolute;
+    top:0;
+    left:0;
+    background-color: rgba(0, 0, 0, 0.6);
+    width:100%;
+    height:100%;
+    z-index:200;
+  }
+   
+  /* モーダルウィンドウの中身のスタイル */
+   .inner0 {
+    position:absolute;
+    z-index:200;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:rgb(0, 0, 0);
+    background-color:#e6ecf0;
+    width: 800px;
+    height: 700px;
+    border-radius:5%;
+  }
+  .inner_p0{
+    width:70%;
+    height:50%;
+    margin: auto;
+    margin-top:20%;
+    font-size:25px;
+  }
+  .modaltoukou1{
+    color:black;
+    display: inline-block;
+    margin: auto;
+    margin-left: 200px;
+    background-color: rgb(247, 213, 62);
+    padding: 14px 40px;
+    border-radius:10%;
+  }
+  @keyframes modal{
+    0% {top:-100%}
+    100% {top:50%}
+  }
+  @keyframes modaltoukou {
+    0% {top:50%}
+    100% {top:100%}
+  } 
+  
+  .evaluation{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+  .evaluation input[type='radio']{
+    display: none;
+  }
+  .evaluation label{
+    position: relative;
+    padding: 10px 10px 0;
+    color: gray;
+    cursor: pointer;
+    font-size: 50px;
+  }
+  .evaluation label .text{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    text-align: center;
+    font-size: 12px;
+    color: gray;
+  }
+  .evaluation label:hover,
+  .evaluation label:hover ~ label,
+  .evaluation input[type='radio']:checked ~ label{
+    color: #ffcc00;
+  }
+  .kutikomi{
+    margin-top: 10px;
+  }
+  .kutikomi2{
+    margin-top: auto;
+    width:50px;
+  }
+  .fa-times:before {
+    content: "\f00d";
+  }
+  
   
   
   
@@ -975,7 +1341,7 @@ body{
     display:flex;
     width:100%;
     margin:20px auto;
-    border-top:2px solid gray;
+    border-bottom:2px solid gray;
   }
   .order1{
     margin-top:5px;
@@ -1217,206 +1583,182 @@ body{
         color:gray;
     }
   
-    @media screen and (min-width:1024px){
-      /* 1024px以上の幅の都合に適応される */
-      .homebox{
-        display:none;
-      }
-      .get{
-        display:flex;
-      }
-      .logo0{
-        margin-left:0;
-      }
-      .login2{
-        font-size:12px;
-        width:130px;
-        height:20px;
-      }
-      .login{
-        font-size:12px;
-        width:100px;
-        height:20px;
-      }
-      .logo{
-        padding-bottom:0;
-      }
-      .just4{
-        display:none;
-      }
-    }
-    
-    @media screen and (max-width: 1024px) and (min-width: 768px){
-      /* 768px~1024pxまでの幅の場合に適応される */
-      .homebox{
-        display:none;
-      }
-      .get{
-        display:flex;
-      }
-      .logo0{
-        margin-left:0;
-      }
-      .login2{
-        font-size:12px;
-        width:130px;
-        height:20px;
-      }
-      .login{
-        font-size:12px;
-        width:100px;
-        height:20px;
-      }
-      .logo{
-        padding-bottom:0;
-      }
-      .just4{
-        display:none;
-      }
-      .just{
-        margin:0 0;
-        font-size:15px;
-      }
-      .daico{
-        width:140px;
-      }
-      .setumei{
-        width:500px;
-      }
-      .textbox{
-        display:inline-block;
-      }
-      .sikaku{
-        width:140px;
-      }
-      .searchForm{
-        margin:10% auto;
-      }
-    }
-    
-    @media screen and (max-width: 767px) {
-      /* 767pxまでの幅の場合に適応される */
-      .logo{
-        display:flex;
-        justify-content: flex-end;
-      }
-      .homebox{
-        width:150px;
-        height:50px;
-        margin-right:auto;
-        margin-left:3%;
-      }
-      .homebox1{
-        width:100%;
-        height:100%;
-      }
-      .get{
-        display:flex;
-        flex-direction: column;
-      }
-      .login2{
-        font-size:10px;
-        width:111px;
-      }
-      .logo0{
-        margin-bottom:5px;
-        margin-right:5%;
-        margin-left:0;
-      }
-      .login{
-        font-size:10px;
-        width:111px;
-        margin-right:0;
-      }
-      .template{
-        position:fixed;
-        left:0;
-        bottom:0;
-        height:50px;
-        z-index: 100;
-        background-color:rgb(255, 227, 144);
-        border-top:1px solid gray;
-      }
-      #menu i{
-        display:block;
-        font-size:20px;
-        color:gray;
-      }
-      .sp{
-        display:block;
-        font-size:10px;
-        color:gray;
-      }
-      .daico{
-        width:100px;
-      }
-      .just{
-        height:60px;
-      }
-      .just3{
-        display:none;
-      }
-      #menu{
-        padding-bottom:10px;
-      }
-      .setumei{
-        width:350px;
-        font-size:20px;
-        padding-top:0;
-      }
-      .textbox{
-        display:block;
-      }
-      .searchForm{
-        width:300px;
-      }
-      .list1{
-        font-size:12px;
-        width:100px;
-        padding-right:10px;
-      }
-      .list2{
-        font-size:12px;
-        width:100px;
-        padding-left:10px;
-        padding-right:10px;
-      }
-      .list3{
-        font-size:12px;
-        width:100px;
-        padding-left:10px;
-      }
-      .sikaku1{
-        display:none;
-      }
-      .ul2{
-        padding-top:0;
-        margin-bottom:50px;
-      }
-    }
-
-
-    .modal10 {
-      position:absolute;
-      width:100%;
-      height:100vh;
-      top:0;
-      left:0;
+  
+  
+  @media screen and (min-width:1024px){
+    /* 1024px以上の幅の都合に適応される */
+    .homebox{
       display:none;
     }
-    .overLay10 {
-      position:absolute;
-      top:0;
-      left:0;
-      background:rgba(200,200,200,0.9);
+    .get{
+      display:flex;
+    }
+    .logo0{
+      margin-left:0;
+    }
+    .login2{
+      font-size:12px;
+      width:130px;
+      height:20px;
+    }
+    .login{
+      font-size:12px;
+      width:100px;
+      height:20px;
+    }
+    .logo{
+      padding-bottom:0;
+    }
+    .just4{
+      display:none;
+    }
+  }
+  
+  @media screen and (max-width: 1024px) and (min-width: 768px){
+    /* 768px~1024pxまでの幅の場合に適応される */
+    .homebox{
+      display:none;
+    }
+    .get{
+      display:flex;
+    }
+    .logo0{
+      margin-left:0;
+    }
+    .login2{
+      font-size:12px;
+      width:130px;
+      height:20px;
+    }
+    .login{
+      font-size:12px;
+      width:100px;
+      height:20px;
+    }
+    .logo{
+      padding-bottom:0;
+    }
+    .just4{
+      display:none;
+    }
+    .just{
+      margin:0 0;
+      font-size:15px;
+    }
+    .daico{
+      width:140px;
+    }
+    .setumei{
+      width:500px;
+    }
+    .textbox{
+      display:inline-block;
+    }
+    .sikaku{
+      width:140px;
+    }
+    .searchForm{
+      margin:10% auto;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    /* 767pxまでの幅の場合に適応される */
+    .logo{
+      display:flex;
+      justify-content: flex-end;
+    }
+    .homebox{
+      width:150px;
+      height:50px;
+      margin-right:auto;
+      margin-left:3%;
+    }
+    .homebox1{
       width:100%;
-      height:100vh;
-      z-index:10;
+      height:100%;
     }
-    .modal10 .inner10 {
-      position:absolute;
-      z-index:11;
-      top:50%;
-      left:50%;
-      transform:translate(-50%,-50%);
+    .get{
+      display:flex;
+      flex-direction: column;
     }
+    .login2{
+      font-size:10px;
+      width:111px;
+    }
+    .logo0{
+      margin-bottom:5px;
+      margin-right:5%;
+      margin-left:0;
+    }
+    .login{
+      font-size:10px;
+      width:111px;
+      margin-right:0;
+    }
+    .template{
+      position:fixed;
+      left:0;
+      bottom:0;
+      height:50px;
+      z-index: 100;
+      background-color:rgb(255, 227, 144);
+      border-top:1px solid gray;
+    }
+    #menu i{
+      display:block;
+      font-size:20px;
+      color:gray;
+    }
+    .sp{
+      display:block;
+      font-size:10px;
+      color:gray;
+    }
+    .daico{
+      width:100px;
+    }
+    .just{
+      height:60px;
+    }
+    .just3{
+      display:none;
+    }
+    #menu{
+      padding-bottom:10px;
+    }
+    .setumei{
+      width:350px;
+      font-size:20px;
+      padding-top:0;
+    }
+    .textbox{
+      display:block;
+    }
+    .searchForm{
+      width:300px;
+    }
+    .list1{
+      font-size:12px;
+      width:100px;
+      padding-right:10px;
+    }
+    .list2{
+      font-size:12px;
+      width:100px;
+      padding-left:10px;
+      padding-right:10px;
+    }
+    .list3{
+      font-size:12px;
+      width:100px;
+      padding-left:10px;
+    }
+    .sikaku1{
+      display:none;
+    }
+    .ul2{
+      padding-top:0;
+      margin-bottom:50px;
+    }
+  }

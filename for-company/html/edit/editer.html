@@ -45,11 +45,11 @@
                     <nav class="template">
                         <div id="menu">
                             <div class="just"><a href="../reserve/reserved.html" class="favorite"><i class="fas fa-tasks"></i>  <span class="sp">予約管理</span></a></div>
-                            <div class="just"><a href="../notification/store.html" class="notice"><i class="fas fa-edit"></i>  <span class="sp">編集</span></a></div>
+                            <div class="just"><a href="../edit/editer.html" class="notice"><i class="fas fa-edit"></i>  <span class="sp">編集</span></a></div>
                             <div class="just3"><a href="../company/company-information.html" class="home"><span class="sp"><img src="../../picture/pinklogo.png" class="daico"></span></a></div>
                             <div class="just just4"><a href="../company/company-information.html" class="favorite"><i class="fas fa-home"></i><span class="sp">会社詳細</span></a></div>
                             <div class="just"><a href="../contact/talk.html" class="order-history"><i class="far fa-comments"></i>  <span class="sp">チャット</span></a></div>
-                            <div class="just"><a href="../setting/setting.html" class="my-page"><i class="far fa-chart-bar"></i>  <span class="sp">分析</span></a></div>
+                            <div class="just"><a href="../analytics/analytics.html" class="my-page"><i class="far fa-chart-bar"></i>  <span class="sp">分析</span></a></div>                        
                         </div>
                     </nav>
                 <div class="allbox">
@@ -92,13 +92,25 @@
                 <div class="info">
                     <nav class="daicomenu">
                         <ul>
-                            <li class="li1"><a href="company-information.html" class="lih1"><i class="fas fa-building"></i> 会社詳細</a></li>
-                            <li><a href="plan.html" class="lih2"><i class="fas fa-scroll"></i> プラン一覧</a></li>
-                            <li><a href="staff.html" class="lih2"><i class="fas fa-user"></i> スタッフ一覧</a></li>
-                            <li><a href="review.html" class="lih2"><i class="fas fa-comments"></i> 口コミ</a></li>
-                            <li><a href="blog.html" class="lih2"><i class="fas fa-pencil-alt"></i> ブログ</a></li>
+                            <li class="li1"><a href="../edit/editer.html" class="lih1"><i class="fas fa-building"></i> 会社詳細</a></li>
+                            <li><a href="../edit/plan.html" class="lih2"><i class="fas fa-scroll"></i> プラン一覧</a></li>
+                            <li><a href="../edit/sutaffu.html" class="lih2"><i class="fas fa-user"></i> スタッフ一覧</a></li>
+                            <li><a href="../edit/review_set.html" class="lih2"><i class="fas fa-comments"></i> 口コミ</a></li>
+                            <li><a href="../edit/blog_set.html" class="lih2"><i class="fas fa-pencil-alt"></i> ブログ</a></li>
                         </ul>
                     </nav>
+                    <div class="bottonbox">
+                        <p class="favoriteadd"><a><button type="button" class="heart8" href="#modal010" class="moadalopen010">編集</button></a></p>
+                        <div class="modal10" id="modal010">
+                            <div class="overLay10 modalClose10"></div>
+                            <div class="inner10">
+                                <input class="form-control" type="text" placeholder="会社名">
+                                <input class="form-control" type="text" placeholder="PR文を記入してください">
+                                <input class="form-control" type="">
+                                <a href="#" class="modalClose10">Close</a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="bottombox">
                         <div class="leftphotos">
                             <div class="leftphoto">
@@ -221,6 +233,24 @@
                     speed: 1000, //切り替えのスピード（小さくすると速くなる）
                     fade: true, //フェードの有効化
                 });
+            });
+        </script>
+        <script type="text/javascript">
+            $(function(){
+                $(".modalOpen10").click(function(){
+                    var navClass = $(this).attr("class"),
+                        href = $(this).attr("href");
+            
+                        $(href).fadeIn();
+                $(this).addClass("open");
+                return false;
+                });
+            $(".modalClose10").click(function(){
+                $(this).parents(".modal10").fadeOut();
+                $(".modalOpen10").removeClass("open");
+                return false;
+                });  
+    
             });
         </script>
     </body>
