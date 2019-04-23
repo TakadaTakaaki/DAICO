@@ -1606,3 +1606,48 @@ body{
       margin-bottom:50px;
     }
   }
+
+
+  .modal10 {
+    position:absolute;
+    width:100%;
+    height:100vh;
+    top:0;
+    left:0;
+    display:none;
+  }
+  .overLay10 {
+    position:absolute;
+    top:0;
+    left:0;
+    background:rgba(200,200,200,0.9);
+    width:100%;
+    height:100vh;
+    z-index:10;
+  }
+  .modal10 .inner10 {
+    position:absolute;
+    z-index:11;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background-color: #e6ecf0;
+    border-radius: 5%;
+    width: 700px;
+    text-align: center;
+  }
+  .heart7 {
+    color: white;
+    font-size: 15px;
+    border: none;
+    background: none;
+    outline: none;
+    font-weight: bold;
+    background-color: rgb(252, 104, 153);
+    border: 1px solid gray;
+    border-radius: 10%;
+    border-bottom: 2px solid gray;
+    cursor: pointer;
+    width: 150px;
+    margin-top: 10px;
+}

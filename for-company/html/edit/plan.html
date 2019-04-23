@@ -92,8 +92,8 @@
                         <div class="info">
                             <nav class="daicomenu">
                                 <ul>
-                                    <li class="li1"><a href="../edit/editer.html" class="lih1"><i class="fas fa-building"></i> 会社詳細</a></li>
-                                    <li><a href="../edit/plan.html" class="lih2"><i class="fas fa-scroll"></i> プラン一覧</a></li>
+                                    <li class="li1"><a href="../edit/editer.html" class="lih2"><i class="fas fa-building"></i> 会社詳細</a></li>
+                                    <li><a href="../edit/plan.html" class="lih1"><i class="fas fa-scroll"></i> プラン一覧</a></li>
                                     <li><a href="../edit/sutaffu.html" class="lih2"><i class="fas fa-user"></i> スタッフ一覧</a></li>
                                     <li><a href="../edit/review_set.html" class="lih2"><i class="fas fa-comments"></i> 口コミ</a></li>
                                     <li><a href="../edit/blog_set.html" class="lih2"><i class="fas fa-pencil-alt"></i> ブログ</a></li>
@@ -101,6 +101,21 @@
                             </nav>
                     <div class="three">
                         <p class="order1">クーポン<em class="suuti">15</em> 件　メニュー<em class="suuti">10</em> 件　あります</p>
+                    </div>
+                    <div class="bottonbox">
+                        <p class="favoriteadd"><a><button type="button" class="heart8" id="modalopen10">追加</button></a></p>
+                        <div class="modal10" id="modal-open">
+                            <div class="overLay10 modalClose10"></div>
+                            <div class="inner10">
+                                <h1>プラン追加ページ</h1>
+                                <p><label>タイトル：<input class="form-control" type="text" placeholder="タイトルを記入してください"></label></p>
+                                <p><label>補足文：<input class="form-control" type="text" placeholder="補足文を記入してください"></label></p>
+                                <p><label>料金：<input class="form-control" type="text" placeholder="ex.¥3000"></label></p>
+                                <p><label>利用条件：<input class="form-control" type="text" placeholder="ex.初回利用のみ"></label></p>
+                                <p><label>有効期限：<input class="form-control" type="text" placeholder="ex.2019年3月末まで"></label></p>
+                                <p><a href="#" class="modalClose10"><button type="button" class="heart7">Close</button></a></p>
+                            </div>
+                        </div>
                     </div>
                     <div class="sortflex">
                         <div class="natural">全て</div>
@@ -114,6 +129,21 @@
                     </div>
                     <div class="flex10">
                         <div class="last">
+                                    <div class="bottonbox">
+                                        <p class="favoriteadd"><a><button type="button" class="heart8" id="modalopen100">編集</button></a></p>
+                                        <div class="modal10" id="modal-open1">
+                                        <div class="overLay10 modalClose10"></div>
+                                            <div class="inner10">
+                                                <h1>プラン編集ページ</h1>
+                                                <p><label>タイトル：<input class="form-control" type="text" placeholder="タイトルを記入してください"></label></p>
+                                                <p><label>補足文：<input class="form-control" type="text" placeholder="補足文を記入してください"></label></p>
+                                                <p><label>料金：<input class="form-control" type="text" placeholder="ex.¥3000"></label></p>
+                                                <p><label>利用条件：<input class="form-control" type="text" placeholder="ex.初回利用のみ"></label></p>
+                                                <p><label>有効期限：<input class="form-control" type="text" placeholder="ex.2019年3月末まで"></label></p>
+                                                <p><a href="#" class="modalClose10"><button type="button" class="heart7">Close</button></a></p>
+                                            </div>
+                                        </div>
+                                    </div>
                             <div class="info2">
                                 <div class="sinki">
                                     新規
@@ -237,6 +267,32 @@
                     speed: 1000, //切り替えのスピード（小さくすると速くなる）
                     fade: true, //フェードの有効化
                 });
+            });
+        </script>
+        <script type="text/javascript">
+            $(function(){
+                $('#modalopen10').click(function() {
+                $('#modal-open').fadeIn();
+                });
+            $(".modalClose10").click(function(){
+                $(this).parents(".modal10").fadeOut();
+                $(".modalOpen10").removeClass("open");
+                return false;
+                });  
+    
+            });
+        </script>
+        <script type="text/javascript">
+            $(function(){
+                $('#modalopen100').click(function() {
+                $('#modal-open1').fadeIn();
+                });
+            $(".modalClose10").click(function(){
+                $(this).parents(".modal10").fadeOut();
+                $(".modalOpen10").removeClass("open");
+                return false;
+                });  
+    
             });
         </script>
     </body>

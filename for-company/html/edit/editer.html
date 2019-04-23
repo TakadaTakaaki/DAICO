@@ -100,14 +100,26 @@
                         </ul>
                     </nav>
                     <div class="bottonbox">
-                        <p class="favoriteadd"><a><button type="button" class="heart8" href="#modal010" class="moadalopen010">編集</button></a></p>
-                        <div class="modal10" id="modal010">
+                        <p class="favoriteadd"><a><button type="button" class="heart8" id="modalopen10">編集</button></a></p>
+                        <div class="modal10" id="modal-open">
                             <div class="overLay10 modalClose10"></div>
                             <div class="inner10">
-                                <input class="form-control" type="text" placeholder="会社名">
-                                <input class="form-control" type="text" placeholder="PR文を記入してください">
-                                <input class="form-control" type="">
-                                <a href="#" class="modalClose10">Close</a>
+                                <h1>編集ページ</h1>
+                                <p><label>会社名：<input class="form-control" type="text" placeholder="会社名を記入してください"></label></p>
+                                <p><label>PR文：<input class="form-control" type="text" placeholder="PR文を記入してください"></label></p>
+                                <p><label>電話番号：<input class="form-control" type="text" placeholder="ex.090-XXXX-XXXX"></label></p>
+                                <p><label>料金：<input class="form-control" type="text" placeholder="ex.¥2500~10000"></label></p>
+                                <p><label>住所：<input class="form-control" type="text" placeholder="ex.東京都渋谷区初台1-15-2"></label></p>
+                                <p><label>創業年：<input class="form-control" type="text" placeholder="ex.1997年"></label></p>
+                                <p><label>クレジットカード：<input class="form-control" type="text" placeholder="ex.VISA／MasterCard／"></label></p>
+                                <p><label>ホームページ：<input class="form-control" type="text" placeholder="ex.https//../../"></label></p>
+                                <p><label>従業員数：<input class="form-control" type="text" placeholder="ex.20名"></label></p>
+                                <p><label>営業時間：<input class="form-control" type="text" placeholder="ex.10:00~20:00"></label></p>
+                                <p><label>サービス概要：<input class="form-control" type="text" placeholder=""></label></p>
+                                <p><label>お支払いに関して：<input class="form-control" type="text" placeholder=""></label></p>
+                                <p><label>キャンセル・解約に関して：<input class="form-control" type="text" placeholder=""></label></p>
+                                <p><label>セキュリティ対策：<input class="form-control" type="text" placeholder=""></label></p>
+                                <p><a href="#" class="modalClose10"><button type="button" class="heart7">Close</button></a></p>
                             </div>
                         </div>
                     </div>
@@ -237,13 +249,8 @@
         </script>
         <script type="text/javascript">
             $(function(){
-                $(".modalOpen10").click(function(){
-                    var navClass = $(this).attr("class"),
-                        href = $(this).attr("href");
-            
-                        $(href).fadeIn();
-                $(this).addClass("open");
-                return false;
+                $('#modalopen10').click(function() {
+                $('#modal-open').fadeIn();
                 });
             $(".modalClose10").click(function(){
                 $(this).parents(".modal10").fadeOut();

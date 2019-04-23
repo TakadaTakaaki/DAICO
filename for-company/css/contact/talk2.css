@@ -6,7 +6,6 @@ body{
     background-attachment: fixed;
     /* background-position: center 130px; */
     /* background-repeat: no-repeat;  */
-    position:relative;
   }
   header{
     width:100%;
@@ -144,6 +143,8 @@ body{
     color: rgb(255, 255, 255);
     padding: 10px;
     font-weight:bold;
+    border-bottom:3px solid white;
+
   }
   .order-history:hover{
     color:white;
@@ -154,7 +155,6 @@ body{
     color: rgb(255, 255, 255);
     padding: 10px;
     font-weight:bold;
-    border-bottom:3px solid white;
   }
   .notice:hover{
     color:white;
@@ -554,8 +554,67 @@ body{
   
   
   
-  
-  
+  .sortflex{
+    display:flex;
+    width:100%;
+    margin:10px auto;
+    font-size:17px;
+    font-weight:bold;
+    color:rgb(87, 86, 86);
+  }
+  .onehover{
+    color:rgb(87, 86, 86);
+  }
+  .onehover1{
+    color:rgb(87, 86, 86);
+  }
+  .onehover:hover{
+    color:rgb(87, 86, 86);
+    background-color:rgb(245, 244, 244);
+    border: 0px solid gray;
+    border-radius:5px 5px 0 0;
+  }
+  .natural{
+    width:150px;
+    text-align:center;
+    padding:10px 20px;
+    border:2px solid gray;
+    border-bottom:none;
+    border-radius:5px 5px 0 0;
+  }
+  .recommend{
+    width:150px;
+    text-align:center;
+    padding:10px 20px;
+    border:1px solid gray;
+    border-radius:5px 5px 0 0;
+    border-bottom:2px solid gray;
+  }
+  .review{
+    width:150px;
+    text-align:center;
+    padding:10px 20px;
+    border:1px solid gray;
+    border-radius:5px 5px 0 0;
+    border-bottom:2px solid gray;
+  }
+  .cheap{
+    width:150px;
+    text-align:center;
+    padding:10px 20px;
+    border:1px solid gray;
+    border-radius:5px 5px 0 0;
+    border-bottom:2px solid gray;
+  }
+  .high{
+    width:150px;
+    text-align:center;
+    padding:10px 20px;
+    border:1px solid gray;
+    border-radius:5px 5px 0 0;
+    border-bottom:2px solid gray;
+  }
+
   table{
       width: 95%;
       margin:0px auto;
@@ -1395,47 +1454,31 @@ body{
       }
     }
 
+    .balloon1 {
+        position: relative;
+        display: inline-block;
+        margin: 1.5em 0;
+        padding: 7px 10px;
+        min-width: 120px;
+        max-width: 100%;
+        color: #555;
+        font-size: 16px;
+        background: #e0edff;
+        border-radius: 15px;
+      }
+            
+      .balloon1 p {
+        margin: 0;
+        padding: 0;
+      }
 
-    .modal10 {
-      position:absolute;
-      width:100%;
-      height:100vh;
-      top:0;
-      left:0;
-      display:none;
-    }
-    .overLay10 {
-      position:absolute;
-      top:0;
-      left:0;
-      background:rgba(200,200,200,0.9);
-      width:100%;
-      height:100vh;
-      z-index:10;
-    }
-    .modal10 .inner10 {
-      position:absolute;
-      z-index:11;
-      top:50%;
-      left:50%;
-      transform:translate(-50%,-50%);
-      background-color: #e6ecf0;
-      border-radius: 5%;
-      width: 700px;
-      text-align: center;
-    }
-    .heart7 {
-      color: white;
-      font-size: 15px;
-      border: none;
-      background: none;
-      outline: none;
-      font-weight: bold;
-      background-color: rgb(252, 104, 153);
-      border: 1px solid gray;
-      border-radius: 10%;
-      border-bottom: 2px solid gray;
-      cursor: pointer;
-      width: 150px;
-      margin-top: 10px;
-  }
+    .balloon1:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -25px;
+        margin-top: -15px;
+        border: 15px solid transparent;
+        border-right: 15px solid #e0edff;
+        z-index: 0;
+      }
