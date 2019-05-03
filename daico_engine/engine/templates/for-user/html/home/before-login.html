@@ -1,14 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <link href="{% static 'css/home/before-login.css' %}" rel="stylesheet">
-        <link rel="shortcut icon" href="../../picture/favicon.ico">
+        <link rel="shortcut icon" href="{% static 'picture/favicon.ico' %}">
         <title>【代行エンジン】代行業を一括で検索・比較出来るサイト</title>
         <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="../../css/slick/slick.css"/>
-        <link rel="stylesheet" type="text/css" href="../../css/slick/slick-theme.css"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/slick/slick.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/slick/slick-theme.css' %}"/>
         <meta name="viewport" content="width=device-width,initial-scale=1">
     </head>
     <body>
@@ -112,31 +113,8 @@
                 </ul>
             </div>
         </div>
-        <script type="text/javascript" src="../../javascript/slick.min.js"></script>
+        <script type="text/javascript" src="{% static 'javascript/slick.min.js'%}"></script>
         <script src="../../javascript/login.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function(){
-                $('.multiple').slick({
-                    autoplay: true, //自動再生
-                    infinite: true, //スライドのループ有効化
-                    dots: true, //ドットのナビゲーションを表示
-                    slidesToShow: 3, //表示するスライドの数
-                    slidesToScroll: 3, //スクロールで切り替わるスライドの数
-                    responsive: [{
-                    breakpoint: 768, //ブレークポイントが768px
-                    settings: {
-                        slidesToShow: 3, //表示するスライドの数
-                        slidesToScroll: 3, //スクロールで切り替わるスライドの数
-                    }
-                    }, {
-                    breakpoint: 480, //ブレークポイントが480px
-                    settings: {
-                        slidesToShow: 2, //表示するスライドの数
-                        slidesToScroll: 2, //スクロールで切り替わるスライドの数
-                    }
-                    }]
-                });
-            });
-        </script>
+        <script type="text/javascript" src="{% static 'javascript/sride.js'%}"></script>
     </body>
 </html>

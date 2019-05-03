@@ -23,5 +23,5 @@ urlpatterns = [
     url(r'^$', include('engine.urls')),
     url(r'favorite/', include('engine.urls')),
     url(r'store/', include('engine.urls')),
-
+    url(r'', include('engine.urls')),
 ]
