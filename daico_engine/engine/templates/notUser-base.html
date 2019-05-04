@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}【代行エンジン】代行業を一括で検索・比較出来るサイト{% endblock %}</title>
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+        <link href="{% static 'css/home/before-login.css' %}" rel="stylesheet">
+        <link rel="shortcut icon" href="{% static 'picture/favicon.ico' %}">
+        <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/slick/slick.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/slick/slick-theme.css' %}"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        {% block extrahead %}{% endblock %}
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <div class="homebox">
+                    <a href="../home/before-login.html"><img src="../../picture/daico.png" class="homebox1"></a>
+                </div>
+                <div class="get">
+                    <div class="logo0">
+                        <a href="../register/after-registration.html" class="login2"><i class="fas fa-user-circle"></i>   新規会員登録(無料)</a>
+                    </div>
+                    <div class="logo00">
+                        <a class="login" id="login-show"><i class="fas fa-sign-in-alt"></i> ログイン</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="login-modal-wrapper" id="login-modal">
+            <div class="modal">
+                <div class="close-modal">
+                    <i class="fa fa-2x fa-times"></i>
+                </div>
+                <div id="login-form">
+                    <h2>Emailログイン</h2>
+                    <form action="#">
+                        <input class="form-control" type="text" placeholder="メールアドレス">
+                        <input class="form-control" type="password" placeholder="パスワード">
+                        <a href="after-login.html"><div id="submit-btn">ログイン</div></a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <nav class="template">
+            <div id="menu">
+                <div class="just"><a href="../reserve/reserved.html" class="favorite"><i class="fas fa-tasks"></i>  <span class="sp">予約管理</span></a></div>
+                <div class="just"><a href="../edit/editer.html" class="notice"><i class="fas fa-edit"></i>  <span class="sp">編集</span></a></div>
+                <div class="just3"><a href="../home/home.html" class="home"><span class="sp"><img src="../../picture/pinklogo.png" class="daico"></span></a></div>
+                <div class="just"><a href="../contact/talk-customer.html" class="order-history"><i class="far fa-comments"></i>  <span class="sp">お問い合わせ</span></a></div>
+                <div class="just"><a href="../analytics/analytics.html" class="my-page"><i class="far fa-chart-bar"></i>  <span class="sp">分析</span></a></div>
+            </div>
+        </nav>            
+        {% block body %}
+        {% endblock %}
+    </body>
+</html>
