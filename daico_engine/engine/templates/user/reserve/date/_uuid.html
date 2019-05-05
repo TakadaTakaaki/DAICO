@@ -17,7 +17,7 @@
                     <p class="sibuya">渋谷　>　道玄坂・明治通り</p>
                 </div>
                 <div class="storename">
-                    <p class="casy"><a href="../company/company-information.html" class="casy1">Casy 【カジー】</a></p>
+                    <p class="casy"><a href="{% url 'company' %}" class="casy1">Casy 【カジー】</a></p>
                 </div>
                 <div class="storetype">
                     <p class="strongpoint">即時予約OK!</p>
@@ -65,13 +65,13 @@
                         <p class="serihu3">¥ 3,000</p>
                     </div>
                     <div class="buton">
-                        <a href="../reserve/plan-all.html" class="click"><button type="button" class="buton1">プランを変更する</button></a>
+                        <a href="{% url 'reserve' %}" class="click"><button type="button" class="buton1">プランを変更する</button></a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="three">
-            <p class="order2"><a href="../reserve/date.html" class="noneorder">空き状況</a></p>
+            <p class="order2"><a href="{% url 'reserve_date' %}" class="noneorder">空き状況</a></p>
             <p class="order1">代行者別空き状況</p>
         </div>
         <div class="calender">

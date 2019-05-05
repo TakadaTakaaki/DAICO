@@ -15,13 +15,13 @@
             <div class="info">
                 <img src="../../picture/car.jpg" class="ikuzi">
                 <div class="part">
-                    <p class="serihu">会社 : <a href="../company/company-information.html" class="casi">Casy</a></p>
-                    <p class="serihu1"><a href="../company/plan.html" class="planning">激安風呂掃除プラン(夕飯付き)</a></p>
+                    <p class="serihu">会社 : <a href="{% url 'company' %}" class="casi">Casy</a></p>
+                    <p class="serihu1"><a href="{% url 'plan' %}" class="planning">激安風呂掃除プラン(夕飯付き)</a></p>
                     <p class="serihu2">¥ 4,000</p>
-                    <a href="../reserve/plan-all.html" class="again"><button type="button" class="order8">再度注文</button></a>
+                    <a href="{% url 'reserve' %}" class="again"><button type="button" class="order8">再度注文</button></a>
                 </div>
                 <div class="buton">
-                    <a href="../company/review.html"　class="iro"><button type="button" class="buton1 sita">口コミを書く</button></a>
+                    <a href="{% url 'review' %}"　class="iro"><button type="button" class="buton1 sita">口コミを書く</button></a>
                     <button type="button" class="buton1 sita">注文を非表示にする</button>
                 </div>
             </div>
