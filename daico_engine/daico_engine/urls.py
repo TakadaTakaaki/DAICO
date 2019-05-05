@@ -52,6 +52,7 @@ urlpatterns = [
     url(r'reserve_payment_detail/', include('engine.urls')),
     url(r'reserve_done/', include('engine.urls')),
     url(r'search/', include('engine.urls')),
+    url(r'setting/', include('engine.urls')),    
     url(r'setting_companyInquiry/', include('engine.urls')),
     url(r'setting_contact/', include('engine.urls')),
     url(r'setting_credit/', include('engine.urls')),

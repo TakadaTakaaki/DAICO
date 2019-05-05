@@ -1,0 +1,116 @@
+{% extends "../../user-base.html" %}
+{% block body %}
+    <div class="three">
+        <p class="order1"><a href="../order-history/order.html" class="now">注文</a></p>
+        <p class="order2"><a href="../order-history/incomplete.html" class="noneorder">未実行の注文</a></p>
+        <p class="order3"><a href="../order-history/cancel.html" class="cancer">キャンセルされた注文</a></p>
+    </div>
+    <div class="flex1">
+        <div class="last">
+            <div class="name">
+                <p class="name0"><em>注文日</em><br>2019年3月10日</p>
+                <p class="name1"><em>実行日</em><br>2019年3月15日</p>
+                <p class="name1"><em>合計</em><br>¥ 4,500</p>
+                <p class="name1"><em>場所</em><br>東京都三鷹市下連雀3丁目２２−８</p>
+                <p class="name2"><a href="../order-history/detail.html" class="ooo">注文詳細</a></p>
+            </div>
+            <div class="info">
+                <img src="../../picture/ikuzi.jpg" class="ikuzi">
+                <div class="part">
+                    <p class="serihu">会社 : <a href="../company/company-information.html" class="casi">Casy</a></p>
+                    <p class="serihu1"><a href="../company/plan.html" class="planning">激安風呂掃除プラン(夕飯付き)</a></p>
+                    <p class="serihu2">¥ 4,000</p>
+                    <a href="../reserve/plan-all.html" class="again"><button type="button" class="order8">再度注文</button></a>
+                </div>
+                <div class="buton">
+                    <a href="../company/review.html" class="sita"><button type="button" class="buton1">口コミを書く</button></a>
+                    <a href="#modal_01" class="modalOpen_0"><button type="button" class="buton1 sita">注文を非表示にする</button></a>
+                    <a href="#modal01" class="modalOpen"><button type="button" class="buton1 sita">お気に入りに追加</button></a>
+                </div>
+                <div class="modal_00" id="modal_01">
+                    <!-- モーダルウィンドウが開いている時のオーバーレイ -->
+                    <div class="overLay_0 modalClose_0"></div>
+                    <!-- モーダルウィンドウの中身 -->
+                    <div class="inner_0">
+                        <div class="inner_p_0">
+                            <P>非表示リストに追加しました。</P>
+                            <a href="" class="modalClose_1">Close</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex1">
+        <div class="last">
+            <div class="name">
+                <p class="name0"><em>注文日</em><br>2019年3月10日</p>
+                <p class="name1"><em>実行日</em><br>2019年3月15日</p>
+                <p class="name1"><em>合計</em><br>¥ 4,500</p>
+                <p class="name1"><em>場所</em><br>東京都三鷹市下連雀3丁目２２−８</p>
+                <p class="name2"><a href="../order-history/detail.html" class="ooo">注文詳細</a></p>
+            </div>
+            <div class="info">
+                <img src="../../picture/youtube.png" class="ikuzi">
+                <div class="part">
+                    <p class="serihu">会社 : <a href="../company/company-information.html" class="casi">Casy</a></p>
+                    <p class="serihu1"><a href="../company/plan.html" class="planning">激安風呂掃除プラン(夕飯付き)</a></p>
+                    <p class="serihu2">¥ 4,000</p>
+                    <a href="../reserve/plan-all.html" class="again"><button type="button" class="order8">再度注文</button></a>
+                </div>
+                <div class="buton">
+                        <a href="../company/review.html" class="sita"><button type="button" class="buton1">口コミを書く</button></a>
+                    <button type="button" class="buton1 sita">注文を非表示にする</button>
+                    <a href="#modal01" class="modalOpen"><button type="button" class="buton1 sita">お気に入りに追加</button></a>
+                </div>
+                <div class="modal00" id="modal01">
+                    <!-- モーダルウィンドウが開いている時のオーバーレイ -->
+                    <div class="overLay modalClose"></div>
+                    <!-- モーダルウィンドウの中身 -->
+                    <div class="inner">
+                        <div class="inner_p">
+                            <P>お気に入りに追加しました。</P>
+                            <a href="" class="modalClose1">Close</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex1">
+            <div class="last">
+                <div class="name">
+                    <p class="name0"><em>注文日</em><br>2019年3月10日</p>
+                    <p class="name1"><em>実行日</em><br>2019年3月15日</p>
+                    <p class="name1"><em>合計</em><br>¥ 4,500</p>
+                    <p class="name1"><em>場所</em><br>東京都三鷹市下連雀3丁目２２−８</p>
+                    <p class="name2"><a href="../order-history/detail.html" class="ooo">注文詳細</a></p>
+                </div>
+                <div class="info">
+                    <img src="../../picture/oko.jpg" class="ikuzi">
+                    <div class="part">
+                        <p class="serihu">会社 : <a href="../company/company-information.html" class="casi">Casy</a></p>
+                        <p class="serihu1"><a href="../company/plan.html" class="planning">激安風呂掃除プラン(夕飯付き)</a></p>
+                        <p class="serihu2">¥ 4,000</p>
+                        <a href="../reserve/plan-all.html" class="again"><button type="button" class="order8">再度注文</button></a>
+                    </div>
+                    <div class="buton">
+                        <a href="../company/review.html" class="sita"><button type="button" class="buton1">口コミを書く</button></a>
+                        <button type="button" class="buton1 sita">注文を非表示にする</button>
+                        <a href="#modal01" class="modalOpen"><button type="button" class="buton1 sita">お気に入りに追加</button></a>
+                    </div>
+                    <div class="modal00" id="modal01">
+                        <!-- モーダルウィンドウが開いている時のオーバーレイ -->
+                        <div class="overLay modalClose"></div>
+                        <!-- モーダルウィンドウの中身 -->
+                        <div class="inner">
+                            <div class="inner_p">
+                                <P>お気に入りに追加しました。</P>
+                                <a href="" class="modalClose1">Close</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

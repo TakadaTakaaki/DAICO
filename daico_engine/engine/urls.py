@@ -35,6 +35,7 @@ urlpatterns = [
     url(r'reserve_payment_detail', views.reserve_payment_detail, name="reserve_payment_detail"),
     url(r'reserve_done', views.reserve_done, name="reserve_done"),
     url(r'search', views.search, name="search"),
+    url(r'setting', views.setting, name="setting"),
     url(r'setting_companyInquiry', views.setting_companyInquiry, name="setting_companyInquiry"),
     url(r'setting_contact', views.setting_contact, name="setting_contact"),
     url(r'setting_credit', views.setting_credit, name="setting_credit"),

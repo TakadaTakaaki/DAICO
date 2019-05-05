@@ -1,0 +1,82 @@
+{% extends "../../user-base.html" %}
+{% block body %}
+    <div class="allbox">
+        <div class="fade" id="fade">
+            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/1.jpg" alt=""></div>
+            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/2.jpg" alt=""></div>
+            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/3.jpg" alt=""></div>
+            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/4.jpg" alt=""></div>
+            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/5.jpg" alt=""></div>
+            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/6.jpg" alt=""></div>
+            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/7.jpg" alt=""></div>
+            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/8.jpg" alt=""></div>
+        </div>
+        <div class="topbox">
+            <div class="leftbox">
+                <div class="erea">
+                    <p class="sibuya">渋谷　>　道玄坂・明治通り</p>
+                </div>
+                <div class="storename">
+                    <p class="casy"><a href="../company/company-information.html" class="casy1">Casy 【カジー】</a></p>
+                </div>
+                <div class="storetype">
+                    <p class="strongpoint">即時予約OK!</p>
+                    <p class="strongpoint1">ポイント加盟店</p>
+                    <p class="strongpoint2">メンズにもオススメ</p>
+                </div>
+            </div>
+            <div class="rightbox">
+                <div class="bottonbox">
+                    <p class="favoriteadd"><button type="button"class="heart"><i class="far fa-heart"></i>  お気に入り</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ol class="step">
+        <li>プラン選択</li>
+        <li class="is-current">日時・代行者指定</li>
+        <li>お客様情報確認</li>
+        <li>予約内容確認</li>
+        <li>予約完了</li>
+    </ol>
+    <div class="box">
+        <div class="three">
+            <p class="order1">選択中プラン</p>
+        </div>
+        <div class="flex10">
+            <div class="last">
+                <div class="info2">
+                    <div class="sinki">
+                        新規
+                    </div>
+                    <div class="gene">
+                        <p class="red">育児代行</p>
+                        <p class="serihu1">【女性スタッフ】激安風呂掃除プラン(夕飯付き)！</p>
+                        <div class="zyouken">
+                            <img src="../../picture/ikuzi.jpg" class="ikuzi">
+                            <p class="simekiri">
+                                プロの掃除機械や技術を持っていきます!!<br>
+                                <br><em class="meizi">利用条件</em> : 初回利用のみ
+                                <br><em class="meizi">有効期限</em> : 2019年3月末
+                            </p>
+                        </div>
+                    </div>
+                    <div class="part">
+                        <p class="serihu3">¥ 3,000</p>
+                    </div>
+                    <div class="buton">
+                        <a href="../reserve/plan-all.html" class="click"><button type="button" class="buton1">プランを変更する</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="three">
+            <p class="order2"><a href="../reserve/date.html" class="noneorder">空き状況</a></p>
+            <p class="order1">代行者別空き状況</p>
+        </div>
+        <div class="calender">
+            カレンダー(API)
+        </div>
+        <a href="../reserve/payment-method.html" class="click"><button type="button" class="buton4">お客様情報の確認</button>
+    </div>
+{% endblock %}
