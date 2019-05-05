@@ -32,7 +32,6 @@ urlpatterns = [
     url(r'staff_detail/', include('engine.urls')),
     url(r'chat/', include('engine.urls')),
     url(r'favorite/', include('engine.urls')),
-    url(r'login/', include('engine.urls')),
     url(r'notice_company/', include('engine.urls')),
     url(r'notice_company_detail/', include('engine.urls')),
     url(r'notice_engine/', include('engine.urls')),

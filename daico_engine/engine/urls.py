@@ -15,7 +15,6 @@ urlpatterns = [
     url(r'staff_detail', views.staff_detail, name="staff_detail"),
     url(r'chat', views.chat, name="chat"),
     url(r'favorite', views.favorite, name="favorite"),
-    url(r'login', views.login, name="login"),
     url(r'notice_company', views.notice_company, name="notice_company"),
     url(r'notice_company_detail', views.notice_company_detail, name="notice_company_detail"),
     url(r'notice_engine', views.notice_engine, name="notice_engine"),

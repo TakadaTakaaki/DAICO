@@ -38,9 +38,6 @@ def chat(request):
 # favorite お気に入り
 def favorite(request):
     return render(request, 'user/favorite/index.html')
-# login ログイン画面
-def login(request):
-    return render(request, 'user/login/index.html')
 # notice 通知
 def notice_company(request):
     return render(request, 'user/notice/company/index.html')
