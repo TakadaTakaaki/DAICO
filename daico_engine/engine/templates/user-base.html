@@ -64,14 +64,19 @@
         <nav class="template">
             <div id="menu">
                 <div class="just"><a href="{% url 'favorite' %}" class="favorite"><i class="far fa-heart"></i>  <span class="sp">お気に入り</span></a></div>
-                <div class="just"><a href="{% url 'store' %}" class="notice"><i class="far fa-envelope"></i>  <span class="sp">通知</span></a></div>
-                <div class="just3"><a href="../home/before-login.html" class="home"><span class="sp"><img src="../../picture/pinklogo.png" class="daico"></span></a></div>
-                <div class="just just4"><a href="../home/before-login.html" class="favorite"><i class="fas fa-home"></i><span class="sp">ホーム</span></a></div>
-                <div class="just"><a href="../order-history/order.html" class="order-history"><i class="fas fa-history"></i>  <span class="sp">注文履歴</span></a></div>
-                <div class="just"><a href="../setting/setting.html" class="my-page"><i class="fas fa-cogs"></i>  <span class="sp">設定</span></a></div>
+                <div class="just"><a href="{% url 'notice' %}" class="notice"><i class="far fa-envelope"></i>  <span class="sp">通知</span></a></div>
+                <div class="just3"><a href="{% url 'index' %}" class="home"><span class="sp"><img src="../../picture/pinklogo.png" class="daico"></span></a></div>
+                <div class="just just4"><a href="{% url 'index' %}l" class="favorite"><i class="fas fa-home"></i><span class="sp">ホーム</span></a></div>
+                <div class="just"><a href="{% url 'order' %}l" class="order-history"><i class="fas fa-history"></i>  <span class="sp">注文履歴</span></a></div>
+                <div class="just"><a href="{% url 'setting' %}" class="my-page"><i class="fas fa-cogs"></i>  <span class="sp">設定</span></a></div>
             </div>
         </nav>
         {% block body %}
         {% endblock %}
     </body>
+    <script type="text/javascript" src="{% static 'js/slick.min.js' %}"></script>
+    <script src="{% static 'js/login.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/sride.js' %}"></script>
+    <script src="{% static 'js/favorite.js' %}s"></script>
+    <script src="{% static 'js/login.js' %}"></script>
 </html>
