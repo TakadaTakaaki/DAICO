@@ -1,9 +1,9 @@
 {% extends "../../user-base.html" %}
 {% block body %}
     <div class="three">
-        <p class="order1"><a href="../order-history/order.html" class="now">注文</a></p>
-        <p class="order2"><a href="../order-history/incomplete.html" class="noneorder">未実行の注文</a></p>
-        <p class="order3"><a href="../order-history/cancel.html" class="cancer">キャンセルされた注文</a></p>
+        <p class="order1"><a href="{% url 'order' %}" class="now">注文</a></p>
+        <p class="order2"><a href="{% url 'onotExecuted' %}" class="noneorder">未実行の注文</a></p>
+        <p class="order3"><a href="{% url 'cancel' %}" class="cancer">キャンセルされた注文</a></p>
     </div>
     <div class="flex1">
         <div class="last">
@@ -12,7 +12,7 @@
                 <p class="name1"><em>実行日</em><br>2019年3月15日</p>
                 <p class="name1"><em>合計</em><br>¥ 4,500</p>
                 <p class="name1"><em>場所</em><br>東京都三鷹市下連雀3丁目２２−８</p>
-                <p class="name2"><a href="../order-history/detail.html" class="ooo">注文詳細</a></p>
+                <p class="name2"><a href="{% url 'ondetail' %}" class="ooo">注文詳細</a></p>
             </div>
             <div class="info">
                 <img src="../../picture/ikuzi.jpg" class="ikuzi">
@@ -48,7 +48,7 @@
                 <p class="name1"><em>実行日</em><br>2019年3月15日</p>
                 <p class="name1"><em>合計</em><br>¥ 4,500</p>
                 <p class="name1"><em>場所</em><br>東京都三鷹市下連雀3丁目２２−８</p>
-                <p class="name2"><a href="../order-history/detail.html" class="ooo">注文詳細</a></p>
+                <p class="name2"><a href="{% url 'ondetail' %}" class="ooo">注文詳細</a></p>
             </div>
             <div class="info">
                 <img src="../../picture/youtube.png" class="ikuzi">
@@ -83,7 +83,7 @@
                     <p class="name1"><em>実行日</em><br>2019年3月15日</p>
                     <p class="name1"><em>合計</em><br>¥ 4,500</p>
                     <p class="name1"><em>場所</em><br>東京都三鷹市下連雀3丁目２２−８</p>
-                    <p class="name2"><a href="../order-history/detail.html" class="ooo">注文詳細</a></p>
+                    <p class="name2"><a href="{% url 'ondetail' %}" class="ooo">注文詳細</a></p>
                 </div>
                 <div class="info">
                     <img src="../../picture/oko.jpg" class="ikuzi">

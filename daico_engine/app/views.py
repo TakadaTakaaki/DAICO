@@ -14,14 +14,14 @@ def index(request):
 # article 記事
 def article(request):
     return render(request, 'user/article/index.html')
-def article_detail(request):
+def adetail(request):
     return render(request, 'user/article/_uuid.html')
 # company 会社詳細
 def company(request):
     return render(request, 'user/company/index.html')
 def blog(request):
     return render(request, 'user/company/blog/index.html')
-def blog_detail(request):
+def bdetail(request):
     return render(request, 'user/company/blog/_uuid.html')
 def plan(request):
     return render(request, 'user/company/plan/index.html')
@@ -30,7 +30,7 @@ def review(request):
     return render(request, 'user/company/review/index.html')
 def staff(request):
     return render(request, 'user/company/staff/index.html')
-def staff_detail(request):
+def sdetail(request):
     return render(request, 'user/company/staff/_uuid.html')
 # chat お問い合わせ user⇔company
 def chat(request):
@@ -39,44 +39,46 @@ def chat(request):
 def favorite(request):
     return render(request, 'user/favorite/index.html')
 # notice 通知
-def notice_company(request):
+def notice_c(request):
     return render(request, 'user/notice/company/index.html')
-def notice_company_detail(request):
+def ncdetail(request):
     return render(request, 'user/notice/company/_uuid.html')
-def notice_engine(request):
+def nengine(request):
     return render(request, 'user/notice/engine/index.html')
-def notice_engine_detail(request):
+def nedetail(request):
     return render(request, 'user/notice/engine/_uuid.html')
 # order 注文履歴
 def order(request):
     return render(request, 'user/order/index.html')
-def order_detail(request):
+def odetail(request):
     return render(request, 'user/order/_uuid.html')
-def order_cancel(request):
+def cancel(request):
     return render(request, 'user/order/cancel/index.html')
-def order_cancel_detail(request):
+def ocdetail(request):
     return render(request, 'user/order/cancel/_uuid.html')
-def order_notExecuted(request):
+def onotExecuted(request):
     return render(request, 'user/order/notExecuted/index.html')
-def order_notExecuted_detail(request):
+def ondetail(request):
     return render(request, 'user/order/notExecuted/_uuid.html')
 # register 新規登録
 def register(request):
     return render(request, 'user/register/index.html')
-def register_detail(request):
+def rdetail(request):
     return render(request, 'user/register/_uuid.html')
 # reserve 予約
 def reserve(request):
     return render(request, 'user/reserve/index.html')
-def reserve_date(request):
+def rdate(request):
     return render(request, 'user/reserve/date/index.html')
-def reserve_date_detail(request):
+def rddetail(request):
     return render(request, 'user/reserve/date/_uuid.html')
-def reserve_payment(request):
+def rpayment(request):
     return render(request, 'user/reserve/payment/index.html')
-def reserve_payment_detail(request):
+def rpdetail(request):
     return render(request, 'user/reserve/payment/_uuid.html')
-def reserve_done(request):
+def rconfirmation(request):
+    return render(request, 'user/reserve/confirmation/index.html')
+def rdone(request):
     return render(request, 'user/reserve/done/index.html')
 # search 検索
 def search(request):
@@ -84,24 +86,24 @@ def search(request):
 # setting 設定
 def setting(request):
     return render(request, 'user/setting/index.html')
-def setting_companyInquiry(request):
+def sinquiry(request):
     return render(request, 'user/setting/companyInquiry/index.html')
-def setting_contact(request):
+def scontact(request):
     return render(request, 'user/setting/contact/index.html')
 # creditについては変更と追加ができないとだめだと思います
-def setting_credit(request):
+def scredit(request):
     return render(request, 'user/setting/credit/index.html')
-def setting_creditAdd(request):
+def screditAdd(request):
     return render(request, 'user/setting/credit/creditAdd.html')
-def setting_creditEdit(request):
+def screditEdit(request):
     return render(request, 'user/setting/credit/creditEdit.html')
-def setting_hidden(request):
+def shidden(request):
     return render(request, 'user/setting/hidden/index.html')
-def setting_tpoint(request):
+def stpoint(request):
     return render(request, 'user/setting/tpoint/index.html')
-def setting_unsubscribe(request):
+def sunsubscribe(request):
     return render(request, 'user/setting/unsubscribe/index.html')
-def setting_userDetailChange(request):
+def suserDetailChange(request):
     return render(request, 'user/setting/userDetailChange/index.html')
 
 

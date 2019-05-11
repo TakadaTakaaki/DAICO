@@ -1,4 +1,4 @@
-{% extends "../../user-base.html" %}
+{% extends "../../../user-base.html" %}
 {% block body %}
     <div class="three">
         <p class="order2">退会</p>
@@ -15,8 +15,8 @@
                     </div>
                 </div>
                 <div class="buton">
-                    <a href="../home/before-login.html" class="click"><button type="button" class="buton4">HOMEへ</button></a>
-                    <a href="../home/before-login.html" class="click"><button type="button" class="buton4">退会する</button></a>
+                    <a href="{% url 'index' %}" class="click"><button type="button" class="buton4">HOMEへ</button></a>
+                    <a href="{% url 'index' %}" class="click"><button type="button" class="buton4">退会する</button></a>
                 </div>
             </div>
         </div>

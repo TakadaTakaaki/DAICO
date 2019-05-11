@@ -1,4 +1,4 @@
-{% extends "../../user-base.html" %}
+{% extends "../../../user-base.html" %}
 {% block body %}
     <div class="allbox">
         <div class="fade" id="fade">
@@ -72,11 +72,11 @@
         </div>
         <div class="three">
             <p class="order1">空き状況</p>
-            <p class="order2"><a href="../reserve/date-choose.html" class="noneorder">代行者別空き状況</a></p>
+            <p class="order2"><a href="{% url 'rddetail' %}" class="noneorder">代行者別空き状況</a></p>
         </div>
         <div class="calender">
             カレンダー(API)
         </div>
-        <a href="../reserve/payment-method.html" class="click"><button type="button" class="buton4">お客様情報の確認</button>
+        <a href="{% url 'rpayment' %}" class="click"><button type="button" class="buton4">お客様情報の確認</button>
     </div>
 {% endblock %}

@@ -6,6 +6,47 @@
         <title>{% block title %}【代行エンジン】代行業を一括で検索・比較出来るサイト{% endblock %}</title>
         <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
         <link href="{% static 'css/home/before-login.css' %}" rel="stylesheet">
+        <link href="{% static 'css/home/blog_list.css' %}" rel="stylesheet">
+        <link href="{% static 'css/home/blog_look.css' %}" rel="stylesheet">
+        <link href="{% static 'css/company/blog-visit.css' %}" rel="stylesheet">
+        <link href="{% static 'css/company/blog.css' %}" rel="stylesheet">
+        <link href="{% static 'css/company/company-information.css' %}" rel="stylesheet">
+        <link href="{% static 'css/company/plan.css' %}" rel="stylesheet">
+        <link href="{% static 'css/company/review.css' %}" rel="stylesheet">
+        <link href="{% static 'css/company/staff.css' %}" rel="stylesheet">
+        <link href="{% static 'css/company/staff-profile.css' %}" rel="stylesheet">
+        <link href="{% static 'css/contact/chat.css' %}" rel="stylesheet">
+        <link href="{% static 'css/favorite/favorite.css' %}" rel="stylesheet">
+        <link href="{% static 'css/notification/daico.css' %}" rel="stylesheet">
+        <link href="{% static 'css/notification/store.css' %}" rel="stylesheet">
+        <link href="{% static 'css/notification/visit.css' %}" rel="stylesheet">
+        <link href="{% static 'css/order-history/order.css' %}" rel="stylesheet">
+        <link href="{% static 'css/order-history/cancel.css' %}" rel="stylesheet">
+        <link href="{% static 'css/order-history/cancle-detail.css' %}" rel="stylesheet">
+        <link href="{% static 'css/order-history/detail.css' %}" rel="stylesheet">
+        <link href="{% static 'css/order-history/incomplete-detail' %}" rel="stylesheet">
+        <link href="{% static 'css/order-history/incomplete.css' %}" rel="stylesheet">
+        <link href="{% static 'css/register/after-registration' %}" rel="stylesheet">
+        <link href="{% static 'css/reserve/plan-all.css' %}" rel="stylesheet">
+        <link href="{% static 'css/reserve/complete.css' %}" rel="stylesheet">
+        <link href="{% static 'css/reserve/confirmation.css' %}" rel="stylesheet">
+        <link href="{% static 'css/reserve/date-choose.css' %}" rel="stylesheet">
+        <link href="{% static 'css/reserve/date.css' %}" rel="stylesheet">
+        <link href="{% static 'css/reserve/payment-method.css' %}" rel="stylesheet">
+        <link href="{% static 'css/search-result/search.css' %}" rel="stylesheet">
+        <link href="{% static 'css/setting/company-information.css' %}" rel="stylesheet">
+        <link href="{% static 'css/setting/contact.css' %}" rel="stylesheet">
+        <link href="{% static 'css/setting/credit-cartd.css' %}" rel="stylesheet">
+        <link href="{% static 'css/setting/hide-list.css' %}" rel="stylesheet">
+        <link href="{% static 'css/setting/setting.css' %}" rel="stylesheet">
+        <link href="{% static 'css/setting/tpoint.css' %}" rel="stylesheet">
+        <link href="{% static 'css/setting/unsubscribe.css' %}" rel="stylesheet">
+        <link href="{% static 'css/setting/user-information.css' %}" rel="stylesheet">
+        <link href="{% static 'css/slick/slick-theme.css' %}" rel="stylesheet">
+        <link href="{% static 'css/slick/slick-theme.css' %}" rel="stylesheet">
+        <link href="{% static 'css/slick/slick-theme1.css' %}" rel="stylesheet">
+        <link href="{% static 'css/slick/slick.css' %}" rel="stylesheet">
+        <link href="{% static 'css/slick/slick1.css' %}" rel="stylesheet">
         <link rel="shortcut icon" href="{% static 'picture/favicon.ico' %}">
         <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -64,7 +105,7 @@
         <nav class="template">
             <div id="menu">
                 <div class="just"><a href="{% url 'favorite' %}" class="favorite"><i class="far fa-heart"></i>  <span class="sp">お気に入り</span></a></div>
-                <div class="just"><a href="{% url 'notice_company' %}" class="notice"><i class="far fa-envelope"></i>  <span class="sp">通知</span></a></div>
+                <div class="just"><a href="{% url 'notice_c' %}" class="notice"><i class="far fa-envelope"></i>  <span class="sp">通知</span></a></div>
                 <div class="just3"><a href="{% url 'index' %}" class="home"><span class="sp"><img src="../../picture/pinklogo.png" class="daico"></span></a></div>
                 <div class="just just4"><a href="{% url 'index' %}" class="favorite"><i class="fas fa-home"></i><span class="sp">ホーム</span></a></div>
                 <div class="just"><a href="{% url 'order' %}" class="order-history"><i class="fas fa-history"></i>  <span class="sp">注文履歴</span></a></div>

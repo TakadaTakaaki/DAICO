@@ -1,4 +1,4 @@
-{% extends "../../user-base.html" %}
+{% extends "../../../user-base.html" %}
 {% block body %}
     <div class="allbox">
         <div class="fade" id="fade">
@@ -97,6 +97,6 @@
                 </div>
             </div>
         </div>
-        <a href="../reserve/confirmation.html" class="click"><button type="button" class="buton4">予約内容の確認</button></a>
+        <a href="{% url 'rconfirmation' %}" class="click"><button type="button" class="buton4">予約内容の確認</button></a>
     </div>
 {% endblock %}

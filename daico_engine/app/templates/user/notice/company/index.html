@@ -1,15 +1,15 @@
-{% extends "../../user-base.html" %}
+{% extends "../../../user-base.html" %}
 {% block body %}
     <div class="three">
         <p class="order3">店舗からのメッセージ</p>
-        <p class="order2"><a href="../notification/daico.html" class="noneorder">DAICOからのメッセージ</a></p>
+        <p class="order2"><a href="{% url 'nengine' %}" class="noneorder">DAICOからのメッセージ</a></p>
         <footer id="navi_footer">
             <a href="#" class="page1">1/10ページ</a>
             <a href="#" class="page3">次へ</a>
         </footer>
     </div>
     <div class="flex1">
-        <a href="../notification/visit.html" class="cuupon">
+        <a href="{% url 'ncdetail' %}" class="cuupon">
             <div class="last">
                 <div class="name">
                     <div class="named">
@@ -23,7 +23,7 @@
         </a>
     </div>
     <div class="flex1">
-        <a href="../notification/visit.html" class="cuupon">
+        <a href="{% url 'ncdetail' %}" class="cuupon">
             <div class="last">
                 <div class="name">
                     <div class="named">
@@ -37,7 +37,7 @@
         </a>
     </div>
     <div class="flex1">
-        <a href="../notification/visit.html" class="cuupon">
+        <a href="{% url 'ncdetail' %}" class="cuupon">
             <div class="last">
                 <div class="name">
                     <div class="named">

@@ -6,14 +6,14 @@
     <div class="flex1">
         <div class="last">
             <div class="info">
-                <a href="../setting/user-information.html"><p class="kazyou">会員情報変更</p></a>
-                <a href="../setting/credit-card.html"><p class="kazyou">クレジットカードの追加</p></a>
-                <a href="../setting/tpoint.html"><p class="kazyou">Tpointの照会</p></a>
-                <a href="../setting/hide-list.html"><p class="kazyou">非表示リスト</p></a>
-                <a href="../setting/contact.html"><p class="kazyou">お問い合わせ</p></a>
-                <a href="../setting/company_information.html"><p class="kazyou">掲載したい企業</p></a>
-                <a href="../home/before-login.html"><p class="kazyou">ログアウト</p></a>
-                <a href="../setting/unsubscribe.html"><p class="kazyou">退会</p></a>
+                <a href="{% url 'suserDetailChange' %}"><p class="kazyou">会員情報変更</p></a>
+                <a href="{% url 'scredit' %}"><p class="kazyou">クレジットカードの追加</p></a>
+                <a href="{% url 'stpoint' %}"><p class="kazyou">Tpointの照会</p></a>
+                <a href="{% url 'shidden' %}"><p class="kazyou">非表示リスト</p></a>
+                <a href="{% url 'scontact' %}"><p class="kazyou">お問い合わせ</p></a>
+                <a href="{% url 'sinquiry' %}"><p class="kazyou">掲載したい企業</p></a>
+                <a href="{% url 'index' %}"><p class="kazyou">ログアウト</p></a>
+                <a href="{% url 'sunsubscribe' %}"><p class="kazyou">退会</p></a>
             </div>
         </div>
     </div>

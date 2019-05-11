@@ -1,4 +1,4 @@
-{% extends "../../user-base.html" %}
+{% extends "../../../user-base.html" %}
 {% block body %}
     <div class="three">
         <p class="order2">会員情報変更</p>
@@ -177,7 +177,7 @@
                     </div>    
                 </div>
                 <div class="buton">
-                    <a href="../home/before-login.html" class="click"><button type="button" class="buton4">変更してHOMEへ</button></a>
+                    <a href="{% url 'index' %}" class="click"><button type="button" class="buton4">変更してHOMEへ</button></a>
                 </div>
             </div>
         </div>

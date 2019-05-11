@@ -22,45 +22,74 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', include('app.urls')),
     url(r'article/', include('app.urls')),
-    url(r'article_detail/', include('app.urls')),
+    url(r'adetail/', include('app.urls')),
+    # article_detail
     url(r'company/', include('app.urls')),
     url(r'blog/', include('app.urls')),
-    url(r'blog_detail/', include('app.urls')),
+    url(r'bdetail/', include('app.urls')),
+    # blog_detail
     url(r'plan/', include('app.urls')),
     url(r'review/', include('app.urls')),
     url(r'staff/', include('app.urls')),
-    url(r'staff_detail/', include('app.urls')),
+    url(r'sdetail/', include('app.urls')),
+    # staff_detail
     url(r'chat/', include('app.urls')),
     url(r'favorite/', include('app.urls')),
-    url(r'notice_company/', include('app.urls')),
-    url(r'notice_company_detail/', include('app.urls')),
-    url(r'notice_engine/', include('app.urls')),
-    url(r'notice_engine_detail/', include('app.urls')),
+    url(r'notice_c/', include('app.urls')),
+    # nptice_company
+    url(r'ncdetail/', include('app.urls')),
+    # notice_company_detail
+    url(r'nengine/', include('app.urls')),
+    # notice_engine
+    url(r'nedetail/', include('app.urls')),
+    # notice_engine_detail
     url(r'order/', include('app.urls')),
-    url(r'order_detail/', include('app.urls')),
-    url(r'order_cancel/', include('app.urls')),
-    url(r'order_cancel_detail/', include('app.urls')),
-    url(r'order_notExecuted/', include('app.urls')),
-    url(r'order_notExecuted_detail/', include('app.urls')),
+    url(r'odetail/', include('app.urls')),
+    # order_detail
+    url(r'cancel', include('app.urls')),
+    # order_cancel
+    url(r'ocdetail/', include('app.urls')),
+    # order_cancel_detail
+    url(r'onotExecuted/', include('app.urls')),
+    # order_notExecuted
+    url(r'ondetail/', include('app.urls')),
+    # order_notExecuted_detail
     url(r'register/', include('app.urls')),
-    url(r'register_detail/', include('app.urls')),
+    url(r'rdetail/', include('app.urls')),
+    # register_detail
     url(r'reserve/', include('app.urls')),
-    url(r'reserve_date/', include('app.urls')),
-    url(r'reserve_date_detail/', include('app.urls')),
-    url(r'reserve_payment/', include('app.urls')),
-    url(r'reserve_payment_detail/', include('app.urls')),
-    url(r'reserve_done/', include('app.urls')),
+    url(r'rdate/', include('app.urls')),
+    # reserve_date
+    url(r'rddetail/', include('app.urls')),
+    # reserve_date_detail
+    url(r'rpayment/', include('app.urls')),
+    # reserve_payment
+    url(r'rpdetail/', include('app.urls')),
+    # reserve_payment_detail
+    url(r'rconfirmation/', include('app.urls')),
+    # reserve_confirmation
+    url(r'rdone/', include('app.urls')),
+    # reserve_done
     url(r'search/', include('app.urls')),
     url(r'setting/', include('app.urls')),    
-    url(r'setting_companyInquiry/', include('app.urls')),
-    url(r'setting_contact/', include('app.urls')),
-    url(r'setting_credit/', include('app.urls')),
-    url(r'setting_creditAdd/', include('app.urls')),
-    url(r'setting_creditEdit/', include('app.urls')),
-    url(r'setting_hidden/', include('app.urls')),
-    url(r'setting_tpoint/', include('app.urls')),
-    url(r'setting_unsubscribe/', include('app.urls')),
-    url(r'setting_userDetailChange/', include('app.urls')),
+    url(r'sinquiry/', include('app.urls')),
+    # setting_companyInquiry
+    url(r'scontact/', include('app.urls')),
+    # setting_contact
+    url(r'scredit/', include('app.urls')),
+    # setting_credit
+    url(r'screditAdd/', include('app.urls')),
+    # setting_creditAdd
+    url(r'screditEdit/', include('app.urls')),
+    # setting_creditEdit
+    url(r'shidden/', include('app.urls')),
+    # setting_hidden
+    url(r'stpoint/', include('app.urls')),
+    # setting_tpoint
+    url(r'sunsubscribe/', include('app.urls')),
+    # setting_unsubscribe
+    url(r'suserDetailChange/', include('app.urls')),
+    # setting_userDetailChange
 
     # company
     # engine

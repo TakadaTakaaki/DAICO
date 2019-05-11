@@ -1,4 +1,4 @@
-{% extends "../../user-base.html" %}
+{% extends "../../../user-base.html" %}
 {% block body %}
     <div class="three">
         <p class="order2">非表示リスト</p>
@@ -13,7 +13,7 @@
                                     <p class="name1"><em>実行日</em><br>2019年3月15日</p>
                                     <p class="name1"><em>合計</em><br>¥ 4,500</p>
                                     <p class="name1"><em>場所</em><br>東京都三鷹市下連雀3丁目２２−８</p>
-                                    <p class="name2"><a href="../order-history/detail.html" class="ooo">注文詳細</a></p>
+                                    <p class="name2"><a href="{% url 'odetail' %}" class="ooo">注文詳細</a></p>
                                 </div>
                                 <div class="info">
                                     <img src="../../picture/ikuzi.jpg" class="ikuzi">
@@ -49,7 +49,7 @@
                                                 <p class="name1"><em>実行日</em><br>2019年3月15日</p>
                                                 <p class="name1"><em>合計</em><br>¥ 4,500</p>
                                                 <p class="name1"><em>場所</em><br>東京都三鷹市下連雀3丁目２２−８</p>
-                                                <p class="name2"><a href="../order-history/detail.html" class="ooo">注文詳細</a></p>
+                                                <p class="name2"><a href="{% url 'odetail' %}" class="ooo">注文詳細</a></p>
                                             </div>
                                             <div class="info">
                                                 <img src="../../picture/ikuzi.jpg" class="ikuzi">
@@ -85,7 +85,7 @@
                                                             <p class="name1"><em>実行日</em><br>2019年3月15日</p>
                                                             <p class="name1"><em>合計</em><br>¥ 4,500</p>
                                                             <p class="name1"><em>場所</em><br>東京都三鷹市下連雀3丁目２２−８</p>
-                                                            <p class="name2"><a href="../order-history/detail.html" class="ooo">注文詳細</a></p>
+                                                            <p class="name2"><a href="{% url 'odetail' %}" class="ooo">注文詳細</a></p>
                                                         </div>
                                                         <div class="info">
                                                             <img src="../../picture/ikuzi.jpg" class="ikuzi">
@@ -115,7 +115,7 @@
                                                     </div>
                                                 </div>
                 <div class="button">
-                    <a href="../home/before-login.html" class="click"><button type="button" class="buton4">HOME</button></a>
+                    <a href="{% url 'index' %}" class="click"><button type="button" class="buton4">HOME</button></a>
                 </div>
             </div>
         </div>

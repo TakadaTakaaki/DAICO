@@ -1,7 +1,7 @@
-{% extends "../../user-base.html" %}
+{% extends "../../../user-base.html" %}
 {% block body %}
     <div class="three">
-        <p class="order3"><a href="../notification/store.html" class="noneorder">店舗からのメッセージ</a></p>
+        <p class="order3"><a href="{% url 'notice_c' %}" class="noneorder">店舗からのメッセージ</a></p>
         <p class="order2">DAICOからのメッセージ</p>
         <footer id="navi_footer">
             <a href="#" class="page1">1/10ページ</a>
@@ -9,7 +9,7 @@
         </footer>
     </div>
     <div class="flex1">
-    <a href="../notification/visit.html" class="cuupon">
+    <a href="{% url 'nedetail' %}" class="cuupon">
         <div class="last">
             <div class="name">
                 <div class="named">
@@ -23,7 +23,7 @@
     </a>
     </div>
     <div class="flex1">
-        <a href="../notification/visit.html" class="cuupon">
+        <a href="{% url 'nedetail' %}" class="cuupon">
             <div class="last">
                 <div class="name">
                     <div class="named">
@@ -37,7 +37,7 @@
         </a>
     </div>
     <div class="flex1">
-        <a href="../notification/visit.html" class="cuupon">
+        <a href="{% url 'nedetail' %}" class="cuupon">
             <div class="last">
                 <div class="name">
                     <div class="named">
@@ -51,7 +51,7 @@
         </a>
     </div>
     <div class="flex1">
-        <a href="../notification/visit.html" class="cuupon">
+        <a href="{% url 'nedetail' %}" class="cuupon">
             <div class="last">
                 <div class="name">
                     <div class="named">
