@@ -1,0 +1,30 @@
+{% extends "../../notUser-base.html" %}
+{% block body %}
+    <div class="flex1">
+        <a href="{% url 'publish' %}" class="cuupon">
+            <div class="last">
+                <div class="name">
+                    <p class="name1"><br>掲載企業一覧</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="flex1">
+        <a href="{% url 'guest' %}" class="cuupon">
+            <div class="last">
+                <div class="name">
+                    <p class="name1"><br>お客様情報一覧</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="flex1">
+        <a href="{% url 'writer' %}" class="cuupon">
+            <div class="last">
+                <div class="name">
+                    <p class="name1"><br>記事</p>
+                </div>
+            </div>
+        </a>
+    </div>
+{% endblock %}

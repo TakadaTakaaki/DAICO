@@ -1,0 +1,77 @@
+{% extends "../../../notUser-base.html" %}
+{% block body %}
+    <div class="allbox">
+        <div class="fade">
+            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/1.jpg" alt=""></div>
+            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/2.jpg" alt=""></div>
+            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/3.jpg" alt=""></div>
+            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/4.jpg" alt=""></div>
+            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/5.jpg" alt=""></div>
+            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/6.jpg" alt=""></div>
+            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/7.jpg" alt=""></div>
+            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/8.jpg" alt=""></div>
+        </div>
+        <div class="topbox">
+            <div class="leftbox">
+                <div class="erea">
+                    <p class="sibuya">渋谷　>　道玄坂・明治通り</p>
+                </div>
+                <div class="storename">
+                    <p class="casy"><a href="" class="casy1">Casy 【カジー】</a></p>
+                </div>
+                <div class="storetype">
+                    <p class="strongpoint">即時予約OK!</p>
+                    <p class="strongpoint1">ポイント加盟店</p>
+                    <p class="strongpoint2">メンズにもオススメ</p>
+                </div>
+            </div>
+            <div class="rightbox">
+                <div class="bottonbox">
+                    <p class="favoriteadd"><button type="button"class="heart"><i class="far fa-heart"></i>  お気に入り</button></p>
+                </div>
+                <div class="bottonbox">
+                    <p class="favoriteadd"><a href=""><button type="button"class="heart8">予約・日時指定へ</button></a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex1">
+        <div class="last">
+            <div class="info">
+                <nav class="daicomenu">
+                    <ul>
+                        <li class="li1"><a href="{% url 'pdetail' %}" class="lih2"><i class="fas fa-building"></i> 会社詳細</a></li>
+                        <li><a href="{% url 'menu' %}" class="lih2"><i class="fas fa-scroll"></i> プラン一覧</a></li>
+                        <li><a href="{% url 'employ' %}" class="lih2"><i class="fas fa-user"></i> スタッフ一覧</a></li>
+                        <li><a href="{% url 'rate' %}" class="lih2"><i class="fas fa-comments"></i> 口コミ</a></li>
+                        <li><a href="{% url 'diary' %}" class="lih1"><i class="fas fa-pencil-alt"></i> ブログ</a></li>
+                    </ul>
+                </nav>
+                <div class="three1">
+                    <p class="order1">Casyのブログ</p>
+                </div>
+                <div class="flex01">
+                    <div class="last01">
+                        <div class="name01">
+                            <div class="named01">
+                                <p class="name0">【シミを必ず落とす研修】</p>
+                            </div>
+                            <div class="para01">
+                                こんにちは！<br>
+                                <br>先日はCasyをご利用頂きましてありがとうございました！<br>
+                                <br>ご利用より１か月が経ちますが、風呂の調子はいかがですか？<br>
+                                掃除の方法などにお困りはございませんか？<br>
+                                <br>Casyでは、次回もネット予約して頂くと次回ご注文の合計金額より<br>
+                                【540円引き】致します♪<br>
+                                <br>次回も最善のご提案が出来たらと思いますので、<br>
+                                ぜひこちらの<a href="../html/yoyaku.html" class="cuupon">クーポン</a>をご利用下さい。<br>
+                                <br>またお会いできるのを楽しみにしています。<br>
+                                <br>Casy　山下智久
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

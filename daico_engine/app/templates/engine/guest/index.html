@@ -1,0 +1,48 @@
+{% extends "../../notUser-base.html" %}
+{% block body %}
+    <div class="flex1">
+        <div class="three">
+            <p class="order1">お客様情報一覧</p>
+        </div>
+        <div class="flex10">
+            <div class="last">
+                <div class="info2">
+                    <div class="gene">
+                        <p class="serihu1"></p>
+                        <div class="zyouken">
+                            <p class="simekiri">
+                                <br>
+                                <be></be><br><em class="meizi">　　名前</em> : 堀北真希
+                                <br><em class="meizi">　　電話番号</em> : 03-1508-0334
+                                <br><em class="meizi">　　メールアドレス</em> : abcd@gmail.com
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="buton">
+                        <a href="{% url 'gdetail' %}" class="click"><button type="button" class="buton1">詳細</button></a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="flex10">
+            <div class="last">
+                <div class="info2">
+                    <div class="gene">
+                        <p class="serihu1"></p>
+                        <div class="zyouken">
+                            <p class="simekiri">
+                                <be></be><br><em class="meizi">　　名前</em> : 菅田将暉
+                                <br><em class="meizi">　　電話番号</em> : 03-1508-0334
+                                <br><em class="meizi">　　メールアドレス</em> : abcd@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                    <div class="buton">
+                        <a href="{% url 'gdetail' %}" class="click"><button type="button" class="buton1">詳細</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

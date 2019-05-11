@@ -46,7 +46,7 @@ urlpatterns = [
     url(r'order/', include('app.urls')),
     url(r'odetail/', include('app.urls')),
     # order_detail
-    url(r'cancel', include('app.urls')),
+    url(r'cancel/', include('app.urls')),
     # order_cancel
     url(r'ocdetail/', include('app.urls')),
     # order_cancel_detail
@@ -92,6 +92,29 @@ urlpatterns = [
     # setting_userDetailChange
 
     # company
+
     # engine
+    url(r'start/', include('app.urls')),
+    url(r'analytics/', include('app.urls')),
+    url(r'contact/', include('app.urls')),
+    url(r'client/', include('app.urls')),
+    url(r'inquire/', include('app.urls')),
+    url(r'customer/', include('app.urls')),
+    url(r'guest/', include('app.urls')),
+    url(r'gdetail/', include('app.urls')),
+    url(r'edit/', include('app.urls')),
+    url(r'manage/', include('app.urls')),
+    url(r'mdetail/', include('app.urls')),
+    url(r'publish/', include('app.urls')),
+    url(r'pdetail/', include('app.urls')),
+    url(r'diary/', include('app.urls')),
+    url(r'ddetail/', include('app.urls')),
+    url(r'employ/', include('app.urls')),
+    url(r'emdetail/', include('app.urls')),
+    url(r'menu/', include('app.urls')),
+    url(r'rate/', include('app.urls')),
+    url(r'writer/', include('app.urls')),
+    url(r'wdetail/', include('app.urls')),
+    # 引数をループさせない
     url(r'', include('app.urls')),
 ]

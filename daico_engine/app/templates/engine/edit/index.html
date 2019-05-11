@@ -1,0 +1,159 @@
+{% extends "../../notUser-base.html" %}
+{% block body %}
+    <div class="allbox">
+        <div class="fade">
+            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/1.jpg" alt=""></div>
+            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/2.jpg" alt=""></div>
+            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/3.jpg" alt=""></div>
+            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/4.jpg" alt=""></div>
+            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/5.jpg" alt=""></div>
+            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/6.jpg" alt=""></div>
+            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/7.jpg" alt=""></div>
+            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/8.jpg" alt=""></div>
+        </div>
+        <div class="topbox">
+            <div class="leftbox">
+                <div class="erea">
+                    <p class="sibuya">渋谷　>　道玄坂・明治通り</p>
+                </div>
+                <div class="storename">
+                    <p class="casy"><a href="" class="casy1">Casy 【カジー】</a></p>
+                </div>
+                <div class="storetype">
+                    <p class="strongpoint">即時予約OK!</p>
+                    <p class="strongpoint1">ポイント加盟店</p>
+                    <p class="strongpoint2">メンズにもオススメ</p>
+                </div>
+            </div>
+            <div class="rightbox">
+                <div class="bottonbox">
+                    <p class="favoriteadd"><button type="button"class="heart"><i class="far fa-heart"></i>  お気に入り</button></p>
+                </div>
+                <div class="bottonbox">
+                    <p class="favoriteadd"><a href=""><button type="button"class="heart8">予約・日時指定へ</button></a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex1">
+        <div class="last">
+            <div class="info">
+                <nav class="daicomenu">
+                    <ul>
+                        <li class="li1"><a href="{% url 'pdetail' %}" class="lih1"><i class="fas fa-building"></i> 会社詳細</a></li>
+                        <li><a href="{% url 'menu' %}" class="lih2"><i class="fas fa-scroll"></i> プラン一覧</a></li>
+                        <li><a href="{% url 'employ' %}" class="lih2"><i class="fas fa-user"></i> スタッフ一覧</a></li>
+                        <li><a href="{% url 'rate' %}" class="lih2"><i class="fas fa-comments"></i> 口コミ</a></li>
+                        <li><a href="{% url 'diary' %}" class="lih2"><i class="fas fa-pencil-alt"></i> ブログ</a></li>
+                    </ul>
+                </nav>
+                <div class="bottombox">
+                    <div class="leftphotos">
+                        <div class="leftphoto">
+                            <img src="../../picture/horikita.jpg" class="photo1">
+                        </div>
+                        <div class="slide">
+                            <div class="leftphoto2">
+                                <img src="../../picture/kazi.png" class="photo2">
+                            </div>
+                            <div class="leftphoto3">
+                                <img src="../../picture/ikuzi.jpg" class="photo3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right5partbox">
+                        <div class="parah">
+                            <p class="redpara">【乾かすだけでキマる】×【無駄にお金は使わせない】必要最低限のメニューで最高のhairを追求する実力派★</p>
+                        </div>
+                        <div class="rank">
+                            <div class="yonko">
+                                <div class="niko">
+                                    <p class="money"><i class="fas fa-yen-sign"></i> 料金<a href="{% url 'menu' %}" class="yen">¥2,500〜</a></p>
+                                    <p class="money"><i class="fas fa-comments"></i> 口コミ<a href="{% url 'rate' %}" class="yen">20件</a></p>
+                                </div>
+                                <div class="niko1">
+                                    <p class="money"><i class="fas fa-th"></i> ブログ<a href="{% url 'diary' %}" class="yen">10件</a></p>
+                                    <p class="money"><i class="fas fa-user"></i> スタッフ<a href="{% url 'employ' %}" class="yen">10件</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paragraph">
+                            <p class="blackpara">【乾かすだけでキマる】にこだわり【本当に必要なメニュー】を見極め【無駄にお金は使わせない】本格派サロン。モダンで落ち着いた空間が心地良さを演出させます。<br>【乾かすだけでキマる】×【無駄にお金は使わせない】必要最低限のメニューで最高のhairを追求する実力派★</p>
+                        </div>
+                        <div class="starbox">
+                            <p class="hyouka"><i class="far fa-star"></i>　総合　<em class="star">★ ★ ★ ★</em></p>
+                            <div class="starbox0">
+                                <div class="starbox1">
+                                    <p class="money"><i class="fas fa-yen-sign"></i>　料金　<em class="star">★ ★ ★</em></p>
+                                    <p class="money"><i class="fas fa-pray"></i>　丁寧　<em class="star">★ ★ ★ ★</em></p>
+                                </div>
+                                <div class="starbox2">
+                                    <p class="money"><i class="fas fa-briefcase"></i>　技術　<em class="star">★ ★</em></p>
+                                    <p class="money"><i class="fas fa-user-friends"></i>　接客　<em class="star">★ ★ ★ ★ ★</em></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="planbox">
+                            <div class="name-next">
+                                <p class="onename">
+                                    Casy【カジー】のプラン
+                                </p>
+                                <p class="allnext">
+                                    <em class="pink">▶</em><a href="{% url 'menu' %}" class="allnext1">　一覧へ</a>
+                                </p>
+                            </div>
+                            <p class="planpara"><em class="genrebox">新規</em><a href="{% url 'menu' %}" class="planpara1">【女性スタッフ】激安風呂掃除プラン(夕飯付き)！¥1,800〜【水回り掃除+1食】</a></p>
+                            <p class="planpara"><em class="genrebox">新規</em><a href="{% url 'menu' %}" class="planpara1">【【U22】若ママ応援プラン育児2時間お任せください！¥3,000〜【育児2時間】</a></p>
+                            <p class="planpara"><em class="genrebox">新規</em><a href="{% url 'menu' %}" class="planpara1">【【学生限定】激安部屋掃除プラン(夕飯付き)！¥2,000〜【部屋掃除+1食】</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="three">
+                    <p class="order1">Casy【カジー】の会社情報</p>
+                </div>
+                <table>
+                    <tr>
+                        <th>電話番号</th>
+                        <td>　03-1508-0334</td>
+                    </tr>
+                    <tr>
+                        <th>本社</th>
+                        <td>　東京都渋谷区初台3−22−9</td>
+                    </tr>
+                    <tr>
+                        <th>創業</th>
+                        <td>　1999年</td>
+                    </tr>
+                    <tr>
+                        <th>クレジットカード</th>
+                        <td>　VISA／MasterCard／JCB／American Express／Diners </td>
+                    </tr>
+                    <tr>
+                        <th>ホームページ</th>
+                        <td>　http/////..sdckdmfkmwjdmc</td>
+                    </tr>
+                    <tr>
+                        <th>従業員数</th>
+                        <td>　30人</td>
+                    </tr>
+                    <tr>
+                        <th>営業時間</th>
+                        <td>　24時間年中無休</td>
+                    </tr>
+                </table>
+                <div class="three">
+                    <p class="order1">サービス概要</p>
+                </div>
+                <div class="three">
+                    <p class="order1">お支払いに関して</p>
+                </div>
+                <div class="three">
+                    <p class="order1">キャンセル・解約に関して</p>
+                </div>
+                <div class="three">
+                    <p class="order1">セキュリティ対策</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
