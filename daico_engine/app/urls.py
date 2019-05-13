@@ -133,5 +133,6 @@ urlpatterns = [
     url(r'menu', views.menu, name="menu"),
     url(r'rate', views.rate, name="rate"),
     url(r'writer', views.writer, name="writer"),
+    
     path('wdetail/<int:pk>/', views.wdetail, name="wdetail"),
 ]

@@ -196,15 +196,15 @@ def menu(request):
 def rate(request):
     return render(request, 'engine/publish/rate/index.html')
 # writer　記事
-# def writer(request):
-#     posts = post.objects.order_by('-published')
-#     return render(request, 'engine/writer/index.html', {'posts': posts})
-# def wdetail(request, pk):
-#     posts = post.objects.get(pk=pk)
-#     return render(request, 'engine/writer/_uuid.html', {'posts': posts})
 def writer(request):
     posts = post.objects.order_by('-published')
-    return render(request, 'engine/writer/index.html',{'posts':posts})
-def wdetail(request,pk):
+    return render(request, 'engine/writer/index.html', {'posts': posts})
+def wdetail(request, pk):
     posts = post.objects.get(pk=pk)
-    return render(request, 'engine/writer/_uuid.html',{'posts':posts})
+    return render(request, 'engine/writer/_uuid.html', {'posts': posts})
+# def writer(request):
+#     posts = post.objects.order_by('-published')
+#     return render(request, 'engine/writer/index.html',{'posts':posts})
+# def wdetail(request,pk):
+#     posts = post.objects.get(pk=pk)
+#     return render(request, 'engine/writer/_uuid.html',{'posts':posts})
