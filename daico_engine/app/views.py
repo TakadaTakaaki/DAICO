@@ -1,9 +1,7 @@
-from django.shortcuts import render
-
-# Create your views here.
-
 from django.http.response import HttpResponse
 from django.shortcuts import render
+from .models import post
+
 
 # user
 def index(request):
@@ -196,6 +194,8 @@ def rate(request):
     return render(request, 'engine/publish/rate/index.html')
 # writer　記事
 def writer(request):
-    return render(request, 'engine/writer/index.html')
-def wdetail(request):
-    return render(request, 'engine/writer/_uuid.html')
+    posts = post.objects.order_by('-published')
+    return render(request, 'engine/writer/index.html', {'posts': posts})
+def wdetail(request, pk):
+    posts = post.objects.get(pk=pk)
+    return render(request, 'engine/writer/_uuid.html', {'posts': posts})

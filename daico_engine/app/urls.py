@@ -1,4 +1,6 @@
 from django.conf.urls import url
+from django.urls import path
+
 from . import views
  
 urlpatterns = [
@@ -131,5 +133,5 @@ urlpatterns = [
     url(r'menu', views.menu, name="menu"),
     url(r'rate', views.rate, name="rate"),
     url(r'writer', views.writer, name="writer"),
-    url(r'wdetail', views.wdetail, name="wdetail"),
+    path('wdetail/<int:pk>/', views.wdetail, name="wdetail"),
 ]
