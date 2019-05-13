@@ -197,7 +197,7 @@ def rate(request):
     return render(request, 'engine/publish/rate/index.html')
 # writer　記事
 def writer(request):
-    posts = post.objects.order_by('-published')
+    posts = post.objects.order_by('id','-published')
     return render(request, 'engine/writer/index.html', {'posts': posts})
 def wdetail(request, pk):
     posts = post.objects.get(pk=pk)

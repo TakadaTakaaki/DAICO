@@ -8,7 +8,7 @@
         <div class="page0">
             <div class="page2">
                 {% for post in posts %}
-                    <a href="{% url 'wdetail' %}" class="blogpage">
+                    <a href="{% url 'wdetail' pk=post.id %}" class="blogpage">
                         <div class="part3">
                             <img src="{% static 'picture/oko.jpg' %}" class="oko">
                             <div class="kowake">
