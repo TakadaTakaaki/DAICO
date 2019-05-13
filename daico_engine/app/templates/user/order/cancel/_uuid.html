@@ -1,5 +1,6 @@
 {% extends "../../../user-base.html" %}
 {% block body %}
+{% load static %}
     <div class="three">
         <p class="order1">注文日 2019年3月10日</p>
         <p class="order1">実行日 2019年3月15日</p>
@@ -13,9 +14,9 @@
                 <p class="name2"><em class="address">注文内容</em><br>商品の小計 : ¥ 4,000<br>手数料 : ¥500<br>注文合計 : ¥4500<br><br><br><em class="address">ご請求額 : ¥4500</em></p>
             </div>
             <div class="info">
-                <img src="../../picture/car.jpg" class="ikuzi">
+                <img src="{% static 'picture/car.jpg' %}" class="ikuzi">
                 <div class="part">
-                    <p class="serihu">会社 : <a href="{% url 'company' %}" class="casi">Casy</a></p>
+                    <p class="serihu">会社 : <a href="{% url 'enterprise' %}" class="casi">Casy</a></p>
                     <p class="serihu1"><a href="{% url 'plan' %}" class="planning">激安風呂掃除プラン(夕飯付き)</a></p>
                     <p class="serihu2">¥ 4,000</p>
                     <a href="{% url 'reserve' %}" class="again"><button type="button" class="order8">再度注文</button></a>

@@ -24,7 +24,7 @@ urlpatterns = [
     url(r'article/', include('app.urls')),
     url(r'adetail/', include('app.urls')),
     # article_detail
-    url(r'company/', include('app.urls')),
+    url(r'enterprise/', include('app.urls')),
     url(r'blog/', include('app.urls')),
     url(r'bdetail/', include('app.urls')),
     # blog_detail
@@ -92,9 +92,29 @@ urlpatterns = [
     # setting_userDetailChange
 
     # company
+    url(r'company/', include('app.urls')),
+    url(r'booking/', include('app.urls')),
+    url(r'bookdetail/', include('app.urls')),
+    url(r'coupon/', include('app.urls')),
+    url(r'player/', include('app.urls')),
+    url(r'medetail/', include('app.urls')),
+    url(r'read/', include('app.urls')),
+    url(r'redetail/', include('app.urls')),
+    url(r'valuation/', include('app.urls')),
+    url(r'compilation/', include('app.urls')),
+    url(r'compon/', include('app.urls')),
+    url(r'complay/', include('app.urls')),
+    url(r'cmdetail/', include('app.urls')),
+    url(r'comre/', include('app.urls')),
+    url(r'comvalua/', include('app.urls')),
+    url(r'survey/', include('app.urls')),
+    url(r'voice/', include('app.urls')),
+    url(r'vcdetail/', include('app.urls')),
+    url(r'vedetail/', include('app.urls')),
+
 
     # engine
-    url(r'start/', include('app.urls')),
+    url(r'engine/', include('app.urls')),
     url(r'analytics/', include('app.urls')),
     url(r'contact/', include('app.urls')),
     url(r'client/', include('app.urls')),
@@ -110,7 +130,7 @@ urlpatterns = [
     url(r'diary/', include('app.urls')),
     url(r'ddetail/', include('app.urls')),
     url(r'employ/', include('app.urls')),
-    url(r'emdetail/', include('app.urls')),
+    url(r'xdetail/', include('app.urls')),
     url(r'menu/', include('app.urls')),
     url(r'rate/', include('app.urls')),
     url(r'writer/', include('app.urls')),

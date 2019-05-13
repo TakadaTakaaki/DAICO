@@ -1,0 +1,94 @@
+{% extends "../../../user-base.html" %}
+{% block body %}
+{% load static %}
+    <div class="allbox">
+        <div class="fade" id="fade">
+            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/1.jpg" alt=""></div>
+            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/2.jpg" alt=""></div>
+            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/3.jpg" alt=""></div>
+            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/4.jpg" alt=""></div>
+            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/5.jpg" alt=""></div>
+            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/6.jpg" alt=""></div>
+            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/7.jpg" alt=""></div>
+            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/8.jpg" alt=""></div>
+        </div>
+        <div class="topbox">
+            <div class="leftbox">
+                <div class="erea">
+                    <p class="sibuya">渋谷　>　道玄坂・明治通り</p>
+                </div>
+                <div class="storename">
+                    <p class="casy"><a href="{% url 'enterprise' %}" class="casy1">Casy 【カジー】</a></p>
+                </div>
+                <div class="storetype">
+                    <p class="strongpoint">即時予約OK!</p>
+                    <p class="strongpoint1">ポイント加盟店</p>
+                    <p class="strongpoint2">メンズにもオススメ</p>
+                </div>
+            </div>
+            <div class="rightbox">
+                <div class="bottonbox">
+                    <p class="favoriteadd"><button type="button"class="heart"><i class="far fa-heart"></i>  お気に入り</button></p>
+                </div>
+                <div class="bottonbox">
+                    <p class="favoriteadd"><a href="{% url 'reserve' %}"><button type="button"class="heart8">予約・日時指定へ</button></a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex1">
+        <div class="last">
+            <div class="info">
+                <nav class="daicomenu">
+                    <ul>
+                        <li class="li1"><a href="{% url 'enterprise' %}" class="lih2"><i class="fas fa-building"></i> 会社詳細</a></li>
+                        <li><a href="{% url 'plan' %}" class="lih2"><i class="fas fa-scroll"></i> プラン一覧</a></li>
+                        <li><a href="{% url 'staff' %}" class="lih1"><i class="fas fa-user"></i> スタッフ一覧</a></li>
+                        <li><a href="{% url 'review' %}" class="lih2"><i class="fas fa-comments"></i> 口コミ</a></li>
+                        <li><a href="{% url 'blog' %}" class="lih2"><i class="fas fa-pencil-alt"></i> ブログ</a></li>
+                    </ul>
+                </nav>
+                <div class="three">
+                    <p class="order1"><em class="suuti">15</em> 人　のスタッフがいます</p>
+                </div>
+                <div class="allstaff">
+                    <div class="staff">
+                        <img src="{% static 'picture/yamap.jpeg' %}" class="staff1">
+                        <p class="hito"><a href="{% url 'sdetail' %}" class="color">山下智久</a></p>
+                        <p class="yakusyoku"><em class="meizi">代表</em> (歴10年)</p>
+                        <p class="prof">風呂掃除は業界No.1の実力を持った愛され男</p>
+                        <a href="{% url 'reserve' %}" class="click"><button type="button" class="buton1">指名して予約へ進む</button></a>
+                    </div>
+                    <div class="staff">
+                        <img src="{% static 'picture/kitagawa.jpg' %}" class="staff1">
+                        <p class="hito"><a href="{% url 'sdetail' %}" class="color">北川景子</a></p>
+                        <p class="yakusyoku"><em class="meizi">店長</em> (歴8年)</p>
+                        <p class="prof">風呂掃除は業界No.1の実力を持った愛され男</p>
+                        <a href="{% url 'reserve' %}" class="click"><button type="button" class="buton1">指名して予約へ進む</button></a>
+                    </div>
+                    <div class="staff">
+                        <img src="{% static 'picture/syouri.png' %}" class="staff1">
+                        <p class="hito"><a href="{% url 'sdetail' %}" class="color">佐藤勝利</a></p>
+                        <p class="yakusyoku"><em class="meizi">エース</em> (歴5年)</p>
+                        <p class="prof">風呂掃除は業界No.1の実力を持った愛され男</p>
+                        <a href="{% url 'reserve' %}" class="click"><button type="button" class="buton1">指名して予約へ進む</button></a>
+                    </div>
+                    <div class="staff">
+                        <img src="{% static 'picture/horikita.jpg' %}" class="staff1">
+                        <p class="hito"><a href="{% url 'sdetail' %}" class="color">堀北真希</a></p>
+                        <p class="yakusyoku"><em class="meizi">見習い</em> (歴3年)</p>
+                        <p class="prof">風呂掃除は業界No.1の実力を持った愛され男</p>
+                        <a href="{% url 'reserve' %}" class="click"><button type="button" class="buton1">指名して予約へ進む</button></a>
+                    </div>
+                    <div class="staff">
+                        <img src="{% static 'picture/syun.jpg' %}" class="staff1">
+                        <p class="hito"><a href="{% url 'sdetail' %}" class="color">小栗旬</a></p>
+                        <p class="yakusyoku"><em class="meizi">見習い</em> (歴3年)</p>
+                        <p class="prof">風呂掃除は業界No.1の実力を持った愛され男</p>
+                        <a href="{% url 'reserve' %}" class="click"><button type="button" class="buton1">指名して予約へ進む</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

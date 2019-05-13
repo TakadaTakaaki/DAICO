@@ -1,5 +1,6 @@
 {% extends "../../user-base.html" %}
 {% block body %}
+{% load static %}
     <div class="one">
         <div class="logo2">
             <p class="setumei">
@@ -29,18 +30,18 @@
         </div>
         <div>
             <ul>
-            　　<li class="sikaku"><a class=”current” href="{% url 'search' %}"><img src="../../picture/kazi.png" class="maru"><p class="ico">家事代行</p></a></li>
-            　　<li class="sikaku"><a href="{% url 'search' %}"><img src="../../picture/ikuzi.jpg" class="maru"><p class="ico">育児代行</p></a></li>
-            　　<li class="sikaku"><a href="{% url 'search' %}"><img src="../../picture/souzi.jpg" class="maru"><p class="ico">掃除代行</p></a></li>
-            　　<li class="sikaku"><a href="{% url 'search' %}"><img src="../../picture/riazyu.png" class="maru"><p class="ico">友達代行</p></a></li>
-            　　<li class="sikaku sikaku1"><a href="{% url 'search' %}"><img src="../../picture/oko.jpg" class="maru"><p class="ico">叱り代行</p></a></li>
+            　　<li class="sikaku"><a class=”current” href="{% url 'search' %}"><img src="{% static 'picture/kazi.png' %}" class="maru"><p class="ico">家事代行</p></a></li>
+            　　<li class="sikaku"><a href="{% url 'search' %}"><img src="{% static 'picture/ikuzi.jpg' %}" class="maru"><p class="ico">育児代行</p></a></li>
+            　　<li class="sikaku"><a href="{% url 'search' %}"><img src="{% static 'picture/souzi.jpg' %}" class="maru"><p class="ico">掃除代行</p></a></li>
+            　　<li class="sikaku"><a href="{% url 'search' %}"><img src="{% static 'picture/riazyu.png' %}" class="maru"><p class="ico">友達代行</p></a></li>
+            　　<li class="sikaku sikaku1"><a href="{% url 'search' %}"><img src="{% static 'picture/oko.jpg' %}" class="maru"><p class="ico">叱り代行</p></a></li>
             </ul>
             <ul class="ul2">
-            　　<li class="sikaku"><a class=”current” href="{% url 'search' %}"><img src="../../picture/disney.jpg" class="maru"><p class="ico">夢国代行</p></a></li>
-            　　<li class="sikaku"><a href="{% url 'search' %}"><img src="../../picture/car.jpg" class="maru"><p class="ico">運転代行</p></a></li>
-            　　<li class="sikaku"><a href="{% url 'search' %}"><img src="../../picture/youtube.png" class="maru"><p class="ico">撮影代行</p></a></li>
-            　　<li class="sikaku"><a href="{% url 'search' %}"><img src="../../picture/super.jpg" class="maru"><p class="ico">相方代行</p></a></li>
-            　　<li class="sikaku sikaku1"><a href="{% url 'search' %}"><img src="../../picture/inu.jpg" class="maru"><p class="ico">散歩代行</p></a></li>
+            　　<li class="sikaku"><a class=”current” href="{% url 'search' %}"><img src="{% static 'picture/disney.jpg' %}" class="maru"><p class="ico">夢国代行</p></a></li>
+            　　<li class="sikaku"><a href="{% url 'search' %}"><img src="{% static 'picture/car.jpg' %}" class="maru"><p class="ico">運転代行</p></a></li>
+            　　<li class="sikaku"><a href="{% url 'search' %}"><img src="{% static 'picture/youtube.png' %}" class="maru"><p class="ico">撮影代行</p></a></li>
+            　　<li class="sikaku"><a href="{% url 'search' %}"><img src="{% static 'picture/super.jpg' %}" class="maru"><p class="ico">相方代行</p></a></li>
+            　　<li class="sikaku sikaku1"><a href="{% url 'search' %}"><img src="{% static 'picture/inu.jpg' %}" class="maru"><p class="ico">散歩代行</p></a></li>
             </ul>
         </div>
     </div>

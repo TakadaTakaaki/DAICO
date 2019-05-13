@@ -1,5 +1,6 @@
-{% extends "../../notUser-base.html" %}
+{% extends "../../engine-base.html" %}
 {% block body %}
+{% load static %}
     <div class="flex1">
         <div class="three">      
             <p class="order1">予約一覧</p>
@@ -29,7 +30,7 @@
                         <p class="red">育児代行</p>
                         <p class="serihu1">【女性スタッフ】激安風呂掃除プラン(夕飯付き)！</p>
                         <div class="zyouken">
-                            <img src="../../picture/ikuzi.jpg" class="ikuzi">
+                            <img src="{% static 'picture/ikuzi.jpg' %}" class="ikuzi">
                             <p class="simekiri">
                                 プロの掃除機械や技術を持っていきます!!<br><br>
                                 <be></be><br><em class="meizi">代行日時</em> : 2019年4月29日
@@ -56,7 +57,7 @@
                         <p class="red">育児代行</p>
                         <p class="serihu1">【女性スタッフ】激安風呂掃除プラン(夕飯付き)！</p>
                         <div class="zyouken">
-                            <img src="../../picture/ikuzi.jpg" class="ikuzi">
+                            <img src="{% static 'picture/ikuzi.jpg' %}" class="ikuzi">
                             <p class="simekiri">
                                 プロの掃除機械や技術を持っていきます!!<br><br>
                                 <be></be><br><em class="meizi">代行日時</em> : 2019年4月29日
@@ -83,7 +84,7 @@
                         <p class="red">育児代行</p>
                         <p class="serihu1">【女性スタッフ】激安風呂掃除プラン(夕飯付き)！</p>
                         <div class="zyouken">
-                            <img src="../../picture/ikuzi.jpg" class="ikuzi">
+                            <img src="{% static 'picture/ikuzi.jpg' %}" class="ikuzi">
                             <p class="simekiri">
                                 プロの掃除機械や技術を持っていきます!!<br><br>
                                 <be></be><br><em class="meizi">代行日時</em> : 2019年4月29日

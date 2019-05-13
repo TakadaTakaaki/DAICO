@@ -1,5 +1,6 @@
 {% extends "../../user-base.html" %}
 {% block body %}
+{% load static %}
     <div class="three">
         <p class="order1"><a href="{% url 'order' %}" class="now">注文</a></p>
         <p class="order2"><a href="{% url 'onotExecuted' %}" class="noneorder">未実行の注文</a></p>
@@ -15,9 +16,9 @@
                 <p class="name2"><a href="{% url 'ondetail' %}" class="ooo">注文詳細</a></p>
             </div>
             <div class="info">
-                <img src="../../picture/ikuzi.jpg" class="ikuzi">
+                <img src="{% static 'picture/ikuzi.jpg' %}" class="ikuzi">
                 <div class="part">
-                    <p class="serihu">会社 : <a href="{% url 'company' %}" class="casi">Casy</a></p>
+                    <p class="serihu">会社 : <a href="{% url 'enterprise' %}" class="casi">Casy</a></p>
                     <p class="serihu1"><a href="{% url 'plan' %}" class="planning">激安風呂掃除プラン(夕飯付き)</a></p>
                     <p class="serihu2">¥ 4,000</p>
                     <a href="{% url 'reserve' %}" class="again"><button type="button" class="order8">再度注文</button></a>
@@ -51,9 +52,9 @@
                 <p class="name2"><a href="{% url 'ondetail' %}" class="ooo">注文詳細</a></p>
             </div>
             <div class="info">
-                <img src="../../picture/youtube.png" class="ikuzi">
+                <img src="{% static 'picture/youtube.png' %}" class="ikuzi">
                 <div class="part">
-                    <p class="serihu">会社 : <a href="{% url 'company' %}" class="casi">Casy</a></p>
+                    <p class="serihu">会社 : <a href="{% url 'enterprise' %}" class="casi">Casy</a></p>
                     <p class="serihu1"><a href="{% url 'plan' %}" class="planning">激安風呂掃除プラン(夕飯付き)</a></p>
                     <p class="serihu2">¥ 4,000</p>
                     <a href="{% url 'reserve' %}" class="again"><button type="button" class="order8">再度注文</button></a>
@@ -86,9 +87,9 @@
                     <p class="name2"><a href="{% url 'ondetail' %}" class="ooo">注文詳細</a></p>
                 </div>
                 <div class="info">
-                    <img src="../../picture/oko.jpg" class="ikuzi">
+                    <img src="{% static 'picture/oko.jpg' %}" class="ikuzi">
                     <div class="part">
-                        <p class="serihu">会社 : <a href="{% url 'company' %}" class="casi">Casy</a></p>
+                        <p class="serihu">会社 : <a href="{% url 'enterprise' %}" class="casi">Casy</a></p>
                         <p class="serihu1"><a href="{% url 'plan' %}" class="planning">激安風呂掃除プラン(夕飯付き)</a></p>
                         <p class="serihu2">¥ 4,000</p>
                         <a href="{% url 'reserve' %}" class="again"><button type="button" class="order8">再度注文</button></a>

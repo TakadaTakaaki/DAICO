@@ -106,13 +106,14 @@
             <div id="menu">
                 <div class="just"><a href="{% url 'favorite' %}" class="favorite"><i class="far fa-heart"></i>  <span class="sp">お気に入り</span></a></div>
                 <div class="just"><a href="{% url 'notice_c' %}" class="notice"><i class="far fa-envelope"></i>  <span class="sp">通知</span></a></div>
-                <div class="just3"><a href="{% url 'index' %}" class="home"><span class="sp"><img src="../../picture/pinklogo.png" class="daico"></span></a></div>
+                <div class="just3"><a href="{% url 'index' %}" class="home"><span class="sp"><img src="{% static 'picture/pinklogo.png' %}" class="daico"></span></a></div>
                 <div class="just just4"><a href="{% url 'index' %}" class="favorite"><i class="fas fa-home"></i><span class="sp">ホーム</span></a></div>
                 <div class="just"><a href="{% url 'order' %}" class="order-history"><i class="fas fa-history"></i>  <span class="sp">注文履歴</span></a></div>
                 <div class="just"><a href="{% url 'setting' %}" class="my-page"><i class="fas fa-cogs"></i>  <span class="sp">設定</span></a></div>
             </div>
         </nav>
         {% block body %}
+{% load static %}
         {% endblock %}
     </body>
     <script type="text/javascript" src="{% static 'js/slick.min.js' %}"></script>

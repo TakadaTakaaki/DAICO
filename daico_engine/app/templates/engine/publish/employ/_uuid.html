@@ -1,5 +1,6 @@
-{% extends "../../../notUser-base.html" %}
+{% extends "../../../engine-base.html" %}
 {% block body %}
+{% load static %}
     <div class="allbox">
         <div class="fade">
             <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/1.jpg" alt=""></div>
@@ -50,7 +51,7 @@
         </div>
         <div class="soloprofile">
             <div class="photo">
-                <img src="../../picture/yamap.jpeg" class="staff1">
+                <img src="{% static 'picture/yamap.jpeg' %}" class="staff1">
                 <a href="" class="click"><button type="button" class="buton1">指名して予約へ進む</button></a>
             </div>
             <div class="osusume">
@@ -73,7 +74,7 @@
                     </p>
                     <a href="{% url 'ddetail' %}" class="blogpage">
                         <div class="part3">
-                            <img src="../../picture/oko.jpg" class="oko">
+                            <img src="{% static 'picture/oko.jpg' %}" class="oko">
                             <div class="kowake">
                                 <p class="title">何でも取れるシミ抜き剤</p>
                                 <p class="blog1">今日は店舗メンバーみんなへの研修を行いました！</p>

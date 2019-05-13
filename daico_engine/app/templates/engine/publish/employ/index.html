@@ -1,5 +1,6 @@
-{% extends "../../../notUser-base.html" %}
+{% extends "../../../engine-base.html" %}
 {% block body %}
+{% load static %}
     <div class="allbox">
         <div class="fade">
             <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/1.jpg" alt=""></div>
@@ -52,36 +53,36 @@
                 </div>
                 <div class="allstaff">
                     <div class="staff">
-                        <img src="../../picture/yamap.jpeg" class="staff1">
-                        <p class="hito"><a href="staff-profile.html" class="color">山下智久</a></p>
+                        <img src="{% static 'picture/yamap.jpeg' %}" class="staff1">
+                        <p class="hito"><a href="{% url 'xdetail' %}" class="color">山下智久</a></p>
                         <p class="yakusyoku"><em class="meizi">代表</em> (歴10年)</p>
                         <p class="prof">風呂掃除は業界No.1の実力を持った愛され男</p>
                         <a href="../reserve/plan-all.html" class="click"><button type="button" class="buton1">指名して予約へ進む</button></a>
                     </div>
                     <div class="staff">
-                        <img src="../../picture/kitagawa.jpg" class="staff1">
-                        <p class="hito"><a href="staff-profile.html" class="color">北川景子</a></p>
+                        <img src="{% static 'picture/kitagawa.jpg' %}" class="staff1">
+                        <p class="hito"><a href="{% url 'xdetail' %}" class="color">北川景子</a></p>
                         <p class="yakusyoku"><em class="meizi">店長</em> (歴8年)</p>
                         <p class="prof">風呂掃除は業界No.1の実力を持った愛され男</p>
                         <a href="../reserve/plan-all.html" class="click"><button type="button" class="buton1">指名して予約へ進む</button></a>
                     </div>
                     <div class="staff">
-                        <img src="../../picture/syouri.png" class="staff1">
-                        <p class="hito"><a href="staff-profile.html" class="color">佐藤勝利</a></p>
+                        <img src="{% static 'picture/syouri.png' %}" class="staff1">
+                        <p class="hito"><a href="{% url 'xdetail' %}" class="color">佐藤勝利</a></p>
                         <p class="yakusyoku"><em class="meizi">エース</em> (歴5年)</p>
                         <p class="prof">風呂掃除は業界No.1の実力を持った愛され男</p>
                         <a href="../reserve/plan-all.html" class="click"><button type="button" class="buton1">指名して予約へ進む</button></a>
                     </div>
                     <div class="staff">
-                        <img src="../../picture/horikita.jpg" class="staff1">
-                        <p class="hito"><a href="staff-profile.html" class="color">堀北真希</a></p>
+                        <img src="{% static 'picture/horikita.jpg' %}" class="staff1">
+                        <p class="hito"><a href="{% url 'xdetail' %}" class="color">堀北真希</a></p>
                         <p class="yakusyoku"><em class="meizi">見習い</em> (歴3年)</p>
                         <p class="prof">風呂掃除は業界No.1の実力を持った愛され男</p>
                         <a href="../reserve/plan-all.html" class="click"><button type="button" class="buton1">指名して予約へ進む</button></a>
                     </div>
                     <div class="staff">
-                        <img src="../../picture/syun.jpg" class="staff1">
-                        <p class="hito"><a href="staff-profile.html" class="color">小栗旬</a></p>
+                        <img src="{% static 'picture/syun.jpg' %}" class="staff1">
+                        <p class="hito"><a href="{% url 'xdetail' %}" class="color">小栗旬</a></p>
                         <p class="yakusyoku"><em class="meizi">見習い</em> (歴3年)</p>
                         <p class="prof">風呂掃除は業界No.1の実力を持った愛され男</p>
                         <a href="../reserve/plan-all.html" class="click"><button type="button" class="buton1">指名して予約へ進む</button></a>

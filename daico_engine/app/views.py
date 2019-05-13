@@ -17,21 +17,21 @@ def article(request):
 def adetail(request):
     return render(request, 'user/article/_uuid.html')
 # company 会社詳細
-def company(request):
-    return render(request, 'user/company/index.html')
+def enterprise(request):
+    return render(request, 'user/enterprise/index.html')
 def blog(request):
-    return render(request, 'user/company/blog/index.html')
+    return render(request, 'user/enterprise/blog/index.html')
 def bdetail(request):
-    return render(request, 'user/company/blog/_uuid.html')
+    return render(request, 'user/enterprise/blog/_uuid.html')
 def plan(request):
-    return render(request, 'user/company/plan/index.html')
+    return render(request, 'user/enterprise/plan/index.html')
     # 裏側見てから決めるページを分けるのか表示方法でどうにかするのか
 def review(request):
-    return render(request, 'user/company/review/index.html')
+    return render(request, 'user/enterprise/review/index.html')
 def staff(request):
-    return render(request, 'user/company/staff/index.html')
+    return render(request, 'user/enterprise/staff/index.html')
 def sdetail(request):
-    return render(request, 'user/company/staff/_uuid.html')
+    return render(request, 'user/enterprise/staff/_uuid.html')
 # chat お問い合わせ user⇔company
 def chat(request):
     return render(request, 'user/chat/index.html')
@@ -108,9 +108,49 @@ def suserDetailChange(request):
 
 
 # company
+def company(request):
+    return render(request, 'company/business/index.html')
+def booking(request):
+    return render(request, 'company/booking/index.html')
+def bookdetail(request):
+    return render(request, 'company/booking/_uuid.html')
+def coupon(request):
+    return render(request, 'company/business/coupon/index.html')
+def player(request):
+    return render(request, 'company/business/player/index.html')
+def medetail(request):
+    return render(request, 'company/business/player/_uuid.html')
+def read(request):
+    return render(request, 'company/business/read/index.html')
+def redetail(request):
+    return render(request, 'company/business/read/_uuid.html')
+def valuation(request):
+    return render(request, 'company/business/valuation/index.html')
+def compilation(request):
+    return render(request, 'company/compilation/index.html')
+def compon(request):
+    return render(request, 'company/compilation/coupon/index.html')
+def complay(request):
+    return render(request, 'company/compilation/player/index.html')
+def cmdetail(request):
+    return render(request, 'company/compilation/player/_uuid.html')
+def comre(request):
+    return render(request, 'company/compilation/read/index.html')
+def comvalua(request):
+    return render(request, 'company/compilation/valuation/index.html')
+def survey(request):
+    return render(request, 'company/survey/index.html')
+def voice(request):
+    return render(request, 'company/voice/index.html')
+def vcdetail(request):
+    return render(request, 'company/voice/_uuid.html')
+def vedetail(request):
+    return render(request, 'company/voice/engine/index.html')
+
+
 
 # engine
-def start(request):
+def engine(request):
     return render(request, 'engine/start/index.html')
 # analytics　分析
 def analytics(request):
@@ -148,7 +188,7 @@ def ddetail(request):
     return render(request, 'engine/publish/diary/_uuid.html')
 def employ(request):
     return render(request, 'engine/publish/employ/index.html')
-def emdetail(request):
+def xdetail(request):
     return render(request, 'engine/publish/employ/_uuid.html')
 def menu(request):
     return render(request, 'engine/publish/menu/index.html')

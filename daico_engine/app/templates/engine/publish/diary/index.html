@@ -1,5 +1,6 @@
-{% extends "../../../notUser-base.html" %}
+{% extends "../../../engine-base.html" %}
 {% block body %}
+{% load static %}
     <div class="allbox">
         <div class="fade">
             <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/1.jpg" alt=""></div>
@@ -54,7 +55,7 @@
                     <div class="page2">
                         <a href="{% url 'ddetail' %}" class="blogpage">
                             <div class="part3">
-                                <img src="../../picture/oko.jpg" class="oko">
+                                <img src="{% static 'picture/oko.jpg' %}" class="oko">
                                 <div class="kowake">
                                     <div class="flexbox">
                                         <p class="humangenre">家事代行</p>
@@ -67,7 +68,7 @@
                         </a>
                         <a href="{% url 'ddetail' %}" class="blogpage">
                             <div class="part3">
-                                <img src="../../picture/oko.jpg" class="oko">
+                                <img src="{% static 'picture/oko.jpg' %}" class="oko">
                                 <div class="kowake">
                                     <div class="flexbox">
                                         <p class="humangenre">家事代行</p>
@@ -80,7 +81,7 @@
                         </a>
                         <a href="{% url 'ddetail' %}" class="blogpage">
                             <div class="part3">
-                                <img src="../../picture/oko.jpg" class="oko">
+                                <img src="{% static 'picture/oko.jpg' %}" class="oko">
                                 <div class="kowake">
                                     <div class="flexbox">
                                         <p class="humangenre">家事代行</p>

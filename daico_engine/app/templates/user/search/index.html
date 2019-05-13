@@ -1,5 +1,6 @@
 {% extends "../../user-base.html" %}
 {% block body %}
+{% load static %}
     <div class="three">
         <p class="order1">家事代行の検索結果<em class="suuti"> 60</em> 件 あります</p>
     </div>
@@ -101,7 +102,7 @@
                     <p class="sibuya">渋谷　>　道玄坂・明治通り</p>
                 </div>
                 <div class="storename">
-                    <p class="casy"><a href="{% url 'company' %}" class="casy1">Casy 【カジー】</a></p>
+                    <p class="casy"><a href="{% url 'enterprise' %}" class="casy1">Casy 【カジー】</a></p>
                 </div>
                 <div class="storetype">
                     <p class="strongpoint">即時予約OK!</p>
@@ -118,14 +119,14 @@
         <div class="bottombox">
             <div class="leftphotos">
                 <div class="leftphoto">
-                    <img src="../../picture/horikita.jpg" class="photo1">
+                    <img src="{% static 'picture/horikita.jpg' %}" class="photo1">
                 </div>
                 <div class="slide">
                     <div class="leftphoto2">
-                        <img src="../../picture/kazi.png" class="photo2">
+                        <img src="{% static 'picture/kazi.png' %}" class="photo2">
                     </div>
                     <div class="leftphoto3">
-                        <img src="../../picture/ikuzi.jpg" class="photo3">
+                        <img src="{% static 'picture/ikuzi.jpg' %}" class="photo3">
                     </div>
                 </div>
             </div>
@@ -145,7 +146,7 @@
                         </div>
                     </div>
                     <div class="buttonbox">
-                        <a href="{% url 'company' %}" class="a">
+                        <a href="{% url 'enterprise' %}" class="a">
                             <button type="botton" class="styled">
                                 会社詳細へ
                             </button>
@@ -153,7 +154,7 @@
                     </div>
                 </div>
                 <div class="paragraph">
-                    <p class="blackpara">【乾かすだけでキマる】にこだわり【本当に必要なメニュー】を見極め【無駄にお金は使わせない】本格派サロン。モダンで落ち着いた空間が心地良さを演<a href="{% url 'company' %}" class="allnext1">...続きを読む</a></p>
+                    <p class="blackpara">【乾かすだけでキマる】にこだわり【本当に必要なメニュー】を見極め【無駄にお金は使わせない】本格派サロン。モダンで落ち着いた空間が心地良さを演<a href="{% url 'enterprise' %}" class="allnext1">...続きを読む</a></p>
                 </div>
                 <div class="starbox">
                     <p class="hyouka"><i class="far fa-star"></i>　総合　<em class="star">★ ★ ★ ★</em></p>
@@ -198,7 +199,7 @@
                     <p class="sibuya">渋谷　>　道玄坂・明治通り</p>
                 </div>
                 <div class="storename">
-                    <p class="casy"><a href="{% url 'company' %}" class="casy1">Kidsline 【キッズライン】</a></p>
+                    <p class="casy"><a href="{% url 'enterprise' %}" class="casy1">Kidsline 【キッズライン】</a></p>
                 </div>
                 <div class="storetype">
                     <p class="strongpoint">即時予約OK!</p>
@@ -215,14 +216,14 @@
         <div class="bottombox">
             <div class="leftphotos">
                 <div class="leftphoto">
-                    <img src="../../picture/kitagawa.jpg" class="photo1">
+                    <img src="{% static 'picture/kitagawa.jpg' %}" class="photo1">
                 </div>
                 <div class="slide">
                     <div class="leftphoto2">
-                        <img src="../../picture/youtube.png" class="photo2">
+                        <img src="{% static 'picture/youtube.png' %}" class="photo2">
                     </div>
                     <div class="leftphoto3">
-                        <img src="../../picture/disney.jpg" class="photo3">
+                        <img src="{% static 'picture/disney.jpg' %}" class="photo3">
                     </div>
                 </div>
             </div>
@@ -242,7 +243,7 @@
                         </div>
                     </div>
                     <div class="buttonbox">
-                        <a href="{% url 'company' %}" class="a">
+                        <a href="{% url 'enterprise' %}" class="a">
                             <button type="botton" class="styled">
                                 会社詳細へ
                             </button>
@@ -250,7 +251,7 @@
                     </div>
                 </div>
                 <div class="paragraph">
-                    <p class="blackpara">【乾かすだけでキマる】にこだわり【本当に必要なメニュー】を見極め【無駄にお金は使わせない】本格派サロン。モダンで落ち着いた空間が心地良さを演<a href="{% url 'company' %}" class="allnext1">...続きを読む</a></p>
+                    <p class="blackpara">【乾かすだけでキマる】にこだわり【本当に必要なメニュー】を見極め【無駄にお金は使わせない】本格派サロン。モダンで落ち着いた空間が心地良さを演<a href="{% url 'enterprise' %}" class="allnext1">...続きを読む</a></p>
                 </div>
                 <div class="starbox">
                     <p class="hyouka"><i class="far fa-star"></i>　総合　<em class="star">★ ★ ★ ★</em></p>
