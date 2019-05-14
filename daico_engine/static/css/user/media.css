@@ -1,0 +1,199 @@
+@media screen and (min-width:1024px){
+  /* 1024px以上の幅の都合に適応される */
+  .homebox{
+    display:none;
+  }
+  .get{
+    display:flex;
+  }
+  .logo0{
+    margin-left:0;
+  }
+  .login2{
+    font-size:12px;
+    width:130px;
+    height:20px;
+  }
+  .login{
+    font-size:12px;
+    width:100px;
+    height:20px;
+  }
+  .logo{
+    padding-bottom:0;
+  }
+  .just4{
+    display:none;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px){
+  /* 768px~1024pxまでの幅の場合に適応される */
+  .homebox{
+    display:none;
+  }
+  .get{
+    display:flex;
+  }
+  .logo0{
+    margin-left:0;
+  }
+  .login2{
+    font-size:12px;
+    width:130px;
+    height:20px;
+  }
+  .login{
+    font-size:12px;
+    width:100px;
+    height:20px;
+  }
+  .logo{
+    padding-bottom:0;
+  }
+  .just4{
+    display:none;
+  }
+  .just{
+    margin:0 0;
+    font-size:15px;
+  }
+  .daico{
+    width:140px;
+  }
+  .setumei{
+    width:500px;
+  }
+  .textbox{
+    display:inline-block;
+  }
+  .sikaku{
+    width:140px;
+  }
+  .searchForm{
+    margin:10% auto;
+  }
+  .modal{
+    margin:30% auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* 767pxまでの幅の場合に適応される */
+  .logo{
+    display:flex;
+    justify-content: flex-end;
+  }
+  .homebox{
+    width:150px;
+    height:50px;
+    margin-right:auto;
+    margin-left:3%;
+  }
+  .homebox1{
+    width:100%;
+    height:100%;
+  }
+  .get{
+    display:flex;
+    flex-direction: column;
+  }
+  .login2{
+    font-size:10px;
+    width:111px;
+  }
+  .logo0{
+    margin-bottom:5px;
+    margin-right:5%;
+    margin-left:0;
+  }
+  .login{
+    font-size:10px;
+    width:111px;
+    margin-right:0;
+  }
+  .template{
+    position:fixed;
+    left:0;
+    bottom:0;
+    height:50px;
+    z-index: 100;
+    background-color:rgb(255, 227, 144);
+    border-top:1px solid gray;
+  }
+  #menu i{
+    display:block;
+    font-size:20px;
+    color:gray;
+  }
+  .sp{
+    display:block;
+    font-size:10px;
+    color:gray;
+  }
+  .daico{
+    width:100px;
+  }
+  .just{
+    height:60px;
+  }
+  .just3{
+    display:none;
+  }
+  #menu{
+    padding-bottom:10px;
+  }
+  .setumei{
+    width:350px;
+    font-size:20px;
+    padding-top:0;
+  }
+  .textbox{
+    display:block;
+  }
+  .searchForm{
+    width:300px;
+  }
+  .list1{
+    font-size:12px;
+    width:100px;
+    padding-right:10px;
+  }
+  .list2{
+    font-size:12px;
+    width:100px;
+    padding-left:10px;
+    padding-right:10px;
+  }
+  .list3{
+    font-size:12px;
+    width:100px;
+    padding-left:10px;
+  }
+  .sikaku1{
+    display:none;
+  }
+  .ul2{
+    padding-top:0;
+    margin-bottom:50px;
+  }
+  .modal{
+    margin:50% auto;
+    width:300px;
+    height:200px;
+  }
+  #login-form input{
+    width:200px;
+    margin-bottom:10px;
+  }
+  #submit-btn{
+    width:200px;
+    padding:10px 14px;
+    margin-top:0;
+  }
+  #login-form h2{
+    margin-bottom:20px;
+  }
+}
+
+
