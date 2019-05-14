@@ -127,3 +127,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+MEDIA_URL = '/pics/'
+MEDIA_ROOT = BASE_DIR
+# mediaの中身を読み込ませるため

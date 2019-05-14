@@ -3,8 +3,11 @@
 # from .models import post
 from django.http.response import HttpResponse
 from django.shortcuts import render
-from .models import post
-
+from .models import Post
+# from django.db.models import Count
+# from django.views import generic
+# from django.db.models import Count
+# from django.views import generic
 
 # user
 def index(request):
@@ -197,10 +200,10 @@ def rate(request):
     return render(request, 'engine/publish/rate/index.html')
 # writer　記事
 def writer(request):
-    posts = post.objects.order_by('id','-published')
+    posts = Post.objects.order_by('-published')
     return render(request, 'engine/writer/index.html', {'posts': posts})
 def wdetail(request, pk):
-    posts = post.objects.get(pk=pk)
+    posts = Post.objects.get(pk=pk)
     return render(request, 'engine/writer/_uuid.html', {'posts': posts})
 # def writer(request):
 #     posts = post.objects.order_by('-published')
@@ -208,3 +211,19 @@ def wdetail(request, pk):
 # def wdetail(request,pk):
 #     posts = post.objects.get(pk=pk)
 #     return render(request, 'engine/writer/_uuid.html',{'posts':posts})
+
+
+# class CategorytList(generic.ListView):
+#     models = Category
+
+#     def get_queryset(self):
+#         queryset = super().get_queryset()
+#         # カテゴリを、紐づいた記事数と一緒に取得し、その記事数順に並び替え
+#         return queryset.annotate(post_count=Count('post')).order_by('-post_count')
+# class CaegorytList(generic.ListView):
+#     model = Category
+
+#     def get_queryset(self):
+#         queryset = super().get_queryset()
+#         # カテゴリを、紐づいた記事数と一緒に取得し、その記事数順に並び替え
+#         return queryset.annotate(post_count=Count('post')).order_by('-post_count')
