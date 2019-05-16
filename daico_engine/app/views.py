@@ -3,7 +3,7 @@
 # from .models import post
 from django.http.response import HttpResponse
 from django.shortcuts import render
-from .models import Post
+from .models import Post,Category
 # from django.db.models import Count
 # from django.views import generic
 # from django.db.models import Count
@@ -11,15 +11,18 @@ from .models import Post
 
 # user
 def index(request):
-    return render(request, 'user/home/index.html')
+    posts = Post.objects.order_by('-published')
+    return render(request, 'user/home/index.html', {'posts': posts})
 
 # _uuidで詳細はできると思ったのでファイル名_uuid.htmlにしました
 
 # article 記事
 def article(request):
-    return render(request, 'user/article/index.html')
-def adetail(request):
-    return render(request, 'user/article/_uuid.html')
+    posts = Post.objects.order_by('-published')
+    return render(request, 'user/article/index.html', {'posts': posts})
+def adetail(request, pk):
+    posts = Post.objects.get(pk=pk)
+    return render(request, 'user/article/_uuid.html', {'posts': posts})
 # company 会社詳細
 def enterprise(request):
     return render(request, 'user/enterprise/index.html')
@@ -198,19 +201,20 @@ def menu(request):
     return render(request, 'engine/publish/menu/index.html')
 def rate(request):
     return render(request, 'engine/publish/rate/index.html')
-# writer　記事
-def writer(request):
+# write　記事
+def write(request,post_count):
     posts = Post.objects.order_by('-published')
+    categories = Category.objects.count('post_count')
     return render(request, 'engine/writer/index.html', {'posts': posts})
 def wdetail(request, pk):
     posts = Post.objects.get(pk=pk)
     return render(request, 'engine/writer/_uuid.html', {'posts': posts})
-# def writer(request):
+# def write(request):
 #     posts = post.objects.order_by('-published')
-#     return render(request, 'engine/writer/index.html',{'posts':posts})
+#     return render(request, 'engine/write/index.html',{'posts':posts})
 # def wdetail(request,pk):
 #     posts = post.objects.get(pk=pk)
-#     return render(request, 'engine/writer/_uuid.html',{'posts':posts})
+#     return render(request, 'engine/write/_uuid.html',{'posts':posts})
 
 
 # class CategorytList(generic.ListView):

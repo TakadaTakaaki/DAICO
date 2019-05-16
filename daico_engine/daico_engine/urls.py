@@ -137,7 +137,7 @@ urlpatterns = [
     url(r'xdetail/', include('app.urls')),
     url(r'menu/', include('app.urls')),
     url(r'rate/', include('app.urls')),
-    url(r'writer/', include('app.urls')),
+    url(r'write/', include('app.urls')),
     url(r'wdetail/', include('app.urls')),
     # 引数をループさせない
     url(r'', include('app.urls')),

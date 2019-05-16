@@ -10,7 +10,7 @@ urlpatterns = [
     # url(r'^$', views.index, name='index'),
     url(r'article', views.article, name="article"),
     # url(r'article', views.article, name="article"),
-    url(r'adetail', views.adetail, name="adetail"),
+    path('adetail/<int:pk>/', views.adetail, name="adetail"),
     # url(r'article_detail', views.article_detail, name="article_detail"),
     url(r'enterprise', views.enterprise, name="enterprise"),
     # url(r'company', views.company, name="company"),
@@ -132,7 +132,7 @@ urlpatterns = [
     url(r'xdetail', views.xdetail, name="xdetail"),
     url(r'menu', views.menu, name="menu"),
     url(r'rate', views.rate, name="rate"),
-    url(r'writer', views.writer, name="writer"),
+    url(r'write', views.write, name="write"),
     
     path('wdetail/<int:pk>/', views.wdetail, name="wdetail"),
 ]

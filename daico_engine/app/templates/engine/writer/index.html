@@ -26,7 +26,7 @@
             <div class="page3">
                 <p class="category">記事カテゴリ</p>
                     {% for category in categories %}
-                        <p class="category1"><a href="" class="category01">{{ category.category }} ({{ post.post_count }})</a></p>
+                        <p class="category1"><a href="" class="category01">{{ category.name }} ({{ category.post_count }})</a></p>
                     {% endfor %}
             </div>
         </div>

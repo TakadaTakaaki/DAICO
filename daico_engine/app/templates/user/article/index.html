@@ -14,45 +14,21 @@
             </div>
             <div class="page0">
                 <div class="page2">
-                    <a href="{% url 'adetail' %}" class="blogpage">
-                        <div class="part3">
-                            <img src="" class="oko">
-                            <div class="kowake">
-                                <div class="flexbox">
-                                    <p class="humangenre">重要</p>
-                                    <p class="human">投稿者 : 山下智久</p>
+                    {% for post in posts %}
+                        <a href="{% url 'wdetail' pk=post.id %}" class="blogpage">
+                            <div class="part3">
+                                <img src="{{ post.image.url }}" class="oko">
+                                <div class="kowake">
+                                    <div class="flexbox">
+                                        <p class="humangenre">{{ post.genre }}</p>
+                                        <p class="human">{{ post.published }}</p>
+                                    </div>
+                                    <p class="title">{{ post.title }}</p>
+                                    <p class="blog1">{{ post.body }}</p>
                                 </div>
-                                <p class="title">何でも取れるシミ抜き剤</p>
-                                <p class="blog1">今日は店舗メンバーみんなへの研修を行いました！</p>
                             </div>
-                        </div>
-                    </a>
-                    <a href="#" class="blogpage">
-                        <div class="part3">
-                            <img src="" class="oko">
-                            <div class="kowake">
-                                <div class="flexbox">
-                                    <p class="humangenre">クーポン</p>
-                                    <p class="human">投稿者 : 山下智久</p>
-                                </div>
-                                <p class="title">何でも取れるシミ抜き剤</p>
-                                <p class="blog1">今日は店舗メンバーみんなへの研修を行いました！</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="blogpage">
-                        <div class="part3">
-                            <img src="" class="oko">
-                            <div class="kowake">
-                                <div class="flexbox">
-                                    <p class="humangenre">クーポン</p>
-                                    <p class="human">投稿者 : 山下智久</p>
-                                </div>
-                                <p class="title">何でも取れるシミ抜き剤</p>
-                                <p class="blog1">今日は店舗メンバーみんなへの研修を行いました！</p>
-                            </div>
-                        </div>
-                    </a>
+                        </a>
+                    {% endfor %}
                 </div>
                 <div class="page3">
                     <p class="category">記事カテゴリ</p>

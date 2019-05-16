@@ -1,7 +1,5 @@
 from django.db import models
 from django.utils import timezone
-from django.db.models import Count
-from django.views import generic
 
 
 
@@ -66,15 +64,15 @@ class Category(models.Model):
     class Meta:
         db_table = 'category'
 
-    category = models.CharField(max_length=40)
+    name = models.CharField(max_length=40)
     objects = CategoryManager()
 
     def __str__(self):
         if hasattr(self,'post_count'):
             # return f'{self.category}({self.post_count})'
-            return f'{self.category}({self.post_count})'
+            return f'{self.name}({self.post_count})'
         else:
-            return self.category
+            return self.name
 
     # def __str__(self):
     #     return self.category
@@ -99,12 +97,12 @@ class Post(models.Model):
         return self.title
 
 
-class CategorytList(generic.ListView):
-    model = Category
+# class CategorytList(generic.ListView):
+#     model = Category
 
-    def get_queryset(self):
-        queryset = super().get_queryset()
-        # カテゴリを、紐づいた記事数と一緒に取得し、その記事数順に並び替え
-        return queryset.annotate(post_count=Count('post')).order_by('-post_count')
+#     def get_queryset(self):
+#         queryset = super().get_queryset()
+#         # カテゴリを、紐づいた記事数と一緒に取得し、その記事数順に並び替え
+#         return queryset.annotate(post_count=Count('post')).order_by('-post_count')
 
 # Create your models here.
