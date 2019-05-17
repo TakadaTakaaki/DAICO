@@ -247,6 +247,7 @@ h1 {
   margin-top: 3%;
   margin-bottom: 3%;
   padding-left: 5%;
+  padding-right: 5%;
   font-weight: bold;
   font-size: 18px;
   color: rgb(117, 104, 106);
@@ -356,4 +357,533 @@ h1 > em {
   color: rgb(248, 64, 126);
   font-size: 20px;
   font-style: normal;
+}
+
+table{
+  width: 100%;
+  margin: 3% 0% 3% 0%;
+  border: solid 1px rgb(172, 164, 148);
+  border-collapse: collapse;
+}
+table > tbody {
+  width: 100%;
+}
+table > tbody > tr {
+  color: rgb(117, 104, 106);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  /* display: table-row; */
+}
+table > tbody > tr > th{
+  width: 20%;
+  text-align: left;
+  background-color: rgb(245, 244, 244);
+  color: rgb(117, 104, 106);
+  text-align: left;
+  padding: 10px 10px;
+  border-bottom: 1px solid rgb(172, 164, 148);
+  border-right:1px solid rgb(172, 164, 148);
+  font-weight:bold;
+  font-size:13px;
+}
+table > tbody > tr > td {
+  width: 80%;
+  border-bottom: 1px solid rgb(172, 164, 148);
+  text-align: left;
+  padding-left: 20px;
+  width: 300px;
+  background-color: rgb(255, 255, 255);
+  padding: 10px 0;
+  color: rgb(2, 2, 109);
+}
+
+h1 > .page-separate {
+  margin-left: 30%;
+  padding: 2px;
+  background-color: rgb(255, 255, 255);
+  font-size: 12px;
+  color: gray;
+}
+
+h1 > .page-next {
+  padding: 2px;
+  background-color: rgb(255, 255, 255);
+  font-size: 12px;
+  color: rgb(2, 2, 109);
+}
+.sortflex{
+  display:flex;
+  widows: 100%;
+  font-size:17px;
+  font-weight:bold;
+  color:rgb(87, 86, 86);
+  padding-top: 2%;
+}
+.sortflex > a {
+  width: 15%;
+  padding: 1% 3% 1% 3%;
+  text-align: center;
+  color: rgb(87, 86, 86);
+  border: 2px solid gray;
+  border-bottom: 2px solid gray;
+  border-radius: 5px 5px 0 0;
+  font-size: 15px;
+}
+
+.company-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  margin-top: 20px; 
+}
+.company-top {
+  width: 100%;
+  background-color: rgb(245, 244, 244);
+  height: 100px;
+  border-bottom: 1px solid gray;
+  border-radius: 5px;
+  display: flex;
+  margin-bottom: 2%;
+}
+.left {
+  width: 70%;
+}
+.left > p {
+  margin-top: 5px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  padding-left: 10px;
+  color: rgb(117, 104, 106);
+}
+.left > a {
+  margin: 4%;
+  color: rgb(248, 64, 126);
+  font-size: 18px;
+}
+.left > div {
+  display: flex;
+  padding-left: 10px;
+  margin-top: 8px;
+}
+.left > div > .point {
+  margin-top: 0;
+  margin-right: 10px;
+  font-size: 12px;
+  background-color: white;
+  border: 1px solid rgb(71, 64, 32);
+  border-radius: 15%;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.left > div > .point1 {
+  margin-top: 0;
+  margin-right: 10px;
+  font-size: 12px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 193, 21);
+  border: 1px solid rgb(71, 64, 32);
+  border-radius: 15%;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.left > div > .point2 {
+  margin-top: 0;
+  margin-right: 10px;
+  font-size: 12px;
+  color: rgb(0, 68, 255);
+  background-color: rgb(168, 245, 255);
+  border: 1px solid rgb(19, 102, 255);
+  border-radius: 15%;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.right {
+  width: 30%;
+}
+.right > .buttonbox {
+  margin: 4%;
+
+}
+.right > .buttonbox > .favorite {
+  color: rgb(124, 115, 97);
+  font-size: 15px;
+  float: right;
+  border: none;
+  background: none;
+  outline: none;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 10%;
+  border-bottom: 2px solid gray;
+  cursor: pointer;
+  /* color: rgb(248, 64, 126); */
+}
+
+.company-next {
+  display: flex;
+  width: 100%;
+  background-color: white;
+  height: auto;
+}
+
+.company-next > .image {
+  width: 40%;
+}
+.company-next > .image > img {
+  width: 300px;
+  height: 300px;
+  margin: 8px;
+}
+.company-next > .image > .image1 {
+  display: flex;
+}
+.image1 > img {
+  width: 140px;
+  height: 140px;
+  margin: 8px;
+
+}
+.company-next > .company-explain {
+  width: 70%;
+}
+.company-explain > .heading {
+  color: rgb(250, 18, 95);
+}
+.company-explain > .heading2 {
+  font-size: 13px;
+}
+
+.company-explain > .information {
+  display: flex;
+}
+.company-explain > .information > .information-a {
+  width: 35%;
+  padding-left: 3%;
+}
+.company-explain > .information > .information-b {
+  width: 35%;
+  padding-left: 3%;
+}
+.company-explain > .information > div > p > a {
+  color: rgb(2, 2, 90);
+  text-align: right;
+}
+.company-explain > .evaluation {
+  display: flex;
+}
+.evaluation > .evaluation-a {
+  width: 35%;
+  padding-left: 3%;
+}
+.evaluation > .evaluation-b {
+  width: 35%;
+  padding-left: 3%;
+}
+.company-explain > div > div {
+  color: rgb(117, 104, 106);
+  font-size: 13px;
+}
+.pinkButton {
+  width: 110px;
+  height: 50px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background-color: rgb(250, 18, 95,0.7);
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  border: 2px solid rgb(189, 186, 186);
+  margin-top: 13px;
+}
+.company-explain > .planbox {
+  background-color: rgb(245, 245, 195);
+  margin-top: 20px;
+  margin-right: 10px;
+}
+.company-explain > .planbox > span {
+  display: flex;
+}
+.company-explain > .planbox > span > p {
+  color: rgb(250, 92, 145);
+  font-size: 14px;
+  margin: 5px;
+}
+.company-explain > .planbox > span > div {
+  color: rgb(250, 92, 145);
+  font-style: normal;
+  font-size: 10px;
+  margin: 4px 1% 5px 50%;
+}
+.company-explain > .planbox > span > div > a {
+  color: rgb(2, 2, 90);
+    margin-left: auto;
+    margin-top: 2px;
+    margin-right: 10px;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+.planbox > p {
+  margin: 0 5px 8px 5px;
+}
+.planbox > p > em {
+  background-color: rgb(250, 92, 145);
+  color: white;
+  font-weight: bold;
+  margin-left: 4px;
+  padding: 3px;
+  font-style: normal;
+  font-size: 12px;
+}
+.planbox > p > a {
+  color: rgb(2, 2, 90);
+  font-size: 13px;
+}
+
+.company-detail {
+  height: auto;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  background-color: rgb(245, 244, 244);
+}
+.company-top-1 {
+  display: flex;
+}
+.company-box-1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  margin-top: 20px; 
+}
+
+h2 {
+  margin-top: 3%;
+  padding-top: 1%;
+  padding-left: 2%;
+  padding-right: 3%;
+  font-weight: bold;
+  font-size: 20px;
+  color:rgb(250, 92, 171);
+  border-top: 2px solid gray;
+}
+
+h3 {
+  padding-left: 4%;
+  margin-bottom: 2%;
+  font-weight: bold;
+  font-size: 17px;
+  color: black;
+}
+.buttonbox > a > .chat {
+  color: white;
+  font-size: 15px;
+  float: right;
+  border: none;
+  background: none;
+  outline: none;
+  font-weight: bold;
+  background-color: rgb(252, 104, 153);
+  border: 1px solid gray;
+  border-radius: 10%;
+  border-bottom: 2px solid gray;
+  cursor: pointer;
+  width: 150px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+}
+.buttonbox > .favorite2 {
+  color: rgb(124, 115, 97);
+  font-size: 15px;
+  float: right;
+  border: none;
+  background: none;
+  outline: none;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 10%;
+  border-bottom: 2px solid gray;
+  cursor: pointer;
+  width: 150px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+}
+.buttonbox > a > .reserve {
+  color: white;
+  font-size: 15px;
+  float: right;
+  border: none;
+  background: none;
+  outline: none;
+  font-weight: bold;
+  background-color: rgb(252, 104, 153);
+  border: 1px solid gray;
+  border-radius: 10%;
+  border-bottom: 2px solid gray;
+  cursor: pointer;
+  width: 150px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+}
+.company-menu {
+  width: 100%;
+  padding-left: 0;
+  text-align: center;
+  background: none;
+  margin-top: 0;
+}
+.company-menu > p {
+  display: inline-block;
+  position: relative;
+  border-right: 1px solid gray;
+  padding: 1px 2%;
+}
+.company-menu > p > a {
+  text-decoration: none;
+  color: rgb(117, 104, 106);
+  display: inline-block;
+  width: 100%;  
+  font-weight: bold;
+}
+.company-menu > .last {
+  border: none;
+}
+
+.coupon {
+  width: 95%;
+  margin: auto;
+  margin-bottom: 20px;
+  border: 1px solid gray;
+  display: flex;
+}
+.coupon > .label {
+  width: 3%;
+  text-align: center;
+  background-color: rgb(250, 92, 145);
+  border-right: 1px solid gray;
+  color: white;
+  font-weight: bold;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+}
+.coupon > .genre {
+  width: 70%;
+}
+.coupon > .genre > span {
+  display: flex;
+  padding-top: 1%;
+}
+.coupon > .genre > span > p {
+  width: 11%;
+  margin: 7px 25px 4px 25px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 11px;
+  text-align: center;
+  background-color: rgb(250, 92, 145);
+  border: 1px solid gray;
+  border-radius: 40%;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+.genre > span > div {
+  font-size: 15px;
+  margin-bottom: 0;
+  margin-top: 2%;
+  color: rgb(250, 92, 145);
+  font-weight: bold;
+  margin-left: 60%;
+}
+.genre > p {
+  font-size: 15px;
+  margin-bottom: 0;
+  margin-top: 3px;
+  color: rgb(97, 73, 30);
+  font-weight: bold;
+  padding-left: 20px;
+}
+.coupon > .genre > div {
+  display: flex;
+}
+.genre > div > img {
+  width: 40%;
+  padding: 3%;
+}
+.genre > div > div {
+  width: 60%;
+  padding: 3%;
+}
+.coupon > .coupon-button {
+  width: 20%;
+  margin-left: auto;
+  background-color: rgb(245, 245, 195);
+}
+.coupon-button > a > button {
+  width: 90%;
+  margin: 5%;
+  border-radius: 5%;
+  background-color: rgb(250, 92, 145);
+  border: 1px solid gray;
+  color: white;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.genre > div > div > div > em {
+  font-style: normal;
+  color: rgb(250, 92, 145);
+  font-size: 15px;
+  font-weight: bold;
+}
+h4 {
+  width: 92%;
+  margin: auto;
+  color: rgb(97, 73, 30);
+  font-weight: bold;
+  padding-left: 30px;
+  font-weight: bold;
+  font-size: 13px;
+  background-color: rgb(245, 244, 244);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.menu-all {
+  width: 70%;
+  padding-bottom: 2%;
+}
+.menu-all > div {
+  display: flex;
+}
+
+.menu-all > div > p {
+  width: 60%;
+  margin: 0;
+  margin: 2%;
+  margin-left: 5%;
+  font-size: 15px;
+  font-weight: bold;
+}
+.menu-all > div > div {
+  width:  40%;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 40%;
+  margin-top: 2%;
+}
+.menu-detail {
+  padding-bottom: 2%;
+  margin-left: 5%;
+  font-size: 12px;
 }
