@@ -205,9 +205,11 @@ def rate(request):
     return render(request, 'engine/publish/rate/index.html')
 # write　記事
 def write(request):
-    posts = Post.objects.order_by('-published')
-    categories = Category.objects.order_by('post_count')
-    return render(request, 'engine/writer/index.html', {'posts': posts} ,{'categories': categories})
+    contexts = ({
+        'posts' : Post.objects.order_by('-published'),
+        'categories' : Category.objects.order_by('name')
+    })
+    return render(request, 'engine/writer/index.html', {'contexts': contexts})
 def wdetail(request, pk):
     posts = Post.objects.get(pk=pk)
     return render(request, 'engine/writer/_uuid.html', {'posts': posts})

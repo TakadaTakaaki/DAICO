@@ -7,7 +7,7 @@
         </div>
         <div class="page0">
             <div class="page2">
-                {% for post in posts %}
+                {% for post in contexts.posts %}
                     <a href="{% url 'wdetail' pk=post.id %}" class="blogpage">
                         <div class="part3">
                             <img src="{{ post.image.url }}" class="oko">
@@ -25,10 +25,9 @@
             </div>
             <div class="page3">
                 <p class="category">記事カテゴリ</p>
-                    {% for category in categories %}
-                        <p class="category1"><a href="" class="category01">{{ category.name }} ({{ category.objects }})</a></p>
+                    {% for category in contexts.categories %}
+                        <p class="category1"><a href="" class="category01">{{ category.name }} ({{ category.post_count }})</a></p>
                     {% endfor %}
-                    <p class="category1"><a href="" class="category01">デモスト (12)</a></p>
             </div>
         </div>
     </div>
