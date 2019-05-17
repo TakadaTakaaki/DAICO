@@ -59,7 +59,7 @@ class CategoryManager(models.Manager):
         return super().get_queryset().annotate(
             post_count=models.Count('post')
         ).order_by('-post_count')
-        
+
 class Category(models.Model):
     class Meta:
         db_table = 'category'
@@ -68,12 +68,10 @@ class Category(models.Model):
     objects = CategoryManager()
 
     def __str__(self):
-        if hasattr(self,'post_count'):
-            # return f'{self.category}({self.post_count})'
+        if hasattr(self, 'post_count'):
             return f'{self.name}({self.post_count})'
         else:
             return self.name
-
     # def __str__(self):
     #     return self.category
 

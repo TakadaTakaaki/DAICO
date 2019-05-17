@@ -3,6 +3,8 @@
 # from .models import post
 from django.http.response import HttpResponse
 from django.shortcuts import render
+from django.db.models import Count
+from django.views import generic
 from .models import Post,Category
 # from django.db.models import Count
 # from django.views import generic
@@ -202,10 +204,10 @@ def menu(request):
 def rate(request):
     return render(request, 'engine/publish/rate/index.html')
 # write　記事
-def write(request,post_count):
+def write(request):
     posts = Post.objects.order_by('-published')
-    categories = Category.objects.count('post_count')
-    return render(request, 'engine/writer/index.html', {'posts': posts})
+    categories = Category.objects.order_by('post_count')
+    return render(request, 'engine/writer/index.html', {'posts': posts} ,{'categories': categories})
 def wdetail(request, pk):
     posts = Post.objects.get(pk=pk)
     return render(request, 'engine/writer/_uuid.html', {'posts': posts})
