@@ -83,11 +83,11 @@
         </tbody>
     </table>
     <div class="sortflex">
-        <a href="../search-result/recommend.html">標準</a>
-        <a href="../search-result/recommend.html">おすすめ順</a>
-        <a href="../search-result/{% url 'review' %}">口コミが高い順</a>
-        <a href="../search-result/cheap.html">料金が安い順</a>
-        <a href="../search-result/high.html">料金が高い順</a>
+        <a class="thisPage" href="{% url 'search' %}">標準</a>
+        <a class="notPage" href="../search-result/recommend.html">おすすめ順</a>
+        <a class="notPage" href="../search-result/{% url 'review' %}">口コミが高い順</a>
+        <a class="notPage" href="../search-result/cheap.html">料金が安い順</a>
+        <a class="notPage" href="../search-result/high.html">料金が高い順</a>
     </div>
     <h1>
         家事代行の絞り込み検索結果<em class="suuti"> 40</em> 件 あります

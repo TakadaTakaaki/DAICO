@@ -11,14 +11,14 @@
                 <p><em>実行日</em><br>2019年3月15日</p>
                 <p><em>合計</em><br>¥ 4,500</p>
                 <p class="address"><em>場所</em><br>東京都三鷹市下連雀3丁目２２−８</p>
-                <p><a href="{% url 'ondetail' %}">注文詳細</a></p>
+                <p><a href="{% url 'odetail' %}">注文詳細</a></p>
             </span>
             <div class="order-bottom">
-                <img src="{% static 'picture/ikuzi.jpg' %}" class="ikuzi">
+                <img src="{% static 'picture/ikuzi.jpg' %}">
                 <span>
-                    <p class="serihu">会社 : <a href="{% url 'enterprise' %}" class="casi">Casy</a></p>
-                    <p class="serihu1"><a href="{% url 'plan' %}" class="planning">激安風呂掃除プラン(夕飯付き)</a></p>
-                    <p class="serihu2">¥ 4,000</p>
+                    <p>会社 : <a href="{% url 'enterprise' %}">Casy</a></p>
+                    <p><a href="{% url 'plan' %}">激安風呂掃除プラン(夕飯付き)</a></p>
+                    <p>¥ 4,000</p>
                     <a href="{% url 'reserve' %}"><button class="pink-Button">再度注文</button></a>
                 </span>
                 <div class="button-box">
@@ -40,6 +40,4 @@
             </div>
         </div>
     </div>
-</div>
-
 {% endblock %}

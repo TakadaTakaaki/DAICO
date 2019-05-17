@@ -1,103 +1,95 @@
 {% extends "../../../user-base.html" %}
 {% block body %}
 {% load static %}
-    <div class="allbox">
-        <div class="fade" id="fade">
-            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/1.jpg" alt=""></div>
-            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/2.jpg" alt=""></div>
-            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/3.jpg" alt=""></div>
-            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/4.jpg" alt=""></div>
-            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/5.jpg" alt=""></div>
-            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/6.jpg" alt=""></div>
-            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/7.jpg" alt=""></div>
-            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/8.jpg" alt=""></div>
-        </div>
-        <div class="topbox">
-            <div class="leftbox">
-                <div class="erea">
-                    <p class="sibuya">渋谷　>　道玄坂・明治通り</p>
-                </div>
-                <div class="storename">
-                    <p class="casy"><a href="{% url 'enterprise' %}" class="casy1">Casy 【カジー】</a></p>
-                </div>
-                <div class="storetype">
-                    <p class="strongpoint">即時予約OK!</p>
-                    <p class="strongpoint1">ポイント加盟店</p>
-                    <p class="strongpoint2">メンズにもオススメ</p>
-                </div>
+    <div class="page">
+        <div class="company-detail">
+            <div class="fade" id="fade">
+                <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/1.jpg" alt=""></div>
+                <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/2.jpg" alt=""></div>
+                <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/3.jpg" alt=""></div>
+                <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/4.jpg" alt=""></div>
+                <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/5.jpg" alt=""></div>
+                <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/6.jpg" alt=""></div>
+                <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/7.jpg" alt=""></div>
+                <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/8.jpg" alt=""></div>
             </div>
-            <div class="rightbox">
-                <div class="bottonbox">
-                    <p class="favoriteadd"><button type="button"class="heart"><i class="far fa-heart"></i>  お気に入り</button></p>
-                </div>
+            <div class="company-top-1">
+                <span class="left">
+                    <p>渋谷　>　道玄坂・明治通り</p>
+                    <a href="{% url 'enterprise' %}">Casy 【カジー】</a>
+                    <div>
+                        <p class="point">即時予約OK!</p>
+                        <p class="point1">ポイント加盟店</p>
+                        <p class="point2">メンズにもオススメ</p>
+                    </div>
+                </span>
+                <span class="right">
+                    <div class="buttonbox">
+                        <a href="../contact/chat-customer.html"><button class="chat"><i class="far fa-comments"></i>　チャット</button></a>
+                        <button class="favorite2"><i class="far fa-heart"></i>  お気に入り</button>
+                    </div>
+                </span>
             </div>
         </div>
-    </div>
-    <ol class="step">
-        <li>プラン選択</li>
-        <li>日時・代行者指定</li>
-        <li class="is-current">お客様情報確認</li>
-        <li>予約内容確認</li>
-        <li>予約完了</li>
-    </ol>
-    <div class="allabout">
-        <div class="box"><p class="menuu">支払い方法を選択</p>
+        <ol class="step">
+            <li>プラン選択</li>
+            <li>日時・代行者指定</li>
+            <li class="is-current">お客様情報確認</li>
+            <li>予約内容確認</li>
+            <li>予約完了</li>
+        </ol>
+        <h1>支払い方法を選択</h1>
+        <div>
+            <div class="radio02">
+                <input type="radio" name="radio02" class="radio02-input" id="radio02-01">
+                <label for="radio02-01">　代金引換</label>
+                <input type="radio" name="radio02" class="radio02-input" id="radio02-02">
+                <label for="radio02-02">　クレジットカード</label>
+                <input type="radio" name="radio02" class="radio02-input" id="radio02-03">
+                <label for="radio02-03">　デビットカード</label>
+            </div>
+        </div>
+        <h1>お客様情報を入力</h1>
+        <div>
+            <form action="//www-creators.com/rsc/receiver.php" method="post">
+                <label>名前</label><br>
+                <input type="text" name="first-name" maxlength="10" value="" placeholder="田中　太郎">
+            </form>
+            <form action="//www-creators.com/rsc/receiver.php" method="post">
+                <label>電話番号</label><br>
+                <input type="text" name="first-name" maxlength="10" value="" placeholder="090-6566-8268">
+            </form>
+            <form action="//www-creators.com/rsc/receiver.php" method="post">
+                <label>住所</label><br>
+                <input type="text" name="first-name" maxlength="10" value="" placeholder="三鷹市下連雀3-22-8">
+            </form>
+        </div>
+        <h1>割引プランの確認</h1>
+        <div class="coupon">
+            <div class="label">
+                新規
+            </div>
             <div class="genre">
-                <div class="radio02">
-                    <input type="radio" name="radio02" class="radio02-input" id="radio02-01">
-                    <label for="radio02-01">　代金引換</label>
-                    <input type="radio" name="radio02" class="radio02-input" id="radio02-02">
-                    <label for="radio02-02">　クレジットカード</label>
-                    <input type="radio" name="radio02" class="radio02-input" id="radio02-03">
-                    <label for="radio02-03">　デビットカード</label>
-                </div>
-            </div>
-        </div>
-        <div class="box"><p class="menuu">お客様情報を入力</p>
-            <div class="genre">
-                <form action="//www-creators.com/rsc/receiver.php" method="post">
-                    <label>名前</label><br>
-                    <input type="text" name="first-name" maxlength="10" value="" placeholder="田中　太郎">
-                </form>
-                <form action="//www-creators.com/rsc/receiver.php" method="post">
-                    <label>電話番号</label><br>
-                    <input type="text" name="first-name" maxlength="10" value="" placeholder="090-6566-8268">
-                </form>
-                <form action="//www-creators.com/rsc/receiver.php" method="post">
-                    <label>住所</label><br>
-                    <input type="text" name="first-name" maxlength="10" value="" placeholder="三鷹市下連雀3-22-8">
-                </form>
-            </div>
-        </div>
-        <div class="box"><p class="menuu">割引プランの確認</p>
-            <div class="flex10">
-                <div class="last">
-                    <div class="info2">
-                        <div class="sinki">
-                            新規
-                        </div>
-                        <div class="gene">
-                            <p class="red">育児代行</p>
-                            <p class="serihu1">【女性スタッフ】激安風呂掃除プラン(夕飯付き)！</p>
-                            <div class="zyouken">
-                                <img src="{% static 'picture/ikuzi.jpg' %}" class="ikuzi">
-                                <p class="simekiri">
-                                    プロの掃除機械や技術を持っていきます!!<br>
-                                    <br><em class="meizi">利用条件</em> : 初回利用のみ
-                                    <br><em class="meizi">有効期限</em> : 2019年3月末
-                                </p>
-                            </div>
-                        </div>
-                        <div class="part">
-                            <p class="serihu3">¥ 3,000</p>
-                        </div>
-                        <div class="buton">
-                            <a href="{% url 'reserve' %}" class="click"><button type="button" class="buton1">プランを変更する</button></a>
-                        </div>
+                <span>
+                    <p>育児代行</p>
+                    <div>¥ 3,000</div>
+                </span>
+                <p>【女性スタッフ】激安風呂掃除プラン(夕飯付き)！</p>
+                <div>
+                    <img src="{% static 'picture/ikuzi.jpg' %}">
+                    <div>
+                        <p>プロの掃除機械や技術を持っていきます!!</p>
+                        <div><em>利用条件</em> : 初回利用のみ</div>
+                        <div><em>有効期限</em> : 2019年3月末まで</div>
                     </div>
                 </div>
             </div>
+            <div class="coupon-button">
+                <a href="{% url 'reserve' %}"><button class="pink-Button">プランを変更する</button></a>
+            </div>
         </div>
-        <a href="{% url 'rconfirmation' %}" class="click"><button type="button" class="buton4">予約内容の確認</button></a>
+        <div class="center-button">
+            <a href="{% url 'rconfirmation' %}"><button class="pink-Button">予約内容の確認</button></a>
+        </div>
     </div>
 {% endblock %}

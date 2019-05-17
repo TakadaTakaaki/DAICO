@@ -1,34 +1,28 @@
 {% extends "../../../user-base.html" %}
 {% block body %}
 {% load static %}
-    <div class="three">
-        <p class="order2">Tpointの照会</p>
-    </div>
-    <div class="flex1">
-        <div class="last">
-            <div class="info">
-                    <table>
-                            <tr>
-                                <th>Tカード番号</th>
-                                <td>　0321-1508-0334</td>
-                            </tr>
-                            <tr>
-                                <th>利用可能ポイント</th>
-                                <td>　<em>1500ポイント</em></td>
-                            </tr>
-                            <tr>
-                                <th>固定ポイント</th>
-                                <td>　<em>500ポイント</em></td>
-                            </tr>
-                            <tr>
-                                <th>ポイント内訳</th>
-                                <td>　通常ポイント : <em>1000ポイント</em>　, 固定ポイント : <em>500ポイント</em></td>
-                            </tr>
-                        </table>
-                <div class="buton">
-                    <a href="{% url 'index' %}" class="click"><button type="button" class="buton4">HOME</button></a>
-                </div>
-            </div>
+    <div class="page">
+        <h1>Tpointの照会</h1>
+        <table>
+            <tr>
+                <th>Tカード番号</th>
+                <td>　0321-1508-0334</td>
+            </tr>
+            <tr>
+                <th>利用可能ポイント</th>
+                <td>　<em>1500ポイント</em></td>
+            </tr>
+            <tr>
+                <th>固定ポイント</th>
+                <td>　<em>500ポイント</em></td>
+            </tr>
+            <tr>
+                <th>ポイント内訳</th>
+                <td>　通常ポイント : <em>1000ポイント</em>　, 固定ポイント : <em>500ポイント</em></td>
+            </tr>
+        </table>
+        <div class="center-button">
+            <a href="{% url 'index' %}"><button class="pink-Button">HOME</button></a>
         </div>
     </div>
 {% endblock %}
