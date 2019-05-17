@@ -7,7 +7,9 @@ a{
   text-decoration: none;
   cursor:pointer;
 }
-
+a:hover {
+  color:rgb(136, 136, 167);
+}
 header{
   width: 100%;
   height: auto;
@@ -18,6 +20,10 @@ header{
 nav{
   width: auto;
   height: auto;
+}
+button {
+  outline: none;
+  cursor: pointer;  
 }
 
 /* モーダル */
@@ -505,25 +511,44 @@ h1 > .page-next {
 .right {
   width: 30%;
 }
-.right > .buttonbox {
+.buttonbox {
   margin: 4%;
 
 }
-.right > .buttonbox > .favorite {
-  color: rgb(124, 115, 97);
-  font-size: 15px;
-  float: right;
-  border: none;
-  background: none;
-  outline: none;
-  background-color: white;
-  border: 1px solid gray;
-  border-radius: 10%;
-  border-bottom: 2px solid gray;
-  cursor: pointer;
-  /* color: rgb(248, 64, 126); */
+.favorite {
+  color:rgb(124, 115, 97);
+  font-size:15px;
+  float:right;
+  border:none;
+  background:none;
+  outline:none;
+  background-color:white;
+  border:1px solid gray;
+  border-radius:10%;
+  border-bottom:2px solid gray;
+  cursor:pointer;
 }
-
+.favorite.active {
+  color:rgb(248, 64, 126);
+  font-size:15px;
+  float:right;
+  border:none;
+  background:none;
+  outline:none;
+  background-color:white;
+  border:1px solid gray;
+  border-radius:10%;
+  border-bottom:2px solid gray;
+}
+.favorite:hover {
+  background-color:rgba(255, 255, 255, 0.5);
+}
+.favorite > i {
+  color:rgb(248, 64, 126);
+}
+.favorite2 > i {
+  color:rgb(248, 64, 126);
+}
 .company-next {
   display: flex;
   width: 100%;
@@ -573,6 +598,10 @@ h1 > .page-next {
   color: rgb(2, 2, 90);
   text-align: right;
 }
+.company-explain > .information > div > p > a:hover {
+  color:rgb(136, 136, 167);
+}
+
 .company-explain > .evaluation {
   display: flex;
 }
@@ -603,6 +632,9 @@ h1 > .page-next {
   border: 2px solid rgb(189, 186, 186);
   margin-top: 13px;
 }
+.pinkButton:hover {
+  background-color:rgb(250, 18, 95,0.5);
+}
 .company-explain > .planbox {
   background-color: rgb(245, 245, 195);
   margin-top: 20px;
@@ -630,6 +662,9 @@ h1 > .page-next {
     margin-bottom: 0;
     font-size: 14px;
 }
+.company-explain > .planbox > span > div > a:hover {
+  color:rgb(136, 136, 167);
+}
 .planbox > p {
   margin: 0 5px 8px 5px;
 }
@@ -645,6 +680,9 @@ h1 > .page-next {
 .planbox > p > a {
   color: rgb(2, 2, 90);
   font-size: 13px;
+}
+.planbox > p > a:hover {
+  color:rgb(136, 136, 167);
 }
 
 .company-detail {
@@ -685,7 +723,7 @@ h3 {
   font-size: 17px;
   color: black;
 }
-.buttonbox > a > .chat {
+.chat {
   color: white;
   font-size: 15px;
   float: right;
@@ -702,7 +740,16 @@ h3 {
   margin-bottom: 5px;
   margin-right: 10px;
 }
-.buttonbox > .favorite2 {
+.chat:hover {
+  background-color:rgb(255, 157, 189);
+}
+.favorite2:hover {
+  background-color:rgba(241, 241, 241, 0.5);
+}
+.reserve:hover {
+  background-color:rgb(255, 157, 189);
+}
+.favorite2 {
   color: rgb(124, 115, 97);
   font-size: 15px;
   float: right;
@@ -718,7 +765,7 @@ h3 {
   margin-bottom: 5px;
   margin-right: 10px;
 }
-.buttonbox > a > .reserve {
+.reserve {
   color: white;
   font-size: 15px;
   float: right;
@@ -747,12 +794,14 @@ h3 {
   position: relative;
   border-right: 1px solid gray;
   padding: 1px 2%;
+  color: rgb(117, 104, 106);
+  font-weight: bold;
 }
 .company-menu > p > a {
   text-decoration: none;
   color: rgb(117, 104, 106);
   display: inline-block;
-  width: 100%;  
+  width: 100%;
   font-weight: bold;
 }
 .company-menu > .last {
@@ -829,16 +878,25 @@ h3 {
   margin-left: auto;
   background-color: rgb(245, 245, 195);
 }
-.coupon-button > a > button {
-  width: 90%;
+.coupon-button > a {
   margin: 5%;
+}
+.coupon-button > a > .pink-Button {
+}
+.pink-Button {
+  padding-top: 5px;
+  padding-bottom: 5px;
   border-radius: 5%;
   background-color: rgb(250, 92, 145);
   border: 1px solid gray;
   color: white;
   font-weight: bold;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  width: 150px;
+}
+.pink-Button:hover{
+  background-color:rgb(252, 215, 115);
+  color:gray;
+  outline: none;
 }
 .genre > div > div > div > em {
   font-style: normal;
@@ -886,4 +944,201 @@ h4 {
   padding-bottom: 2%;
   margin-left: 5%;
   font-size: 12px;
+}
+.staff-all {
+  width: 90%;
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+}
+.staff-all > div {
+  width: 23%;
+  margin: auto;
+  margin-left: 1%;
+  margin-bottom: 3%;
+}
+.staff-all > div > img {
+  width: 140px;
+  height: 140px;
+  margin-left: 20px;
+}
+.staff-all > div > p {
+  margin-left: 10px;
+}
+.staff-all > div > p > em {
+  font-style: normal;
+  color: rgb(250, 92, 145);
+  font-size: 15px;
+  font-weight: bold; 
+}
+h1 > #review {
+  margin-left: 40%;
+}
+.review-box {
+  width: 90%;
+  margin: auto;
+  padding-bottom: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  margin-top: 20px; 
+}
+h5 {
+  color: rgb(117, 104, 106);
+  border-bottom: 2px solid gray;
+  margin: 0;
+  padding-top: 1%;
+  padding-left: 2%;
+}
+h5 > em {
+  color: rgb(248, 64, 126);
+  font-size: 17px;
+  font-style: normal;
+}
+.review-box > .company-detail {
+  margin-top: 0;
+}
+.review-box > .comment {
+  width: 80%;
+  margin: auto;
+}
+.staff-profile {
+  width: 95%;
+  display: flex;
+  margin: auto;
+}
+.staff-profile > span {
+  width: 20%;
+  margin: 3%;
+}
+.staff-profile > span > img {
+  width: 200px;
+  height: 200px;
+}
+.staff-profile > span > a {
+  margin-left: 13%;
+}
+
+.staff-profile > div {
+  width: 80%;
+  margin: 3%;
+  margin-top: 0%;
+}
+.staff-profile > div > div {
+  font-size: 14px;
+  padding-left: 5%;
+}
+.staff-profile > div > p {
+  color: rgb(248, 64, 126);
+  font-size: 17px;
+  font-style: normal;
+}
+.staff-profile > div > span > h3 {
+  border-top: 1px dotted gray;
+  border-bottom: 1px dotted gray;
+}
+
+h3 > em {
+  font-weight: normal;
+  font-style: normal;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20%;
+}
+.article > ul {
+  list-style: none;
+}
+h4 > a {
+  margin-left: 40%;
+}
+.message {
+  margin: auto;
+  margin-bottom: 10px;
+  width: 95%;
+  background-color: rgb(245, 244, 244);
+  color: rgb(99, 77, 47);
+  font-weight: bold;
+  display: flex;
+  border: 1px solid  rgb(99, 77, 47);
+
+}
+.message > div {
+  width: 30%;
+}
+.message > p {
+  width: 50%;
+  padding-top: 2%;
+  font-size: 14px;
+}
+.message > span {
+  width: 20%;
+  padding-top: 4%;
+  font-size: 14px;
+}
+.message > div > div {
+  padding-left: 25%;
+  font-size: 15px;
+  padding-top: 2%;
+}
+.h1-a {
+  margin-left: 4%;
+}
+.h1-c {
+  margin-right: 4%;
+}
+.order {
+  width: 95%;
+  margin: auto;
+  border: 1px solid gray;
+}
+.order > span {
+  display: flex;
+  background-color: rgb(245, 244, 244);
+  border-bottom: 1px solid gray;
+  color: rgb(99, 77, 47);
+  font-weight: bold;
+  font-size: 13px;
+  padding-left: 2%;
+}
+.order > span > p {
+  width: 17%;
+}
+.order > span > .address {
+  width: 25%;
+}
+.order > span > p > a {
+  color: rgb(248, 64, 126);
+  padding-left: 50%;
+  margin-top: 15%;
+}
+.order > div {
+  display: flex;
+}
+.order-bottom > span {
+  width: 35%;
+  margin-left: 5%;
+}
+.order-bottom > div {
+  width: 20%;
+}
+.order-bottom > img {
+  padding: 10px 20px;
+  width: 250px;
+  height: 130px;
+}
+.order-bottom > span > p {
+  font-size: 14px;
+}
+.button-box {
+  margin-top: 1%;
+}
+.button-box > a > button {
+  width: 100%;
+  padding: 3px 25px 3px 25px;
+  margin: 5%;
+  margin-top: 7%;
+  border-radius: 5%;
+  background-color: rgb(226, 225, 225);
+  border: 1px solid gray;
+  outline: none;
 }

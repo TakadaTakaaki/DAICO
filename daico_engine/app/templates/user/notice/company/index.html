@@ -1,54 +1,27 @@
 {% extends "../../../user-base.html" %}
 {% block body %}
 {% load static %}
-    <div class="three">
-        <p class="order3">店舗からのメッセージ</p>
-        <p class="order2"><a href="{% url 'nengine' %}" class="noneorder">DAICOからのメッセージ</a></p>
-        <footer id="navi_footer">
-            <a href="#" class="page1">1/10ページ</a>
-            <a href="#" class="page3">次へ</a>
-        </footer>
-    </div>
-    <div class="flex1">
-        <a href="{% url 'ncdetail' %}" class="cuupon">
-            <div class="last">
-                <div class="name">
-                    <div class="named">
-                        <p class="name0">家事代行</p>
-                        <p class="name3">Casy</p>
-                    </div>
-                    <p class="name1"><br>【次回使えるクーポンの紹介】</p>
-                    <p class="name2"><br>2019/3/8 10:30</p>
-                </div>
+    <div class="page">
+        <h1>店舗からのメッセージ
+            <a href="{% url 'nengine' %}" class="h1-a">DAICOからのメッセージ</a>
+            <a href="#" class="page-separate">1/10ページ</a>
+            <a href="#" class="page-next">次へ</a>
+        </h1>
+        <a href="{% url 'ncdetail' %}" class="message">
+            <div>
+                <p class="category-tag">家事代行</p>
+                <div class="">Casy</div>
             </div>
+            <p><br>【次回使えるクーポンの紹介】</p>
+            <span><br>2019/3/8 10:30</span>
         </a>
-    </div>
-    <div class="flex1">
-        <a href="{% url 'ncdetail' %}" class="cuupon">
-            <div class="last">
-                <div class="name">
-                    <div class="named">
-                        <p class="name0">家事代行</p>
-                        <p class="name3">Bers</p>
-                    </div>
-                    <p class="name1"><br>【次回使えるクーポンの紹介】</p>
-                    <p class="name2"><br>2019/3/8 10:30</p>
-                </div>
+        <a href="{% url 'ncdetail' %}" class="message">
+            <div>
+                <p class="category-tag">家事代行</p>
+                <div class="">Casy</div>
             </div>
-        </a>
-    </div>
-    <div class="flex1">
-        <a href="{% url 'ncdetail' %}" class="cuupon">
-            <div class="last">
-                <div class="name">
-                    <div class="named">
-                        <p class="name0">家事代行</p>
-                        <p class="name3">Kids</p>
-                    </div>
-                    <p class="name1"><br>【次回使えるクーポンの紹介】</p>
-                    <p class="name2"><br>2019/3/8 10:30</p>
-                </div>
-            </div>
+            <p><br>【次回使えるクーポンの紹介】</p>
+            <span><br>2019/3/8 10:30</span>
         </a>
     </div>
 {% endblock %}

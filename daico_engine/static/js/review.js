@@ -1,4 +1,4 @@
-$(".modalOpen1").click(function(){
+$("#review").click(function(){
 		
     var navClass = $(this).attr("class"),
         href = $(this).attr("href");
@@ -26,3 +26,16 @@ $(".modaltoukou1").click(function(){
   $(".modalOpen1").removeClass("open");
   return false;
 });  
+
+// $(function() {
+//   $('#review').click(function() {
+//     $('#modal04').fadeIn();
+//   });
+//   $('.close-modal1').click(function() {
+//       $('#save').fadeOut();
+//     });
+//   $('.close-modal2').click(function() {
+//     $('#login-modal2').fadeOut();
+//     $('#signup-modal2').fadeOut();
+//   });
+// });
