@@ -135,4 +135,5 @@ urlpatterns = [
     url(r'write', views.write, name="write"),
     
     path('wdetail/<int:pk>/', views.wdetail, name="wdetail"),
+    path('category/<int:pk>/', views.category, name="category"),
 ]

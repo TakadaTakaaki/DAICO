@@ -139,6 +139,7 @@ urlpatterns = [
     url(r'rate/', include('app.urls')),
     url(r'write/', include('app.urls')),
     url(r'wdetail/', include('app.urls')),
+    url(r'category/', include('app.urls')),
     # 引数をループさせない
     url(r'', include('app.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

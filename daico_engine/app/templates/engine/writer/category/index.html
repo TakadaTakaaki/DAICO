@@ -1,9 +1,9 @@
-{% extends "../../engine-base.html" %}
+{% extends "../../../engine-base.html" %}
 {% block body %}
 {% load static %}
     <div class="flex1">
         <div class="three">
-            <p class="order1"><em class="suuti">{{ post.title | length }}</em> 件　の記事があります</p>
+            <p class="order1"><em class="suuti">100</em> 件　の記事があります</p>
         </div>
         <div class="page0">
             <div class="page2">
@@ -17,6 +17,7 @@
                                     <p class="human">{{ post.published }}</p>
                                 </div>
                                 <p class="title">{{ post.title }}</p>
+                                <p class="blog1">{{ post.body }}</p>
                             </div>
                         </div>
                     </a>
