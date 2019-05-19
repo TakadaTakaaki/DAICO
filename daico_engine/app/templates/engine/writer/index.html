@@ -3,11 +3,23 @@
 {% load static %}
     <div class="flex1">
         <div class="three">
+<<<<<<< HEAD
                 <p class="order1"><em class="suuti">{{ post.queryset }}</em> 件　の記事があります</p>
+=======
+                <p class="order1"><em class="suuti" id="count">{{ post }}</em> 記事一覧</p>
+                <!-- <script type="text/javascript">
+                    $(document).ready(function(){
+                        $('#count') ({
+                            let = document.getElementById('count')
+                        })
+                    })
+                    console.log(let);
+                </script> -->
+>>>>>>> 3d07a072d46d77a6c6db09c98968b4af658f644f
         </div>
         <div class="page0">
             <div class="page2">
-                {% for post in contexts.posts %}
+                {% for post in contexts.post_list %}
                     <a href="{% url 'wdetail' pk=post.id %}" class="blogpage">
                         <div class="part3">
                             <img src="{{ post.image.url }}" class="oko">
@@ -25,9 +37,10 @@
             <div class="page3">
                 <p class="category">記事カテゴリ</p>
                     {% for category in contexts.categories %}
-                        <p class="category1"><a href="{% url 'category' pk=category.id %}" class="category01">{{ category.name }} ({{ category.post_count }})</a></p>
+                        <p class="category1"><a href="{% url 'category' category_id=category.id %}" class="category01">{{ category.name }} ({{ category.post_count }})</a></p>
                     {% endfor %}
             </div>
         </div>
     </div>
 {% endblock %}
+

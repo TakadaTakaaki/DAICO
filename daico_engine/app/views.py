@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.db.models import Count
 from django.views import generic
 from .models import Post,Category
-
+from django.core.exceptions import MultipleObjectsReturned
 
 # user
 def index(request):
@@ -199,17 +199,30 @@ def rate(request):
     return render(request, 'engine/publish/rate/index.html')
 # write　記事
 def write(request):
+    posts = Post.objects.order_by('-published'),
+    # count = posts.count('Post')
+    for obj in posts:
+        print(obj)
+        # count = obj.count()
     contexts = ({
+<<<<<<< HEAD
         'posts' : Post.objects.order_by('-published'),
+=======
+        'post_list' : obj,
+        # 'counts' : count,
+>>>>>>> 3d07a072d46d77a6c6db09c98968b4af658f644f
         'categories' : Category.objects.order_by('name'),
     })
     return render(request, 'engine/writer/index.html', {'contexts': contexts})
 def wdetail(request, pk):
     posts = Post.objects.get(pk=pk)
     return render(request, 'engine/writer/_uuid.html', {'posts': posts})
-def category(request, pk):
+def category(request, category_id):
+    posts =  Post.objects.filter(category_id=category_id),
+    for post in posts:
+        print(post)
     contexts = ({
-        'posts' : Post.objects.order_by('-published'),
-        'categories' : Category.objects.order_by('name')
+        'post_list' : post,
+        'categories' : Category.objects.order_by('name'),
     })
     return render(request, 'engine/writer/category/index.html', {'contexts': contexts})
