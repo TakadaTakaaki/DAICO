@@ -2,7 +2,7 @@ from django.http.response import HttpResponse
 from django.shortcuts import render
 from django.db.models import Count
 from django.views import generic
-from .models import Post,Category
+from .models import Post,Category,Company_data
 from django.core.exceptions import MultipleObjectsReturned
 
 # user
@@ -130,7 +130,8 @@ def redetail(request):
 def valuation(request):
     return render(request, 'company/business/valuation/index.html')
 def compilation(request):
-    return render(request, 'company/compilation/index.html')
+    company_datas = Company_data.objects.order_by('name')
+    return render(request, 'company/compilation/index.html', {'company_datas' : company_datas})
 def compon(request):
     return render(request, 'company/compilation/coupon/index.html')
 def complay(request):
@@ -205,12 +206,8 @@ def write(request):
         print(obj)
         # count = obj.count()
     contexts = ({
-<<<<<<< HEAD
-        'posts' : Post.objects.order_by('-published'),
-=======
         'post_list' : obj,
         # 'counts' : count,
->>>>>>> 3d07a072d46d77a6c6db09c98968b4af658f644f
         'categories' : Category.objects.order_by('name'),
     })
     return render(request, 'engine/writer/index.html', {'contexts': contexts})
