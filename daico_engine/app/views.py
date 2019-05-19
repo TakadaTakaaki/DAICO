@@ -202,10 +202,11 @@ def write(request):
     posts = Post.objects.order_by('-published'),
     # count = posts.count('Post')
     for obj in posts:
-        count = obj.count()
+        print(obj)
+        # count = obj.count()
     contexts = ({
         'post_list' : obj,
-        'counts' : count,
+        # 'counts' : count,
         'categories' : Category.objects.order_by('name'),
     })
     return render(request, 'engine/writer/index.html', {'contexts': contexts})

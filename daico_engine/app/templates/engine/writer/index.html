@@ -3,9 +3,15 @@
 {% load static %}
     <div class="flex1">
         <div class="three">
-            {% for post in contexts.counts %}
-                <p class="order1"><em class="suuti">{{ post }}</em> 件の記事</p>
-            {% endfor %}
+                <p class="order1"><em class="suuti" id="count">{{ post }}</em> 記事一覧</p>
+                <!-- <script type="text/javascript">
+                    $(document).ready(function(){
+                        $('#count') ({
+                            let = document.getElementById('count')
+                        })
+                    })
+                    console.log(let);
+                </script> -->
         </div>
         <div class="page0">
             <div class="page2">
