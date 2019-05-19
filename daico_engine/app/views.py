@@ -201,7 +201,7 @@ def rate(request):
 def write(request):
     contexts = ({
         'posts' : Post.objects.order_by('-published'),
-        'categories' : Category.objects.order_by('name')
+        'categories' : Category.objects.order_by('name'),
     })
     return render(request, 'engine/writer/index.html', {'contexts': contexts})
 def wdetail(request, pk):

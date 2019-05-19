@@ -29,6 +29,12 @@ class Category(models.Model):
         else:
             return self.name
 
+# class PostManager(models.Manager):
+#     def get_queryset(self):
+#         return super().get_queryset().annotate(
+#             posts_count=models.Count('post')
+        # ).order_by('-posts_count')
+
 class Post(models.Model):
     class Meta:
         db_table = 'post'
@@ -42,3 +48,9 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+    # def __str__(self):
+    #     if hasattr(self, 'posts_count'):
+    #         return f'{self.posts_count}'
+    #     else:
+    #         return self.genre
