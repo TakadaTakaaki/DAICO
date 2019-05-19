@@ -1,42 +1,34 @@
 {% extends "../../engine-base.html" %}
 {% block body %}
 {% load static %}
-    <div class="flex1">
-        <div class="three">
-            <p class="order1"><em class="suuti">100</em> 件　の記事があります</p>
-        </div>
-        <div class="page0">
-            <div class="page2">
-                {% for post in posts %}
-                    <a href="{% url 'wdetail' pk=post.id %}" class="blogpage">
-                        <div class="part3">
-                            <img src="{% static 'picture/oko.jpg' %}" class="oko">
-                            <div class="kowake">
-                                <div class="flexbox">
-                                    <p class="humangenre">{{ post.genre }}</p>
-                                    <p class="human">{{ post.published }}</p>
+    <div class="page">
+        <h1>記事一覧</h1>
+        <div class="article">
+            <p><em>100</em> 件　の記事があります</p>
+            <span>
+                <ul>
+                    {% for post in contexts.post_list %}
+                    <li>
+                        <a href="{% url 'wdetail' pk=post.id %}" class="article-page">
+                            <img src="{{ post.image.url }}">
+                            <span>
+                                <div>
+                                    <p class="category-tag">{{ post.genre }}</p>
+                                    <p>{{ post.published }}</p>
                                 </div>
-                                <p class="title">{{ post.title }}</p>
-                                <p class="blog1">{{ post.body }}</p>
-                            </div>
-                        </div>
-                    </a>
-                {% endfor %}
-            </div>
-            <div class="page3">
-                <p class="category">記事カテゴリ</p>
-                <p class="category1"><a href="" class="category01">家事裏技 (12)</a></p>
-                <p class="category1"><a href="" class="category01">育児裏技 (7)</a></p>
-                <p class="category1"><a href="" class="category01">家事裏技 (12)</a></p>
-                <p class="category1"><a href="" class="category01">育児裏技 (7)</a></p>
-                <p class="category1"><a href="" class="category01">家事裏技 (12)</a></p>
-                <p class="category1"><a href="" class="category01">育児裏技 (7)</a></p>
-                <p class="category">スタッフ</p>
-                <p class="category1"><a href="" class="category01">山下智久 (12)</a></p>
-                <p class="category1"><a href="" class="category01">北川景子 (7)</a></p>
-                <p class="category1"><a href="" class="category01">佐藤勝利 (12)</a></p>
-                <p class="category1"><a href="" class="category01">堀北真希 (7)</a></p>
-            </div>
+                                <p>{{ post.title }}</p>
+                            </span>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <div class="category">
+                    <p class="category-title">記事カテゴリ</p>
+                    {% for category in contexts.categories %}
+                        <p><a href="{% url 'category' category_id=category.id %}">{{ category.name }} ({{ category.post_count }})</a></p>
+                    {% endfor %}
+                </div>
+            </span>
         </div>
     </div>
 {% endblock %}

@@ -1,22 +1,24 @@
-# from django.http.response import HttpResponse
-# from django.shortcuts import render
-# from .models import post
 from django.http.response import HttpResponse
 from django.shortcuts import render
-from .models import post
-
+from django.db.models import Count
+from django.views import generic
+from .models import Post,Category
+from django.core.exceptions import MultipleObjectsReturned
 
 # user
 def index(request):
-    return render(request, 'user/home/index.html')
+    posts = Post.objects.order_by('-published')
+    return render(request, 'user/home/index.html', {'posts': posts})
 
 # _uuidで詳細はできると思ったのでファイル名_uuid.htmlにしました
 
 # article 記事
 def article(request):
-    return render(request, 'user/article/index.html')
-def adetail(request):
-    return render(request, 'user/article/_uuid.html')
+    posts = Post.objects.order_by('-published')
+    return render(request, 'user/article/index.html', {'posts': posts})
+def adetail(request, pk):
+    posts = Post.objects.get(pk=pk)
+    return render(request, 'user/article/_uuid.html', {'posts': posts})
 # company 会社詳細
 def enterprise(request):
     return render(request, 'user/enterprise/index.html')
@@ -195,16 +197,28 @@ def menu(request):
     return render(request, 'engine/publish/menu/index.html')
 def rate(request):
     return render(request, 'engine/publish/rate/index.html')
-# writer　記事
-def writer(request):
-    posts = post.objects.order_by('id','-published')
-    return render(request, 'engine/writer/index.html', {'posts': posts})
+# write　記事
+def write(request):
+    posts = Post.objects.order_by('-published'),
+    # count = posts.count('Post')
+    for obj in posts:
+        print(obj)
+        # count = obj.count()
+    contexts = ({
+        'post_list' : obj,
+        # 'counts' : count,
+        'categories' : Category.objects.order_by('name'),
+    })
+    return render(request, 'engine/writer/index.html', {'contexts': contexts})
 def wdetail(request, pk):
-    posts = post.objects.get(pk=pk)
+    posts = Post.objects.get(pk=pk)
     return render(request, 'engine/writer/_uuid.html', {'posts': posts})
-# def writer(request):
-#     posts = post.objects.order_by('-published')
-#     return render(request, 'engine/writer/index.html',{'posts':posts})
-# def wdetail(request,pk):
-#     posts = post.objects.get(pk=pk)
-#     return render(request, 'engine/writer/_uuid.html',{'posts':posts})
+def category(request, category_id):
+    posts =  Post.objects.filter(category_id=category_id),
+    for post in posts:
+        print(post)
+    contexts = ({
+        'post_list' : post,
+        'categories' : Category.objects.order_by('name'),
+    })
+    return render(request, 'engine/writer/category/index.html', {'contexts': contexts})

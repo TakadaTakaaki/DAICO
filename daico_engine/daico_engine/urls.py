@@ -16,6 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import include, url
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
+# 下二つが画像関連の場所と繋いでる
+
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
@@ -133,8 +137,10 @@ urlpatterns = [
     url(r'xdetail/', include('app.urls')),
     url(r'menu/', include('app.urls')),
     url(r'rate/', include('app.urls')),
-    url(r'writer/', include('app.urls')),
+    url(r'write/', include('app.urls')),
     url(r'wdetail/', include('app.urls')),
+    url(r'category/', include('app.urls')),
     # 引数をループさせない
     url(r'', include('app.urls')),
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# 画像追加に必要

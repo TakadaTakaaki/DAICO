@@ -262,7 +262,7 @@ body{
   
   .article {
     margin-top: 1%;
-    border: 1px solid rgb(17, 17, 51);
+    /* border: 1px solid rgb(17, 17, 51); */
     height: flex;
     position: relative;
   }

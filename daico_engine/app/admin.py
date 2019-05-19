@@ -1,8 +1,9 @@
 # from django.contrib import admin
 # from .models import post
 from django.contrib import admin
-from .models import post
+from .models import Post
+from .models import Category
 
-admin.site.register(post)
+admin.site.register(Post)
 
-# Register your models here.
+admin.site.register(Category)
