@@ -1,8 +1,8 @@
 from django.conf.urls import url
 from django.urls import path
-
+from django.core.exceptions import MultipleObjectsReturned
 from . import views
- 
+
 urlpatterns = [
     # user
 
@@ -21,7 +21,7 @@ urlpatterns = [
     url(r'plan', views.plan, name="plan"),
     # url(r'plan', views.plan, name="plan"),
     url(r'review', views.review, name="review"),
-     # url(r'review', views.review, name="review"),
+    # url(r'review', views.review, name="review"),
     url(r'staff', views.staff, name="staff"),
     # url(r'staff', views.staff, name="staff"),
     url(r'sdetail', views.sdetail, name="sdetail"),
@@ -135,5 +135,5 @@ urlpatterns = [
     url(r'write', views.write, name="write"),
     
     path('wdetail/<int:pk>/', views.wdetail, name="wdetail"),
-    path('category/<int:pk>/', views.category, name="category"),
+    path('category/<int:category_id>/', views.category, name="category"),
 ]
