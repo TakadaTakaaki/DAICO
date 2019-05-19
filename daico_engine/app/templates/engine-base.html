@@ -5,37 +5,7 @@
         <meta charset="UTF-8">
         <title>{% block title %}【代行エンジン】代行業を一括で検索・比較出来るサイト{% endblock %}</title>
         <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-        <link href="{% static 'engine/css/analytics/analytics.css' %}" rel="stylesheet">
-        <link href="{% static 'engine/css/article/article.css' %}" rel="stylesheet">
-        <link href="{% static 'engine/css/article/article-detail.css' %}" rel="stylesheet">
-        <link href="{% static 'engine/css/article/new-article.css' %}" rel="stylesheet">
-        <link href="{% static 'engine/css/company/blog.css' %}" rel="stylesheet">
-        <link href="{% static 'engine/css/company/blog-visit.css' %}" rel="stylesheet">
-        <link href="{% static 'engine/css/company/company-detail.css' %}" rel="stylesheet">
-        <link href="{% static 'engine/css/company/company-information.css' %}" rel="stylesheet">
-        <link href="{% static 'engine/css/company/plan.css' %}" rel="stylesheet">
-        <link href="{% static 'engine/css/company/staff-profile.css' %}" rel="stylesheet">
-        <link href="{% static 'engine/css/company/staff.css' %}" rel="stylesheet">
-        <link href="{% static 'engine/css/company/review.css' %}" rel="stylesheet">
-        <link href="{% static 'engine/css/contact/chat.css' %}" rel="stylesheet">
-        <link href="{% static 'engine/css/contact/talk.css' %}" rel="stylesheet">
-        <link href="{% static 'engine/css/customer/customer-detail.css' %}" rel="stylesheet">
-        <link href="{% static 'engine/css/customer/customer.css' %}" rel="stylesheet">
-        <link href="{% static 'engine/css/edit/editer.css' %}" rel="stylesheet">
-        <link href="{% static 'engine/css/edit/plan.css' %}" rel="stylesheet">
-        <link href="{% static 'engine/css/home/home.css' %}" rel="stylesheet">
-        <link href="{% static 'engine/css/reserve/information.css' %}" rel="stylesheet">
-        <link href="{% static 'engine/css/reserve/reserved.css' %}" rel="stylesheet">
-        <link href="{% static 'engine/css/slick/slick-theme.css' %}" rel="stylesheet">
-        <link href="{% static 'engine/css/slick/slick-theme1.css' %}" rel="stylesheet">
-        <link href="{% static 'engine/css/slick/slick.css' %}" rel="stylesheet">
-        <link href="{% static 'engine/css/slick/slick1.css' %}" rel="stylesheet">
-        <link href="{% static 'company/css/edit/blog_set.css' %}" rel="stylesheet">
-        <link href="{% static 'company/css/edit/review_set.css' %}" rel="stylesheet">
-        <link href="{% static 'company/css/edit/blog_set.css' %}" rel="stylesheet">
-        <link href="{% static 'company/css/edit/staff-pro.css' %}" rel="stylesheet">
-        <link href="{% static 'company/css/edit/sutaffu.css' %}" rel="stylesheet">
-        <link href="{% static 'company/css/contact/talk2.css' %}" rel="stylesheet">
+        <link href="{% static 'css/company/company.css' %}" rel="stylesheet">
         <link rel="shortcut icon" href="{% static 'picture/favicon.ico' %}">
         <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -46,56 +16,50 @@
     </head>
     <body>
         <header>
-            <div class="logo">
-                <div class="homebox">
+            <nav>
+                <!-- <div class="homebox">
                     <a href="../home/before-login.html"><img src="../../picture/daico.png" class="homebox1"></a>
+                </div> -->
+                <div class="login-group">
+                    <a id="login2"><i class="fas fa-user-circle"></i> 新規会員登録(無料)</a>
+                    <a id="login-show"><i class="fas fa-sign-in-alt"></i> ログイン</a>
                 </div>
-                <div class="get">
-                    <div class="logo0">
-                        <a href="../register/after-registration.html" class="login2"><i class="fas fa-user-circle"></i>   新規会員登録(無料)</a>
+                <div class="login-modal-wrapper" id="login-modal">
+                    <div class="modal">
+                        <div class="close-modal">
+                            <i class="fa fa-2x fa-times"></i>
+                        </div>
+                        <div id="login-form">
+                            <h2>Emailログイン</h2>
+                            <form action="#">
+                                <input class="form-control" type="text" placeholder="メールアドレス">
+                                <input class="form-control" type="password" placeholder="パスワード">
+                                <a href="after-login.html"><div id="submit-btn">ログイン</div></a>
+                            </form>
+                        </div>
                     </div>
-                    <div class="logo00">
-                        <a class="login" id="login-show"><i class="fas fa-sign-in-alt"></i> ログイン</a>
-                    </div>
                 </div>
-            </div>
-        </header>
-        <div class="login-modal-wrapper" id="login-modal">
-            <div class="modal">
-                <div class="close-modal">
-                    <i class="fa fa-2x fa-times"></i>
+                <div class="menu" id="menu">
+                    <a href="{% url 'booking' %}"><i class="fas fa-tasks"></i>予約管理</a>
+                    <a href="{% url 'compilation' %}"><i class="fas fa-edit"></i>編集</a>
+                    <a href="{% url 'company' %}"><img src="{% static 'picture/pinklogo.png' %}"></a>
+                    <a href="{% url 'voice' %}"><i class="far fa-comments"></i>お問い合わせ</a>
+                    <a href="{% url 'survey' %}"><i class="far fa-chart-bar"></i>分析</a>
                 </div>
-                <div id="login-form">
-                    <h2>Emailログイン</h2>
-                    <form action="#">
-                        <input class="form-control" type="text" placeholder="メールアドレス">
-                        <input class="form-control" type="password" placeholder="パスワード">
-                        <a href="after-login.html"><div id="submit-btn">ログイン</div></a>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <nav class="template">
-            <div id="menu">
-                <div class="just"><a href="{% url 'manage' %}" class="favorite"><i class="fas fa-tasks"></i>  <span class="sp">予約管理</span></a></div>
-                <div class="just"><a href="{% url 'edit' %}" class="notice"><i class="fas fa-edit"></i>  <span class="sp">編集</span></a></div>
-                <div class="just3"><a href="{% url 'engine' %}" class="home"><span class="sp"><img src="{% static 'picture/pinklogo.png' %}" class="daico"></span></a></div>
-                <div class="just"><a href="{% url 'contact' %}" class="order-history"><i class="far fa-comments"></i>  <span class="sp">お問い合わせ</span></a></div>
-                <div class="just"><a href="{% url 'analytics' %}" class="my-page"><i class="far fa-chart-bar"></i>  <span class="sp">分析</span></a></div>
-            </div>
-        </nav>            
+            </nav>
+        </header>         
         {% block body %}
-{% load static %}
+        {% load static %}
         {% endblock %}
-        <script type="text/javascript" src="{% static 'js/slick.min.js' %}"></script>
-        <script src="{% static 'js/login.js' %}"></script>
-        <script type="text/javascript" src="{% static 'js/sride.js' %}"></script>
-        <script src="{% static 'js/favorite.js' %}s"></script>
-        <script src="{% static 'js/login.js' %}"></script>
-        <script src="{% static 'js/fade.js' %}"></script>
-        <script src="{% static 'js/review.js' %"></script>
-        <script src="{% static 'js/order.js' %}"></script>
-        <script type="text/javascript" src="{% static 'js/edit.js' %}"></script>
-        <script type="text/javascript" src="{% static 'js/editer.js' %}"></script>
     </body>
+    <script type="text/javascript" src="{% static 'js/slick.min.js' %}"></script>
+    <script src="{% static 'js/login.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/sride.js' %}"></script>
+    <script src="{% static 'js/favorite.js' %}s"></script>
+    <script src="{% static 'js/login.js' %}"></script>
+    <script src="{% static 'js/fade.js' %}"></script>
+    <script src="{% static 'js/review.js' %"></script>
+    <script src="{% static 'js/order.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/edit.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/editer.js' %}"></script>    
 </html>
