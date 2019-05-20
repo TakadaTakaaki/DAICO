@@ -77,3 +77,32 @@ class Company_data(models.Model):
     def __str__(self):
         return self.name
 
+class Staff(models.Model):
+    class Meta:
+        db_table = 'staff'
+
+    company_name = models.CharField(max_length=30)
+    name = models.CharField(max_length=30)
+    position = models.CharField(max_length=10)
+    description = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.company_name
+
+class Plan(models.Model):
+    class Meta:
+        db_table = 'plan'
+
+    company_plan = models.CharField(max_length=30)
+    genre = models.CharField(max_length=8)
+    title = models.CharField(max_length=30)
+    description = models.CharField(max_length=75)
+    price = models.CharField(max_length=30)
+    terms = models.CharField(max_length=20)
+    effect = models.CharField(max_length=15)
+
+    def __str__(self):
+        return self.company_plan
+
+
+

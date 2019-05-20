@@ -2,7 +2,7 @@ from django.http.response import HttpResponse
 from django.shortcuts import render
 from django.db.models import Count
 from django.views import generic
-from .models import Post,Category,Company_data
+from .models import Post,Category,Company_data,Staff,Plan
 from django.core.exceptions import MultipleObjectsReturned
 
 # user
@@ -133,9 +133,11 @@ def compilation(request):
     company_datas = Company_data.objects.order_by('name')
     return render(request, 'company/compilation/index.html', {'company_datas' : company_datas})
 def compon(request):
-    return render(request, 'company/compilation/coupon/index.html')
+    plans = Plan.objects.order_by('genre')
+    return render(request, 'company/compilation/coupon/index.html', {'plans' : plans})
 def complay(request):
-    return render(request, 'company/compilation/player/index.html')
+    staffs = Staff.objects.order_by('name')
+    return render(request, 'company/compilation/player/index.html', {'staffs' : staffs})
 def cmdetail(request):
     return render(request, 'company/compilation/player/_uuid.html')
 def comre(request):

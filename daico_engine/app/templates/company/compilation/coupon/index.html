@@ -94,27 +94,29 @@
                             </div>
                         </div>
                 <div class="info2">
-                    <div class="sinki">
-                        新規
-                    </div>
-                    <div class="gene">
-                        <p class="red">育児代行</p>
-                        <p class="serihu1">【女性スタッフ】激安風呂掃除プラン(夕飯付き)！</p>
-                        <div class="zyouken">
-                            <img src="{% static 'picture/ikuzi.jpg' %}" class="ikuzi">
-                            <p class="simekiri">
-                                プロの掃除機械や技術を持っていきます!!<br><br>
-                                <be></be><br><em class="meizi">利用条件</em> : 初回利用のみ
-                                <br><em class="meizi">有効期限</em> : 2019年3月末まで
-                            </p>
+                    {% for plan in plans %}
+                        <div class="sinki">
+                            新規
                         </div>
-                    </div>
-                    <div class="part">
-                        <p class="serihu3">¥ 3,000</p>
-                    </div>
-                    <div class="buton">
-                        <a href="" class="click"><button type="button" class="buton1">このクーポンを<br>利用して予約へ進む</button></a>
-                    </div>
+                        <div class="gene">
+                            <p class="red">{{ plan.genre }}</p>
+                            <p class="serihu1">{{ plan.title }}</p>
+                            <div class="zyouken">
+                                <img src="{% static 'picture/ikuzi.jpg' %}" class="ikuzi">
+                                <p class="simekiri">
+                                    {{ plan.description }}<br><br>
+                                    <be></be><br><em class="meizi">利用条件</em> : {{ plan.terms }}
+                                    <br><em class="meizi">有効期限</em> : {{ plan.effect }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="part">
+                            <p class="serihu3">{{ plan.price }}</p>
+                        </div>
+                        <div class="buton">
+                            <a href="" class="click"><button type="button" class="buton1">このクーポンを<br>利用して予約へ進む</button></a>
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
