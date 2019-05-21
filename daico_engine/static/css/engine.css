@@ -261,60 +261,55 @@ h1 {
 }
 
 .article {
+  width: 95%;
+  margin: auto;
   margin-top: 1%;
-  border: 1px solid rgb(17, 17, 51);
   height: flex;
   position: relative;
-}
-.article > p {
-  width: 92%;
-  margin: 4%;
-  border-bottom: 3px solid gray;
-}
-.article > p > em {
-  color: rgb(248, 64, 126);
-  font-size: 20px;
 }
 .article > span {
   width: 100%;
   display: flex;
+  margin: auto;
 }
 
-.article > span > ul {
+.article > span > span {
   width: 80%;
-  list-style: none;
+  flex-direction: column;
 }
-.article > span > ul > li {
-  width: 80%;
+.article > span > span > a {
   padding-top: -2%;
-  margin: 0 2% 0 2%;
-  border-bottom: 2px solid gray;
+  margin: 3% 2% 3% 2%;
+  border: 1px solid  rgb(17, 17, 51);
 }
 .article-page {
   color: rgb(90, 66, 5);
   display: flex;
 }
 .article-page > img {
-  width: 20%;
-  margin: 3% 5% 3% 5%;
+  width: 150px;
+  height: 150px;
+  margin: 2% 5% 2% 5%;
 }
 .article-page > span {
   width: 70%;
+  margin-left: -5%;
 }
 .article-page > span > div {
   display: flex;
 }
-.article-page > span > div > p{
-  width: 50%;
+.article-page > span > div > div{
+  width: 80%;
+  margin-top: 5%;
 }
 .category-tag {
   background-color: rgb(218, 161, 4);
   font-weight: bold;
   border-radius: 40%;
   border: 1px solid rgb(17, 17, 51);
-  margin: 3% 10% 3% 10%;
+  margin: 5% 10% 5% 10%;
   text-align: center;
-  width: 40%;
+  width: 20%;
   color:white;
   padding:5px 10px 5px 10px;
   font-size: 12px;
@@ -326,6 +321,7 @@ h1 {
 
 .article > span > .category {
   width: 20%;
+  margin-left: 5%;
 }
 
 .category-title {
@@ -339,9 +335,9 @@ h1 {
 .article > div> .article-table {
   width: 90%;
   padding: 2% 5% 2% 5%;
-  background-color: rgba(17, 17, 51,0.8);
-  border: 1px solid rgb(17, 17, 51);
-  color: white;
+  background-color: rgb(245, 244, 244);  
+  border-bottom: 1px solid rgb(17, 17, 51);
+  color: rgb(117, 104, 106);
   font-weight: bold;
 }
 .article > div {
@@ -1236,6 +1232,7 @@ h4 > a {
 }
 .center-button {
   text-align: center;
+  margin-bottom: 5%;
 }
 .change {
   position: relative;

@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <title>{% block title %}【代行エンジン】代行業を一括で検索・比較出来るサイト{% endblock %}</title>
         <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-        <link href="{% static 'css/engine/engine.css' %}" rel="stylesheet">
+        <link href="{% static 'css/engine.css' %}" rel="stylesheet">
         <link rel="shortcut icon" href="{% static 'picture/favicon.ico' %}">
         <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -42,7 +42,7 @@
                 <div class="menu" id="menu">
                     <a href="{% url 'booking' %}"><i class="fas fa-tasks"></i>予約管理</a>
                     <a href="{% url 'compilation' %}"><i class="fas fa-edit"></i>編集</a>
-                    <a href="{% url 'company' %}"><img src="{% static 'picture/pinklogo.png' %}"></a>
+                    <a href="{% url 'engine' %}"><img src="{% static 'picture/pinklogo.png' %}"></a>
                     <a href="{% url 'voice' %}"><i class="far fa-comments"></i>お問い合わせ</a>
                     <a href="{% url 'survey' %}"><i class="far fa-chart-bar"></i>分析</a>
                 </div>

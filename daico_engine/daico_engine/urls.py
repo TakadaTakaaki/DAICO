@@ -27,6 +27,7 @@ urlpatterns = [
     url(r'^$', include('app.urls')),
     url(r'article/', include('app.urls')),
     url(r'adetail/', include('app.urls')),
+    url(r'type/', include('app.urls')),
     # article_detail
     url(r'enterprise/', include('app.urls')),
     url(r'blog/', include('app.urls')),

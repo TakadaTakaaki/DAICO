@@ -14,11 +14,26 @@ def index(request):
 
 # article 記事
 def article(request):
-    posts = Post.objects.order_by('-published')
-    return render(request, 'user/article/index.html', {'posts': posts})
+    posts = Post.objects.order_by('-published'),
+    for obj in posts:
+        print(obj)
+    contexts = ({
+        'post_list' : obj,
+        'categories' : Category.objects.order_by('name'),
+    })
+    return render(request, 'user/article/index.html', {'contexts': contexts})
 def adetail(request, pk):
     posts = Post.objects.get(pk=pk)
     return render(request, 'user/article/_uuid.html', {'posts': posts})
+def type(request, category_id):
+    posts =  Post.objects.filter(category_id=category_id),
+    for post in posts:
+        print(post)
+    contexts = ({
+        'post_list' : post,
+        'categories' : Category.objects.order_by('name'),
+    })
+    return render(request, 'user/article/type/index.html', {'contexts': contexts})
 # company 会社詳細
 def enterprise(request):
     return render(request, 'user/enterprise/index.html')

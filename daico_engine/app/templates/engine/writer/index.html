@@ -2,26 +2,23 @@
 {% block body %}
 {% load static %}
     <div class="page">
-        <h1>記事一覧</h1>
+        <h1><em>100</em> 件　の記事があります</h1>
         <div class="article">
-            <p><em>100</em> 件　の記事があります</p>
             <span>
-                <ul>
+                <span>
                     {% for post in contexts.post_list %}
-                    <li>
-                        <a href="{% url 'wdetail' pk=post.id %}" class="article-page">
-                            <img src="{{ post.image.url }}">
-                            <span>
-                                <div>
-                                    <p class="category-tag">{{ post.genre }}</p>
-                                    <p>{{ post.published }}</p>
-                                </div>
-                                <p>{{ post.title }}</p>
-                            </span>
-                        </a>
-                    </li>
+                    <a href="{% url 'wdetail' pk=post.id %}" class="article-page">
+                        <img src="{{ post.image.url }}">
+                        <span>
+                            <div>
+                                <p class="category-tag">{{ post.genre }}</p>
+                                <p>{{ post.published }}</p>
+                            </div>
+                            <p>{{ post.title }}</p>
+                        </span>
+                    </a>
                     {% endfor %}
-                </ul>
+                </span>
                 <div class="category">
                     <p class="category-title">記事カテゴリ</p>
                     {% for category in contexts.categories %}
