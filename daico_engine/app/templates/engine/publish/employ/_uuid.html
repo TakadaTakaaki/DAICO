@@ -1,86 +1,80 @@
 {% extends "../../../engine-base.html" %}
 {% block body %}
 {% load static %}
-    <div class="allbox">
-        <div class="fade">
-            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/1.jpg" alt=""></div>
-            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/2.jpg" alt=""></div>
-            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/3.jpg" alt=""></div>
-            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/4.jpg" alt=""></div>
-            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/5.jpg" alt=""></div>
-            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/6.jpg" alt=""></div>
-            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/7.jpg" alt=""></div>
-            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/8.jpg" alt=""></div>
-        </div>
-        <div class="topbox">
-            <div class="leftbox">
-                <div class="erea">
-                    <p class="sibuya">渋谷　>　道玄坂・明治通り</p>
-                </div>
-                <div class="storename">
-                    <p class="casy"><a href="" class="casy1">Casy 【カジー】</a></p>
-                </div>
-                <div class="storetype">
-                    <p class="strongpoint">即時予約OK!</p>
-                    <p class="strongpoint1">ポイント加盟店</p>
-                    <p class="strongpoint2">メンズにもオススメ</p>
-                </div>
+    <div class="page">
+        <div class="company-detail">
+            <div class="fade" id="fade">
+                <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/1.jpg" alt=""></div>
+                <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/2.jpg" alt=""></div>
+                <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/3.jpg" alt=""></div>
+                <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/4.jpg" alt=""></div>
+                <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/5.jpg" alt=""></div>
+                <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/6.jpg" alt=""></div>
+                <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/7.jpg" alt=""></div>
+                <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/8.jpg" alt=""></div>
             </div>
-            <div class="rightbox">
-                <div class="bottonbox">
-                    <p class="favoriteadd"><button type="button"class="heart"><i class="far fa-heart"></i>  お気に入り</button></p>
-                </div>
-                <div class="bottonbox">
-                    <p class="favoriteadd"><a href=""><button type="button"class="heart8">予約・日時指定へ</button></a></p>
-                </div>
+            <div class="company-top-1">
+                <span class="left">
+                    <p>渋谷　>　道玄坂・明治通り</p>
+                    <a href="">Casy 【カジー】</a>
+                    <div>
+                        <p class="point">即時予約OK!</p>
+                        <p class="point1">ポイント加盟店</p>
+                        <p class="point2">メンズにもオススメ</p>
+                    </div>
+                </span>
+                <span class="right">
+                    <div class="buttonbox">
+                        <button class="favorite2"><i class="far fa-heart"></i>  お気に入り</button>
+                        <a href=""><button class="reserve">予約・日時指定へ</button></a>
+                    </div>
+                </span>
             </div>
         </div>
-    </div>
-    <div class="info">
-        <nav class="daicomenu">
-            <ul>
-                <li class="li1"><a href="{% url 'pdetail' %}" class="lih2"><i class="fas fa-building"></i> 会社詳細</a></li>
-                <li><a href="{% url 'menu' %}" class="lih2"><i class="fas fa-scroll"></i> プラン一覧</a></li>
-                <li><a href="{% url 'employ' %}" class="lih1"><i class="fas fa-user"></i> スタッフ一覧</a></li>
-                <li><a href="{% url 'rate' %}" class="lih2"><i class="fas fa-comments"></i> 口コミ</a></li>
-                <li><a href="{% url 'diary' %}" class="lih2"><i class="fas fa-pencil-alt"></i> ブログ</a></li>
-            </ul>
-        </nav>
-        <div class="three1">
-            <p class="order1">山下智久</p>
+        <div class="company-menu">
+            <p><a href="{% url 'pdetail' %}"><i class="fas fa-building"></i> 会社詳細</a></p>
+            <p><a href="{% url 'menu' %}"><i class="fas fa-scroll"></i> プラン一覧</a></p>
+            <p><a href="{% url 'employ' %}"><i class="fas fa-user"></i> スタッフ一覧</a></p>
+            <p><a href="{% url 'rate' %}"><i class="fas fa-comments"></i> 口コミ</a></p>
+            <p class="last"><a href="{% url 'diary' %}"><i class="fas fa-pencil-alt"></i> ブログ</a></p>
         </div>
-        <div class="soloprofile">
-            <div class="photo">
+        <h1>山下智久</h1>
+        <div class="staff-profile">
+            <span>
                 <img src="{% static 'picture/yamap.jpeg' %}" class="staff1">
-                <a href="" class="click"><button type="button" class="buton1">指名して予約へ進む</button></a>
-            </div>
-            <div class="osusume">
-                <p class="top">
-                    【10~20代メンズから指名No.1】
-                </p>
-                <p class="osusume1">
+                <a href=""><button class="pink-Button">指名して予約へ進む</button></a>
+            </span>
+            <div>
+                <p>【10~20代メンズから指名No.1】</p>
+                <div>
                     大阪で「メンズヘア」なら池谷義彦にお任せ！<br>
                     「とにかくセットがキマるカット」が話題で大阪内外から予約が殺到するメンズヘアのスペシャリスト★<br>
                     「アイロン」を使かわなくても簡単にできるスタイリング術もしっかりとレクシャーさせて頂きます！
-                </p>
-                <p class="profilepart"><em class="bold">代表歴</em>　　　　　　　7年</p>
-                <p class="profilepart"><em class="bold">得意なジャンル</em>　　　家事代行</p>
-                <p class="profilepart"><em class="bold">得意な技術</em>　　　　　カビ・シミ取り</p>
-                <p class="profilepart"><em class="bold">趣味・マイブーム</em>　　シミをきれいに落とす</p>
-                <p class="profilepart"><em class="bold">特技</em>　　　　　　　　毛玉取り</p>
-                <div class="staffblog">
-                    <p class="stylistblog">
-                        スタッフブログ　　　　　　　　　　　　　　　　　　　　<a href="" class="allblog">山下智久のブログ一覧</a>
-                    </p>
-                    <a href="{% url 'ddetail' %}" class="blogpage">
-                        <div class="part3">
-                            <img src="{% static 'picture/oko.jpg' %}" class="oko">
-                            <div class="kowake">
-                                <p class="title">何でも取れるシミ抜き剤</p>
-                                <p class="blog1">今日は店舗メンバーみんなへの研修を行いました！</p>
-                            </div>
-                        </div>
-                    </a>
+                </div>
+                <span>
+                    <h3>代表歴 <em>7年</em></h3>
+                    <h3>得意なジャンル <em>家事代行</em></h3>
+                    <h3>得意な技術 <em>カビ・シミ取り</em></h3>
+                    <h3>趣味・マイブーム <em>シミをきれいに落とす</em></h3>
+                    <h3>特技 <em>毛玉取り</em></h3>
+                </span>
+                <h4>スタッフブログ<a href="" class="allblog">山下智久のブログ一覧</a></h4>
+                <div class="article">
+                    <ul>
+                        <li>
+                            <a href="" class="article-page">
+                                <img src="{% static 'picture/oko.jpg' %}" class="oko">
+                                <span>
+                                    <div>
+                                        <p class="category-tag">重要</p>
+                                        <p>投稿者 : 山下智久</p>
+                                    </div>
+                                    <p>何でも取れるシミ抜き剤</p>
+                                    <p>今日は店舗メンバーみんなへの研修を行いました！</p>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

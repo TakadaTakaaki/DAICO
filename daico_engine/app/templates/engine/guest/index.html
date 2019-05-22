@@ -1,49 +1,35 @@
 {% extends "../../engine-base.html" %}
 {% block body %}
 {% load static %}
-    <div class="flex1">
-        <div class="three">
-            <p class="order1">お客様情報一覧</p>
-        </div>
-        <div class="flex10">
-            <div class="last">
-                <div class="info2">
-                    <div class="gene">
-                        <p class="serihu1"></p>
-                        <div class="zyouken">
-                            <p class="simekiri">
-                                <br>
-                                <be></be><br><em class="meizi">　　名前</em> : 堀北真希
-                                <br><em class="meizi">　　電話番号</em> : 03-1508-0334
-                                <br><em class="meizi">　　メールアドレス</em> : abcd@gmail.com
-
-                            </p>
+    <div class="page">
+            <h1>お客様情報一覧</h1>
+            <div class="coupon">
+                <div class="genre">
+                    <div>
+                        <div>
+                            <div><em>名前</em> : 堀北真希</div>
+                            <div><em>電話番号</em> : 03-1508-0334</div>
+                            <div><em>メールアドレス</em> : come-on@gmail.co.jp</div>
                         </div>
-                    </div>
-                    <div class="buton">
-                        <a href="{% url 'gdetail' %}" class="click"><button type="button" class="buton1">詳細</button></a>
                     </div>
                 </div>
+                <div class="coupon-button">
+                    <a href="{% url 'gdetail' %}"><button class="pink-Button">詳細</button></a>
+                </div>
             </div>
-        </div> 
-        <div class="flex10">
-            <div class="last">
-                <div class="info2">
-                    <div class="gene">
-                        <p class="serihu1"></p>
-                        <div class="zyouken">
-                            <p class="simekiri">
-                                <be></be><br><em class="meizi">　　名前</em> : 菅田将暉
-                                <br><em class="meizi">　　電話番号</em> : 03-1508-0334
-                                <br><em class="meizi">　　メールアドレス</em> : abcd@gmail.com
-                            </p>
+            <div class="coupon">
+                <div class="genre">
+                    <div>
+                        <div>
+                            <div><em>名前</em> : 堀北真希</div>
+                            <div><em>電話番号</em> : 03-1508-0334</div>
+                            <div><em>メールアドレス</em> : come-on@gmail.co.jp</div>
                         </div>
                     </div>
-                    <div class="buton">
-                        <a href="{% url 'gdetail' %}" class="click"><button type="button" class="buton1">詳細</button></a>
-                    </div>
+                </div>
+                <div class="coupon-button">
+                    <a href="{% url 'gdetail' %}"><button class="pink-Button">詳細</button></a>
                 </div>
             </div>
         </div>
-    </div>
 {% endblock %}

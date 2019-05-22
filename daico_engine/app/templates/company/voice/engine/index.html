@@ -1,78 +1,45 @@
 {% extends "../../../company-base.html" %}
 {% block body %}
 {% load static %}
-    <div class="flex1">
-        <div class="three">
-            <p class="order1">お問い合わせ一覧</p>
-        </div>
-        <nav class="daicomenu">
-                <ul>
-                    <li class="li1"><a href="{% url 'vedetail' %}" class="lih1"><i class="fas fa-building"></i> お客様</a></li>
-                    <li><a href="{% url 'voice' %}" class="lih2"><i class="fas fa-scroll"></i> 運営</a></li>
-                </ul>
-            </nav>
+    <div class="page">
+        <h1><a href="{% url 'voice' %}" class="h1-c">運営</a>
+            お客様
+        </h1>
         <div class="sortflex">
-            <div class="natural">未対応</div>
-            <a href="" class="onehover"><div class="recommend">開発処理中</div></a>
-            <a href="" class="onehover"><div class="review">対応済み</div></a>
-            <a href="" class="onehover"><div class="cheap">保留</div></a>
-            <a href="" class="onehover"><div class="high">クローズ</div></a>
-        </div>
-        <div class="flex10">
-            <div class="last">
-                <div class="info2">
-                    <div class="gene">
-                        <p class="serihu1">【ログインについて】</p>
-                        <div class="zyouken">
-                            <p class="simekiri">
-                                　　　パスワードを忘れてしまいました<br><br>
-                                <be></be><br><em class="meizi">　　アカウント名</em> : 菅田将暉
-                                <br><em class="meizi">　　メールアドレス</em> : suda@softbank.ne.jp
-                            </p>
-                        </div>
-                    </div>
-                    <div class="buton">
-                        <a href="{% url 'vcdetail' %}" class="click"><button type="button" class="buton1">お問い合わせを開始する</button></a>
+            <a href="" class="thisPage">未対応</a>
+            <a href="" class="notPage">開発処理中</a>
+            <a href="" class="notPage">対応済み</a>
+            <a href="" class="notPage">保留</a>
+            <a href="" class="notPage">クローズ</a>
+        </div>                    
+        <div class="coupon">
+            <div class="genre">
+                <p>【ログインについて】</p>
+                <div>
+                    <div>
+            　　　      <p>パスワードを忘れてしまいました</p>
+                        <div><em>アカウント名</em> : 菅田将暉</div>
+                        <div><em>メールアドレス</em> : suda@softbank.ne.jp</div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="flex10">
-            <div class="last">
-                <div class="info2">
-                    <div class="gene">
-                        <p class="serihu1">【不具合について】</p>
-                        <div class="zyouken">
-                            <p class="simekiri">
-                                　　　予約ページのバグを直してください<br><br>
-                                <be></be><br><em class="meizi">　　アカウント名</em> : 菅田将暉
-                                <br><em class="meizi">　　メールアドレス</em> : suda@softbank.ne.jp
-                            </p>
-                        </div>
-                    </div>
-                    <div class="buton">
-                        <a href="{% url 'vcdetail' %}" class="click"><button type="button" class="buton1">お問い合わせを開始する</button></a>
+            <div class="coupon-button">
+                <a href="{% url 'vcdetail' %}"><button class="pink-Button">お問い合わせを開始する</button></a>
+            </div>
+        </div>                           
+        <div class="coupon">
+            <div class="genre">
+                <p>【不具合について】</p>
+                <div>
+                    <div>
+            　　　      <p>予約ページのバグを直してください</p>
+                        <div><em>アカウント名</em> : 菅田将暉</div>
+                        <div><em>メールアドレス</em> : suda@softbank.ne.jp</div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="flex10">
-            <div class="last">
-                <div class="info2">
-                    <div class="gene">
-                        <p class="serihu1">【ご意見・ご要望について】</p>
-                        <div class="zyouken">
-                            <p class="simekiri">
-                                　　　本人以外が注文できるように出来ないですか？<br><br>
-                                <be></be><br><em class="meizi">　　アカウント名</em> : 菅田将暉
-                                <br><em class="meizi">　　メールアドレス</em> : suda@softbank.ne.jp
-                            </p>
-                        </div>
-                    </div>
-                    <div class="buton">
-                        <a href="{% url 'vcdetail' %}" class="click"><button type="button" class="buton1">お問い合わせを開始する</button></a>
-                    </div>
-                </div>
+            <div class="coupon-button">
+                <a href="{% url 'vcdetail' %}"><button class="pink-Button">お問い合わせを開始する</button></a>
             </div>
         </div>
     </div>
