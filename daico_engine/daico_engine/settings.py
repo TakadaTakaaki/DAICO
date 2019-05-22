@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app'
+    'app',
+    'accounts'
 ]
 
 MIDDLEWARE = [
@@ -130,3 +131,6 @@ STATICFILES_DIRS = (
 MEDIA_URL = '/pics/'
 MEDIA_ROOT = BASE_DIR
 # mediaの中身を読み込ませるため
+
+# ログイン後にリダイレクトされるページのURL
+# LOGIN_REDIRECT_URL = '/'

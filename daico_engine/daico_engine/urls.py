@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import include, url
-from django.urls import path
+from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 # 下二つが画像関連の場所と繋いでる
@@ -25,6 +25,7 @@ urlpatterns = [
     # path('admin/', admin.site.urls),
     url(r'^admin/', admin.site.urls),
     url(r'^$', include('app.urls')),
+    path('accounts/', include('accounts.urls')),
     url(r'article/', include('app.urls')),
     url(r'adetail/', include('app.urls')),
     url(r'type/', include('app.urls')),
