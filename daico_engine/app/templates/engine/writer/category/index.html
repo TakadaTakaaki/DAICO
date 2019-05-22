@@ -1,33 +1,31 @@
 {% extends "../../../engine-base.html" %}
 {% block body %}
 {% load static %}
-    <div class="flex1">
-        <div class="three">
-            <p class="order1">記事一覧<em class="suuti"></em></p>
-        </div>
-        <div class="page0">
-            <div class="page2">
-                {% for post in contexts.post_list %}
-                    <a href="{% url 'wdetail' pk=post.id %}" class="blogpage">
-                        <div class="part3">
-                            <img src="{{ post.image.url }}" class="oko">
-                            <div class="kowake">
-                                <div class="flexbox">
-                                    <p class="humangenre">{{ post.genre }}</p>
-                                    <p class="human">{{ post.published }}</p>
-                                </div>
-                                <p class="title">{{ post.title }}</p>
+    <div class="page">
+        <h1><em>100</em> 件　の記事があります</h1>
+        <div class="article">
+            <span>
+                <span>
+                    {% for post in contexts.post_list %}
+                    <a href="{% url 'wdetail' pk=post.id %}" class="article-page">
+                        <img src="{{ post.image.url }}">
+                        <span>
+                            <div>
+                                <p class="category-tag">{{ post.genre }}</p>
+                                <p>{{ post.published }}</p>
                             </div>
-                        </div>
+                            <p>{{ post.title }}</p>
+                        </span>
                     </a>
-                {% endfor %}
-            </div>
-            <div class="page3">
-                <p class="category">記事カテゴリ</p>
-                    {% for category in contexts.categories %}
-                        <p class="category1"><a href="{% url 'category' category_id=category.id %}" class="category01">{{ category.name }} ({{ category.post_count }})</a></p>
                     {% endfor %}
-            </div>
+                </span>
+                <div class="category">
+                    <p class="category-title">記事カテゴリ</p>
+                    {% for category in contexts.categories %}
+                        <p><a href="{% url 'category' category_id=category.id %}">{{ category.name }} ({{ category.post_count }})</a></p>
+                    {% endfor %}
+                </div>
+            </span>
         </div>
     </div>
 {% endblock %}

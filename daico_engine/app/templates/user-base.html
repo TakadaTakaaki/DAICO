@@ -5,8 +5,8 @@
         <meta charset="UTF-8">
         <title>{% block title %}【代行エンジン】代行業を一括で検索・比較出来るサイト{% endblock %}</title>
         <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-        <link href="{% static 'css/home/before-login.css' %}" rel="stylesheet">
-        <link href="{% static 'css/home/blog_list.css' %}" rel="stylesheet">
+        <!-- <link href="{% static 'css/home/before-login.css' %}" rel="stylesheet"> -->
+        <!--<link href="{% static 'css/home/blog_list.css' %}" rel="stylesheet">
         <link href="{% static 'css/home/blog_look.css' %}" rel="stylesheet">
         <link href="{% static 'css/company/blog-visit.css' %}" rel="stylesheet">
         <link href="{% static 'css/company/blog.css' %}" rel="stylesheet">
@@ -41,12 +41,14 @@
         <link href="{% static 'css/setting/setting.css' %}" rel="stylesheet">
         <link href="{% static 'css/setting/tpoint.css' %}" rel="stylesheet">
         <link href="{% static 'css/setting/unsubscribe.css' %}" rel="stylesheet">
-        <link href="{% static 'css/setting/user-information.css' %}" rel="stylesheet">
-        <link href="{% static 'css/slick/slick-theme.css' %}" rel="stylesheet">
+        <link href="{% static 'css/setting/user-information.css' %}" rel="stylesheet"> -->
+        <!-- <link href="{% static 'css/user/user.css' %}" rel="stylesheet"> -->
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+        <!-- <link href="{% static 'css/slick/slick-theme.css' %}" rel="stylesheet">
         <link href="{% static 'css/slick/slick-theme.css' %}" rel="stylesheet">
         <link href="{% static 'css/slick/slick-theme1.css' %}" rel="stylesheet">
         <link href="{% static 'css/slick/slick.css' %}" rel="stylesheet">
-        <link href="{% static 'css/slick/slick1.css' %}" rel="stylesheet">
+        <link href="{% static 'css/slick/slick1.css' %}" rel="stylesheet"> -->
         <link rel="shortcut icon" href="{% static 'picture/favicon.ico' %}">
         <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -57,63 +59,57 @@
     </head>
     <body>
         <header>
-            <div class="logo">
-                <div class="homebox">
-                    <a href="../home/before-login.html"><img src="../../picture/daico.png" class="homebox1"></a>
+            <nav>
+                <!-- <div>
+                    <a href="../home/before-login.html"><img src="../../picture/daico.png"></a>
+                </div> -->
+                <div class="login-group">
+                    <a id="login-show"><i class="fas fa-user-circle"></i> 新規会員登録(無料)</a>
+                    <a id="login-show2"><i class="fas fa-sign-in-alt"></i> ログイン</a>
                 </div>
-                <div class="get">
-                    <div class="logo0">
-                        <a class="login2" id="login-show"><i class="fas fa-user-circle"></i>   新規会員登録(無料)</a>
-                    </div>
-                    <div class="logo00">
-                        <a class="login" id="login-show2"><i class="fas fa-sign-in-alt"></i> ログイン</a>
+                <div class="login-modal-wrapper" id="login-modal">
+                    <div class="modal" >
+                        <div class="close-modal">
+                            <i class="fa fa-2x fa-times"></i>
+                        </div>
+                        <div id="login-form">
+                            <h3>新規会員登録</h3>
+                            <form action="#">
+                                <input type="text" placeholder="名前">
+                                <input type="text" placeholder="メールアドレス">
+                                <input type="password" placeholder="パスワード">
+                                <a href="../../html/register/after-registration.html"><div id="submit-btn">登録</div></a>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
+                <div class="login-modal-wrapper" id="login-modal2">
+                    <div class="modal">
+                        <div class="close-modal2">
+                            <i class="fa fa-2x fa-times"></i>
+                        </div>
+                        <div id="login-form">
+                            <h3>Emailログイン</h3>
+                            <form action="#">
+                                <input type="text" placeholder="メールアドレス">
+                                <input type="password" placeholder="パスワード">
+                                <a href="after-login.html"><div id="submit-btn">ログイン</div></a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu" id="menu">
+                    <a href="{% url 'favorite' %}"><i class="far fa-heart"></i> お気に入り</a>
+                    <a href="{% url 'notice_c' %}"><i class="far fa-envelope"></i> 通知</a>
+                    <a href="{% url 'index' %}"><img src="{% static 'picture/pinklogo.png' %}"></a>
+                    <!-- <a href="{% url 'index' %}"><i class="fas fa-home"></i> ホーム</a> -->
+                    <a href="{% url 'order' %}"><i class="fas fa-history"></i> 注文履歴</a>
+                    <a href="{% url 'setting' %}"><i class="fas fa-cogs"></i> 設定</a>
+                </div>
+            </nav>
         </header>
-        <div class="login-modal-wrapper" id="login-modal">
-            <div class="modal">
-                <div class="close-modal">
-                    <i class="fa fa-2x fa-times"></i>
-                </div>
-                <div id="login-form">
-                    <h2>新規会員登録</h2>
-                    <form action="#">
-                        <input class="form-control" type="text" placeholder="名前">
-                        <input class="form-control" type="text" placeholder="メールアドレス">
-                        <input class="form-control" type="password" placeholder="パスワード">
-                        <a href="../../html/register/after-registration.html"><div id="submit-btn">登録</div></a>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="login-modal-wrapper" id="login-modal2">
-            <div class="modal">
-                <div class="close-modal2">
-                    <i class="fa fa-2x fa-times"></i>
-                </div>
-                <div id="login-form">
-                    <h2>Emailログイン</h2>
-                    <form action="#">
-                        <input class="form-control" type="text" placeholder="メールアドレス">
-                        <input class="form-control" type="password" placeholder="パスワード">
-                        <a href="after-login.html"><div id="submit-btn">ログイン</div></a>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <nav class="template">
-            <div id="menu">
-                <div class="just"><a href="{% url 'favorite' %}" class="favorite"><i class="far fa-heart"></i>  <span class="sp">お気に入り</span></a></div>
-                <div class="just"><a href="{% url 'notice_c' %}" class="notice"><i class="far fa-envelope"></i>  <span class="sp">通知</span></a></div>
-                <div class="just3"><a href="{% url 'index' %}" class="home"><span class="sp"><img src="{% static 'picture/pinklogo.png' %}" class="daico"></span></a></div>
-                <div class="just just4"><a href="{% url 'index' %}" class="favorite"><i class="fas fa-home"></i><span class="sp">ホーム</span></a></div>
-                <div class="just"><a href="{% url 'order' %}" class="order-history"><i class="fas fa-history"></i>  <span class="sp">注文履歴</span></a></div>
-                <div class="just"><a href="{% url 'setting' %}" class="my-page"><i class="fas fa-cogs"></i>  <span class="sp">設定</span></a></div>
-            </div>
-        </nav>
         {% block body %}
-{% load static %}
+        {% load static %}
         {% endblock %}
     </body>
     <script type="text/javascript" src="{% static 'js/slick.min.js' %}"></script>

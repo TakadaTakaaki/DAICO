@@ -27,6 +27,7 @@ urlpatterns = [
     url(r'^$', include('app.urls')),
     url(r'article/', include('app.urls')),
     url(r'adetail/', include('app.urls')),
+    url(r'type/', include('app.urls')),
     # article_detail
     url(r'enterprise/', include('app.urls')),
     url(r'blog/', include('app.urls')),
@@ -144,4 +145,3 @@ urlpatterns = [
     url(r'', include('app.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 # 画像追加に必要
-

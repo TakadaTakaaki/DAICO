@@ -1,21 +1,17 @@
 {% extends "../../user-base.html" %}
 {% block body %}
 {% load static %}
-    <div class="three">
-        <p class="order2">設定</p>
-    </div>
-    <div class="flex1">
-        <div class="last">
-            <div class="info">
-                <a href="{% url 'suserDetailChange' %}"><p class="kazyou">会員情報変更</p></a>
-                <a href="{% url 'scredit' %}"><p class="kazyou">クレジットカードの追加</p></a>
-                <a href="{% url 'stpoint' %}"><p class="kazyou">Tpointの照会</p></a>
-                <a href="{% url 'shidden' %}"><p class="kazyou">非表示リスト</p></a>
-                <a href="{% url 'scontact' %}"><p class="kazyou">お問い合わせ</p></a>
-                <a href="{% url 'sinquiry' %}"><p class="kazyou">掲載したい企業</p></a>
-                <a href="{% url 'index' %}"><p class="kazyou">ログアウト</p></a>
-                <a href="{% url 'sunsubscribe' %}"><p class="kazyou">退会</p></a>
-            </div>
+    <div class="page">
+        <h1>設定</h1>
+        <div class="setting-info">
+            <a href="{% url 'suserDetailChange' %}"><p class="kazyou">会員情報変更</p></a>
+            <a href="{% url 'scredit' %}"><p class="kazyou">クレジットカードの追加</p></a>
+            <a href="{% url 'stpoint' %}"><p class="kazyou">Tpointの照会</p></a>
+            <a href="{% url 'shidden' %}"><p class="kazyou">非表示リスト</p></a>
+            <a href="{% url 'scontact' %}"><p class="kazyou">お問い合わせ</p></a>
+            <a href="{% url 'sinquiry' %}"><p class="kazyou">掲載したい企業</p></a>
+            <a href="{% url 'index' %}"><p class="kazyou">ログアウト</p></a>
+            <a href="{% url 'sunsubscribe' %}"><p class="kazyou">退会</p></a>
         </div>
     </div>
 {% endblock %}

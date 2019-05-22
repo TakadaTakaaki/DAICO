@@ -1,21 +1,14 @@
 {% extends "../../engine-base.html" %}
 {% block body %}
 {% load static %}
-    <div class="flex1">
-        <div class="three1">
-            <p class="order1"></p>
-        </div>
-        <div class="flex01">
-            <div class="last01">
-                <div class="name01">
-                    <div class="named01">
-                        <p class="name0">{{ posts.title }}</p>
-                    </div>
-                    <div class="para01">
-                        {% autoescape off %}
-                            {{ posts.body | linebreaks }}<br>
-                        {% endautoescape %}
-                    </div>
+    <div class="page">
+        <div class="article">
+            <div>
+                <div class="article-table">{{ posts.title }}</div>
+                <div class="article-detail">
+                    {% autoescape off %}
+                        {{ posts.body | linebreaks }}
+                    {% endautoescape %}
                 </div>
             </div>
         </div>

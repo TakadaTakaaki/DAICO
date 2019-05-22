@@ -1,56 +1,38 @@
 {% extends "../../../user-base.html" %}
 {% block body %}
 {% load static %}
-    <div class="three">
-        <p class="order2">お問い合わせ</p>
-    </div>
-    <div class="flex1">
-        <div class="last">
-            <div class="info">
-                <div class="cp_ipradio">
-                    <div class="menwomen">
-                        <div class="sikiri">お問い合わせの種類</div>
-                        <div class="box">
-                            <input type="radio" id="radio1" name="cpipr01" />
-                            <label for="radio1">ご注文について</label>
-                            <input type="radio" id="radio2" name="cpipr01" />
-                            <label for="radio2">会員情報について</label>
-                            <input type="radio" id="radio3" name="cpipr01" />
-                            <label for="radio3">ご利用方法について</label>
-                            <input type="radio" id="radio4" name="cpipr01" />
-                            <label for="radio4">その他</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="nameform">
-                    <div class="sikiri">お問い合わせの内容</div>
-                    <div class="flexbox01">
-                        <textarea name="example" cols="50" rows="10"></textarea>
-                    </div>
-                </div>
-                <div class="nameform">
-                    <div class="sikiri">お名前</div>
-                    <div class="cp_iptxt">
-                        <input type="text" placeholder="お名前">
-                        <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
-                    </div>
-                </div>
-                <div class="tellphone">
-                    <label for="i_tel"><div class="sikiri">電話番号</div></label>
-                    <div class="flexbox01">
-                        <input id="i_tel" type="tel" name="tel" value="" inputmode="tel" placeholder="080-1234-5678">
-                    </div>
-                </div>   
-                <div class="mailform">
-                    <div class="sikiri">メールアドレス</div>
-                    <div class="flexbox01">
-                        <input id="i_tel" type="text" name="email" value="" style="ime-mode:disabled" placeholder="localname@domain.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="メールアドレス" required />
-                    </div>
-                </div>
-                <div class="buton">
-                    <a href="{% url 'index' %}" class="click"><button type="button" class="buton4">送信してHOMEへ</button></a>
-                </div>
-            </div>
+    <div class="page">
+        <h1>お問い合わせ</h1>
+        <h4>お問い合わせの種類</h4>
+        <div class="change">
+            <input type="radio" id="radio1" name="cpipr01" />
+            <label for="radio1">ご注文について</label>
+            <input type="radio" id="radio2" name="cpipr01" />
+            <label for="radio2">会員情報について</label>
+            <input type="radio" id="radio3" name="cpipr01" />
+            <label for="radio3">ご利用方法について</label>
+            <input type="radio" id="radio4" name="cpipr01" />
+            <label for="radio4">その他</label>
+        </div>
+        <h4>お問い合わせの内容</h4>
+        <div class="change">
+            <textarea class="textarea"></textarea>
+        </div>
+        <h4>お名前</h4>
+        <div class="change">
+            <input type="text" placeholder="お名前">
+            <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+        <h4>電話番号</h4>
+        <div class="change">
+            <input id="i_tel" type="tel" name="tel" value="" inputmode="tel" placeholder="080-1234-5678">
+        </div>
+        <h4>メールアドレス</h4>
+        <div class="change">
+            <input id="i_tel" type="text" name="email" value="" style="ime-mode:disabled" placeholder="localname@domain.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="メールアドレス" required />
+        </div>
+        <div class="center-button">
+            <a href="{% url 'index' %}"><button class="pink-Button">送信してHOMEへ</button></a>
         </div>
     </div>
 {% endblock %}

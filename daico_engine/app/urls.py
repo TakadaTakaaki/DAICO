@@ -11,6 +11,9 @@ urlpatterns = [
     url(r'article', views.article, name="article"),
     # url(r'article', views.article, name="article"),
     path('adetail/<int:pk>/', views.adetail, name="adetail"),
+    path('type/<int:category_id>/', views.type, name="type"),
+
+
     # url(r'article_detail', views.article_detail, name="article_detail"),
     url(r'enterprise', views.enterprise, name="enterprise"),
     # url(r'company', views.company, name="company"),

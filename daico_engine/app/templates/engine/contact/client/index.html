@@ -1,78 +1,45 @@
 {% extends "../../../engine-base.html" %}
 {% block body %}
 {% load static %}
-    <div class="flex1">
-        <div class="buttonbox">
-            <a href="{% url 'inquire' %}" class="a">
-                <button type="botton" class="styled">Customer</button>
-            </a>
-            <a href="{% url 'contact' %}" class="a">
-                <button type="botton" class="styled1">Client</button>
-            </a>
-        </div>
-        <div class="three"></div>
+    <div class="page">
+        <h1>Client
+            <a href="{% url 'inquire' %}" class="h1-a">Customer</a>
+        </h1>
         <div class="sortflex">
-            <div class="natural">未対応</div>
-            <a href="{% url 'contact' %}" class="onehover"><div class="recommend">開発処理中</div></a>
-            <a href="{% url 'contact' %}" class="onehover"><div class="review">対応済み</div></a>
-            <a href="{% url 'contact' %}" class="onehover"><div class="cheap">保留</div></a>
-            <a href="{% url 'contact' %}" class="onehover"><div class="high">クローズ</div></a>
+            <a href="{% url 'contact' %}" class="thisPage">未対応</a>
+            <a href="{% url 'contact' %}" class="notPage">開発処理中</a>
+            <a href="{% url 'contact' %}" class="notPage">対応済み</a>
+            <a href="{% url 'contact' %}" class="notPage">保留</a>
+            <a href="{% url 'contact' %}" class="notPage">クローズ</a>
         </div>                    
-        <div class="flex10">
-            <div class="last">
-                <div class="info2">
-                    <div class="gene">
-                        <p class="serihu1">【ログインについて】</p>
-                        <div class="zyouken">
-                            <p class="simekiri">
-                                　　　パスワードを忘れてしまいました<br><br>
-                                <be></be><br><em class="meizi">　　アカウント名</em> : 菅田将暉
-                                <br><em class="meizi">　　メールアドレス</em> : suda@softbank.ne.jp
-                            </p>
-                        </div>
-                    </div>
-                    <div class="buton">
-                        <a href="{% url 'client' %}" class="click"><button type="button" class="buton2">お問い合わせを開始する</button></a>
+        <div class="coupon">
+            <div class="genre">
+                <p>【ログインについて】</p>
+                <div>
+                    <div>
+            　　　      <p>パスワードを忘れてしまいました</p>
+                        <div><em>アカウント名</em> : 菅田将暉</div>
+                        <div><em>メールアドレス</em> : suda@softbank.ne.jp</div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="flex10">
-            <div class="last">
-                <div class="info2">
-                    <div class="gene">
-                        <p class="serihu1">【不具合について】</p>
-                        <div class="zyouken">
-                            <p class="simekiri">
-                                　　　予約ページのバグを直してください<br><br>
-                                <be></be><br><em class="meizi">　　アカウント名</em> : 菅田将暉
-                                <br><em class="meizi">　　メールアドレス</em> : suda@softbank.ne.jp
-                            </p>
-                        </div>
-                    </div>
-                    <div class="buton">
-                        <a href="{% url 'client' %}" class="click"><button type="button" class="buton2">お問い合わせを開始する</button></a>
+            <div class="coupon-button">
+                <a href="{% url 'client' %}"><button class="pink-Button">お問い合わせを開始する</button></a>
+            </div>
+        </div>                           
+        <div class="coupon">
+            <div class="genre">
+                <p>【不具合について】</p>
+                <div>
+                    <div>
+            　　　      <p>予約ページのバグを直してください</p>
+                        <div><em>アカウント名</em> : 菅田将暉</div>
+                        <div><em>メールアドレス</em> : suda@softbank.ne.jp</div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="flex10">
-            <div class="last">
-                <div class="info2">
-                    <div class="gene">
-                        <p class="serihu1">【ご意見・ご要望について】</p>
-                        <div class="zyouken">
-                            <p class="simekiri">
-                                　　　本人以外が注文できるように出来ないですか？<br><br>
-                                <be></be><br><em class="meizi">　　アカウント名</em> : 菅田将暉
-                                <br><em class="meizi">　　メールアドレス</em> : suda@softbank.ne.jp
-                            </p>
-                        </div>
-                    </div>
-                    <div class="buton">
-                        <a href="{% url 'client' %}" class="click"><button type="button" class="buton2">お問い合わせを開始する</button></a>
-                    </div>
-                </div>
+            <div class="coupon-button">
+                <a href="{% url 'client' %}"><button class="pink-Button">お問い合わせを開始する</button></a>
             </div>
         </div>
     </div>

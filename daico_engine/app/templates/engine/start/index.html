@@ -1,31 +1,17 @@
 {% extends "../../engine-base.html" %}
 {% block body %}
 {% load static %}
-    <div class="flex1">
-        <a href="{% url 'publish' %}" class="cuupon">
-            <div class="last">
-                <div class="name">
-                    <p class="name1"><br>掲載企業一覧</p>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="flex1">
-        <a href="{% url 'guest' %}" class="cuupon">
-            <div class="last">
-                <div class="name">
-                    <p class="name1"><br>お客様情報一覧</p>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="flex1">
-        <a href="{% url 'write' %}" class="cuupon">
-            <div class="last">
-                <div class="name">
-                    <p class="name1"><br>記事</p>
-                </div>
-            </div>
-        </a>
+    <div class="page">
+        <div class="setting-info">
+            <a href="{% url 'publish' %}">
+                <p class="name1">掲載企業一覧</p>
+            </a>
+            <a href="{% url 'guest' %}">
+                <p class="name1">お客様情報一覧</p>
+            </a>
+            <a href="{% url 'write' %}">
+                <p class="name1">記事</p>
+            </a>
+        </div>
     </div>
 {% endblock %}

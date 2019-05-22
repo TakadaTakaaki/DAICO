@@ -1,59 +1,40 @@
 {% extends "../../../user-base.html" %}
 {% block body %}
 {% load static %}
-    <div class="flex1">
-        <div class="last">
-                <div class="three">
-                    <p class="order1">DAICO　掲載資料請求</p>
-                </div>
-            <div class="info">
-                <div class="nameform">
-                    <div class="sikiri">お名前</div>
-                    <div class="cp_iptxt">
-                        <input type="text" placeholder="ご担当者名">
-                        <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
-                    </div>
-                </div>
-                <div class="cp_ipradio">
-                    <div class="menwomen">
-                        <div class="sikiri">郵便番号</div>
-                        <!-- ▼郵便番号入力フィールド(3桁+4桁) -->
-                        <input type="text" name="zip31" size="4" maxlength="3"> － <input type="text" name="zip32" size="5" maxlength="4" onKeyUp="AjaxZip3.zip2addr('zip31','zip32','pref31','addr31','addr31');">
-                        <!-- ▼住所入力フィールド(都道府県) -->
-                        <input type="text" name="pref31" size="20">
-                        <!-- ▼住所入力フィールド(都道府県以降の住所) -->
-                        <input type="text" name="addr31" size="40">
-                        </div>
-                    </div>
-                </div>
-                <div class="tellphone">
-                    <label for="i_tel"><div class="sikiri">電話番号</div></label>
-                    <div class="flexbox01">
-                        <input id="i_tel" type="tel" name="tel" value="" inputmode="tel" placeholder="080-1234-5678">
-                    </div>
-                </div>   
-                <div class="mailform">
-                    <div class="sikiri">メールアドレス</div>
-                    <div class="flexbox01">
-                        <input id="i_tel" type="text" name="email" value="" style="ime-mode:disabled" placeholder="localname@domain.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="メールアドレス" required />
-                    </div>
-                </div>
-                <div class="passform">
-                    <div class="sikiri">貴店の業種（複数可）</div>
-                    <div class="flexbox01">
-                        <input id="i_tel" type="password" name="password" value="" style="ime-mode:disabled" placeholder="例）家事代行、育児代行" pattern="(?=.*?[a-z])(?=.*?[A-Z])(?=.*?\d)[a-zA-Z\d]{6,}" title="半角英大文字・半角英小文字・半角数字いれずれも必ず含む6文字以上" required />
-                    </div>    
-                </div>
-                <div class="question">
-                    <div class="sikiri">ご要望・ご質問など</div>
-                    <div class="flexbox01">
-                        <textarea name="example" cols="50" rows="10"></textarea>
-                    </div>
-                </div>
-                <div class="buton">
-                    <a href="" class="click"><button type="button" class="buton1">確認する</button></a>
-                </div>
-            </div>
+    <div class="page">
+        <h1 >DAICO　掲載資料請求</h1>
+        <h4>お名前</h4>
+        <div class="change">
+            <input type="text" placeholder="ご担当者名">
+            <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+        <h4>郵便番号/住所</h4>
+        <div class="change-address">
+            <!-- ▼郵便番号入力フィールド(3桁+4桁) -->
+            <input type="text" name="zip31" size="4" maxlength="3"> － <input type="text" name="zip32" size="5" maxlength="4" onKeyUp="AjaxZip3.zip2addr('zip31','zip32','pref31','addr31','addr31');">
+            <!-- ▼住所入力フィールド(都道府県) -->
+            <input type="text" name="pref31" size="20">
+            <!-- ▼住所入力フィールド(都道府県以降の住所) -->
+            <input type="text" name="addr31" size="40">
+        </div>
+        <h4>電話番号</h4>
+        <div class="change">
+            <input id="i_tel" type="tel" name="tel" value="" inputmode="tel" placeholder="080-1234-5678">
+        </div>
+        <h4>メールアドレス</h4>
+        <div class="change">
+            <input id="i_tel" type="text" name="email" value="" style="ime-mode:disabled" placeholder="localname@domain.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="メールアドレス" required />
+        </div>
+        <h4>貴店の業種（複数可）</h4>
+        <div class="change">
+            <input id="i_tel" type="password" name="password" value="" style="ime-mode:disabled" placeholder="例）家事代行、育児代行" pattern="(?=.*?[a-z])(?=.*?[A-Z])(?=.*?\d)[a-zA-Z\d]{6,}" title="半角英大文字・半角英小文字・半角数字いれずれも必ず含む6文字以上" required />
+        </div>    
+        <h4>ご要望・ご質問など</h4>
+        <div class="change">
+            <textarea class="textarea"></textarea>
+        </div>
+        <div class="center-button">
+            <a href=""><button class="pink-Button">確認する</button></a>
         </div>
     </div>
 {% endblock %}

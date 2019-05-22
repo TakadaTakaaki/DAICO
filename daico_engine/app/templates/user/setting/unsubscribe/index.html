@@ -1,25 +1,15 @@
 {% extends "../../../user-base.html" %}
 {% block body %}
 {% load static %}
-    <div class="three">
-        <p class="order2">退会</p>
-    </div>
-    <div class="flex1">
-        <div class="last">
-            <div class="info">
-                <div class="cp_ipradio">
-                    <div class="menwomen">
-                        <div class="sikiri">注意</div>
-                        <div class="box">
-                                DAICO会員を退会されますと、これまで受けていた特典を受けられなくなります。また新たにDAICO上で注文する際に、氏名や住所などを再度入力する必要があります。
-                        </div>
-                    </div>
-                </div>
-                <div class="buton">
-                    <a href="{% url 'index' %}" class="click"><button type="button" class="buton4">HOMEへ</button></a>
-                    <a href="{% url 'index' %}" class="click"><button type="button" class="buton4">退会する</button></a>
-                </div>
-            </div>
+    <div class="page">
+        <h1>退会</h1>
+        <h4>注意</h4>
+        <div class="change">
+                DAICO会員を退会されますと、これまで受けていた特典を受けられなくなります。また新たにDAICO上で注文する際に、氏名や住所などを再度入力する必要があります。
+        </div>
+        <div class="center-button">
+            <a href="{% url 'index' %}"><button class="pink-Button">HOMEへ</button></a>
+            <a href="{% url 'index' %}"><button class="pink-Button">退会する</button></a>
         </div>
     </div>
 {% endblock %}

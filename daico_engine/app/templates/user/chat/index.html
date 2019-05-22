@@ -2,21 +2,19 @@
 {% extends "../../user-base.html" %}
 {% block body %}
 {% load static %}
-    <div class="flex1">
-        <div class="three"></div>
-        <div class="status">
-            <select class="statuss">
-                <option value="家事代行についてのご質問">家事代行についてのご質問</option>
-                <option value="育児代行についてのご質問">育児代行についてのご質問</option>
-                <option value="掃除・料理代行についてのご質問">掃除・料理代行についてのご質問</option>
-                <option value="その他">その他</option>
-                <option value="ご意見・ご要望">ご意見・ご要望</option>
-            </select>
+    <div class="page">
+        <h1>チャットページ</h1>
+        <select class="status">
+            <option value="家事代行についてのご質問">家事代行についてのご質問</option>
+            <option value="育児代行についてのご質問">育児代行についてのご質問</option>
+            <option value="掃除・料理代行についてのご質問">掃除・料理代行についてのご質問</option>
+            <option value="その他">その他</option>
+            <option value="ご意見・ご要望">ご意見・ご要望</option>
+        </select>
+        <div class="chat-input">
+            <input type="text" placeholder="お問い合わせ内容">
+            <a href="{% url 'chat' %}"><button type="submit">送信</button></a>
         </div>
-        <div class="searchForm">
-            <input class="searchForm-input" type="text" placeholder="お問い合わせ内容">
-            <a href="{% url 'chat' %}"><button class="searchForm-submit" type="submit">送信</button></a>
-        </div>
-        <div class="three2"></div>
+        <h1></h1>
     </div>
 {% endblock %}

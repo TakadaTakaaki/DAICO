@@ -1,69 +1,55 @@
 {% extends "../../../user-base.html" %}
 {% block body %}
 {% load static %}
-    <div class="three">
-        <p class="order2">クレジットカードを追加</p>
-    </div>
-    <div class="flex1">
-        <div class="last">
-            <div class="info">
-                <div class="nameform">
-                    <div class="sikiri">カード会社</div>
-                    <div class="cp_iptxt">
-                        <input type="text" placeholder="会社名">
-                        <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
-                    </div>
-                </div>
-                <div class="tellphone">
-                    <label for="i_tel"><div class="sikiri">カード番号</div></label>
-                    <div class="flexbox01">
-                        <input id="i_tel" type="tel" name="tel" value="" inputmode="tel" placeholder="0803-1234-5678">
-                    </div>
-                </div>   
-                <div class="birth">
-                    <div class="sikiri">有効期限</div>
-                    <div class="flexbox01">
-                        <select name="year">
-                            <option value="">-</option>
-                            <option value="2000">2000</option>
-                            <option value="2001">2001</option>
-                            <option value="2002">2002</option>
-                            <option value="2003">2003</option>
-                            <option value="2004">2004</option>
-                            <option value="2005">2005</option>
-                            <option value="2006">2006</option>
-                            <option value="2007">2007</option>
-                            <option value="2008">2008</option>
-                            <option value="2009">2009</option>
-                        </select>　年
-                        <select name="month">
-                            <option value="">-</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                        </select>　月
-                    </div>
-                </div>
-                <div class="nameform">
-                    <div class="sikiri">カード名義人</div>
-                    <div class="cp_iptxt">
-                        <input type="text" placeholder="お名前">
-                        <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
-                    </div> 
-                </div>
-                <div class="buton">
-                    <a href="{% url 'index' %}" class="click"><button type="button" class="buton4">追加してHOMEへ</button></a>
-                </div>
-            </div>
+    <div class="page">
+        <h1>クレジットカードを追加</h1>
+        <h4>カード会社</h4>
+        <div class="change">
+            <input type="text" placeholder="会社名">
+            <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+        <h4>カード番号</h4>
+        <div class="change">
+            <input id="i_tel" type="tel" name="tel" value="" inputmode="tel" placeholder="0803-1234-5678">
+        </div>
+        <h4>有効期限</h4>
+        <div class="change">
+            <select name="year">
+                <option value="">-</option>
+                <option value="2000">2000</option>
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+            </select>　年
+            <select name="month">
+                <option value="">-</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>　月
+        </div>
+        <h4>カード名義人</h4>
+        <div class="change">
+            <input type="text" placeholder="お名前">
+            <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+        </div> 
+        <div class="center-button">
+            <a href="{% url 'index' %}"><button class="pink-Button">追加してHOMEへ</button></a>
         </div>
     </div>
 {% endblock %}
