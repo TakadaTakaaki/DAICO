@@ -815,7 +815,8 @@ h3 {
 .coupon {
   width: 95%;
   margin: auto;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   border: 1px solid gray;
   display: flex;
 }
@@ -1311,5 +1312,5 @@ h4 > a {
 }
 .status {
   font-size: 15px;
-  margin-left: 60%;
+  margin-left: 70%;
 }

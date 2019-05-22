@@ -1,10 +1,8 @@
 {% extends "../../engine-base.html" %}
 {% block body %}
 {% load static %}
-    <div class="flex1">
-        <div class="three">
-            <p class="order1">お客様情報</p>
-        </div>
+    <div class="page">
+        <h1>お客様情報</h1>
         <table>
             <tr>
                 <th>代行日時</th>
@@ -35,31 +33,27 @@
                 <td>　090-6566-8268</td>
             </tr>
         </table>
-        <div class="flex10">
-            <div class="last">
-                <div class="info2">
-                    <div class="sinki">
-                        新規
-                    </div>
-                    <div class="gene">
-                        <p class="red">育児代行</p>
-                        <p class="serihu1">【女性スタッフ】激安風呂掃除プラン(夕飯付き)！</p>
-                        <div class="zyouken">
-                            <img src="{% static 'picture/ikuzi.jpg' %}" class="ikuzi">
-                            <p class="simekiri">
-                                プロの掃除機械や技術を持っていきます!!<br><br>
-                                <be></be><br><em class="meizi">代行日時</em> : 2019年4月29日
-                                <br><em class="meizi">代行者</em> : 小栗 旬
-                            </p>
-                        </div>
-                    </div>
-                    <div class="part">
-                        <p class="serihu3">¥ 3,000</p>
-                    </div>
-                    <div class="buton">
-                        <a href="" class="click"><button type="button" class="buton1">詳細を見る</button></a>
+        <div class="coupon">
+            <div class="label">
+                新規
+            </div>
+            <div class="genre">
+                <span>
+                    <p>育児代行</p>
+                    <div>¥ 3,000</div>
+                </span>
+                <p>【女性スタッフ】激安風呂掃除プラン(夕飯付き)！</p>
+                <div>
+                    <img src="{% static 'picture/ikuzi.jpg' %}">
+                    <div>
+                        <p>プロの掃除機械や技術を持っていきます!!</p>
+                        <div><em>利用条件</em> : 初回利用のみ</div>
+                        <div><em>有効期限</em> : 2019年3月末まで</div>
                     </div>
                 </div>
+            </div>
+            <div class="coupon-button">
+                <a href="{% url 'mdetail' %}"><button class="pink-Button">詳細を見る</button></a>
             </div>
         </div>
     </div>

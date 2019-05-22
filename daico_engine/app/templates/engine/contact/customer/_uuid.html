@@ -1,18 +1,15 @@
 {% extends "../../../engine-base.html" %}
 {% block body %}
 {% load static %}
-    <div class="flex1">
-        <div class="three">
-        </div>
-        <div class="status">
-            <select class="statuss">
-                <option value="未対応">未対応</option>
-                <option value="開発処理中">開発処理中</option>
-                <option value="対応済み">対応済み</option>
-                <option value="保留">保留</option>
-                <option value="クローズ">クローズ</option>
-            </select>
-        </div>
+    <div class="page">
+        <h1>返信フォーム</h1>
+        <select class="status">
+            <option value="未対応">未対応</option>
+            <option value="開発処理中">開発処理中</option>
+            <option value="対応済み">対応済み</option>
+            <option value="保留">保留</option>
+            <option value="クローズ">クローズ</option>
+        </select>
         <div class="balloon1">
             <p class="serihu1">【ログインについて】</p>
             <div class="zyouken">
@@ -23,11 +20,10 @@
                 </p>
             </div>
         </div>
-        <div class="searchForm">
-            <input class="searchForm-input" type="text" placeholder="返信内容">
-            <a href="{% url 'customer' %}"><button class="searchForm-submit" type="submit">送信</button></a>
+        <div class="chat-input">
+            <input type="text" placeholder="返信内容">
+            <a href="{% url 'customer' %}"><button type="submit">送信</button></a>
         </div>
-        <div class="three2">
-        </div>
+        <h1></h1>
     </div>
 {% endblock %}
