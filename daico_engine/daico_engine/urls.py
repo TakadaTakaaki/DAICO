@@ -1,18 +1,3 @@
-"""daico_engine URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/2.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
 from django.conf.urls import include, url
 from django.urls import path, include
@@ -25,6 +10,8 @@ urlpatterns = [
     # path('admin/', admin.site.urls),
     url(r'^admin/', admin.site.urls),
     url(r'^$', include('customer.urls')),
+
+    # user
     path('customer/', include('customer.urls')),
     url(r'article/', include('customer.urls')),
     url(r'adetail/', include('customer.urls')),
@@ -147,6 +134,9 @@ urlpatterns = [
     url(r'write/', include('app.urls')),
     url(r'wdetail/', include('app.urls')),
     url(r'category/', include('app.urls')),
+
+    #　ログイン練習
+    url(r'polls/', include('app.urls')), 
     # 引数をループさせない
     url(r'', include('app.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

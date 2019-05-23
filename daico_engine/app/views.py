@@ -4,6 +4,13 @@ from django.db.models import Count
 from django.views import generic
 from .models import Article,Category
 from django.core.exceptions import MultipleObjectsReturned
+from .forms import UserCreationForm
+from django.urls import reverse_lazy
+ 
+class SignUpView(generic.CreateView):
+    form_class = UserCreationForm
+    success_url = reverse_lazy('index')
+    template_name = 'polls.html'
 
 # engine
 def engine(request):

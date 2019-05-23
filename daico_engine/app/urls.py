@@ -5,6 +5,8 @@ from . import views
 
 urlpatterns = [
     # engine
+    # ログイン練習
+    url(r'polls/', views.SignUpView.as_view(), name='polls'),
     url(r'engine', views.engine, name="engine"),
     url(r'analytics', views.analytics, name="analytics"),
     url(r'contact', views.contact, name="contact"),

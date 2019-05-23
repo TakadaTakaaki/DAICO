@@ -135,3 +135,5 @@ MEDIA_ROOT = BASE_DIR
 
 # ログイン後にリダイレクトされるページのURL
 # LOGIN_REDIRECT_URL = '/'
+
+AUTH_USER_MODEL = 'app.User'

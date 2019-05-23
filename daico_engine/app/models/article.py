@@ -33,9 +33,3 @@ class Article(models.Model):
 
     def __str__(self):
         return self.title
-
-# class User(models.Model):
-#     class Meta:
-#         db_table = 'user'
-
-#     mail = models.MailField()
