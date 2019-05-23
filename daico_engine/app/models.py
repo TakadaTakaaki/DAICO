@@ -1,20 +1,11 @@
 from django.db import models
 from django.utils import timezone
 
-class Article(models.Model):
-    class Meta:
-        db_table = 'article'
-
-    title = models.CharField(max_length=20)
-    genre = models.CharField(max_length=4)
-    date = models.DateTimeField()
-    body = models.TextField()
-
 class CategoryManager(models.Manager):
     def get_queryset(self):
         return super().get_queryset().annotate(
-            post_count=models.Count('post')
-        ).order_by('-post_count')
+            article_count=models.Count('article')
+        ).order_by('-article_count')
 
 class Category(models.Model):
     class Meta:
@@ -24,14 +15,14 @@ class Category(models.Model):
     objects = CategoryManager()
 
     def __str__(self):
-        if hasattr(self, 'post_count'):
-            return f'{self.name}({self.post_count})'
+        if hasattr(self, 'article_count'):
+            return f'{self.name}({self.article_count})'
         else:
             return self.name
 
-class Post(models.Model):
+class Article(models.Model):
     class Meta:
-        db_table = 'post'
+        db_table = 'article'
 
     title = models.CharField(max_length=100)
     genre = models.CharField(max_length=4)

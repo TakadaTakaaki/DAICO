@@ -24,99 +24,104 @@ from django.conf.urls.static import static
 urlpatterns = [
     # path('admin/', admin.site.urls),
     url(r'^admin/', admin.site.urls),
-    url(r'^$', include('app.urls')),
-    path('accounts/', include('accounts.urls')),
-    url(r'article/', include('app.urls')),
-    url(r'adetail/', include('app.urls')),
-    url(r'type/', include('app.urls')),
+    url(r'^$', include('customer.urls')),
+    path('customer/', include('customer.urls')),
+    url(r'article/', include('customer.urls')),
+    url(r'adetail/', include('customer.urls')),
+    url(r'type/', include('customer.urls')),
     # article_detail
-    url(r'enterprise/', include('app.urls')),
-    url(r'blog/', include('app.urls')),
-    url(r'bdetail/', include('app.urls')),
+    url(r'enterprise/', include('customer.urls')),
+    url(r'blog/', include('customer.urls')),
+    url(r'bdetail/', include('customer.urls')),
     # blog_detail
-    url(r'plan/', include('app.urls')),
-    url(r'review/', include('app.urls')),
-    url(r'staff/', include('app.urls')),
-    url(r'sdetail/', include('app.urls')),
+    url(r'plan/', include('customer.urls')),
+    url(r'review/', include('customer.urls')),
+    url(r'staff/', include('customer.urls')),
+    url(r'sdetail/', include('customer.urls')),
     # staff_detail
-    url(r'chat/', include('app.urls')),
-    url(r'favorite/', include('app.urls')),
-    url(r'notice_c/', include('app.urls')),
+    url(r'chat/', include('customer.urls')),
+    url(r'favorite/', include('customer.urls')),
+    url(r'notice_c/', include('customer.urls')),
     # nptice_company
-    url(r'ncdetail/', include('app.urls')),
+    url(r'ncdetail/', include('customer.urls')),
     # notice_company_detail
-    url(r'nengine/', include('app.urls')),
+    url(r'nengine/', include('customer.urls')),
     # notice_engine
-    url(r'nedetail/', include('app.urls')),
+    url(r'nedetail/', include('customer.urls')),
     # notice_engine_detail
-    url(r'order/', include('app.urls')),
-    url(r'odetail/', include('app.urls')),
+    url(r'order/', include('customer.urls')),
+    url(r'odetail/', include('customer.urls')),
     # order_detail
-    url(r'cancel/', include('app.urls')),
+    url(r'cancel/', include('customer.urls')),
     # order_cancel
-    url(r'ocdetail/', include('app.urls')),
+    url(r'ocdetail/', include('customer.urls')),
     # order_cancel_detail
-    url(r'onotExecuted/', include('app.urls')),
+    url(r'onotExecuted/', include('customer.urls')),
     # order_notExecuted
-    url(r'ondetail/', include('app.urls')),
+    url(r'ondetail/', include('customer.urls')),
     # order_notExecuted_detail
-    url(r'register/', include('app.urls')),
-    url(r'rdetail/', include('app.urls')),
+    url(r'register/', include('customer.urls')),
+    url(r'rdetail/', include('customer.urls')),
     # register_detail
-    url(r'reserve/', include('app.urls')),
-    url(r'rdate/', include('app.urls')),
+    url(r'reserve/', include('customer.urls')),
+    url(r'rdate/', include('customer.urls')),
     # reserve_date
-    url(r'rddetail/', include('app.urls')),
+    url(r'rddetail/', include('customer.urls')),
     # reserve_date_detail
-    url(r'rpayment/', include('app.urls')),
+    url(r'rpayment/', include('customer.urls')),
     # reserve_payment
-    url(r'rpdetail/', include('app.urls')),
+    url(r'rpdetail/', include('customer.urls')),
     # reserve_payment_detail
-    url(r'rconfirmation/', include('app.urls')),
+    url(r'rconfirmation/', include('customer.urls')),
     # reserve_confirmation
-    url(r'rdone/', include('app.urls')),
+    url(r'rdone/', include('customer.urls')),
     # reserve_done
-    url(r'search/', include('app.urls')),
-    url(r'setting/', include('app.urls')),    
-    url(r'sinquiry/', include('app.urls')),
+    url(r'search/', include('customer.urls')),
+    url(r'setting/', include('customer.urls')),    
+    url(r'sinquiry/', include('customer.urls')),
     # setting_companyInquiry
-    url(r'scontact/', include('app.urls')),
+    url(r'scontact/', include('customer.urls')),
     # setting_contact
-    url(r'scredit/', include('app.urls')),
+    url(r'scredit/', include('customer.urls')),
     # setting_credit
-    url(r'screditAdd/', include('app.urls')),
+    url(r'screditAdd/', include('customer.urls')),
     # setting_creditAdd
-    url(r'screditEdit/', include('app.urls')),
+    url(r'screditEdit/', include('customer.urls')),
     # setting_creditEdit
-    url(r'shidden/', include('app.urls')),
+    url(r'shidden/', include('customer.urls')),
     # setting_hidden
-    url(r'stpoint/', include('app.urls')),
+    url(r'stpoint/', include('customer.urls')),
     # setting_tpoint
-    url(r'sunsubscribe/', include('app.urls')),
+    url(r'sunsubscribe/', include('customer.urls')),
     # setting_unsubscribe
-    url(r'suserDetailChange/', include('app.urls')),
+    url(r'suserDetailChange/', include('customer.urls')),
     # setting_userDetailChange
+    url(r'', include('customer.urls')),
+
 
     # company
-    url(r'company/', include('app.urls')),
-    url(r'booking/', include('app.urls')),
-    url(r'bookdetail/', include('app.urls')),
-    url(r'coupon/', include('app.urls')),
-    url(r'player/', include('app.urls')),
-    url(r'medetail/', include('app.urls')),
-    url(r'read/', include('app.urls')),
-    url(r'redetail/', include('app.urls')),
-    url(r'valuation/', include('app.urls')),
-    url(r'compilation/', include('app.urls')),
-    url(r'compon/', include('app.urls')),
-    url(r'complay/', include('app.urls')),
-    url(r'cmdetail/', include('app.urls')),
-    url(r'comre/', include('app.urls')),
-    url(r'comvalua/', include('app.urls')),
-    url(r'survey/', include('app.urls')),
-    url(r'voice/', include('app.urls')),
-    url(r'vcdetail/', include('app.urls')),
-    url(r'vedetail/', include('app.urls')),
+    path('client/', include('client.urls')),
+    url(r'company/', include('client.urls')),
+    url(r'booking/', include('client.urls')),
+    url(r'bookdetail/', include('client.urls')),
+    url(r'coupon/', include('client.urls')),
+    url(r'player/', include('client.urls')),
+    url(r'medetail/', include('client.urls')),
+    url(r'read/', include('client.urls')),
+    url(r'redetail/', include('client.urls')),
+    url(r'valuation/', include('client.urls')),
+    url(r'compilation/', include('client.urls')),
+    url(r'compon/', include('client.urls')),
+    url(r'complay/', include('client.urls')),
+    url(r'cmdetail/', include('client.urls')),
+    url(r'comre/', include('client.urls')),
+    url(r'comvalua/', include('client.urls')),
+    url(r'survey/', include('client.urls')),
+    url(r'voice/', include('client.urls')),
+    url(r'vcdetail/', include('client.urls')),
+    url(r'vedetail/', include('client.urls')),
+    url(r'', include('client.urls')),
+
 
 
     # engine
