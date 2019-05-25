@@ -1,0 +1,16 @@
+{% extends "../../user-base.html" %}
+{% block body %}
+{% load static %}
+    <div class="page">
+        <div class="article">
+            <div>
+                <div class="article-table">{{ articles.title }}</div>
+                <div class="article-detail">
+                    {% autoescape off %}
+                        {{ articles.body | linebreaks }}
+                    {% endautoescape %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

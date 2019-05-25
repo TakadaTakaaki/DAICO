@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}【代行エンジン】代行業を一括で検索・比較出来るサイト{% endblock %}</title>
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+        <!-- <link href="{% static 'css/home/before-login.css' %}" rel="stylesheet"> -->
+        <!--<link href="{% static 'css/home/blog_list.css' %}" rel="stylesheet">
+        <link href="{% static 'css/home/blog_look.css' %}" rel="stylesheet">
+        <link href="{% static 'css/company/blog-visit.css' %}" rel="stylesheet">
+        <link href="{% static 'css/company/blog.css' %}" rel="stylesheet">
+        <link href="{% static 'css/company/company-information.css' %}" rel="stylesheet">
+        <link href="{% static 'css/company/plan.css' %}" rel="stylesheet">
+        <link href="{% static 'css/company/review.css' %}" rel="stylesheet">
+        <link href="{% static 'css/company/staff.css' %}" rel="stylesheet">
+        <link href="{% static 'css/company/staff-profile.css' %}" rel="stylesheet">
+        <link href="{% static 'css/contact/chat.css' %}" rel="stylesheet">
+        <link href="{% static 'css/favorite/favorite.css' %}" rel="stylesheet">
+        <link href="{% static 'css/notification/daico.css' %}" rel="stylesheet">
+        <link href="{% static 'css/notification/store.css' %}" rel="stylesheet">
+        <link href="{% static 'css/notification/visit.css' %}" rel="stylesheet">
+        <link href="{% static 'css/order-history/order.css' %}" rel="stylesheet">
+        <link href="{% static 'css/order-history/cancel.css' %}" rel="stylesheet">
+        <link href="{% static 'css/order-history/cancle-detail.css' %}" rel="stylesheet">
+        <link href="{% static 'css/order-history/detail.css' %}" rel="stylesheet">
+        <link href="{% static 'css/order-history/incomplete-detail' %}" rel="stylesheet">
+        <link href="{% static 'css/order-history/incomplete.css' %}" rel="stylesheet">
+        <link href="{% static 'css/register/after-registration' %}" rel="stylesheet">
+        <link href="{% static 'css/reserve/plan-all.css' %}" rel="stylesheet">
+        <link href="{% static 'css/reserve/complete.css' %}" rel="stylesheet">
+        <link href="{% static 'css/reserve/confirmation.css' %}" rel="stylesheet">
+        <link href="{% static 'css/reserve/date-choose.css' %}" rel="stylesheet">
+        <link href="{% static 'css/reserve/date.css' %}" rel="stylesheet">
+        <link href="{% static 'css/reserve/payment-method.css' %}" rel="stylesheet">
+        <link href="{% static 'css/search-result/search.css' %}" rel="stylesheet">
+        <link href="{% static 'css/setting/company-information.css' %}" rel="stylesheet">
+        <link href="{% static 'css/setting/contact.css' %}" rel="stylesheet">
+        <link href="{% static 'css/setting/credit-cartd.css' %}" rel="stylesheet">
+        <link href="{% static 'css/setting/hide-list.css' %}" rel="stylesheet">
+        <link href="{% static 'css/setting/setting.css' %}" rel="stylesheet">
+        <link href="{% static 'css/setting/tpoint.css' %}" rel="stylesheet">
+        <link href="{% static 'css/setting/unsubscribe.css' %}" rel="stylesheet">
+        <link href="{% static 'css/setting/user-information.css' %}" rel="stylesheet"> -->
+        <!-- <link href="{% static 'css/user/user.css' %}" rel="stylesheet"> -->
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+        <!-- <link href="{% static 'css/slick/slick-theme.css' %}" rel="stylesheet">
+        <link href="{% static 'css/slick/slick-theme.css' %}" rel="stylesheet">
+        <link href="{% static 'css/slick/slick-theme1.css' %}" rel="stylesheet">
+        <link href="{% static 'css/slick/slick.css' %}" rel="stylesheet">
+        <link href="{% static 'css/slick/slick1.css' %}" rel="stylesheet"> -->
+        <link rel="shortcut icon" href="{% static 'picture/favicon.ico' %}">
+        <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/slick/slick.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/slick/slick-theme.css' %}"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        {% block extrahead %}{% endblock %}
+    </head>
+    <body>
+        <header>
+            <nav>
+                {% if user.is_authenticated %}
+                <div class="login-group">
+                    <a id="login-show" href=""><i class="fas fa-user-circle"></i> {{ user.get_username }} 様</a>
+                    <a id="login-show2" href="{% url 'logout' %}"><i class="fas fa-sign-in-alt"></i> ログアウト</a>
+                </div>
+                {% else %}
+                <!-- <div>
+                    <a href="../home/before-login.html"><img src="../../picture/daico.png"></a>
+                </div> -->
+                <div class="login-group">
+                    <a id="login-show" href="{% url 'rdetail' %}"><i class="fas fa-user-circle"></i> 新規会員登録(無料)</a>
+                    <a id="login-show2" href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> ログイン</a>
+                </div>
+                {% endif %}
+                <!-- <div class="login-modal-wrapper" id="login-modal">
+                    <div class="modal" >
+                        <div class="close-modal">
+                            <i class="fa fa-2x fa-times"></i>
+                        </div>
+                        <div id="login-form">
+                            <h3>新規会員登録</h3>
+                            <form action="" method="POST">
+                                {{ form.non_field_errors }}
+                                {% for field in form %}
+                                <div class="form-group">
+                                    <label for="{{ field.id_for_label }}">{{ field.label_tag }}</label>
+                                    {{ field }}
+                                    {{ field.errors }}
+                                </div>
+                                {% endfor %}
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-primary btn-lg">送信</button>
+                            </form>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="login-modal-wrapper" id="login-modal2">
+                    <div class="modal">
+                        <div class="close-modal2">
+                            <i class="fa fa-2x fa-times"></i>
+                        </div>
+                        <div id="login-form">
+                            <h3>Emailログイン</h3>
+                            <form action="#">
+                                <input type="text" placeholder="メールアドレス">
+                                <input type="password" placeholder="パスワード">
+                                <a href="after-login.html"><div id="submit-btn">ログイン</div></a>
+                            </form>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="menu" id="menu">
+                    <a href="{% url 'fav' %}"><i class="far fa-heart"></i> お気に入り</a>
+                    <a href="{% url 'notice_c' %}"><i class="far fa-envelope"></i> 通知</a>
+                    <a href="{% url 'index' %}"><img src="{% static 'picture/pinklogo.png' %}"></a>
+                    <!-- <a href="{% url 'index' %}"><i class="fas fa-home"></i> ホーム</a> -->
+                    <a href="{% url 'order' %}"><i class="fas fa-history"></i> 注文履歴</a>
+                    <a href="{% url 'setting' %}"><i class="fas fa-cogs"></i> 設定</a>
+                </div>
+            </nav>
+        </header>
+        {% block body %}
+        {% load static %}
+        {% endblock %}
+    </body>
+    <script type="text/javascript" src="{% static 'js/slick.min.js' %}"></script>
+    <script src="{% static 'js/login.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/sride.js' %}"></script>
+    <script src="{% static 'js/favorite.js' %}s"></script>
+    <script src="{% static 'js/login.js' %}"></script>
+    <script src="{% static 'js/fade.js' %}"></script>
+    <script src="{% static 'js/review.js' %"></script>
+    <script src="{% static 'js/order.js' %}"></script>
+</html>

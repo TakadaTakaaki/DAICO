@@ -1,0 +1,31 @@
+{% extends "../../../user-base.html" %}
+{% block body %}
+{% load static %}
+    <div class="page">
+        <h1><em>100</em> 件　の記事があります</h1>
+        <div class="article">
+            <span>
+                <span>
+                    {% for article in contexts.article_list %}
+                    <a href="{% url 'adetail' pk=article.id %}" class="article-page">
+                        <img src="{{ article.image.url }}">
+                        <span>
+                            <div>
+                                <p class="category-tag">{{ article.genre }}</p>
+                                <div>{{ article.published }}</div>
+                            </div>
+                            <p>{{ article.title }}</p>
+                        </span>
+                    </a>
+                    {% endfor %}
+                </span>
+                <div class="category">
+                    <p class="category-title">記事カテゴリ</p>
+                    {% for category in contexts.categories %}
+                        <p><a href="{% url 'type' category_id=category.id %}">{{ category.name }} ({{ category.article_count }})</a></p>
+                    {% endfor %}
+                </div>
+            </span>
+        </div>        
+    </div>
+{% endblock %}
