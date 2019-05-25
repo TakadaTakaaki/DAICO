@@ -1,5 +1,6 @@
 from django.conf.urls import url
 from django.urls import path
+from django.core.exceptions import MultipleObjectsReturned
 from . import views
 
 # set the application namespace
@@ -7,7 +8,8 @@ from . import views
 
 urlpatterns = [
     # ex: /accounts/signup/
-    path('signup/', views.SignUpView.as_view(), name='signup'),
+    # path('signup/', views.SignUpView.as_view(), name='signup'),
+    # url(r'user-base/', views.SignUpView.as_view(), name='user-base'),
     # user
     url(r'^$', views.index, name='index'),
     # url(r'^$', views.index, name='index'),
@@ -32,7 +34,7 @@ urlpatterns = [
     # url(r'staff_detail', views.staff_detail, name="staff_detail"),
     url(r'chat', views.chat, name="chat"),
     # url(r'chat', views.chat, name="chat"),
-    url(r'favorite', views.favorite, name="favorite"),
+    url(r'fav', views.fav, name="fav"),
     # url(r'favorite', views.favorite, name="favorite"),
     url(r'notice_c', views.notice_c, name="notice_c"),
     # url(r'notice_company', views.notice_company, name="notice_company"),
@@ -56,7 +58,7 @@ urlpatterns = [
     # url(r'order_notExecuted_detail', views.order_notExecuted_detail, name="order_notExecuted_detail"),
     url(r'register', views.register, name="register"),
     # url(r'register', views.register, name="register"),
-    url(r'rdetail', views.rdetail, name="rdetail"),
+    url(r'rdetail', views.SignUpView.as_view(), name="rdetail"),
     # url(r'register_detail', views.register_detail, name="register_detail"),
     url(r'reserve', views.reserve, name="reserve"),
     # url(r'reserve', views.reserve, name="reserve"),

@@ -1,4 +1,3 @@
-from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 from django.views import generic
 from django.http.response import HttpResponse
@@ -6,11 +5,12 @@ from django.shortcuts import render
 from django.db.models import Count
 from app.models import Article,Category
 from django.core.exceptions import MultipleObjectsReturned
+from .forms import UserCreationForm
 
 class SignUpView(generic.CreateView):
     form_class = UserCreationForm
-    success_url = reverse_lazy('index')
-    template_name = 'customer/signup.html'
+    success_url = reverse_lazy('register')
+    template_name = 'user/register/_uuid.html'
 
 # user
 def index(request):
@@ -61,7 +61,7 @@ def sdetail(request):
 def chat(request):
     return render(request, 'user/chat/index.html')
 # favorite お気に入り
-def favorite(request):
+def fav(request):
     return render(request, 'user/favorite/index.html')
 # notice 通知
 def notice_c(request):

@@ -1,5 +1,21 @@
 {% extends "../../user-base.html" %}
 {% block body %}
 {% load static %}
-
+    <div class="page">
+        <h1>新規会員登録</h1>
+        <form action="" method="POST">
+            {{ form.non_field_errors }}
+            {% for field in form %}
+            <h4><label for="{{ field.id_for_label }}">{{ field.label_tag }}</label></h4>
+            <div class="change">
+                {{ field }}
+                {{ field.errors }}
+            </div>
+            {% endfor %}
+            {% csrf_token %}
+            <div class="center-button">
+                <button type="submit" class="btn btn-primary btn-lg pink-Button">登録</button>
+            </div>
+        </form>
+    </div>
 {% endblock %}

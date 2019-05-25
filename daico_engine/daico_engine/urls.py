@@ -27,7 +27,7 @@ urlpatterns = [
     url(r'sdetail/', include('customer.urls')),
     # staff_detail
     url(r'chat/', include('customer.urls')),
-    url(r'favorite/', include('customer.urls')),
+    url(r'fav/', include('customer.urls')),
     url(r'notice_c/', include('customer.urls')),
     # nptice_company
     url(r'ncdetail/', include('customer.urls')),
@@ -136,7 +136,8 @@ urlpatterns = [
     url(r'category/', include('app.urls')),
 
     #　ログイン練習
-    url(r'polls/', include('app.urls')), 
+    # url(r'polls/', include('app.urls')), 
+    # url(r'user-base/', include('customer.urls')), 
     # 引数をループさせない
     url(r'', include('app.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
