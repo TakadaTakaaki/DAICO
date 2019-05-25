@@ -5,10 +5,11 @@ from django.shortcuts import render
 from django.db.models import Count
 from app.models import Article,Category
 from django.core.exceptions import MultipleObjectsReturned
-from .forms import UserCreationForm
+from .forms import UserCreationForm, UserChangeForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView, LogoutView
 from .forms import LoginForm
+from app.models import User
 
 
 class Index(generic.TemplateView):
@@ -36,6 +37,12 @@ class SignUpView(generic.CreateView):
     form_class = UserCreationForm
     success_url = reverse_lazy('register')
     template_name = 'user/register/_uuid.html'
+
+class UserChangeView(generic.UpdateView):
+    model = User
+    form_class = UserChangeForm
+    success_url = reverse_lazy('setting')
+    template_name = 'user/setting/userDetailChange/index.html'
 
 # user
 def index(request):
@@ -153,5 +160,6 @@ def stpoint(request):
     return render(request, 'user/setting/tpoint/index.html')
 def sunsubscribe(request):
     return render(request, 'user/setting/unsubscribe/index.html')
-def suserDetailChange(request):
-    return render(request, 'user/setting/userDetailChange/index.html')
+def suserDetailChange(request, pk):
+    users = User.objects.get(pk=pk)
+    return render(request, 'user/setting/userDetailChange/index.html', {'users': users})
