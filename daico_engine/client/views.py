@@ -7,7 +7,7 @@ from django.db.models import Count
 from app.models import Article,Category
 from django.core.exceptions import MultipleObjectsReturned
 from django.shortcuts import redirect
-from .forms import Company_dataAdd
+# from .forms import Company_dataAdd
 
 
 class SignUpView(generic.CreateView):
@@ -35,11 +35,25 @@ def redetail(request):
 def valuation(request):
     return render(request, 'company/business/valuation/index.html')
 def compilation(request):
-    return render(request, 'company/compilation/index.html')
+    company_datas = Company_data.objects.order_by('name')
+    return render(request, 'company/compilation/index.html', {'company_datas' : company_datas})
+def create(request):
+    if (request.method == 'POST'):
+        obj = Company_data()
+        info = Company_dataAdd(request.POST,instance=obj)
+        info.save()
+    return redirect(to='/compilation')
+    modelform_dict = {
+        'title': '編集ページ',
+        'form': Company_dataAdd(),
+    }
+    return render(request, 'company/compilation/_uuid.html', modelform_dict)
 def compon(request):
-    return render(request, 'company/compilation/coupon/index.html')
+    plans = Plan.objects.order_by('genre')
+    return render(request, 'company/compilation/coupon/index.html', {'plans' : plans})
 def complay(request):
-    return render(request, 'company/compilation/player/index.html')
+    staffs = Staff.objects.order_by('name')
+    return render(request, 'company/compilation/player/index.html', {'staffs' : staffs})
 def cmdetail(request):
     return render(request, 'company/compilation/player/_uuid.html')
 def comre(request):

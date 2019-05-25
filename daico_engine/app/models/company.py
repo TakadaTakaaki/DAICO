@@ -2,8 +2,6 @@ from django.db import models
 from django.utils import timezone
 
 
-
-
 class Company_data(models.Model):
     class Meta:
         db_table = 'company_data'
