@@ -114,4 +114,9 @@ MEDIA_URL = '/pics/'
 MEDIA_ROOT = BASE_DIR
 # mediaの中身を読み込ませるため
 
+# 会員登録
 AUTH_USER_MODEL = 'app.User'
+
+# ログイン
+LOGIN_URL = 'app.login'
+LOGIN_REDIRECT_URL = '/'

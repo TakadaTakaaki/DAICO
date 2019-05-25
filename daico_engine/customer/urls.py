@@ -11,7 +11,7 @@ urlpatterns = [
     # path('signup/', views.SignUpView.as_view(), name='signup'),
     # url(r'user-base/', views.SignUpView.as_view(), name='user-base'),
     # user
-    url(r'^$', views.index, name='index'),
+    url(r'^$', views.Index.as_view(), name='index'),
     # url(r'^$', views.index, name='index'),
     url(r'article', views.article, name="article"),
     # url(r'article', views.article, name="article"),
@@ -92,8 +92,14 @@ urlpatterns = [
     # url(r'setting_hidden', views.setting_hidden, name="setting_hidden"),
     url(r'stpoint', views.stpoint, name="stpoint"),
     # url(r'setting_tpoint', views.setting_tpoint, name="setting_tpoint"),
-    url(r'sunsubscribe', views.sunsubscribe, name="sunsubscribe"),
+    # url(r'sunsubscribe', views.sunsubscribe, name="sunsubscribe"),
     # url(r'setting_unsubscribe', views.setting_unsubscribe, name="setting_unsubscribe"),
     url(r'suserDetailChange', views.suserDetailChange, name="suserDetailChange"),
     # url(r'setting_userDetailChange', views.setting_userDetailChange, name="setting_userDetailChange"),
+    url(r'login', views.Login.as_view(), name="login"),
+    # url(r'login', views.login, name="login"),
+    url(r'logout', views.Logout.as_view(), name="logout"),
+    # url(r'logout', views.logout, name="logout"),
+    # path('<str:username>/delete/', views.UserDeleteView.as_view(), name='delete'),
+    # 退会
 ]

@@ -1,0 +1,21 @@
+{% extends "../../user-base.html" %}
+{% block body %}
+{% load static %}
+    <div class="page">
+        <h1>ログイン</h1>
+        <form action="" method="POST">
+            {{ form.non_field_errors }}
+            {% for field in form %}
+            <div class="change">
+                {{ field }}
+                {{ field.errors }}
+            </div>
+            {% endfor %}
+            <div class="center-button">
+                <button type="submit" class="btn btn-primary btn-lg pink-Button">ログイン</button>
+                <input type="hidden" name="next" value="{{ next }}" />
+            </div>
+            {% csrf_token %}
+        </form>
+    </div>
+{% endblock %}

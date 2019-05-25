@@ -60,13 +60,20 @@
     <body>
         <header>
             <nav>
+                {% if user.is_authenticated %}
+                <div class="login-group">
+                    <a id="login-show" href=""><i class="fas fa-user-circle"></i> {{ user.get_username }} 様</a>
+                    <a id="login-show2" href="{% url 'logout' %}"><i class="fas fa-sign-in-alt"></i> ログアウト</a>
+                </div>
+                {% else %}
                 <!-- <div>
                     <a href="../home/before-login.html"><img src="../../picture/daico.png"></a>
                 </div> -->
                 <div class="login-group">
-                    <a id="login-show" href="{% url 'rdetail'"><i class="fas fa-user-circle"></i> 新規会員登録(無料)</a>
-                    <a id="login-show2"><i class="fas fa-sign-in-alt"></i> ログイン</a>
+                    <a id="login-show" href="{% url 'rdetail' %}"><i class="fas fa-user-circle"></i> 新規会員登録(無料)</a>
+                    <a id="login-show2" href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> ログイン</a>
                 </div>
+                {% endif %}
                 <!-- <div class="login-modal-wrapper" id="login-modal">
                     <div class="modal" >
                         <div class="close-modal">
@@ -89,7 +96,7 @@
                         </div>
                     </div>
                 </div> -->
-                <div class="login-modal-wrapper" id="login-modal2">
+                <!-- <div class="login-modal-wrapper" id="login-modal2">
                     <div class="modal">
                         <div class="close-modal2">
                             <i class="fa fa-2x fa-times"></i>
@@ -103,7 +110,7 @@
                             </form>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="menu" id="menu">
                     <a href="{% url 'fav' %}"><i class="far fa-heart"></i> お気に入り</a>
                     <a href="{% url 'notice_c' %}"><i class="far fa-envelope"></i> 通知</a>

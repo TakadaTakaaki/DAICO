@@ -83,6 +83,10 @@ urlpatterns = [
     # setting_unsubscribe
     url(r'suserDetailChange/', include('customer.urls')),
     # setting_userDetailChange
+    url(r'login/', include('customer.urls')),
+    # login
+    url(r'logout/', include('customer.urls')),
+    # logout
     url(r'', include('customer.urls')),
 
 

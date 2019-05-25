@@ -6,6 +6,31 @@ from django.db.models import Count
 from app.models import Article,Category
 from django.core.exceptions import MultipleObjectsReturned
 from .forms import UserCreationForm
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.views import LoginView, LogoutView
+from .forms import LoginForm
+
+
+class Index(generic.TemplateView):
+    template_name = 'user/home/index.html'
+
+
+class Login(LoginView):
+    form_class = LoginForm
+    template_name = 'user/login/index.html'
+
+
+class Logout(LoginRequiredMixin, LogoutView):
+    template_name = 'user/home/index.html'
+
+
+# class UserDeleteView(generic.DeleteView):
+#     form_class = UserDeleteForm
+#     template_name = "user/setting/unsubscribe/index.html"
+#     success_url = reverse_lazy("/")
+#     slug_field = 'username'
+#     slug_url_kwarg = 'username'
+
 
 class SignUpView(generic.CreateView):
     form_class = UserCreationForm
