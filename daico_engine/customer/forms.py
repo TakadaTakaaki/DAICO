@@ -13,9 +13,11 @@ class UserCreationForm(UserCreationForm):
         }
 
 class UserChangeForm(UserChangeForm):
+    password = None
+    
     class Meta:
         model = User
-        fields = ('email', 'name', 'password', 'sex', 'birth_year', 'birth_month','birth_day', 'address', 'phone')
+        fields = ('email', 'name', 'sex', 'birth_year', 'birth_month','birth_day', 'address', 'phone')
         labels = {'email': 'メールアドレス','name': '名前','sex': '性別','birth_year': '西暦','birth_month': '生誕月','birth_day': '生誕日','address': '住所','phone': '電話番号',}
         widgets = {
             'name': forms.TextInput(attrs={'placeholder': '例) 代行　エンジン'}),
