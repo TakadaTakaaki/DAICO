@@ -30,9 +30,11 @@ class User(AbstractBaseUser, PermissionsMixin):
         ('A', 'Client User'),
         ('B', 'Customer User')
     }
-    user_type = models.CharField(max_length=1,
-                                 choices=type_choices,
-                                 default='B')
+    user_type = models.CharField(
+        max_length=1,
+        choices=type_choices,
+        default='B'
+    )
 
     email = models.EmailField(max_length=128, unique=True)
     name = models.CharField(max_length=150, blank=True)
@@ -41,25 +43,37 @@ class User(AbstractBaseUser, PermissionsMixin):
         ('B', '女性'),
         ('C', 'その他')
     }
-    sex = models.CharField(max_length=1,
-                              choices=sex_choices,
-                              default=None,
-                              null=True)
-    birth_year = models.IntegerField(max_length=4,
-                                     default=None,
-                                     null=True)
-    birth_month = models.IntegerField(max_length=2,
-                                      default=None,
-                                      null=True)
-    birth_day = models.IntegerField(max_length=2,
-                                    default=None,
-                                    null=True)
-    address = models.CharField(max_length=300,
-                               default=None,
-                               null=True)
-    phone = models.IntegerField(max_length=12,
-                                default=None,
-                                null=True)
+    sex = models.CharField(
+        max_length=1,
+        choices=sex_choices,
+        default=None,
+        null=True
+    )
+    birth_year = models.IntegerField(
+        max_length=4,
+        default=None,
+        null=True
+    )
+    birth_month = models.IntegerField(
+        max_length=2,
+        default=None,
+        null=True
+    )
+    birth_day = models.IntegerField(
+        max_length=2,
+        default=None,
+        null=True
+    )
+    address = models.CharField(
+        max_length=300,
+        default=None,
+        null=True
+    )
+    phone = models.TextField(
+        max_length=12,
+        default=None,
+        null=True
+    )
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
