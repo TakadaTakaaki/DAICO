@@ -6,8 +6,9 @@ from django.shortcuts import render
 from django.db.models import Count
 from app.models import Article,Category
 from django.core.exceptions import MultipleObjectsReturned
+from app.models import Company_data,Plan,Staff
 from django.shortcuts import redirect
-# from .forms import Company_dataAdd
+from .forms import Company_dataAdd
 
 
 class SignUpView(generic.CreateView):

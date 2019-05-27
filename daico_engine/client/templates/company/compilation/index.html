@@ -18,7 +18,9 @@
                     <p class="sibuya">渋谷　>　道玄坂・明治通り</p>
                 </div>
                 <div class="storename">
-                    <p class="casy"><a href="" class="casy1">Casy 【カジー】</a></p>
+                    {% for company_data in company_datas %}
+                        <p class="casy"><a href="" class="casy1">{{ company_data.name }}</a></p>
+                    {% endfor %}
                 </div>
                 <div class="storetype">
                     <p class="strongpoint">即時予約OK!</p>
@@ -49,8 +51,8 @@
                     </ul>
                 </nav>
                 <div class="bottonbox">
-                    <p class="favoriteadd"><a><button type="button" class="heart8" id="modalopen10">編集</button></a></p>
-                    <div class="modal10" id="modal-open">
+                    <p class="favoriteadd"><a href="{% url 'create' %}"><button type="button" class="heart8" id="modalopen10">編集</button></a></p>
+                    <!-- <div class="modal10" id="modal-open">
                         <div class="overLay10 modalClose10"></div>
                         <div class="inner10">
                             <h1>編集ページ</h1>
@@ -70,7 +72,7 @@
                             <p><label>セキュリティ対策：<input class="form-control" type="text" placeholder=""></label></p>
                             <p><a href="#" class="modalClose10"><button type="button" class="heart7">Close</button></a></p>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="bottombox">
                     <div class="leftphotos">
@@ -87,20 +89,22 @@
                         </div>
                     </div>
                     <div class="right5partbox">
-                        <div class="parah">
-                            <p class="redpara">【乾かすだけでキマる】×【無駄にお金は使わせない】必要最低限のメニューで最高のhairを追求する実力派★</p>
-                        </div>
+                        {% for company_data in company_datas %}
+                            <p class="redpara">{{ company_data.pr }}</p>
+                        {% endfor %}                            
                         <div class="rank">
-                            <div class="yonko">
-                                <div class="niko">
-                                    <p class="money"><i class="fas fa-yen-sign"></i> 料金<a href="{% url 'compon' %}" class="yen">¥2,500〜</a></p>
-                                    <p class="money"><i class="fas fa-comments"></i> 口コミ<a href="{% url 'comvalua' %}" class="yen">20件</a></p>
+                            {% for company_data in company_datas %}
+                                <div class="yonko">
+                                    <div class="niko">
+                                        <p class="money"><i class="fas fa-yen-sign"></i> 料金<a href="{% url 'compon' %}" class="yen">{{ company_data.price }}</a></p>
+                                        <p class="money"><i class="fas fa-comments"></i> 口コミ<a href="{% url 'comvalua' %}" class="yen">??件</a></p>
+                                    </div>
+                                    <div class="niko1">
+                                        <p class="money"><i class="fas fa-th"></i> ブログ<a href="{% url 'comre' %}" class="yen">??件</a></p>
+                                        <p class="money"><i class="fas fa-user"></i> スタッフ<a href="{% url 'complay' %}" class="yen">{{ company_data.staff }}</a></p>
+                                    </div>
                                 </div>
-                                <div class="niko1">
-                                    <p class="money"><i class="fas fa-th"></i> ブログ<a href="{% url 'comre' %}" class="yen">10件</a></p>
-                                    <p class="money"><i class="fas fa-user"></i> スタッフ<a href="{% url 'complay' %}" class="yen">10件</a></p>
-                                </div>
-                            </div>
+                            {% endfor %}                                    
                         </div>
                         <div class="paragraph">
                             <p class="blackpara">【乾かすだけでキマる】にこだわり【本当に必要なメニュー】を見極め【無駄にお金は使わせない】本格派サロン。モダンで落ち着いた空間が心地良さを演出させます。<br>【乾かすだけでキマる】×【無駄にお金は使わせない】必要最低限のメニューで最高のhairを追求する実力派★</p>
@@ -137,49 +141,55 @@
                     <p class="order1">Casy【カジー】の会社情報</p>
                 </div>
             </div>
-                <table>
-                    <tr>
-                        <th>電話番号</th>
-                        <td>　03-1508-0334</td>
-                    </tr>
-                    <tr>
-                        <th>本社</th>
-                        <td>　東京都渋谷区初台3−22−9</td>
-                    </tr>
-                    <tr>
-                        <th>創業</th>
-                        <td>　1999年</td>
-                    </tr>
-                    <tr>
-                        <th>クレジットカード</th>
-                        <td>　VISA／MasterCard／JCB／American Express／Diners </td>
-                    </tr>
-                    <tr>
-                        <th>ホームページ</th>
-                        <td>　http/////..sdckdmfkmwjdmc</td>
-                    </tr>
-                    <tr>
-                        <th>従業員数</th>
-                        <td>　30人</td>
-                    </tr>
-                    <tr>
-                        <th>営業時間</th>
-                        <td>　24時間年中無休</td>
-                    </tr>
-                </table>
+            {% for company_data in company_datas %}
+            <table>
+                <tr>
+                    <th>電話番号</th>
+                    <td>{{ company_data.tell }}</td>
+                </tr>
+                <tr>
+                    <th>本社</th>
+                    <td>{{ company_data.address }}</td>
+                </tr>
+                <tr>
+                    <th>創業</th>
+                    <td>{{ company_data.year }}</td>
+                </tr>
+                <tr>
+                    <th>クレジットカード</th>
+                    <td>{{ company_data.credit }}</td>
+                </tr>
+                <tr>
+                    <th>ホームページ</th>
+                    <td>{{ company_data.homepage }}</td>
+                </tr>
+                <tr>
+                    <th>従業員数</th>
+                    <td>{{ company_data.staff }}</td>
+                </tr>
+                <tr>
+                    <th>営業時間</th>
+                    <td>{{ company_data.time }}</td>
+                </tr>
+            </table>
                 <div class="three">
                     <p class="order1">サービス概要</p>
+                    <p class="order1">{{ company_data.service}}</p>
                 </div>
                 <div class="three">
                     <p class="order1">お支払いに関して</p>
+                    <p class="order1">{{ company_data.pay }}</p>
                 </div>
                 <div class="three">
                     <p class="order1">キャンセル・解約に関して</p>
+                    <P class="order1">{{ company_data.cancel }}</P>
                 </div>
                 <div class="three">
                     <p class="order1">セキュリティ対策</p>
+                    <p class="order1">{{ company_data.security }}</p>
                 </div>
-            </div>
+            {% endfor %}
+            </div>        
         </div>
     </div>
 {% endblock %}
