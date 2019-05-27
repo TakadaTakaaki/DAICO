@@ -5,9 +5,9 @@ from django.shortcuts import render
 from django.db.models import Count
 from app.models import Article,Category
 from django.core.exceptions import MultipleObjectsReturned
-from .forms import UserCreationForm, UserChangeForm,  MyPasswordChangeForm
+from .forms import UserCreationForm, UserChangeForm
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth.views import LoginView, LogoutView, PasswordChangeView
+from django.contrib.auth.views import LoginView, LogoutView
 from .forms import LoginForm
 from app.models import User
 from django import forms
@@ -44,9 +44,9 @@ class UserChangeView(generic.UpdateView):
     success_url = reverse_lazy('setting')
     template_name = 'user/setting/userDetailChange/index.html'
 
-class PasswordChange(PasswordChangeView):
-    form_class = UserChangeForm
-    template_name = 'user/setting/userDetailChange/index.html'
+# class PasswordChange(PasswordChangeView):
+#     form_class = UserChangeForm
+#     template_name = 'user/setting/userDetailChange/index.html'
 
 # user
 def index(request):

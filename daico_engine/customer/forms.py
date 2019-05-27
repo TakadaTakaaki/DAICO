@@ -1,4 +1,4 @@
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm, AuthenticationForm,  PasswordChangeForm
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm, AuthenticationForm
 from app.models import User
 from django import forms
 
@@ -14,7 +14,7 @@ class UserCreationForm(UserCreationForm):
 
 class UserChangeForm(UserChangeForm):
     password = None
-    
+
     class Meta:
         model = User
         fields = ('email', 'name', 'sex', 'birth_year', 'birth_month','birth_day', 'address', 'phone')
@@ -28,11 +28,11 @@ class UserChangeForm(UserChangeForm):
             'address': forms.TextInput(attrs={'placeholder': '例) 東京都中野区'}),
         }
 
-class MyPasswordChangeForm(PasswordChangeForm):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        for field in self.fields.values():
-            field.widget.attrs['class'] = 'form-control'
+# class MyPasswordChangeForm(PasswordChangeForm):
+#     def __init__(self, *args, **kwargs):
+#         super().__init__(*args, **kwargs)
+#         for field in self.fields.values():
+#             field.widget.attrs['class'] = 'form-control'
 
 
 class LoginForm(AuthenticationForm):
