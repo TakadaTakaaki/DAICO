@@ -102,7 +102,7 @@ urlpatterns = [
     url(r'redetail/', include('client.urls')),
     url(r'valuation/', include('client.urls')),
     url(r'compilation/', include('client.urls')),
-    url(r'create/', include('client.urls')),
+    url(r'hensyu/', include('client.urls')),
     url(r'compon/', include('client.urls')),
     url(r'complay/', include('client.urls')),
     url(r'cmdetail/', include('client.urls')),

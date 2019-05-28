@@ -38,12 +38,14 @@ def valuation(request):
 def compilation(request):
     company_datas = Company_data.objects.order_by('name')
     return render(request, 'company/compilation/index.html', {'company_datas' : company_datas})
-def create(request):
+def hensyu(request):
+    company_datas = Company_data.objects.filter(users__user_type="A")
+    # users = User.objects.filter(pk=company_data_id),
     if (request.method == 'POST'):
         obj = Company_data()
         info = Company_dataAdd(request.POST,instance=obj)
         info.save()
-    return redirect(to='/compilation')
+        return redirect(to='/compilation')
     modelform_dict = {
         'title': '編集ページ',
         'form': Company_dataAdd(),

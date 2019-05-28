@@ -1,146 +1,104 @@
 {% extends "../../company-base.html" %}
 {% block body %}
 {% load static %}
-    <div class="allbox">
-        <div class="fade">
-            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/1.jpg" alt=""></div>
-            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/2.jpg" alt=""></div>
-            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/3.jpg" alt=""></div>
-            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/4.jpg" alt=""></div>
-            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/5.jpg" alt=""></div>
-            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/6.jpg" alt=""></div>
-            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/7.jpg" alt=""></div>
-            <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/8.jpg" alt=""></div>
-        </div>
-        <div class="topbox">
-            <div class="leftbox">
-                <div class="erea">
-                    <p class="sibuya">渋谷　>　道玄坂・明治通り</p>
-                </div>
-                <div class="storename">
-                    {% for company_data in company_datas %}
-                        <p class="casy"><a href="" class="casy1">{{ company_data.name }}</a></p>
-                    {% endfor %}
-                </div>
-                <div class="storetype">
-                    <p class="strongpoint">即時予約OK!</p>
-                    <p class="strongpoint1">ポイント加盟店</p>
-                    <p class="strongpoint2">メンズにもオススメ</p>
-                </div>
+    <div class="page">
+        <div class="company-detail">
+            <div class="fade" id="fade">
+                <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/1.jpg" alt=""></div>
+                <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/2.jpg" alt=""></div>
+                <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/3.jpg" alt=""></div>
+                <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/4.jpg" alt=""></div>
+                <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/5.jpg" alt=""></div>
+                <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/6.jpg" alt=""></div>
+                <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/7.jpg" alt=""></div>
+                <div class="blogwrite"><img src="https://www.jungleocean.com/demo/jquery-slick/images/8.jpg" alt=""></div>
             </div>
-            <div class="rightbox">
-                <div class="bottonbox">
-                    <p class="favoriteadd"><button type="button"class="heart"><i class="far fa-heart"></i>  お気に入り</button></p>
-                </div>
-                <div class="bottonbox">
-                    <p class="favoriteadd"><a href=""><button type="button"class="heart8">予約・日時指定へ</button></a></p>
-                </div>
+            <div class="company-top-1">
+                <span class="left">
+                    <p>渋谷　>　道玄坂・明治通り</p>
+                    <div class="storename">
+                        {% for company_data in company_datas %}
+                            <p class="casy"><a href="" class="casy1">{{ company_data.name }}</a></p>
+                        {% endfor %}
+                    </div>
+                    <div>
+                        <p class="point">即時予約OK!</p>
+                        <p class="point1">ポイント加盟店</p>
+                        <p class="point2">メンズにもオススメ</p>
+                    </div>
+                </span>
+                <span class="right">
+                    <div class="buttonbox">
+                        <button class="favorite2"><i class="far fa-heart"></i>  お気に入り</button>
+                        <a href=""><button class="reserve">予約・日時指定へ</button></a>
+                    </div>
+                </span>
             </div>
         </div>
-    </div>
-    <div class="flex1">
-        <div class="last">
-            <div class="info">
-                <nav class="daicomenu">
-                    <ul>
-                        <li class="li1"><a href="{% url 'compilation' %}" class="lih1"><i class="fas fa-building"></i> 会社詳細</a></li>
-                        <li><a href="{% url 'compon' %}" class="lih2"><i class="fas fa-scroll"></i> プラン一覧</a></li>
-                        <li><a href="{% url 'complay' %}" class="lih2"><i class="fas fa-user"></i> スタッフ一覧</a></li>
-                        <li><a href="{% url 'comvalua' %}" class="lih2"><i class="fas fa-comments"></i> 口コミ</a></li>
-                        <li><a href="{% url 'comre' %}" class="lih2"><i class="fas fa-pencil-alt"></i> ブログ</a></li>
-                    </ul>
-                </nav>
-                <div class="bottonbox">
-                    <p class="favoriteadd"><a href="{% url 'create' %}"><button type="button" class="heart8" id="modalopen10">編集</button></a></p>
-                    <!-- <div class="modal10" id="modal-open">
-                        <div class="overLay10 modalClose10"></div>
-                        <div class="inner10">
-                            <h1>編集ページ</h1>
-                            <p><label>会社名：<input class="form-control" type="text" placeholder="会社名を記入してください"></label></p>
-                            <p><label>PR文：<input class="form-control" type="text" placeholder="PR文を記入してください"></label></p>
-                            <p><label>電話番号：<input class="form-control" type="text" placeholder="ex.090-XXXX-XXXX"></label></p>
-                            <p><label>料金：<input class="form-control" type="text" placeholder="ex.¥2500~10000"></label></p>
-                            <p><label>住所：<input class="form-control" type="text" placeholder="ex.東京都渋谷区初台1-15-2"></label></p>
-                            <p><label>創業年：<input class="form-control" type="text" placeholder="ex.1997年"></label></p>
-                            <p><label>クレジットカード：<input class="form-control" type="text" placeholder="ex.VISA／MasterCard／"></label></p>
-                            <p><label>ホームページ：<input class="form-control" type="text" placeholder="ex.https//../../"></label></p>
-                            <p><label>従業員数：<input class="form-control" type="text" placeholder="ex.20名"></label></p>
-                            <p><label>営業時間：<input class="form-control" type="text" placeholder="ex.10:00~20:00"></label></p>
-                            <p><label>サービス概要：<input class="form-control" type="text" placeholder=""></label></p>
-                            <p><label>お支払いに関して：<input class="form-control" type="text" placeholder=""></label></p>
-                            <p><label>キャンセル・解約に関して：<input class="form-control" type="text" placeholder=""></label></p>
-                            <p><label>セキュリティ対策：<input class="form-control" type="text" placeholder=""></label></p>
-                            <p><a href="#" class="modalClose10"><button type="button" class="heart7">Close</button></a></p>
-                        </div>
-                    </div> -->
-                </div>
-                <div class="bottombox">
-                    <div class="leftphotos">
-                        <div class="leftphoto">
-                            <img src="{% static 'picture/horikita.jpg' %}" class="photo1">
-                        </div>
-                        <div class="slide">
-                            <div class="leftphoto2">
-                                <img src="{% static 'picture/kazi.png' %}" class="photo2">
-                            </div>
-                            <div class="leftphoto3">
-                                <img src="{% static 'picture/ikuzi.jpg' %}" class="photo3">
-                            </div>
+        <div class="company-menu">
+            <p><a href="{% url 'company' %}"><i class="fas fa-building"></i> 会社詳細</a></p>
+            <p><a href="{% url 'coupon' %}"><i class="fas fa-scroll"></i> プラン一覧</a></p>
+            <p><a href="{% url 'player' %}"><i class="fas fa-user"></i> スタッフ一覧</a></p>
+            <p><a href="{% url 'valuation' %}"><i class="fas fa-comments"></i> 口コミ</a></p>
+            <p class="last"><a href="{% url 'read' %}"><i class="fas fa-pencil-alt"></i> ブログ</a></p>
+        </div>
+        <div class="bottonbox">
+            <p class="favoriteadd"><a href="{% url 'hensyu' %}"><button type="button" class="heart8" id="modalopen10">編集</button></a></p>
+        </div>
+        <div class="company-box-1">
+                <div class="company-next">
+                    <div class="image">
+                        <img src="{% static 'picture/horikita.jpg' %}">
+                        <div class="image1">
+                            <img src="{% static 'picture/kazi.png' %}">
+                            <img src="{% static 'picture/ikuzi.jpg' %}">
                         </div>
                     </div>
-                    <div class="right5partbox">
-                        {% for company_data in company_datas %}
-                            <p class="redpara">{{ company_data.pr }}</p>
-                        {% endfor %}                            
-                        <div class="rank">
+                    <div class="company-explain">
+                        <div class="right5partbox">
                             {% for company_data in company_datas %}
-                                <div class="yonko">
-                                    <div class="niko">
-                                        <p class="money"><i class="fas fa-yen-sign"></i> 料金<a href="{% url 'compon' %}" class="yen">{{ company_data.price }}</a></p>
-                                        <p class="money"><i class="fas fa-comments"></i> 口コミ<a href="{% url 'comvalua' %}" class="yen">??件</a></p>
-                                    </div>
-                                    <div class="niko1">
-                                        <p class="money"><i class="fas fa-th"></i> ブログ<a href="{% url 'comre' %}" class="yen">??件</a></p>
-                                        <p class="money"><i class="fas fa-user"></i> スタッフ<a href="{% url 'complay' %}" class="yen">{{ company_data.staff }}</a></p>
-                                    </div>
+                                <p class="redpara">{{ company_data.pr }}</p>
+                            {% endfor %}                            
+                                <div class="rank">
+                                    {% for company_data in company_datas %}
+                                        <div class="yonko">
+                                            <div class="niko">
+                                                <p class="money"><i class="fas fa-yen-sign"></i> 料金<a href="{% url 'compon' %}" class="yen">{{ company_data.price }}</a></p>
+                                                <p class="money"><i class="fas fa-comments"></i> 口コミ<a href="{% url 'comvalua' %}" class="yen">??件</a></p>
+                                            </div>
+                                            <div class="niko1">
+                                                <p class="money"><i class="fas fa-th"></i> ブログ<a href="{% url 'comre' %}" class="yen">??件</a></p>
+                                                <p class="money"><i class="fas fa-user"></i> スタッフ<a href="{% url 'complay' %}" class="yen">{{ company_data.staff }}</a></p>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
                                 </div>
-                            {% endfor %}                                    
-                        </div>
-                        <div class="paragraph">
-                            <p class="blackpara">【乾かすだけでキマる】にこだわり【本当に必要なメニュー】を見極め【無駄にお金は使わせない】本格派サロン。モダンで落ち着いた空間が心地良さを演出させます。<br>【乾かすだけでキマる】×【無駄にお金は使わせない】必要最低限のメニューで最高のhairを追求する実力派★</p>
-                        </div>
-                        <div class="starbox">
-                            <p class="hyouka"><i class="far fa-star"></i>　総合　<em class="star">★ ★ ★ ★</em></p>
-                            <div class="starbox0">
-                                <div class="starbox1">
-                                    <p class="money"><i class="fas fa-yen-sign"></i>　料金　<em class="star">★ ★ ★</em></p>
-                                    <p class="money"><i class="fas fa-pray"></i>　丁寧　<em class="star">★ ★ ★ ★</em></p>
-                                </div>
-                                <div class="starbox2">
-                                    <p class="money"><i class="fas fa-briefcase"></i>　技術　<em class="star">★ ★</em></p>
-                                    <p class="money"><i class="fas fa-user-friends"></i>　接客　<em class="star">★ ★ ★ ★ ★</em></p>
-                                </div>
+                        <p class="heading2">【乾かすだけでキマる】にこだわり【本当に必要なメニュー】を見極め【無駄にお金は使わせない】本格派サロン。モダンで落ち着いた空間が心地良さを演出させます。<br>
+                                【乾かすだけでキマる】×【無駄にお金は使わせない】必要最低限のメニューで最高のhairを追求する実力派★</p>
+                        <p class="evaluation-all"><i class="far fa-star"></i>　総合　<em class="star">★ ★ ★ ★</em></p>
+                        <div class="evaluation">
+                            <div class="evaluation-a">
+                                <p><i class="fas fa-yen-sign"></i>  料金　<em class="star">★ ★ ★</em></p>
+                                <p><i class="fas fa-pray"></i>  丁寧　<em class="star">★ ★ ★ ★</em></p>
+                            </div>
+                            <div class="evaluation-b">
+                                <p><i class="fas fa-briefcase"></i>  技術　<em class="star">★ ★</em></p>
+                                <p><i class="fas fa-user-friends"></i>  接客　<em class="star">★ ★ ★ ★ ★</em></p>
                             </div>
                         </div>
                         <div class="planbox">
-                            <div class="name-next">
-                                <p class="onename">
-                                    Casy【カジー】のプラン
-                                </p>
-                                <p class="allnext">
-                                    <em class="pink">▶</em><a href="../company/plan.html" class="allnext1">　一覧へ</a>
-                                </p>
-                            </div>
-                            <p class="planpara"><em class="genrebox">新規</em><a href="{% url 'compon' %}" class="planpara1">【女性スタッフ】激安風呂掃除プラン(夕飯付き)！¥1,800〜【水回り掃除+1食】</a></p>
-                            <p class="planpara"><em class="genrebox">新規</em><a href="{% url 'compon' %}" class="planpara1">【【U22】若ママ応援プラン育児2時間お任せください！¥3,000〜【育児2時間】</a></p>
-                            <p class="planpara"><em class="genrebox">新規</em><a href="{% url 'compon' %}" class="planpara1">【【学生限定】激安部屋掃除プラン(夕飯付き)！¥2,000〜【部屋掃除+1食】</a></p>
+                            <span>
+                                <p>Casy【カジー】のプラン</p>
+                                <div>▶<a href="{% url 'coupon' %}">　一覧へ</a></div>
+                            </span>
+                            <p><em>新規</em><a href="{% url 'coupon' %}">【女性スタッフ】激安風呂掃除プラン(夕飯付き)！¥1,800〜【水回り掃除+1食】</a></p>
+                            <p><em>新規</em><a href="{% url 'coupon' %}">【【U22】若ママ応援プラン育児2時間お任せください！¥3,000〜【育児2時間】</a></p>
+                            <p><em>新規</em><a href="{% url 'coupon' %}">【【学生限定】激安部屋掃除プラン(夕飯付き)！¥2,000〜【部屋掃除+1食】</a></p>
                         </div>
                     </div>
                 </div>
-                <div class="three">
-                    <p class="order1">Casy【カジー】の会社情報</p>
-                </div>
             </div>
+            <h1 class="order1">Casy【カジー】の会社情報</h1>
             {% for company_data in company_datas %}
             <table>
                 <tr>
@@ -172,24 +130,39 @@
                     <td>{{ company_data.time }}</td>
                 </tr>
             </table>
-                <div class="three">
-                    <p class="order1">サービス概要</p>
-                    <p class="order1">{{ company_data.service}}</p>
-                </div>
-                <div class="three">
-                    <p class="order1">お支払いに関して</p>
-                    <p class="order1">{{ company_data.pay }}</p>
-                </div>
-                <div class="three">
-                    <p class="order1">キャンセル・解約に関して</p>
-                    <P class="order1">{{ company_data.cancel }}</P>
-                </div>
-                <div class="three">
-                    <p class="order1">セキュリティ対策</p>
-                    <p class="order1">{{ company_data.security }}</p>
-                </div>
-            {% endfor %}
-            </div>        
+            <div class="threethree">
+                <h2>サービス概要</h2>
+                <h3>{{ company_data.service }}</h3>
+                ・毎週1回、お客様の不在時にお伺いして掃除をするサービスです。<br>
+                ・毎週決まった曜日（平日）にお伺いします。（お伺いする曜日はエリアによって異なります。）<br>
+                ・部屋の間取りが1R/1K/1DK/1LDK（40㎡未満）が対象となります。（それ以上の場合は個別お見積りいたします）<br>
+                ・サービスエリアは東京23区となります。<br>
+                <h3>鍵・貴重品の管理</h3>
+                ・不在時のサービスの場合、サービス開始時にお客様から合鍵をお預かりします。（鍵は当社にて厳重管理いたします。）<br>
+                ・万が一のトラブルを回避するために、お部屋にある貴重品は鍵のかかるところに保管してください。<br>
+                掃除用具
+                ・掃除機（クイックルワイパー）、トイレブラシ、お風呂スポンジ、および洗剤、ゴミ袋などの消耗品は、お客様にご準備頂きます。（買い物代行324円をご利用していただくことも可能です。）<br>
+                <h2>{{ company_data.pay }}</h2>
+                ・翌月27日（金融機関が休みの場合は翌営業日）に前月1カ月分の代金を指定口座から引き落とします。<br>
+                ・サービスのお申し込み時に、口座振替依頼書をご記入いただきます。
+                <h2>キャンセル・解約に関して</h2>
+                <h3>キャンセル</h3>
+                ・サービス実施日の1週間前の18時まではキャンセルは無料です。それ以降のキャンセルの場合はキャンセル料として全額頂きます。<br>
+                <h3>{{ company_data.cancel }}</h3>
+                ・サービス実施日の1週間前の18時までにご解約の申し出があった場合は、翌週からサービスがストップいたします。<br>
+                <h2>{{ company_data.security }}</h2>
+                <h3>1. お預かりする鍵にはココセコムを付けて厳重管理をいたします。</h3>
+                ・お客様から鍵をお預かりする際は、シリアル番号まで記載した「鍵預り証」を発行いたします。（鍵はお客様でご用意願います。当社で複製は行っておりません）<br>
+                ・お預かりした鍵は、ココセコムに取り付けて、担当スタッフが厳重に管理いたします。万が一盗難・紛失等が起こった場合、ココセコムの位置検索サービスにて即座に場所を把握し、当社スタッフまたはセコムの緊急対処員がかけつけることで被害を最小限におさえます。またその場合、損害賠償請求に関する法律に基づき、必要に応じてお客様のご自宅の鍵をお取替え致します。<br>
+                ・スタッフには、鍵に第三者がお客様を特定できる情報を記載することや、それらの情報が記載された書類等といっしょに鍵を持ち歩くことを契約により禁止しています<br>
+                <h3>2. サービス中のスタッフによる物損・紛失事故は、当社が責任を持ちます。</h3>
+                ・サービス中にサービススタッフの故意または著しい過失によって、お客様宅にある物に損害を与えた場合、事実関係と賠償責任保険に基づいて保険会社から受け取った保険金額を限度として、当社が当該損害を賠償いたします。<br>
+                ・現金・貴重品・貴金属類、個人情報や機密事項が記載された書類・データ類、金銭で代替することのできない物品等は、サービススタッフの手の届かない保管場所に保管していただくようお願い申し上げます。<br>
+                <h3>3. 個人情報の取り扱いは、契約と規則により徹底管理いたします。</h3>
+                ・サービススタッフとは、採用時において顧客情報に関する機密保持契約を結んでおり、お客様情報を外部に漏らすことはございません。また、サービス規約に則った掃除箇所もしくは別途お客様からご指示いただいた掃除箇所以外は絶対に触れることのないように徹底しております。<br>
+                ・当社は個人情報保護法について、規則の制定及び管理体制の確立に努めております。当社全従業者が遵守すべき行動基準として本個人情報保護方針を定め、その遵守の徹底を図ることといたします。<br>
+                {% endfor %}
+            </div>
         </div>
     </div>
 {% endblock %}

@@ -19,7 +19,7 @@ urlpatterns = [
     url(r'redetail', views.redetail, name="redetail"),
     url(r'valuation', views.valuation, name="valuation"),
     url(r'compilation', views.compilation, name="compilation"),
-    url(r'create', views.create, name="create"),
+    url(r'hensyu', views.hensyu, name="hensyu"),
     url(r'compon', views.compon, name="compon"),
     url(r'complay', views.complay, name="complay"),
     url(r'cmdetail', views.cmdetail, name="cmdetail"),
@@ -29,4 +29,5 @@ urlpatterns = [
     url(r'voice', views.voice, name="voice"),
     url(r'vcdetail', views.vcdetail, name="vcdetail"),
     url(r'vedetail', views.vedetail, name="vedetail"),
+    # path('compilation/<int:pk>/', views.compilation, name="compilation"),
 ]
