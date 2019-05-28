@@ -11,18 +11,18 @@
             <option value="クローズ">クローズ</option>
         </select>
         <div class="balloon1">
-            <p class="serihu1">【ログインについて】</p>
+            <p class="serihu1">{{ contacts.get_foo_display }}</p>
             <div class="zyouken">
                 <p class="simekiri">
-                    　　　パスワードを忘れてしまいました<br><br>
-                    <be></be><br><em class="meizi">　　アカウント名</em> : 菅田将暉
-                    <br><em class="meizi">　　メールアドレス</em> : suda@softbank.ne.jp
+                        　　　{{ contacts.message }}<br><br>
+                    <be></be><br><em class="meizi">　　アカウント名</em> : {{ contacts.name }}
+                    <br><em class="meizi">　　メールアドレス</em> : {{ contacts.email }}
                 </p>
             </div>
         </div>
         <div class="chat-input">
             <input type="text" placeholder="返信内容">
-            <a href="{% url 'customer' %}"><button type="submit">送信</button></a>
+            <a href=""><button type="submit">送信</button></a>
         </div>
         <h1></h1>
     </div>

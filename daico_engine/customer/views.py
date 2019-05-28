@@ -11,6 +11,10 @@ from django.contrib.auth.views import LoginView, LogoutView
 from .forms import LoginForm
 from app.models import User
 from django import forms
+from django.shortcuts import render_to_response
+from .forms import ContactForm
+from django.template import RequestContext
+from django.views.generic import FormView
 
 class Index(generic.TemplateView):
     template_name = 'user/home/index.html'
@@ -47,6 +51,17 @@ class UserChangeView(generic.UpdateView):
 # class PasswordChange(PasswordChangeView):
 #     form_class = UserChangeForm
 #     template_name = 'user/setting/userDetailChange/index.html'
+
+
+class ContactView(generic.FormView):
+    form_class = ContactForm
+    success_url = reverse_lazy('setting')
+    template_name = 'user/setting/contact/index.html'
+
+    def form_valid(self, form):
+        form.save()
+        return super().form_valid(form)
+
 
 # user
 def index(request):
@@ -151,6 +166,12 @@ def sinquiry(request):
     return render(request, 'user/setting/companyInquiry/index.html')
 def scontact(request):
     return render(request, 'user/setting/contact/index.html')
+# def scontact(request):
+#     if request.method == 'POST':
+#         contacts = ContactForm(request.POST)
+#     else:
+#         contacts = ContactForm()
+#     return render(request,'user/setting/contact/index.html',{'contacts': contacts} )
 # creditについては変更と追加ができないとだめだと思います
 def scredit(request):
     return render(request, 'user/setting/credit/index.html')

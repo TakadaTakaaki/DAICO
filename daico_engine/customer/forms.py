@@ -1,6 +1,8 @@
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm, AuthenticationForm
 from app.models import User
 from django import forms
+from django.forms import ModelForm
+from app.models import Contact
 
 class UserCreationForm(UserCreationForm):
     class Meta(UserCreationForm):
@@ -41,3 +43,15 @@ class LoginForm(AuthenticationForm):
         for field in self.fields.values():
             field.widget.attrs['class'] = 'form-control'
             field.widget.attrs['placeholder'] = field.label  # placeholderにフィールドのラベルを入れる
+
+class ContactForm(ModelForm):
+    class Meta:
+        model = Contact
+        fields = ('email', 'name', 'foo', 'message', 'phone')
+        labels = {'email': 'メールアドレス','name': '名前','foo': 'お問い合わせ種類','message': 'お問い合わせ内容','phone': '電話番号',}
+        widgets = {
+            'name': forms.TextInput(attrs={'placeholder': '例) 代行　エンジン'}),
+            'email': forms.TextInput(attrs={'placeholder': '例) neekey@gmail.com'}),
+            'message': forms.TextInput(attrs={'placeholder': '例) パスワードを忘れてしまいました'}),
+            'phone': forms.TextInput(attrs={'placeholder': '例) 09065668268'}),
+        }

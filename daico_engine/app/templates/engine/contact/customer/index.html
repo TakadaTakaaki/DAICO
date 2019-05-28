@@ -11,36 +11,23 @@
             <a href="{% url 'inquire' %}" class="notPage">対応済み</a>
             <a href="{% url 'inquire' %}" class="notPage">保留</a>
             <a href="{% url 'inquire' %}" class="notPage">クローズ</a>
-        </div>                    
+        </div>  
+        {% for contact in contacts %}                  
         <div class="coupon">
             <div class="genre">
-                <p>【ログインについて】</p>
+                <p>{{ contact.get_foo_display }}</p>
                 <div>
                     <div>
-            　　　      <p>パスワードを忘れてしまいました</p>
-                        <div><em>アカウント名</em> : 菅田将暉</div>
-                        <div><em>メールアドレス</em> : suda@softbank.ne.jp</div>
+            　　　      <p>{{ contact.message }}</p>
+                        <div><em>アカウント名</em> : {{ contact.name }}</div>
+                        <div><em>メールアドレス</em> : {{ contact.email }}</div>
                     </div>
                 </div>
             </div>
             <div class="coupon-button">
-                <a href="{% url 'customer' %}"><button class="pink-Button">お問い合わせを開始する</button></a>
-            </div>
-        </div>                           
-        <div class="coupon">
-            <div class="genre">
-                <p>【不具合について】</p>
-                <div>
-                    <div>
-            　　　      <p>予約ページのバグを直してください</p>
-                        <div><em>アカウント名</em> : 菅田将暉</div>
-                        <div><em>メールアドレス</em> : suda@softbank.ne.jp</div>
-                    </div>
-                </div>
-            </div>
-            <div class="coupon-button">
-                <a href="{% url 'customer' %}"><button class="pink-Button">お問い合わせを開始する</button></a>
+                <a href="{% url 'customer' pk=contact.id %}"><button class="pink-Button">お問い合わせを開始する</button></a>
             </div>
         </div>
+        {% endfor %}
     </div>
 {% endblock %}

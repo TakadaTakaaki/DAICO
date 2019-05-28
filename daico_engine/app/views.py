@@ -2,7 +2,7 @@ from django.http.response import HttpResponse
 from django.shortcuts import render
 from django.db.models import Count
 from django.views import generic
-from .models import Article,Category
+from .models import Article,Category, Contact
 from django.core.exceptions import MultipleObjectsReturned
 # from .forms import UserCreationForm
 # from django.urls import reverse_lazy
@@ -24,9 +24,11 @@ def contact(request):
 def client(request):
     return render(request, 'engine/contact/client/_uuid.html')
 def inquire(request):
-    return render(request, 'engine/contact/customer/index.html')
-def customer(request):
-    return render(request, 'engine/contact/customer/_uuid.html')
+    contacts = Contact.objects.order_by('name')
+    return render(request, 'engine/contact/customer/index.html', {'contacts': contacts})
+def customer(request, pk):
+    contacts = Contact.objects.get(pk=pk)
+    return render(request, 'engine/contact/customer/_uuid.html', {'contacts': contacts})
 # guest　お客様
 def guest(request):
     return render(request, 'engine/guest/index.html')
