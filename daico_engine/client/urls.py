@@ -29,5 +29,6 @@ urlpatterns = [
     url(r'voice', views.voice, name="voice"),
     url(r'vcdetail', views.vcdetail, name="vcdetail"),
     url(r'vedetail', views.vedetail, name="vedetail"),
+    path('compilation/<int:pk>/', views.compilation, name="compilation"),
     # path('compilation/<int:pk>/', views.compilation, name="compilation"),
 ]

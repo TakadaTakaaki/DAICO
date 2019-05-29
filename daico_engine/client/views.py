@@ -36,10 +36,12 @@ def redetail(request):
 def valuation(request):
     return render(request, 'company/business/valuation/index.html')
 def compilation(request):
+    # b = Company_data.objects.get(pk=pk)
     company_datas = Company_data.objects.order_by('name')
     return render(request, 'company/compilation/index.html', {'company_datas' : company_datas})
-def hensyu(request, users__user_type):
-    company_datas = Company_data.objects.filter(users__user_type="A")
+def hensyu(request):
+    # b = Company_data.objects.all().filter(pk=pk)
+    # company_datas = Company_data.objects.filter(users__user_type="A")
     # users = User.objects.filter(pk=company_data_id),
     if (request.method == 'POST'):
         obj = Company_data()
