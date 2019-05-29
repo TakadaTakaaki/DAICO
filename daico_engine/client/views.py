@@ -38,7 +38,7 @@ def valuation(request):
 def compilation(request):
     company_datas = Company_data.objects.order_by('name')
     return render(request, 'company/compilation/index.html', {'company_datas' : company_datas})
-def hensyu(request):
+def hensyu(request, users__user_type):
     company_datas = Company_data.objects.filter(users__user_type="A")
     # users = User.objects.filter(pk=company_data_id),
     if (request.method == 'POST'):
