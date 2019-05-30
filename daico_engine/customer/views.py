@@ -3,7 +3,7 @@ from django.views import generic
 from django.http.response import HttpResponse
 from django.shortcuts import render
 from django.db.models import Count
-from app.models import Article,Category, Chat
+from app.models import Article,Category, Chat, Request
 from django.core.exceptions import MultipleObjectsReturned
 from .forms import UserCreationForm, UserChangeForm
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -13,6 +13,7 @@ from app.models import User
 from django import forms
 from django.shortcuts import render_to_response
 from .forms import ContactForm
+from .forms import RequestForm
 from django.template import RequestContext
 from django.views.generic import FormView
 
@@ -62,6 +63,14 @@ class ContactView(generic.FormView):
         form.save()
         return super().form_valid(form)
 
+class RequestView(generic.FormView):
+    form_class = RequestForm
+    success_url = reverse_lazy('setting')
+    template_name = 'user/setting/companyinquiry/index.html'
+
+    def form_valid(self, form):
+        form.save()
+        return super().form_valid(form)
 
 # user
 def index(request):

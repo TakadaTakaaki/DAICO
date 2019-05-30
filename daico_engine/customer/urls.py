@@ -11,7 +11,7 @@ urlpatterns = [
     # path('signup/', views.SignUpView.as_view(), name='signup'),
     # url(r'user-base/', views.SignUpView.as_view(), name='user-base'),
     # user
-    url(r'^$', views.Index.as_view(), name='index'),
+    url(r'^$', views.index, name='index'),
     # url(r'^$', views.index, name='index'),
     url(r'article', views.article, name="article"),
     # url(r'article', views.article, name="article"),
@@ -78,7 +78,7 @@ urlpatterns = [
     # url(r'search', views.search, name="search"),
     url(r'setting', views.setting, name="setting"),
     # url(r'setting', views.setting, name="setting"),
-    url(r'sinquiry', views.sinquiry, name="sinquiry"),
+    url(r'sinquiry', views.RequestView.as_view(), name="sinquiry"),
     # url(r'setting_companyInquiry', views.setting_companyInquiry, name="setting_companyInquiry"),
     url(r'scontact', views.ContactView.as_view(), name="scontact"),
     # url(r'setting_contact', views.setting_contact, name="setting_contact"),

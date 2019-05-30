@@ -123,6 +123,7 @@ urlpatterns = [
     url(r'contact/', include('app.urls')),
     url(r'client/', include('app.urls')),
     url(r'inquire/', include('app.urls')),
+    url(r'request/', include('app.urls')),
     url(r'customer/', include('app.urls')),
     url(r'guest/', include('app.urls')),
     url(r'gdetail/', include('app.urls')),

@@ -12,6 +12,7 @@ urlpatterns = [
     url(r'contact', views.contact, name="contact"),
     url(r'client', views.client, name="client"),
     url(r'inquire', views.inquire, name="inquire"),
+    url(r'request', views.request, name="request"),
     # url(r'customer', views.customer, name="customer"),
     url(r'customer', views.ChatView.as_view(), name="customer"),
     url(r'guest', views.guest, name="guest"),

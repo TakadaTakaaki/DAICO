@@ -1,0 +1,35 @@
+{% extends "../../../engine-base.html" %}
+{% block body %}
+{% load static %}
+    <div class="page">
+        <h1><a href="{% url 'contact' %}" class="h1-c">Client</a>
+            <a href="{% url 'inquire' %}" class="h1-c">Customer</a>
+            Request
+        </h1>
+        <div class="sortflex">
+            <a href="{% url 'request' %}" class="thisPage">未対応</a>
+            <a href="{% url 'request' %}" class="notPage">開発処理中</a>
+            <a href="{% url 'request' %}" class="notPage">対応済み</a>
+            <a href="{% url 'request' %}" class="notPage">保留</a>
+            <a href="{% url 'request' %}" class="notPage">クローズ</a>
+        </div>  
+        {% for request in requests %}                  
+        <div class="coupon">
+            <div class="genre">
+                <p>掲載資料請求</p>
+                <div>
+                    <div>
+            　　　      <p>{{ request.message }}</p>
+                        <div><em>担当者名</em> : {{ request.name }}</div>
+                        <div><em>メールアドレス</em> : {{ request.email }}</div>
+                        <div><em>業種</em> : {{ request.kind }}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="coupon-button">
+                <a href="{% url 'customer' %}"><button class="pink-Button">返信する</button></a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

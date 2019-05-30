@@ -9,7 +9,7 @@ from django.views import generic
 from django.http.response import HttpResponse
 from django.shortcuts import render
 from django.db.models import Count
-from .models import Article, Category, Contact, Chat
+from .models import Article, Category, Contact, Chat, Request
 from django.core.exceptions import MultipleObjectsReturned
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView, LogoutView
@@ -55,6 +55,9 @@ def inquire(request):
     return render(request, 'engine/contact/customer/index.html', {'contacts': contacts})
 def customer(request):
     return render(request, 'engine/contact/customer/_uuid.html',)
+def request(request):
+    requests = Request.objects.order_by('-id')
+    return render(request, 'engine/contact/request/index.html', {'requests': requests})
 # guest　お客様
 def guest(request):
     return render(request, 'engine/guest/index.html')

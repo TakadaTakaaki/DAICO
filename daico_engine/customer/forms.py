@@ -3,6 +3,7 @@ from app.models import User
 from django import forms
 from django.forms import ModelForm
 from app.models import Contact
+from app.models import Request
 
 class UserCreationForm(UserCreationForm):
     class Meta(UserCreationForm):
@@ -54,4 +55,18 @@ class ContactForm(ModelForm):
             'email': forms.TextInput(attrs={'placeholder': '例) neekey@gmail.com'}),
             'message': forms.TextInput(attrs={'placeholder': '例) パスワードを忘れてしまいました'}),
             'phone': forms.TextInput(attrs={'placeholder': '例) 09065668268'}),
+        }
+
+class RequestForm(ModelForm):
+    class Meta:
+        model = Request
+        fields = ('name', 'kind', 'email', 'phone', 'address', 'message')
+        labels = {'email': 'メールアドレス','name': '名前','kind': '貴店の業種','message': '要望','phone': '電話番号', 'address': '住所',}
+        widgets = {
+            'name': forms.TextInput(attrs={'placeholder': '担当者名'}),
+            'email': forms.TextInput(attrs={'placeholder': '例) neekey@gmail.com'}),
+            'message': forms.TextInput(attrs={'placeholder': '例) 掲載したいです'}),
+            'phone': forms.TextInput(attrs={'placeholder': '例) 09065668268'}),
+            'address': forms.TextInput(attrs={'placeholder': '例) 東京都港区浜松町'}),
+            'kind': forms.TextInput(attrs={'placeholder': '例) 家事代行、育児代行'}),
         }
