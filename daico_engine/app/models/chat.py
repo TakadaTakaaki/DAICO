@@ -10,22 +10,22 @@ class Chat(models.Model):
     #     ("C","ご利用方法について"),
     #     ("D","その他"),
     # }
-    # EXAMPLE_FOO = ((1, 'ご注文について'), (2, '会員情報について'), (3, 'ご利用方法について'), (4, 'その他'))
+    EXAMPLE_FOO = ((1, 'ご注文について'), (2, '会員情報について'), (3, 'ご利用方法について'), (4, 'その他'))
     # kinds = models.CharField(
     #     max_length=1,
     #     choices=kind,
     #     default='C'
     # )
-    # foo = models.IntegerField(choices=EXAMPLE_FOO)
-    # text = models.CharField(
-    #     max_length=150,
-    #     blank=True
-    # )
+    foo = models.IntegerField(choices=EXAMPLE_FOO)
+    name = models.CharField(
+        max_length=10,
+    )
+    date = models.DateTimeField(default=timezone.now)
     # email = models.EmailField(
     #     max_length=128,
     #     unique=True
     # )
-    message = models.CharField(
+    message = models.TextField(
         max_length=300,
         null=False
     )

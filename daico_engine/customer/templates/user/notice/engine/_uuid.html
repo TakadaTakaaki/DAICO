@@ -2,21 +2,22 @@
 {% block body %}
 {% load static %}
     <div class="page">
-        <h1>DAICO　からのメッセージ</h1>
+        <h1>代行エンジン　からのメッセージ</h1>
         <div class="article">
             <div>
-                <div class="article-table">【次回使えるクーポンのお知らせ】</div>
+                <div class="article-table">【{{ chats.get_foo_display }}】</div>
                 <div class="article-detail">
-                        こんにちは！<br>
-                        <br>先日はCasyをご利用頂きましてありがとうございました！<br>
-                        <br>ご利用より１か月が経ちますが、風呂の調子はいかがですか？<br>
-                        掃除の方法などにお困りはございませんか？<br>
-                        <br>Casyでは、次回もネット予約して頂くと次回ご注文の合計金額より<br>
-                        【540円引き】致します♪<br>
-                        <br>次回も最善のご提案が出来たらと思いますので、<br>
-                        ぜひこちらの<a href="{% url 'reserve' %}" class="cuupon">クーポン</a>をご利用下さい。<br>
-                        <br>またお会いできるのを楽しみにしています。<br>
-                        <br>Casy　スタッフ一同
+                    こんにちは！<br>
+                    {{ chats.message }}
+                    <br>先日はCasyをご利用頂きましてありがとうございました！<br>
+                    <br>ご利用より１か月が経ちますが、風呂の調子はいかがですか？<br>
+                    掃除の方法などにお困りはございませんか？<br>
+                    <br>Casyでは、次回もネット予約して頂くと次回ご注文の合計金額より<br>
+                    【540円引き】致します♪<br>
+                    <br>またお会いできるのを楽しみにしています。<br>
+                    <br>Casy　スタッフ一同
+                    <div class="center-button"></div>
+                        <a href="scontact"><button class="pink-Button">返信する</button></a>
                     </div>
                 </div>
             </div>

@@ -31,7 +31,7 @@ from django.views.generic import FormView
 
 class ChatView(generic.FormView):
     form_class = ChatForm
-    success_url = reverse_lazy('customer')
+    success_url = reverse_lazy('inquire')
     template_name = 'engine/contact/customer/_uuid.html'
 
     def form_valid(self, form):
@@ -53,9 +53,8 @@ def client(request):
 def inquire(request):
     contacts = Contact.objects.order_by('-id')
     return render(request, 'engine/contact/customer/index.html', {'contacts': contacts})
-def customer(request, pk):
-    contacts = Contact.objects.get(pk=pk)
-    return render(request, 'engine/contact/customer/_uuid.html', {'contacts': contacts})
+def customer(request):
+    return render(request, 'engine/contact/customer/_uuid.html',)
 # guest　お客様
 def guest(request):
     return render(request, 'engine/guest/index.html')

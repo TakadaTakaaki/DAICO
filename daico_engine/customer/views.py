@@ -3,7 +3,7 @@ from django.views import generic
 from django.http.response import HttpResponse
 from django.shortcuts import render
 from django.db.models import Count
-from app.models import Article,Category
+from app.models import Article,Category, Chat
 from django.core.exceptions import MultipleObjectsReturned
 from .forms import UserCreationForm, UserChangeForm
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -120,9 +120,11 @@ def notice_c(request):
 def ncdetail(request):
     return render(request, 'user/notice/company/_uuid.html')
 def nengine(request):
-    return render(request, 'user/notice/engine/index.html')
-def nedetail(request):
-    return render(request, 'user/notice/engine/_uuid.html')
+    chats = Chat.objects.order_by('-id')
+    return render(request, 'user/notice/engine/index.html', {'chats': chats})
+def nedetail(request, pk):
+    chats = Chat.objects.get(pk=pk)
+    return render(request, 'user/notice/engine/_uuid.html', {'chats': chats})
 # order 注文履歴
 def order(request):
     return render(request, 'user/order/index.html')
