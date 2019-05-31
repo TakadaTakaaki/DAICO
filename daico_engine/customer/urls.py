@@ -102,4 +102,5 @@ urlpatterns = [
     # url(r'logout', views.logout, name="logout"),
     # path('<str:username>/delete/', views.UserDeleteView.as_view(), name='delete'),
     # 退会
+    path('Company_dataListView', views.Company_dataListView.as_view(), name='Company_dataListView'),
 ]

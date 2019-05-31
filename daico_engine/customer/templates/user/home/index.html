@@ -23,8 +23,18 @@
         </div>
     </div>
     <div class="search">
-        <input type="text" placeholder="  ジャンルを検索してください">
-        <a href="{% url 'search' %}"><button type="submit"><i class="fas fa-search fa-2x"></i></button></a>
+        <form class="navbar-item field has-addons" action="{% url 'Company_dataListView' %}" method="get" accept-charset="utf-8">
+            <div class="control">
+                <input class="input" type="text" name="q" placeholder="キーワードを入力してください">
+            </div>
+            <div class="control">
+                <button class="button is-info" type="submit"><span class="icon"><i class="fas fa-search"></i></span></button>
+            </div>
+        </form>
+        <!-- <form action="" method="GET">
+            <input type="text" placeholder="  ジャンルを検索してください">
+            <a href="{% url 'search' %}"><button type="submit"><i class="fas fa-search fa-2x"></i></button></a>
+        </form> -->
     </div>
     <div class="search-icon">
         <ul>
@@ -41,5 +51,29 @@
         　　<li><a href="{% url 'search' %}"><img src="{% static 'picture/super.jpg' %}"><p>相方代行</p></a></li>
         　　<li><a href="{% url 'search' %}"><img src="{% static 'picture/inu.jpg' %}"><p>散歩代行</p></a></li>
         </ul>
-    </div>        
+    </div> 
+    <!-- <form class="navbar-item field has-addons" action="{% url 'Company_dataListView' %}" method="get" accept-charset="utf-8">
+        <div class="control">
+            <input class="input" type="text" name="q" placeholder="検索...">
+        </div>
+        <div class="control">
+            <button class="button is-info" type="submit"><span class="icon"><i class="fas fa-search"></i></span></button>
+        </div>
+    </form> -->
+    
+    <div class="container">
+        {% for company_data in company_data_list %}
+        <div class="box">
+            <article class="media">
+                <div class="media-content">
+                    <div class="content">
+                        <p>
+                        <strong>{{ company_data.name | truncatechars_html:35 }}</strong>
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+        {% endfor %}
+    </div>       
 {% endblock %}
