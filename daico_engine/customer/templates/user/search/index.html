@@ -106,9 +106,12 @@
                 </div>
             </span>
             <span class="right">
-                <div class="buttonbox">
-                    <button class="favorite"><i class="far fa-heart"></i>  お気に入り</button>
-                </div>
+                <form action="{% url 'fav' Company_data.pk %}" method="post">
+                    <div class="buttonbox">
+                        <button class="favorite"><i class="far fa-heart"></i>  お気に入り</button>
+                    </div>
+                    {% csrf_token %}
+                </form>
             </span>
         </div>
         <div class="company-next">

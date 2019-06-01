@@ -13,6 +13,7 @@ import re
 from django.db.models import Q
 from django.urls import reverse
 from pure_pagination.mixins import PaginationMixin
+from django.shortcuts import redirect, get_object_or_404
 
 
 
@@ -91,7 +92,8 @@ def sdetail(request):
 def chat(request):
     return render(request, 'user/chat/index.html')
 # favorite お気に入り
-def fav(request):
+def fav(request, pk):
+    data = get_object_or_404(Company_data, pk=pk)
     return render(request, 'user/favorite/index.html')
 # notice 通知
 def notice_c(request):
