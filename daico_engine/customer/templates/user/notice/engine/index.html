@@ -7,21 +7,15 @@
             <a href="#" class="page-separate">1/10ページ</a>
             <a href="#" class="page-next">次へ</a>
         </h1>
-        <a href="{% url 'nedetail' %}" class="message">
+        {% for chat in chats %} 
+        <a href="{% url 'nedetail' pk=chat.id %}" class="message">
             <div>
                 <p class="category-tag">運営</p>
-                <div class="">Casy</div>
+                <div class="">{{ chat.name }}</div>
             </div>
-            <p><br>【次回使えるクーポンの紹介】</p>
-            <span><br>2019/3/8 10:30</span>
+            <p><br>【{{ chat.get_foo_display }}】</p>
+            <span><br>{{ chat.date }}</span>
         </a>
-        <a href="{% url 'nedetail' %}" class="message">
-            <div>
-                <p class="category-tag">運営</p>
-                <div class="">Casy</div>
-            </div>
-            <p><br>【次回使えるクーポンの紹介】</p>
-            <span><br>2019/3/8 10:30</span>
-        </a>
+        {% endfor %}
     </div>
 {% endblock %}

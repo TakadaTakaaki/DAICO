@@ -2,37 +2,20 @@
 {% block body %}
 {% load static %}
     <div class="page">
-        <h1>お問い合わせ</h1>
-        <h4>お問い合わせの種類</h4>
-        <div class="change">
-            <input type="radio" id="radio1" name="cpipr01" />
-            <label for="radio1">ご注文について</label>
-            <input type="radio" id="radio2" name="cpipr01" />
-            <label for="radio2">会員情報について</label>
-            <input type="radio" id="radio3" name="cpipr01" />
-            <label for="radio3">ご利用方法について</label>
-            <input type="radio" id="radio4" name="cpipr01" />
-            <label for="radio4">その他</label>
-        </div>
-        <h4>お問い合わせの内容</h4>
-        <div class="change">
-            <textarea class="textarea"></textarea>
-        </div>
-        <h4>お名前</h4>
-        <div class="change">
-            <input type="text" placeholder="お名前">
-            <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
-        </div>
-        <h4>電話番号</h4>
-        <div class="change">
-            <input id="i_tel" type="tel" name="tel" value="" inputmode="tel" placeholder="080-1234-5678">
-        </div>
-        <h4>メールアドレス</h4>
-        <div class="change">
-            <input id="i_tel" type="text" name="email" value="" style="ime-mode:disabled" placeholder="localname@domain.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="メールアドレス" required />
-        </div>
-        <div class="center-button">
-            <a href="{% url 'index' %}"><button class="pink-Button">送信してHOMEへ</button></a>
-        </div>
+        <form action="" method="POST">
+            <h1>お問い合わせ</h1>
+            {{ form.non_field_errors }}
+            {% for field in form %}
+            <h4><label for="{{ field.id_for_label }}">{{ field.label_tag }}</label></h4>
+            <div class="change">
+                {{ field }}
+                {{ field.errors }}
+            </div>
+            {% endfor %}
+            {% csrf_token %}
+            <div class="center-button">
+                <button type="submit" class="btn btn-primary btn-lg pink-Button">送信</button>
+            </div>
+        </form>
     </div>
 {% endblock %}

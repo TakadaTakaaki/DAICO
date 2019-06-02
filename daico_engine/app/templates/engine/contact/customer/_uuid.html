@@ -10,20 +10,34 @@
             <option value="保留">保留</option>
             <option value="クローズ">クローズ</option>
         </select>
-        <div class="balloon1">
-            <p class="serihu1">【ログインについて】</p>
+        <!-- <div class="balloon1">
+            <p class="serihu1">{{ contacts.get_foo_display }}</p>
             <div class="zyouken">
                 <p class="simekiri">
-                    　　　パスワードを忘れてしまいました<br><br>
-                    <be></be><br><em class="meizi">　　アカウント名</em> : 菅田将暉
-                    <br><em class="meizi">　　メールアドレス</em> : suda@softbank.ne.jp
+                        　　　{{ contacts.message }}<br><br>
+                    <be></be><br><em class="meizi">　　アカウント名</em> : {{ contacts.name }}
+                    <br><em class="meizi">　　メールアドレス</em> : {{ contacts.email }}
                 </p>
             </div>
         </div>
         <div class="chat-input">
             <input type="text" placeholder="返信内容">
-            <a href="{% url 'customer' %}"><button type="submit">送信</button></a>
+            <a href=""><button type="submit">送信</button></a>
         </div>
-        <h1></h1>
+        <h1></h1> -->
+        <form action="" method="POST">
+            {{ form.non_field_errors }}
+            {% for field in form %}
+            <h4><label for="{{ field.id_for_label }}">{{ field.label_tag }}</label></h4>
+            <div class="change">
+                {{ field }}
+                {{ field.errors }}
+            </div>
+            {% endfor %}
+            {% csrf_token %}
+            <div class="center-button">
+                <button type="submit" class="btn btn-primary btn-lg pink-Button">送信</button>
+            </div>
+        </form>
     </div>
 {% endblock %}

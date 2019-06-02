@@ -1,9 +1,24 @@
+# from django.http.response import HttpResponse
+# from django.shortcuts import render
+# from django.db.models import Count
+# from django.views import generic
+# from .models import Article,Category, Contact, Chat
+# from django.core.exceptions import MultipleObjectsReturned
+from django.urls import reverse_lazy
+from django.views import generic
 from django.http.response import HttpResponse
 from django.shortcuts import render
 from django.db.models import Count
-from django.views import generic
-from .models import Article,Category
+from .models import Article, Category, Contact, Chat, Request
 from django.core.exceptions import MultipleObjectsReturned
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.views import LoginView, LogoutView
+from .models import User
+from django import forms
+from django.shortcuts import render_to_response
+from .forms import ChatForm
+from django.template import RequestContext
+from django.views.generic import FormView
 # from .forms import UserCreationForm
 # from django.urls import reverse_lazy
 
@@ -11,6 +26,18 @@ from django.core.exceptions import MultipleObjectsReturned
 #     form_class = UserCreationForm
 #     success_url = reverse_lazy('index')
 #     template_name = 'polls.html'
+
+
+
+class ChatView(generic.FormView):
+    form_class = ChatForm
+    success_url = reverse_lazy('inquire')
+    template_name = 'engine/contact/customer/_uuid.html'
+
+    def form_valid(self, form):
+        form.save()
+        return super().form_valid(form)
+
 
 # engine
 def engine(request):
@@ -24,9 +51,13 @@ def contact(request):
 def client(request):
     return render(request, 'engine/contact/client/_uuid.html')
 def inquire(request):
-    return render(request, 'engine/contact/customer/index.html')
+    contacts = Contact.objects.order_by('-id')
+    return render(request, 'engine/contact/customer/index.html', {'contacts': contacts})
 def customer(request):
-    return render(request, 'engine/contact/customer/_uuid.html')
+    return render(request, 'engine/contact/customer/_uuid.html',)
+def request(request):
+    requests = Request.objects.order_by('-id')
+    return render(request, 'engine/contact/request/index.html', {'requests': requests})
 # guest　お客様
 def guest(request):
     return render(request, 'engine/guest/index.html')

@@ -3,13 +3,19 @@ from django.views import generic
 from django.http.response import HttpResponse
 from django.shortcuts import render
 from django.db.models import Count
-from app.models import Article,Category
+from app.models import Article,Category, Chat, Request
 from django.core.exceptions import MultipleObjectsReturned
-from .forms import UserCreationForm
+from .forms import UserCreationForm, UserChangeForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView, LogoutView
 from .forms import LoginForm
-
+from app.models import User
+from django import forms
+from django.shortcuts import render_to_response
+from .forms import ContactForm
+from .forms import RequestForm
+from django.template import RequestContext
+from django.views.generic import FormView
 
 class Index(generic.TemplateView):
     template_name = 'user/home/index.html'
@@ -36,6 +42,35 @@ class SignUpView(generic.CreateView):
     form_class = UserCreationForm
     success_url = reverse_lazy('register')
     template_name = 'user/register/_uuid.html'
+
+class UserChangeView(generic.UpdateView):
+    model = User
+    form_class = UserChangeForm
+    success_url = reverse_lazy('setting')
+    template_name = 'user/setting/userDetailChange/index.html'
+
+# class PasswordChange(PasswordChangeView):
+#     form_class = UserChangeForm
+#     template_name = 'user/setting/userDetailChange/index.html'
+
+
+class ContactView(generic.FormView):
+    form_class = ContactForm
+    success_url = reverse_lazy('setting')
+    template_name = 'user/setting/contact/index.html'
+
+    def form_valid(self, form):
+        form.save()
+        return super().form_valid(form)
+
+class RequestView(generic.FormView):
+    form_class = RequestForm
+    success_url = reverse_lazy('setting')
+    template_name = 'user/setting/companyinquiry/index.html'
+
+    def form_valid(self, form):
+        form.save()
+        return super().form_valid(form)
 
 # user
 def index(request):
@@ -94,9 +129,11 @@ def notice_c(request):
 def ncdetail(request):
     return render(request, 'user/notice/company/_uuid.html')
 def nengine(request):
-    return render(request, 'user/notice/engine/index.html')
-def nedetail(request):
-    return render(request, 'user/notice/engine/_uuid.html')
+    chats = Chat.objects.order_by('-id')
+    return render(request, 'user/notice/engine/index.html', {'chats': chats})
+def nedetail(request, pk):
+    chats = Chat.objects.get(pk=pk)
+    return render(request, 'user/notice/engine/_uuid.html', {'chats': chats})
 # order 注文履歴
 def order(request):
     return render(request, 'user/order/index.html')
@@ -140,6 +177,12 @@ def sinquiry(request):
     return render(request, 'user/setting/companyInquiry/index.html')
 def scontact(request):
     return render(request, 'user/setting/contact/index.html')
+# def scontact(request):
+#     if request.method == 'POST':
+#         contacts = ContactForm(request.POST)
+#     else:
+#         contacts = ContactForm()
+#     return render(request,'user/setting/contact/index.html',{'contacts': contacts} )
 # creditについては変更と追加ができないとだめだと思います
 def scredit(request):
     return render(request, 'user/setting/credit/index.html')
@@ -153,5 +196,8 @@ def stpoint(request):
     return render(request, 'user/setting/tpoint/index.html')
 def sunsubscribe(request):
     return render(request, 'user/setting/unsubscribe/index.html')
-def suserDetailChange(request):
-    return render(request, 'user/setting/userDetailChange/index.html')
+def suserDetailChange(request, pk):
+    users = User.objects.get(pk=pk)
+    return render(request, 'user/setting/userDetailChange/index.html', {'users': users})
+def uuiuserDetailChange(request):
+    return render(request, 'user/setting/userDetailChange/_uuid.html')

@@ -12,14 +12,14 @@
     <div class="article-list">
         <a href="{% url 'article' %}" class="color">記事一覧へ</a>
         <div class="multiple">
-            <div class="article-piece"><img src="https://www.jungleocean.com/demo/jquery-slick/images/1.jpg" alt=""><p>１時間５００円からの激安店舗!!</p></div>
-            <div class="article-piece"><img src="https://www.jungleocean.com/demo/jquery-slick/images/2.jpg" alt=""><p>１時間５００円からの激安店舗!!</p></div>
-            <div class="article-piece"><img src="https://www.jungleocean.com/demo/jquery-slick/images/3.jpg" alt=""><p>１時間５００円からの激安店舗!!</p></div>
-            <div class="article-piece"><img src="https://www.jungleocean.com/demo/jquery-slick/images/4.jpg" alt=""><p>１時間５００円からの激安店舗!!</p></div>
-            <div class="article-piece"><img src="https://www.jungleocean.com/demo/jquery-slick/images/5.jpg" alt=""><p>１時間５００円からの激安店舗!!</p></div>
-            <div class="article-piece"><img src="https://www.jungleocean.com/demo/jquery-slick/images/6.jpg" alt=""><p>１時間５００円からの激安店舗!!</p></div>
-            <div class="article-piece"><img src="https://www.jungleocean.com/demo/jquery-slick/images/7.jpg" alt=""><p>１時間５００円からの激安店舗!!</p></div>
-            <div class="article-piece"><img src="https://www.jungleocean.com/demo/jquery-slick/images/8.jpg" alt=""><p>１時間５００円からの激安店舗!!</p></div>
+            {% for article in articles %}
+                <div class="article-piece">
+                    <a href="{% url 'adetail' pk=article.id %}">
+                        <img src="{{ article.image.url }}" alt="">
+                    </a>
+                    <p>{{ article.title }}</p>
+                </div>
+            {% endfor %}
         </div>
     </div>
     <div class="search">

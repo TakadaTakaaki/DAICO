@@ -1,0 +1,21 @@
+{% extends "../../../user-base.html" %}
+{% block body %}
+{% load static %}
+    <div class="page">
+        <div class="article">
+            <div>
+                <div class="article-table">【ログイン、会員登録をお願いします】</div>
+                <div class="article-detail">
+                    まずは、ログイン、会員登録をしてください。<br>
+                    <br>下記ボタンにて、ログイン、会員登録が出来ます。<br><br>
+                    <br>ログイン完了次第、いつでも当サイトを
+                    ご利用いただけます。
+                </div>
+                <div class="center-button">
+                    <a href="{% url 'login' %}"><button class="pinkButton">ログイン</button></a>
+                    <a href="{% url 'rdetail' %}"><button class="pinkButton">新規会員登録</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

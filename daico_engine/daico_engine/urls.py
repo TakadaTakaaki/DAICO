@@ -83,6 +83,8 @@ urlpatterns = [
     # setting_unsubscribe
     url(r'suserDetailChange/', include('customer.urls')),
     # setting_userDetailChange
+    url(r'uuiuserDetailChange/', include('customer.urls')),
+    # setting_userDetailChange_uuid
     url(r'login/', include('customer.urls')),
     # login
     url(r'logout/', include('customer.urls')),
@@ -121,6 +123,7 @@ urlpatterns = [
     url(r'contact/', include('app.urls')),
     url(r'client/', include('app.urls')),
     url(r'inquire/', include('app.urls')),
+    url(r'request/', include('app.urls')),
     url(r'customer/', include('app.urls')),
     url(r'guest/', include('app.urls')),
     url(r'gdetail/', include('app.urls')),

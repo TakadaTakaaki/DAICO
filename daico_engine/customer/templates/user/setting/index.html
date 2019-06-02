@@ -4,7 +4,7 @@
     <div class="page">
         <h1>設定</h1>
         <div class="setting-info">
-            <a href="{% url 'suserDetailChange' %}"><p class="kazyou">会員情報変更</p></a>
+            <a href="{% url 'suserDetailChange' pk=user.id %}"><p class="kazyou">会員情報変更</p></a>
             <a href="{% url 'scredit' %}"><p class="kazyou">クレジットカードの追加</p></a>
             <a href="{% url 'stpoint' %}"><p class="kazyou">Tpointの照会</p></a>
             <a href="{% url 'shidden' %}"><p class="kazyou">非表示リスト</p></a>
