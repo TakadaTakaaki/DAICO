@@ -75,6 +75,7 @@ urlpatterns = [
     url(r'rdone', views.rdone, name="rdone"),
     # url(r'reserve_done', views.reserve_done, name="reserve_done"),
     url(r'search', views.search, name="search"),
+    path('genre/<int:genre_id>/', views.genre, name="genre"),
     # url(r'search', views.search, name="search"),
     url(r'setting', views.setting, name="setting"),
     # url(r'setting', views.setting, name="setting"),

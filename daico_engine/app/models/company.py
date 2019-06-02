@@ -2,6 +2,17 @@ from django.db import models
 from django.utils import timezone
 
 
+class Genre(models.Model):
+    class Meta:
+        db_table = 'genre'
+
+    name = models.CharField(max_length=40)
+
+
+    def __str__(self):
+        return self.name
+
+
 class Company_data(models.Model):
     class Meta:
         db_table = 'company_data'
@@ -22,7 +33,9 @@ class Company_data(models.Model):
     security = models.TextField()
     place1 = models.CharField(max_length=10)
     place2 = models.CharField(max_length=10)
-    
+    genre = models.ForeignKey(Genre, verbose_name='カテゴリ', on_delete=models.PROTECT,)
+
+
     def __str__(self):
         return '<id:' + str(self.id) + ',' + self.name + ',' + self.staff + '>'
 

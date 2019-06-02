@@ -3,7 +3,7 @@ from django.views import generic
 from django.http.response import HttpResponse
 from django.shortcuts import render
 from django.db.models import Count
-from app.models import Article,Category,Company_data
+from app.models import Article,Category,Company_data,Genre
 from django.core.exceptions import MultipleObjectsReturned
 from .forms import UserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -46,7 +46,14 @@ class SignUpView(generic.CreateView):
 # user
 def index(request):
     articles = Article.objects.order_by('-published')
-    return render(request, 'user/home/index.html', {'articles': articles})
+    for obj in company_datas:
+        print(obj)
+    contexts = ({
+        'company_data_list' : obj,
+        # 'counts' : count,
+        'genres' : Genre.objects.order_by('name'),
+    })
+    return render(request, 'user/home/index.html', {'articles': articles}, {'contexts': contexts})
 
 # _uuidで詳細はできると思ったのでファイル名_uuid.htmlにしました
 
@@ -141,6 +148,15 @@ def rdone(request):
 def search(request):
     company_datas = Company_data.objects.order_by('name')
     return render(request, 'user/search/index.html', {'company_datas' : company_datas})
+def genre(request, genre_id):
+    company_datas =  Company_data.objects.filter(genre_id=genre_id),
+    for company_data in company_data:
+        print(company_data)
+    contexts = ({
+        'company_data_list' : company_data,
+        'genre' : genre.objects.order_by('name'),
+    })
+    return render(request, 'user/search/genre/index.html', {'contexts': contexts})
 # setting 設定
 def setting(request):
     return render(request, 'user/setting/index.html')
@@ -176,7 +192,7 @@ class Company_dataListView(PaginationMixin, generic.ListView):
         query = self.request.GET.get('q')
 
         if query:
-            result = Company_data.objects.filter(Q(name__icontains=query))
+            result = Company_data.objects.filter(Q(name__icontains=query, place1__icontains=query, place2__icontains=query))
             return result
         # return reverse_lazy('user/search/index.html')
 # def normalize_query(query_string,

@@ -37,7 +37,12 @@
         </form> -->
     </div>
     <div class="search-icon">
-        <ul>
+        {% for genre in contexts.genres %}
+        <div>
+            <p><a href="{% url 'genre' genre_id=genre.id %}">{{ genre.name }}</a></p>
+        </div>
+        {% endfor %}
+        <!-- <ul>
         　　<li><a href="{% url 'search' %}"><img src="{% static 'picture/kazi.png' %}"><p>家事代行</p></a></li>
         　　<li><a href="{% url 'search' %}"><img src="{% static 'picture/ikuzi.jpg' %}"><p>育児代行</p></a></li>
         　　<li><a href="{% url 'search' %}"><img src="{% static 'picture/souzi.jpg' %}"><p>掃除代行</p></a></li>
@@ -50,7 +55,7 @@
         　　<li><a href="{% url 'search' %}"><img src="{% static 'picture/youtube.png' %}"><p>撮影代行</p></a></li>
         　　<li><a href="{% url 'search' %}"><img src="{% static 'picture/super.jpg' %}"><p>相方代行</p></a></li>
         　　<li><a href="{% url 'search' %}"><img src="{% static 'picture/inu.jpg' %}"><p>散歩代行</p></a></li>
-        </ul>
+        </ul> -->
     </div> 
     <!-- <form class="navbar-item field has-addons" action="{% url 'Company_dataListView' %}" method="get" accept-charset="utf-8">
         <div class="control">
