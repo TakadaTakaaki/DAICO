@@ -122,6 +122,33 @@
             </div>
         </div>
         {% endfor %}
+        {% for company_data in company_datas %}
+        <div class="company-top">
+            <span class="left">
+                <p>{{ company_data.place1 }}　>　{{ company_data.place2 }}</p>
+                <a href="{% url 'enterprise' %}">{{ company_data.name }}</a>
+                <div>
+                    <p class="point">即時予約OK!</p>
+                    <p class="point1">ポイント加盟店</p>
+                    <p class="point2">メンズにもオススメ</p>
+                </div>
+            </span>
+            <span class="right">
+                <div class="buttonbox">
+                    <!-- <button class="favorite"><i class="far fa-heart"></i>  お気に入り</button> -->
+                    <div class="information">
+                        <div class="information-a">
+                            <p><i class="fas fa-yen-sign"></i>  料金<a href="{% url 'plan' %}">{{ company_data.price }}</a></p>
+                            <p><i class="fas fa-comments"></i>  口コミ<a href="{% url 'review' %}">??件</a></p>
+                        </div>
+                    </div>
+                </div>
+            </span>
+            <div>
+                <a href="{% url 'enterprise' %}"><button class="pinkButton">プラン一覧へ</button></a>
+            </div>
+        </div>
+        {% endfor %}
         <!-- </div> -->
         <!-- <div class="company-next">
             <div class="image">
