@@ -11,7 +11,7 @@ from django.contrib.auth.views import LoginView, LogoutView
 from .forms import LoginForm
 import re
 from django.db.models import Q
-from django.urls import reverse
+from django.urls import reverse_lazy
 from pure_pagination.mixins import PaginationMixin
 from django.shortcuts import redirect, get_object_or_404
 
@@ -92,8 +92,8 @@ def sdetail(request):
 def chat(request):
     return render(request, 'user/chat/index.html')
 # favorite お気に入り
-def fav(request, pk):
-    data = get_object_or_404(Company_data, pk=pk)
+def fav(request):
+    # data = get_object_or_404(Company_data, pk=pk)
     return render(request, 'user/favorite/index.html')
 # notice 通知
 def notice_c(request):
@@ -139,7 +139,8 @@ def rdone(request):
     return render(request, 'user/reserve/done/index.html')
 # search 検索
 def search(request):
-    return render(request, 'user/search/index.html')
+    company_datas = Company_data.objects.order_by('name')
+    return render(request, 'user/search/index.html', {'company_datas' : company_datas})
 # setting 設定
 def setting(request):
     return render(request, 'user/setting/index.html')
@@ -165,9 +166,10 @@ def suserDetailChange(request):
 
 
 class Company_dataListView(PaginationMixin, generic.ListView):
-    template_name = "user/home/index.html"
+    template_name = "user/search/index.html"
     model = Company_data
-
+    # success_url = reverse_lazy('search')
+    
     #Serch
     def get_queryset(self):
         result = super(Company_dataListView, self).get_queryset()
@@ -175,7 +177,8 @@ class Company_dataListView(PaginationMixin, generic.ListView):
 
         if query:
             result = Company_data.objects.filter(Q(name__icontains=query))
-        return result
+            return result
+        # return reverse_lazy('user/search/index.html')
 # def normalize_query(query_string,
 #                     findterms=re.compile(r'"([^"]+)"|(\S+)').findall,
 #                     normspace=re.compile(r'\s{2,}').sub):

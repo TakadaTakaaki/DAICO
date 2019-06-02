@@ -20,7 +20,9 @@ class Company_data(models.Model):
     pay = models.TextField()
     cancel = models.TextField() 
     security = models.TextField()
-
+    place1 = models.CharField(max_length=10)
+    place2 = models.CharField(max_length=10)
+    
     def __str__(self):
         return '<id:' + str(self.id) + ',' + self.name + ',' + self.staff + '>'
 

@@ -103,5 +103,5 @@ urlpatterns = [
     # path('<str:username>/delete/', views.UserDeleteView.as_view(), name='delete'),
     # 退会
     path('Company_dataListView', views.Company_dataListView.as_view(), name='Company_dataListView'),
-    path('search/<int:pk>/', views.fav, name='search'),   
+    # path('search/<int:pk>/', views.fav, name='search'),   
 ]

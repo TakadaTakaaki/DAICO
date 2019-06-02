@@ -94,11 +94,12 @@
         <a href="#" class="page-separate">1/10ページ</a>
         <a href="#" class="page-next">次へ</a>
     </h1>
-    <div class="company-box">
+    <!-- <div class="company-box"> -->
+        {% for company_data in company_data_list %}
         <div class="company-top">
             <span class="left">
-                <p>渋谷　>　道玄坂・明治通り</p>
-                <a href="{% url 'enterprise' %}">Casy 【カジー】</a>
+                <p>{{ company_data.place1 }}　>　{{ company_data.place2 }}</p>
+                <a href="{% url 'enterprise' %}">{{ company_data.name }}</a>
                 <div>
                     <p class="point">即時予約OK!</p>
                     <p class="point1">ポイント加盟店</p>
@@ -106,23 +107,31 @@
                 </div>
             </span>
             <span class="right">
-                <form action="{% url 'fav' Company_data.pk %}" method="post">
-                    <div class="buttonbox">
-                        <button class="favorite"><i class="far fa-heart"></i>  お気に入り</button>
+                <div class="buttonbox">
+                    <!-- <button class="favorite"><i class="far fa-heart"></i>  お気に入り</button> -->
+                    <div class="information">
+                        <div class="information-a">
+                            <p><i class="fas fa-yen-sign"></i>  料金<a href="{% url 'plan' %}">{{ company_data.price }}</a></p>
+                            <p><i class="fas fa-comments"></i>  口コミ<a href="{% url 'review' %}">??件</a></p>
+                        </div>
                     </div>
-                    {% csrf_token %}
-                </form>
+                </div>
             </span>
+            <div>
+                <a href="{% url 'enterprise' %}"><button class="pinkButton">プラン一覧へ</button></a>
+            </div>
         </div>
-        <div class="company-next">
+        {% endfor %}
+        <!-- </div> -->
+        <!-- <div class="company-next">
             <div class="image">
                 <img src="{% static 'picture/horikita.jpg' %}">
                 <div class="image1">
                     <img src="{% static 'picture/kazi.png' %}">
                     <img src="{% static 'picture/ikuzi.jpg' %}">
                 </div>
-            </div>
-            <div class="company-explain">
+            </div> -->
+            <!-- <div class="company-explain">
                 <p class="heading">【乾かすだけでキマる】×【無駄にお金は使わせない】必要最低限のメニューで最高のhairを追求する実力派★</p>
                 <div class="information">
                     <div class="information-a">
@@ -163,8 +172,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="company-box">
+    </div> -->
+    <!-- <div class="company-box">
         <div class="company-top">
             <span class="left">
                 <p>渋谷　>　道玄坂・明治通り</p>
@@ -229,7 +238,7 @@
                     <p><em>新規</em><a href="{% url 'plan' %}">【【学生限定】激安部屋掃除プラン(夕飯付き)！¥2,000〜【部屋掃除+1食】</a></p>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>
 {% endblock %}
